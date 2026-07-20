@@ -62,6 +62,47 @@ export const blogPosts = [
     "minutes": 9
   }
 ] as const;
+export const blogDetails = {
+  'offshore-resourcing-provider-questions': {
+    takeaways: [
+      'Ask who owns quality before you ask about price.',
+      'Get the replacement rule in writing before the first start date.',
+      'Treat tool access, customer data, and approval limits as part of the role, not as setup after hiring.',
+    ],
+    sections: [
+      {
+        heading: 'Start with the work, then ask who manages it',
+        body: 'A provider can send resumes fast and still leave you with a messy hire. Start with the work list. Ask which tasks are safe for an offshore staff member on day one, which tasks need owner approval, and who checks the first two weeks of output. If the answer is vague, the provider is selling labor instead of a managed staffing plan.',
+      },
+      {
+        heading: 'Ask for the real quality loop',
+        body: 'Quality control should be boring and visible. You want a named reviewer, a weekly scorecard, and a simple way to flag misses. For customer support, that may mean ticket samples and response checks. For admin work, it may mean inbox labels, calendar rules, and a daily done list. For finance support, it should include approval limits and restricted access.',
+      },
+      {
+        heading: 'Check replacement coverage before you need it',
+        body: 'Bad fit happens. The provider should explain how replacement works, how long it usually takes, and what happens to your notes, SOPs, and tool access if a person changes. This matters more than a polished pitch deck. A clean replacement rule protects the business owner from starting over from memory.',
+      },
+    ],
+    comparison: [
+      { topic: 'Screening', weak: '"We have many candidates."', strong: '"Here is how we screen for this role, schedule, and tool stack."' },
+      { topic: 'Quality', weak: '"You can manage them directly."', strong: '"Here is the weekly scorecard and escalation path."' },
+      { topic: 'Access', weak: '"Give them the tools they need."', strong: '"Start with limited permissions and named approval rules."' },
+      { topic: 'Replacement', weak: '"We can replace if needed."', strong: '"This is the replacement window and handoff process."' },
+    ],
+    quoteScript: '"Before we choose a person, can you show me the first two weeks of management? I want to see the scorecard, access limits, replacement rule, and who reviews the work if quality slips."',
+    sources: [
+      { name: 'NIST Cybersecurity Framework 2.0', url: 'https://www.nist.gov/cyberframework', note: 'Useful for access, identity, and risk conversations when offshore staff need business systems.' },
+      { name: 'FTC Safeguards Rule', url: 'https://www.ftc.gov/business-guidance/privacy-security/safeguards-rule', note: 'A plain reminder that some customer and financial data needs written safeguards, not casual sharing.' },
+      { name: 'Microsoft identity security best practices', url: 'https://learn.microsoft.com/en-us/security/zero-trust/deploy/identity', note: 'Helpful background for least-privilege access and account controls.' },
+    ],
+    faqs: [
+      { q: 'Should I ask about price first?', a: 'Ask about scope and management first. Price only makes sense after the provider knows the role, hours, tools, and quality checks.' },
+      { q: 'What is a red flag in an offshore provider call?', a: 'A provider who cannot explain screening, replacement, access controls, or who checks quality during the first two weeks is a risk.' },
+      { q: 'Do I need SOPs before hiring?', a: 'You do not need a perfect manual. You do need examples, approval rules, and a short list of tasks for the first week.' },
+    ],
+  },
+} as const;
+
 export const stats = [{label:'Typical savings target',value:'30-60%',note:'depends on role, management, and local hiring plan'},{label:'Best pilot length',value:'14 days',note:'enough time to test quality before scaling'},{label:'Start with',value:'5-10 tasks',note:'clear recurring tasks beat vague job descriptions'}] as const;
 
 export const stealthOffer = {
