@@ -16,52 +16,82 @@ export const site = {
 } as const;
 export const services = [
   {
-    "slug": "operations-support",
-    "title": "Operations Support",
-    "desc": "Operations Support for teams using offshore resourcing with clear SOPs, weekly review, and measurable handoffs."
+    slug: 'operations-support',
+    title: 'Operations Support',
+    desc: 'Keep recurring handoffs, queue updates, and routine follow-up moving without putting every check back on the owner.',
+    bestTasks: ['Update work queues and trackers', 'Prepare handoff notes and status reports', 'Follow documented steps for recurring requests'],
+    controls: ['Named owner for approvals', 'Daily record of completed work', 'Escalation rules for exceptions'],
+    firstWeek: ['Choose one queue to hand off', 'Share examples and access limits', 'Review a small batch together'],
   },
   {
-    "slug": "customer-support",
-    "title": "Customer Support",
-    "desc": "Customer Support for teams using offshore resourcing with clear SOPs, weekly review, and measurable handoffs."
+    slug: 'customer-support',
+    title: 'Customer Support',
+    desc: 'Add offshore coverage for routine tickets and customer follow-up while keeping refunds, exceptions, and sensitive cases with your team.',
+    bestTasks: ['Answer common questions from approved replies', 'Tag and route incoming tickets', 'Follow up on open requests'],
+    controls: ['Sample ticket reviews', 'Clear refund and credit limits', 'Escalation path for sensitive cases'],
+    firstWeek: ['Learn the help desk and reply library', 'Handle low-risk tickets in a test queue', 'Review replies before wider access'],
   },
   {
-    "slug": "admin-support",
-    "title": "Admin Support",
-    "desc": "Admin Support for teams using offshore resourcing with clear SOPs, weekly review, and measurable handoffs."
+    slug: 'admin-support',
+    title: 'Admin Support',
+    desc: 'Move calendar upkeep, inbox sorting, data entry, and document follow-up to a role with clear limits and review points.',
+    bestTasks: ['Sort inboxes using agreed labels', 'Update calendars and shared records', 'Prepare documents from approved templates'],
+    controls: ['Written calendar and inbox rules', 'Limited access to only the needed tools', 'Approval before sending sensitive messages'],
+    firstWeek: ['Start with one inbox or calendar', 'Work from real examples', 'Check the daily done list together'],
   },
   {
-    "slug": "reporting-and-qa",
-    "title": "Reporting and QA",
-    "desc": "Reporting and QA for teams using offshore resourcing with clear SOPs, weekly review, and measurable handoffs."
-  }
+    slug: 'reporting-and-qa',
+    title: 'Reporting and QA',
+    desc: 'Give managers a cleaner view of offshore work through sample checks, scorecard updates, and documented follow-up on misses.',
+    bestTasks: ['Pull weekly activity numbers', 'Check samples against a written rubric', 'Log errors and follow-up actions'],
+    controls: ['One scorecard with named measures', 'Manager review for disputed results', 'A record of fixes and repeat issues'],
+    firstWeek: ['Agree on what good work looks like', 'Score a small sample together', 'Set the first review date'],
+  },
 ] as const;
 export const blogPosts = [
   {
     "slug": "offshore-resourcing-planning",
-    "title": "Offshore Resourcing: What does it plan?",
-    "excerpt": "A plain-English guide to staffing details, scope, and hidden planning.",
+    "title": "How to plan an offshore role before you hire",
+    "excerpt": "Turn a loose task list into a role with clear hours, access limits, and review rules.",
     "minutes": 6
   },
   {
     "slug": "offshore-resourcing-tasks-to-outsource",
-    "title": "Offshore Resourcing: What tasks should you outsource first?",
-    "excerpt": "Start with recurring work that has examples and clear review rules.",
+    "title": "Which tasks should you outsource first?",
+    "excerpt": "Start with repeatable work that has examples, an owner, and a clear line for exceptions.",
     "minutes": 7
   },
   {
     "slug": "offshore-resourcing-provider-questions",
-    "title": "Offshore Resourcing: Questions to ask before hiring",
-    "excerpt": "Use these questions before you sign with a provider or freelancer.",
+    "title": "Questions to ask an offshore staffing provider",
+    "excerpt": "Ask how screening, quality checks, access, and replacement work before you sign.",
     "minutes": 8
   },
   {
     "slug": "offshore-resourcing-onboarding-checklist",
-    "title": "Offshore Resourcing: First week onboarding checklist",
-    "excerpt": "A simple checklist for tools, SOPs, calls, QA, and reporting.",
+    "title": "A practical first-week onboarding checklist",
+    "excerpt": "Set up tools, sample work, daily reviews, and approval limits before the role gets busy.",
     "minutes": 9
   }
 ] as const;
+
+export const guideBasics = {
+  'offshore-resourcing-planning': {
+    answer: 'Write the role around work that already exists. List the tasks, the tools used, the hours that need coverage, and the decisions that stay with your team. A provider can screen more accurately when those details are settled first.',
+    prepare: ['Five to ten tasks the person will handle often', 'Examples of finished work', 'Required hours and overlap', 'Tools and access limits'],
+    checks: ['Who owns the result?', 'What needs approval?', 'How will the first week be reviewed?', 'What would make this role a poor fit?'],
+  },
+  'offshore-resourcing-tasks-to-outsource': {
+    answer: 'Begin with work that repeats and is easy to check. Inbox sorting, record updates, routine ticket replies, and report preparation are usually safer starting points than work that depends on judgment or money decisions.',
+    prepare: ['A real example of the task', 'A short list of steps', 'The expected finish time', 'A rule for unusual cases'],
+    checks: ['Can a new person learn this from examples?', 'Can a manager check the result quickly?', 'Does the task involve payments or private data?', 'Who handles exceptions?'],
+  },
+  'offshore-resourcing-onboarding-checklist': {
+    answer: 'Keep the first week small. Give access only to the tools needed for the first tasks, review sample work early, and write down where the staff member must stop and ask for help.',
+    prepare: ['Accounts with limited permissions', 'Two or three sample tasks', 'A daily check-in time', 'Named contacts for questions'],
+    checks: ['Can the person find the current instructions?', 'Are approval limits written down?', 'Is completed work easy to see?', 'When will access and quality be reviewed?'],
+  },
+} as const;
 export const blogDetails = {
   'offshore-resourcing-provider-questions': {
     takeaways: [
@@ -103,27 +133,25 @@ export const blogDetails = {
   },
 } as const;
 
-export const stats = [{label:'Typical savings target',value:'30-60%',note:'depends on role, management, and local hiring plan'},{label:'Best pilot length',value:'14 days',note:'enough time to test quality before scaling'},{label:'Start with',value:'5-10 tasks',note:'clear recurring tasks beat vague job descriptions'}] as const;
-
 export const staffingOffer = {
-  partner: 'our staffing team',
-  promise: 'Get a managed offshore staffing plan built around the work you need removed from your plate.',
+  partner: 'a staffing partner',
+  promise: 'Get an offshore staffing plan based on the work you need handled.',
   fit: [
-    'business owners who need reliable remote staff but do not want to screen alone',
-    'teams that want trained support, backup coverage, and a clear manager path',
-    'companies that need help with admin, operations, customer support, calls, bookkeeping, development, or marketing work',
+    'business owners who need remote staff but do not want to screen candidates alone',
+    'teams that want backup coverage and a clear person to contact when work slips',
+    'companies hiring for admin, operations, customer support, calls, bookkeeping, development, or marketing work',
   ],
   included: [
-    'role planning call to turn your task list into a clear staffing scope',
+    'a role planning call that turns your task list into a clear staffing scope',
     'candidate matching based on skills, schedule, tools, and communication needs',
-    'onboarding guidance for SOPs, scorecards, reporting, and safe tool access',
-    'managed support so quality, attendance, and replacement questions do not sit only on the owner',
+    'help setting up instructions, scorecards, reporting, and safe tool access',
+    'a clear contact for quality, attendance, and replacement questions',
   ],
   proof: [
-    'clear task scope before hiring',
-    'weekly reporting rhythm',
-    'named accountability and escalation path',
-    'simple handoff plan for tools, SOPs, and quality checks',
+    'task scope agreed before hiring',
+    'a set time for weekly reporting',
+    'named owners for approvals and escalations',
+    'a written handoff for tools, instructions, and quality checks',
   ],
 } as const;
 
@@ -136,10 +164,10 @@ export const leadQuestions = [
 ] as const;
 
 export const staffingProcess = [
-  { step: '1', title: 'Map the role', body: 'We turn messy tasks into one clear role with outcomes, tools, limits, and a first-week checklist.' },
-  { step: '2', title: 'Match the staff', body: 'our staffing team can help match remote staff to the work, schedule, communication style, and skill level you need.' },
-  { step: '3', title: 'Launch with control', body: 'Start with SOPs, sample work, limited access, daily review, and a simple scorecard so quality is easy to see.' },
-  { step: '4', title: 'Scale what works', body: 'Once the first tasks are stable, add more work, better reporting, and stronger delegation without guessing.' },
+  { step: '1', title: 'Map the role', body: 'Turn the task list into one role with clear tools, limits, and a first-week checklist.' },
+  { step: '2', title: 'Match the staff', body: 'Compare candidates against the work, schedule, communication needs, and skill level.' },
+  { step: '3', title: 'Start small', body: 'Use sample work, limited access, and daily checks while the person learns the role.' },
+  { step: '4', title: 'Add work carefully', body: 'Hand over more tasks only after the first ones are accurate and easy to review.' },
 ] as const;
 
-export const staffingFitNote = 'Every staffing plan depends on role scope, schedule, skills, tools, and management needs. Send the role details and our staffing team can guide the best fit.';
+export const staffingFitNote = 'The right setup depends on the work, hours, tools, and level of manager support. Share those details so the follow-up team can point you toward a sensible fit.';

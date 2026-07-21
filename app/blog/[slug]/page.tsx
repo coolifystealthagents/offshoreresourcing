@@ -1,5 +1,5 @@
 import { Header, Footer, CTA, JsonLd } from '../../components';
-import { blogDetails, blogPosts, site } from '../../data';
+import { blogDetails, blogPosts, guideBasics, site } from '../../data';
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -15,6 +15,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const p = blogPosts.find((x) => x.slug === slug) || blogPosts[0];
   const details = blogDetails[slug as keyof typeof blogDetails];
+  const basics = guideBasics[slug as keyof typeof guideBasics];
   const siteUrl = `https://${site.domain.toLowerCase()}`;
   const articleUrl = `${siteUrl}/blog/${p.slug}`;
   const schema = {
@@ -131,29 +132,20 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 ))}
               </section>
             </>
-          ) : (
+          ) : basics ? (
             <div className="card">
               <h2>The short answer</h2>
-              <p>
-                Start with one role, a short task list, and a weekly scorecard. Do not outsource a
-                messy process until examples and rules are clear.
-              </p>
+              <p>{basics.answer}</p>
               <h2>What to prepare</h2>
               <ul>
-                <li>Task examples and sample replies</li>
-                <li>Tool access and permission rules</li>
-                <li>Daily output target</li>
-                <li>Escalation rules for anything sensitive</li>
+                {basics.prepare.map((item) => <li key={item}>{item}</li>)}
               </ul>
-              <h2>Questions to ask</h2>
+              <h2>Check these points</h2>
               <ul>
-                <li>Who screens the worker?</li>
-                <li>Who checks quality?</li>
-                <li>What happens if fit is poor?</li>
-                <li>How are passwords and customer data handled?</li>
+                {basics.checks.map((item) => <li key={item}>{item}</li>)}
               </ul>
             </div>
-          )}
+          ) : null}
         </article>
         <CTA />
       </main>
