@@ -15,38 +15,18 @@ export const site = {
   "badge": "Team bench"
 } as const;
 export const services = [
-  {
-    slug: 'operations-support',
-    title: 'Operations Support',
-    desc: 'Keep recurring handoffs, queue updates, and routine follow-up moving without putting every check back on the owner.',
-    bestTasks: ['Update work queues and trackers', 'Prepare handoff notes and status reports', 'Follow documented steps for recurring requests'],
-    controls: ['Named owner for approvals', 'Daily record of completed work', 'Escalation rules for exceptions'],
-    firstWeek: ['Choose one queue to hand off', 'Share examples and access limits', 'Review a small batch together'],
-  },
-  {
-    slug: 'customer-support',
-    title: 'Customer Support',
-    desc: 'Add offshore coverage for routine tickets and customer follow-up while keeping refunds, exceptions, and sensitive cases with your team.',
-    bestTasks: ['Answer common questions from approved replies', 'Tag and route incoming tickets', 'Follow up on open requests'],
-    controls: ['Sample ticket reviews', 'Clear refund and credit limits', 'Escalation path for sensitive cases'],
-    firstWeek: ['Learn the help desk and reply library', 'Handle low-risk tickets in a test queue', 'Review replies before wider access'],
-  },
-  {
-    slug: 'admin-support',
-    title: 'Admin Support',
-    desc: 'Move calendar upkeep, inbox sorting, data entry, and document follow-up to a role with clear limits and review points.',
-    bestTasks: ['Sort inboxes using agreed labels', 'Update calendars and shared records', 'Prepare documents from approved templates'],
-    controls: ['Written calendar and inbox rules', 'Limited access to only the needed tools', 'Approval before sending sensitive messages'],
-    firstWeek: ['Start with one inbox or calendar', 'Work from real examples', 'Check the daily done list together'],
-  },
-  {
-    slug: 'reporting-and-qa',
-    title: 'Reporting and QA',
-    desc: 'Give managers a cleaner view of offshore work through sample checks, scorecard updates, and documented follow-up on misses.',
-    bestTasks: ['Pull weekly activity numbers', 'Check samples against a written rubric', 'Log errors and follow-up actions'],
-    controls: ['One scorecard with named measures', 'Manager review for disputed results', 'A record of fixes and repeat issues'],
-    firstWeek: ['Agree on what good work looks like', 'Score a small sample together', 'Set the first review date'],
-  },
+  { slug: "talent-sourcing-support", title: "Talent Sourcing Support", desc: "Filipino resourcing specialists can handle talent sourcing support with documented workflows, approval limits, and owner review." },
+  { slug: "candidate-screening-coordination", title: "Candidate Screening Coordination", desc: "Filipino resourcing specialists can handle candidate screening coordination with documented workflows, approval limits, and owner review." },
+  { slug: "interview-scheduling", title: "Interview Scheduling", desc: "Filipino resourcing specialists can handle interview scheduling with documented workflows, approval limits, and owner review." },
+  { slug: "recruitment-administration", title: "Recruitment Administration", desc: "Filipino resourcing specialists can handle recruitment administration with documented workflows, approval limits, and owner review." },
+  { slug: "workforce-planning-support", title: "Workforce Planning Support", desc: "Filipino resourcing specialists can handle workforce planning support with documented workflows, approval limits, and owner review." },
+  { slug: "onboarding-coordination", title: "Onboarding Coordination", desc: "Filipino resourcing specialists can handle onboarding coordination with documented workflows, approval limits, and owner review." },
+  { slug: "training-administration", title: "Training Administration", desc: "Filipino resourcing specialists can handle training administration with documented workflows, approval limits, and owner review." },
+  { slug: "performance-reporting", title: "Performance Reporting", desc: "Filipino resourcing specialists can handle performance reporting with documented workflows, approval limits, and owner review." },
+  { slug: "schedule-coordination", title: "Schedule Coordination", desc: "Filipino resourcing specialists can handle schedule coordination with documented workflows, approval limits, and owner review." },
+  { slug: "people-operations-support", title: "People Operations Support", desc: "Filipino resourcing specialists can handle people operations support with documented workflows, approval limits, and owner review." },
+  { slug: "compliance-document-administration", title: "Compliance Document Administration", desc: "Filipino resourcing specialists can handle compliance document administration with documented workflows, approval limits, and owner review." },
+  { slug: "retention-program-support", title: "Retention Program Support", desc: "Filipino resourcing specialists can handle retention program support with documented workflows, approval limits, and owner review." },
 ] as const;
 export const blogPosts = [
   {
@@ -171,3 +151,6 @@ export const staffingProcess = [
 ] as const;
 
 export const staffingFitNote = 'The right setup depends on the work, hours, tools, and level of manager support. Share those details so the follow-up team can point you toward a sensible fit.';
+
+
+export const researchPosts: Array<{ slug: string; title: string; excerpt: string; body: string[] }> = [];
