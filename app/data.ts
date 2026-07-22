@@ -82,15 +82,24 @@ export const blogDetails = {
     sections: [
       {
         heading: 'Start with the work, then ask who manages it',
-        body: 'A provider can send resumes fast and still leave you with a messy hire. Start with the work list. Ask which tasks are safe for an offshore staff member on day one, which tasks need owner approval, and who checks the first two weeks of output. If the answer is vague, the provider is selling labor instead of a managed staffing plan.',
+        paragraphs: [
+          'A provider can send resumes fast and still leave you with a messy hire. Start with the work list, not a job title copied from another company.',
+          'Ask which tasks are safe for a Filipino staff member on day one, which tasks need owner approval, and who checks the first two weeks of output. A vague answer usually means you will have to build the management plan after hiring.',
+        ],
       },
       {
         heading: 'Ask for the real quality loop',
-        body: 'Quality control should be boring and visible. You want a named reviewer, a weekly scorecard, and a simple way to flag misses. For customer support, that may mean ticket samples and response checks. For admin work, it may mean inbox labels, calendar rules, and a daily done list. For finance support, it should include approval limits and restricted access.',
+        paragraphs: [
+          'Quality checks should be simple and visible. Ask who reviews the work, how often they review it, and where they record a missed step.',
+          'Customer support may use ticket samples and response checks, while admin work may use inbox rules and a daily done list. Finance support also needs written approval limits and restricted account access.',
+        ],
       },
       {
         heading: 'Check replacement coverage before you need it',
-        body: 'Bad fit happens. The provider should explain how replacement works, how long it usually takes, and what happens to your notes, SOPs, and tool access if a person changes. This matters more than a polished pitch deck. A clean replacement rule protects the business owner from starting over from memory.',
+        paragraphs: [
+          'A hire can be the wrong fit even after careful screening. Ask how replacement works, how long the search may take, and who keeps the role moving during the change.',
+          'Your notes, instructions, and account access should have a named owner throughout the handoff. A written replacement rule is more useful than a promise that the provider will handle it.',
+        ],
       },
     ],
     comparison: [
@@ -102,7 +111,7 @@ export const blogDetails = {
     quoteScript: '"Before we choose a person, can you show me the first two weeks of management? I want to see the scorecard, access limits, replacement rule, and who reviews the work if quality slips."',
     sources: [
       { name: 'NIST Cybersecurity Framework 2.0', url: 'https://www.nist.gov/cyberframework', note: 'Useful for access, identity, and risk conversations when offshore staff need business systems.' },
-      { name: 'FTC Safeguards Rule', url: 'https://www.ftc.gov/business-guidance/privacy-security/safeguards-rule', note: 'A plain reminder that some customer and financial data needs written safeguards, not casual sharing.' },
+      { name: 'FTC Safeguards Rule guidance', url: 'https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know', note: 'A plain reminder that some customer and financial data needs written safeguards, not casual sharing.' },
       { name: 'Microsoft identity security best practices', url: 'https://learn.microsoft.com/en-us/security/zero-trust/deploy/identity', note: 'Helpful background for least-privilege access and account controls.' },
     ],
     faqs: [
