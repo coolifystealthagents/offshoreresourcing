@@ -28,6 +28,35 @@ export const services = [
   { slug: "compliance-document-administration", title: "Compliance Document Administration", desc: "Filipino resourcing specialists can handle compliance document administration with documented workflows, approval limits, and owner review." },
   { slug: "retention-program-support", title: "Retention Program Support", desc: "Filipino resourcing specialists can handle retention program support with documented workflows, approval limits, and owner review." },
 ] as const;
+
+export const serviceDetails = {
+  'workforce-planning-support': {
+    summary: 'A Filipino workforce planning specialist can organize workload records, coverage notes, and draft staffing views for your manager. Your team still decides headcount, budget, overtime, hiring, and any exception that changes policy.',
+    bestTasks: [
+      'Combine approved hours, leave records, and workload forecasts in one planning sheet',
+      'Flag coverage gaps and prepare options for manager review',
+      'Keep role, schedule, and capacity records current after approved changes',
+      'Prepare a weekly summary of open roles, planned coverage, and unresolved questions',
+    ],
+    controls: [
+      'Managers approve headcount, hiring plans, overtime, and budget changes',
+      'The specialist works only from approved source records and named systems',
+      'Draft plans stay unpublished until the manager checks assumptions and exceptions',
+      'Access is limited to the workforce records needed for the assigned planning work',
+    ],
+    firstWeek: [
+      { title: 'Share the source records', body: 'Provide approved schedules, leave records, role lists, and one recent planning example.' },
+      { title: 'Build a draft view', body: 'The Filipino specialist prepares a planning sheet and marks missing or conflicting information.' },
+      { title: 'Review before use', body: 'The manager checks coverage, assumptions, and exceptions before any staffing decision is made.' },
+    ],
+    faqs: [
+      { q: 'Can the specialist decide how many people we need?', a: 'No. The specialist can prepare workload and coverage information, but your manager owns headcount and hiring decisions.' },
+      { q: 'What should we provide before the work starts?', a: 'Share approved schedules, leave records, role lists, workload data, and an example of the planning format your team already uses.' },
+      { q: 'Can this role approve overtime or leave?', a: 'No. A Filipino specialist can record approved changes and flag conflicts. Your authorized manager approves overtime, leave, and policy exceptions.' },
+    ],
+  },
+} as const;
+
 export const blogPosts = [
   {
     "slug": "offshore-resourcing-planning",
