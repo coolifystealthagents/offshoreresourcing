@@ -59,6 +59,12 @@ export const serviceDetails = {
 
 export const blogPosts = [
   {
+    "slug": "philippines-recruitment-coordinator-hiring-guide",
+    "title": "How to hire a Philippines recruitment coordinator",
+    "excerpt": "Build a clear recruiting support role for candidate records, interview schedules, follow-ups, and manager handoffs.",
+    "minutes": 12
+  },
+  {
     "slug": "offshore-resourcing-planning",
     "title": "How to plan an offshore role before you hire",
     "excerpt": "Turn a loose task list into a role with clear hours, access limits, and review rules.",
@@ -102,6 +108,123 @@ export const guideBasics = {
   },
 } as const;
 export const blogDetails = {
+  'philippines-recruitment-coordinator-hiring-guide': {
+    articleType: 'publisher',
+    shortAnswer: [
+      'A Philippines recruitment coordinator can keep candidate records clean, arrange interviews, send approved follow-ups, and prepare hiring updates. The hiring manager should still choose candidates, approve offers, and decide any exception to the written process.',
+      'The role works best when one manager owns the result and the coordinator has a narrow first-month task list. Give the coordinator approved message templates, limited system access, and a clear place to record every handoff.',
+    ],
+    takeaways: [
+      'Hire for careful follow-through, not for a vague promise to run all recruitment.',
+      'Test the real work with a scheduling and candidate-record sample before making a decision.',
+      'Keep candidate decisions, offer approval, and sensitive exceptions with your authorized manager.',
+      'Review queue age, record accuracy, and missed handoffs each week.',
+    ],
+    stats: [
+      { label: 'Labor force participation', value: 61.35, display: '61.35%', year: '2025', note: 'Share of the population age 15+ in the labor force, modeled ILO estimate.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.TLF.CACT.ZS?format=json&per_page=10' },
+      { label: 'Employment in services', value: 59.55, display: '59.55%', year: '2025', note: 'Share of total Philippine employment in services, modeled ILO estimate.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.SRV.EMPL.ZS?format=json&per_page=10' },
+      { label: 'Tertiary enrollment', value: 47.41, display: '47.41%', year: '2024', note: 'Gross tertiary enrollment ratio for the Philippines.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SE.TER.ENRR?format=json&per_page=10' },
+    ],
+    sections: [
+      {
+        heading: 'Start with a support role, not a catch-all recruiter',
+        paragraphs: [
+          'A recruitment coordinator handles the movement around a hiring decision. That includes opening approved requisitions, checking whether applications are complete, arranging interviews, sending approved reminders, and keeping the applicant tracking system current.',
+          'The role should not quietly absorb every people decision. Your hiring manager still defines the required experience, decides who advances, approves any assessment, checks references under company policy, and makes the final hiring call.',
+          'This split matters when the coordinator works from the Philippines and supports managers in another time zone. A written handoff point prevents a scheduling question from turning into an unauthorized promise to a candidate.',
+        ],
+      },
+      {
+        heading: 'Use national data as context, not as a hiring promise',
+        paragraphs: [
+          'The World Bank reports a 61.35 percent Philippine labor force participation share for 2025. It also reports that services accounted for 59.55 percent of employment in 2025, which gives buyers useful context for service-based support work.',
+          'The same database lists a 47.41 percent gross tertiary enrollment ratio for 2024. That number describes participation in tertiary education at the country level; it does not prove that a particular applicant has the writing, judgment, or system skills your role needs.',
+          'Country data can help you decide where to search, but the work sample still decides whether a person can do the job. Screen each applicant against the same role brief, examples, and pass rules instead of leaning on broad claims about Filipino talent.',
+        ],
+      },
+      {
+        heading: 'Write the role brief before you review applicants',
+        paragraphs: [
+          'A useful brief names the hiring lanes, systems, coverage hours, and decisions that stay with the manager. It also says how quickly the coordinator should acknowledge a new request and where an overdue handoff gets flagged.',
+          'List the work by frequency instead of filling the brief with personality words. For example, the daily list may cover candidate status checks and interview changes, while the weekly list may cover an aging report and a meeting with each hiring manager.',
+          'State what the coordinator cannot do without approval. Common limits include changing selection criteria, rejecting an applicant for a new reason, promising a start date, sharing interview notes outside the approved group, or sending an offer.',
+        ],
+      },
+      {
+        heading: 'Test the work candidates will actually do',
+        paragraphs: [
+          'A short work sample tells you more than another general interview question. Give every finalist the same small packet: a fictional candidate list, two interviewer calendars, one cancellation, one missing document, and your approved message templates.',
+          'Ask the person to prepare a schedule, update the candidate statuses, draft two messages, and write a short note for the hiring manager. Remove real names and personal details so the exercise does not expose applicant information.',
+          'Score accuracy first. A polished message cannot make up for a double-booked interview, a missing time zone, or a candidate moved to the wrong stage.',
+        ],
+      },
+      {
+        heading: 'Build a daily queue that managers can see',
+        paragraphs: [
+          'The coordinator needs one source of truth for open interviews, candidate questions, and manager approvals. A shared queue should show the owner, next action, due time, current stage, and the last contact made.',
+          'Start each shift with changes that affect people today: cancellations, no replies, interviewer conflicts, and missing meeting links. Then handle new scheduling requests and record work before preparing the manager update.',
+          'End the shift with a short handoff. The note should name what moved, what is waiting for a manager, what may miss its date, and what the next coordinator or manager needs to do.',
+        ],
+      },
+      {
+        heading: 'Protect applicant data from the first screen',
+        paragraphs: [
+          'Candidate files may contain contact details, work history, interview notes, and identity records. Give the coordinator access only to the records needed for the assigned hiring lanes, and remove access when the work changes.',
+          'The Philippine Data Privacy Act sets rules for processing personal information, while the NIST Privacy Framework gives teams a practical way to identify and manage privacy risk. Your own legal and security owners should decide the controls that apply to your company and the places where it operates.',
+          'Use named accounts, multi-factor authentication, approved storage, and a written rule against downloading applicant files to personal devices. Keep interview notes factual and limit who can see them.',
+        ],
+      },
+      {
+        heading: 'Run the first month in small steps',
+        paragraphs: [
+          'During week one, let the coordinator observe one complete hiring lane and update sample records. The manager should check every schedule and candidate message before it goes out.',
+          'In week two, hand over live scheduling for a small set of roles while the manager reviews the queue each day. Add the weekly aging report only after candidate stages and handoffs stay accurate.',
+          'Weeks three and four can add more hiring lanes or a second manager if the first queue remains clean. Do not add reference checks, assessment administration, or access to more applicant files just because the calendar work looks good.',
+        ],
+      },
+      {
+        heading: 'Manage the role with a small weekly scorecard',
+        paragraphs: [
+          'A scorecard should help a manager find a problem, not reward activity for its own sake. Track records updated correctly, interviews arranged without avoidable conflict, overdue handoffs, and candidate messages sent from approved templates.',
+          'Review a small sample of records each week and discuss the misses with the coordinator. If the same mistake repeats, fix the instruction, access rule, or review step before adding more work.',
+          'Volume belongs beside quality, never above it. A coordinator who closes many tasks but loses candidate history or misses manager approvals creates more work than the dashboard shows.',
+        ],
+      },
+    ],
+    roleTable: [
+      { stage: 'New request', coordinator: 'Open the approved role record and check required fields.', manager: 'Approve the role brief, selection rules, and interview team.', proof: 'Complete requisition with one named owner.' },
+      { stage: 'Applicant review', coordinator: 'Check completeness and apply only written routing rules.', manager: 'Decide who advances and record the reason.', proof: 'Status and decision owner match the record.' },
+      { stage: 'Interview setup', coordinator: 'Confirm time zones, send the approved invite, and track replies.', manager: 'Choose interviewers and handle exceptions.', proof: 'Calendar, link, stage, and candidate message agree.' },
+      { stage: 'Follow-up', coordinator: 'Send approved reminders and flag overdue decisions.', manager: 'Give the decision and approve any custom reply.', proof: 'Next action, due date, and last contact are visible.' },
+      { stage: 'Close or handoff', coordinator: 'Update the final status and archive records under policy.', manager: 'Approve the outcome and any offer or rejection message.', proof: 'No open task, loose file, or unclear owner remains.' },
+    ],
+    expertQuote: {
+      text: 'Effective LMI analysis can improve education and training programmes to meet current and future industry skills needs. However, such LMI analysis for improved skills needs anticipation and matching requires reliable and comprehensive information,',
+      person: 'Khalid Hassan',
+      title: 'Director, ILO Country Office for the Philippines',
+      sourceName: 'International Labour Organization, February 17, 2023',
+      url: 'https://www.ilo.org/resource/article/maximizing-philippine-labour-market-intelligence-local-skills-needs',
+    },
+    banners: [
+      { eyebrow: 'Role scope', title: 'Turn the task list into a recruiting support brief.', body: 'Write the hiring lanes, systems, coverage hours, and approval limits before screening begins. The workforce planning guide gives you a simple place to start.', label: 'Plan the role', href: '/blog/offshore-resourcing-planning' },
+      { eyebrow: 'Service fit', title: 'Need help with interview scheduling?', body: 'Review the exact scheduling tasks a Filipino coordinator can own. Keep interviewer choice and hiring decisions with your manager.', label: 'See interview scheduling support', href: '/services/interview-scheduling' },
+      { eyebrow: 'First month', title: 'Set up the handoff before the queue gets busy.', body: 'Use limited access, sample work, and daily checks while the coordinator learns your process. Add work only after the first lane stays accurate.', label: 'Open the onboarding checklist', href: '/blog/offshore-resourcing-onboarding-checklist' },
+    ],
+    sources: [
+      { name: 'World Bank: Labor force participation, Philippines', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.TLF.CACT.ZS?format=json&per_page=10', note: '2025 value: 61.35 percent. Modeled ILO estimate for people age 15 and older.' },
+      { name: 'World Bank: Employment in services, Philippines', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.SRV.EMPL.ZS?format=json&per_page=10', note: '2025 value: 59.548 percent of total employment, shown as 59.55 percent in this guide.' },
+      { name: 'World Bank: School enrollment, tertiary, Philippines', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SE.TER.ENRR?format=json&per_page=10', note: '2024 gross enrollment ratio: 47.4135 percent, shown as 47.41 percent in this guide.' },
+      { name: 'International Labour Organization: Maximizing Philippine labour market intelligence for local skills needs', url: 'https://www.ilo.org/resource/article/maximizing-philippine-labour-market-intelligence-local-skills-needs', note: 'Source for Khalid Hassan’s exact statement about reliable labor market information and skills matching.' },
+      { name: 'Republic Act No. 10173, Data Privacy Act of 2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Full legal text used for the applicant-data boundary.' },
+      { name: 'NIST Privacy Framework', url: 'https://www.nist.gov/privacy-framework', note: 'Voluntary framework for identifying and managing privacy risk.' },
+    ],
+    faqs: [
+      { q: 'What can a Philippines recruitment coordinator handle?', a: 'The coordinator can maintain candidate records, arrange interviews, send approved reminders, prepare queue reports, and flag missing manager decisions. The exact scope should match your systems and written approval rules.' },
+      { q: 'Should the coordinator reject applicants?', a: 'The hiring manager should own selection decisions. A coordinator may record and send an approved decision, but should not create a new rejection reason or change the selection rules.' },
+      { q: 'How do I test a recruitment coordinator?', a: 'Use a short fictional scheduling exercise with calendars, candidate stages, a cancellation, and approved message templates. Score record accuracy, time-zone handling, message clarity, and the quality of the manager handoff.' },
+      { q: 'What should the weekly scorecard include?', a: 'Track record accuracy, avoidable scheduling conflicts, overdue handoffs, and use of approved messages. Review a sample of records so the score reflects the actual work.' },
+    ],
+  },
   'offshore-resourcing-provider-questions': {
     takeaways: [
       'Ask who owns quality before you ask about price.',
