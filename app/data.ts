@@ -63,32 +63,7 @@ export const blogPosts = [
     "title": "How to hire a Philippines recruitment coordinator",
     "excerpt": "Build a clear recruiting support role for candidate records, interview schedules, follow-ups, and manager handoffs.",
     "minutes": 12
-  },
-  {
-    "slug": "offshore-resourcing-planning",
-    "title": "How to plan an offshore role before you hire",
-    "excerpt": "Turn a loose task list into a role with clear hours, access limits, and review rules.",
-    "minutes": 6
-  },
-  {
-    "slug": "offshore-resourcing-tasks-to-outsource",
-    "title": "Which tasks should you outsource first?",
-    "excerpt": "Start with repeatable work that has examples, an owner, and a clear line for exceptions.",
-    "minutes": 7
-  },
-  {
-    "slug": "offshore-resourcing-provider-questions",
-    "title": "Questions to ask an offshore staffing provider",
-    "excerpt": "Ask how screening, quality checks, access, and replacement work before you sign.",
-    "minutes": 8
-  },
-  {
-    "slug": "offshore-resourcing-onboarding-checklist",
-    "title": "A practical first-week onboarding checklist",
-    "excerpt": "Set up tools, sample work, daily reviews, and approval limits before the role gets busy.",
-    "minutes": 9
-  }
-] as const;
+  },] as const;
 
 export const guideBasics = {
   'offshore-resourcing-planning': {
@@ -206,9 +181,9 @@ export const blogDetails = {
       url: 'https://www.ilo.org/resource/article/maximizing-philippine-labour-market-intelligence-local-skills-needs',
     },
     banners: [
-      { eyebrow: 'Role scope', title: 'Turn the task list into a recruiting support brief.', body: 'Write the hiring lanes, systems, coverage hours, and approval limits before screening begins. The workforce planning guide gives you a simple place to start.', label: 'Plan the role', href: '/blog/offshore-resourcing-planning' },
+      { eyebrow: 'Role scope', title: 'Turn the task list into a recruiting support brief.', body: 'Write the hiring lanes, systems, coverage hours, and approval limits before screening begins. The workforce planning guide gives you a simple place to start.', label: 'Plan the role', href: '/blog' },
       { eyebrow: 'Service fit', title: 'Need help with interview scheduling?', body: 'Review the exact scheduling tasks a Filipino coordinator can own. Keep interviewer choice and hiring decisions with your manager.', label: 'See interview scheduling support', href: '/services/interview-scheduling' },
-      { eyebrow: 'First month', title: 'Set up the handoff before the queue gets busy.', body: 'Use limited access, sample work, and daily checks while the coordinator learns your process. Add work only after the first lane stays accurate.', label: 'Open the onboarding checklist', href: '/blog/offshore-resourcing-onboarding-checklist' },
+      { eyebrow: 'First month', title: 'Set up the handoff before the queue gets busy.', body: 'Use limited access, sample work, and daily checks while the coordinator learns your process. Add work only after the first lane stays accurate.', label: 'Open the onboarding checklist', href: '/blog' },
     ],
     sources: [
       { name: 'World Bank: Labor force participation, Philippines', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.TLF.CACT.ZS?format=json&per_page=10', note: '2025 value: 61.35 percent. Modeled ILO estimate for people age 15 and older.' },
