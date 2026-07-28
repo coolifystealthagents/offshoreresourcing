@@ -1,0 +1,37 @@
+{
+  "assignments": {
+    "offshore-resourcing-alternatives": {
+      "concept": "candidate-records",
+      "path": "/images/thumbnails/offshore-resourcing-alternatives.webp"
+    },
+    "offshore-team-onboarding-controls": {
+      "concept": "document-workflow",
+      "path": "/images/thumbnails/offshore-team-onboarding-controls.webp"
+    },
+    "offshore-team-quality-scorecard": {
+      "concept": "handoff-lanes",
+      "path": "/images/thumbnails/offshore-team-quality-scorecard.webp"
+    },
+    "philippines-offshore-staffing-costs": {
+      "concept": "screening-checklist",
+      "path": "/images/thumbnails/philippines-offshore-staffing-costs.webp"
+    },
+    "philippines-services-workforce": {
+      "concept": "overlap-hours",
+      "path": "/images/thumbnails/philippines-services-workforce.webp"
+    },
+    "recruitment-coordinator-alternatives": {
+      "concept": "workforce-dashboard",
+      "path": "/images/thumbnails/recruitment-coordinator-alternatives.webp"
+    },
+    "talent-sourcing-alternatives": {
+      "concept": "interview-calendar",
+      "path": "/images/thumbnails/talent-sourcing-alternatives.webp"
+    },
+    "workforce-planning-alternatives": {
+      "concept": "operations-board",
+      "path": "/images/thumbnails/workforce-planning-alternatives.webp"
+    }
+  },
+  "library_version": 1
+}

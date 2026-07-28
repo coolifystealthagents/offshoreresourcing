@@ -1,0 +1,35 @@
+{
+  "brand": "Offshore Resourcing",
+  "library_version": 1,
+  "approved": true,
+  "approval_reference": "OFFAA-5 plan revision #1",
+  "canvas": {
+    "width": 1200,
+    "height": 630,
+    "format": "WEBP",
+    "quality": 90
+  },
+  "colors": {
+    "ink": "#111827",
+    "slate": "#475569",
+    "teal": "#14b8a6",
+    "white": "#ffffff",
+    "mist": "#f1f5f9"
+  },
+  "logo": "public/logo.svg",
+  "output_directory": "public/images/thumbnails",
+  "public_path_prefix": "/images/thumbnails",
+  "background_directory": "public/images/thumbnail-backgrounds",
+  "manifest": "thumbnail/assignments.json",
+  "concept_count": 30,
+  "concepts": [
+    "candidate-pipeline", "interview-calendar", "global-team-grid", "talent-map",
+    "screening-checklist", "onboarding-path", "workforce-dashboard", "role-scorecard",
+    "handoff-lanes", "coverage-clock", "recruitment-funnel", "people-network",
+    "document-workflow", "approval-gates", "skills-matrix", "remote-collaboration",
+    "candidate-records", "schedule-bridge", "quality-review", "sourcing-radar",
+    "team-bench", "process-blueprint", "capacity-planning", "compliance-files",
+    "retention-loop", "manager-handoff", "talent-shortlist", "operations-board",
+    "overlap-hours", "reliable-delivery"
+  ]
+}

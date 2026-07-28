@@ -5,7 +5,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 3000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate:content": "node scripts/validate-content.mjs",
+    "thumbnails:assign": "node scripts/assign-thumbnails.mjs",
+    "thumbnails:report": "node scripts/thumbnail-report.mjs",
+    "thumbnails:publish": "py -3 scripts/thumbnail_ops.py publish",
+    "thumbnails:sync-frontmatter": "py -3 scripts/thumbnail_ops.py sync-frontmatter"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",

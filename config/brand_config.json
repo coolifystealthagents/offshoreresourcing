@@ -1,0 +1,16 @@
+{
+  "brand": "Offshore Resourcing",
+  "width": 1200,
+  "height": 630,
+  "colors": ["#111827", "#475569", "#14b8a6", "#ffffff"],
+  "logo": "public/logo.svg",
+  "outputFormat": "webp",
+  "backgroundConcepts": [
+    "team-grid-01", "team-grid-02", "team-grid-03", "team-grid-04", "team-grid-05",
+    "workflow-01", "workflow-02", "workflow-03", "workflow-04", "workflow-05",
+    "talent-map-01", "talent-map-02", "talent-map-03", "talent-map-04", "talent-map-05",
+    "scorecard-01", "scorecard-02", "scorecard-03", "scorecard-04", "scorecard-05",
+    "handoff-01", "handoff-02", "handoff-03", "handoff-04", "handoff-05",
+    "operations-01", "operations-02", "operations-03", "operations-04", "operations-05"
+  ]
+}
