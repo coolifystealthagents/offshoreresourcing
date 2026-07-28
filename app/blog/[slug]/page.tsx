@@ -92,6 +92,19 @@ function QueueGraphic({ graphic }: { graphic: PublisherDetails['queueGraphic'] }
   </figure>;
 }
 
+function RelatedCards({ items }: { items: Array<{ label: string; href: string; description?: string }> }) {
+  const cards = items.slice(0, 3);
+  return <section className="card article-related-module" aria-labelledby="article-related-heading">
+    <h2 id="article-related-heading">Related content</h2>
+    <div className="article-related-grid">
+      {cards.map((item) => <a className="card article-related-card" href={item.href} key={item.href}>
+        <h3>{item.label}</h3>
+        <p>{item.description || item.label}</p>
+      </a>)}
+    </div>
+  </section>;
+}
+
 function PublisherArticle({ details }: { details: PublisherDetails }) {
   return <>
     <section className="card evidence-card">
@@ -150,8 +163,9 @@ function PublisherArticle({ details }: { details: PublisherDetails }) {
     <section className="article-section">
       <h2>{details.sections[5].heading}</h2>
       {details.sections[5].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-      <p>{details.relatedLinks.intro} {details.relatedLinks.items.map((item, index) => <span key={item.href}>{index > 0 ? ' ' : ''}<a href={item.href}>{item.label}</a>{index === details.relatedLinks.items.length - 1 ? '.' : ';'}</span>)}</p>
+      <p>{details.relatedLinks.intro}</p>
     </section>
+    <RelatedCards items={details.relatedLinks.items} />
     <section className="article-section">
       <h2>{details.sections[6].heading}</h2>
       {details.sections[6].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
