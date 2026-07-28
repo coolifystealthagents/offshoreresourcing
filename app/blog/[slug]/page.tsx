@@ -35,15 +35,16 @@ function ArticleBanner({ banner, position }: { banner: PublisherDetails['banners
   </aside>;
 }
 
-function WorkforceChart({ stats }: { stats: PublisherDetails['stats'] }) {
-  return <figure className="article-visual chart-visual" data-visual="workforce-context-chart">
+function WorkforceChart({ stats, chart }: { stats: PublisherDetails['stats']; chart: PublisherDetails['chart'] }) {
+  return <figure className="article-visual chart-visual" data-visual="workforce-context-chart" tabIndex={0} aria-label={`${chart.title}. Scroll horizontally to read the full chart on a small screen.`}>
     <figcaption>
-      <strong>Philippine workforce context</strong>
-      <span>Percent, latest year shown for each World Bank indicator</span>
+      <strong>{chart.title}</strong>
+      <span>{chart.subtitle}</span>
     </figcaption>
+    <p className="scroll-cue">Swipe sideways to see the full chart.</p>
     <svg viewBox="0 0 760 390" role="img" aria-labelledby="workforce-chart-title workforce-chart-desc">
-      <title id="workforce-chart-title">Three Philippine workforce indicators</title>
-      <desc id="workforce-chart-desc">Horizontal bars show labor force participation at 61.35 percent in 2025, services employment at 59.55 percent in 2025, and tertiary enrollment at 47.41 percent in 2024.</desc>
+      <title id="workforce-chart-title">{chart.title}</title>
+      <desc id="workforce-chart-desc">{stats.map((stat) => `${stat.label}: ${stat.display} in ${stat.year}`).join('; ')}.</desc>
       <g className="chart-grid">
         {[0, 20, 40, 60, 80, 100].map((tick) => <g key={tick}>
           <line x1={190 + tick * 5} y1="46" x2={190 + tick * 5} y2="314" />
@@ -59,25 +60,21 @@ function WorkforceChart({ stats }: { stats: PublisherDetails['stats'] }) {
         </g>;
       })}
     </svg>
-    <p className="method-note">Method note: Values come from the linked World Bank indicator series. Labor force participation and services employment are modeled ILO estimates; tertiary enrollment is a gross enrollment ratio. These country figures describe context, not the ability of an individual applicant.</p>
+    <p className="method-note">{chart.methodNote}</p>
   </figure>;
 }
 
-function QueueGraphic() {
-  const steps = [
-    { x: 34, label: 'New request', note: 'Check scope' },
-    { x: 210, label: 'Candidate record', note: 'Update stage' },
-    { x: 386, label: 'Interview', note: 'Confirm time zone' },
-    { x: 562, label: 'Manager handoff', note: 'Record decision' },
-  ];
-  return <figure className="article-visual queue-visual" data-visual="coordinator-queue-graphic">
+function QueueGraphic({ graphic }: { graphic: PublisherDetails['queueGraphic'] }) {
+  const steps = graphic.steps.map((step, index) => ({ ...step, x: 34 + index * 176 }));
+  return <figure className="article-visual queue-visual" data-visual="coordinator-queue-graphic" tabIndex={0} aria-label={`${graphic.title}. Scroll horizontally to read the full graphic on a small screen.`}>
     <figcaption>
-      <strong>A visible recruiting queue</strong>
-      <span>Each step ends with a record, owner, and next action</span>
+      <strong>{graphic.title}</strong>
+      <span>{graphic.subtitle}</span>
     </figcaption>
+    <p className="scroll-cue">Swipe sideways to see the full handoff graphic.</p>
     <svg viewBox="0 0 760 250" role="img" aria-labelledby="queue-title queue-desc">
-      <title id="queue-title">Recruitment coordinator queue from request to manager handoff</title>
-      <desc id="queue-desc">Four connected boxes show a new request, candidate record, interview, and manager handoff. The manager owns the hiring decision.</desc>
+      <title id="queue-title">{graphic.title}</title>
+      <desc id="queue-desc">{graphic.description}</desc>
       <defs>
         <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" /></marker>
       </defs>
@@ -89,9 +86,9 @@ function QueueGraphic() {
         <text className="queue-label" x={step.x + 16} y="124">{step.label}</text>
         <text className="queue-note" x={step.x + 16} y="148">{step.note}</text>
       </g>)}
-      <text className="queue-owner" x="380" y="215" textAnchor="middle">Manager owns selection, exceptions, and the final decision</text>
+      <text className="queue-owner" x="380" y="215" textAnchor="middle">{graphic.ownerNote}</text>
     </svg>
-    <p className="method-note">Use the same sequence in your applicant tracking system or shared queue. The tool matters less than a current stage, named owner, due time, and written next action.</p>
+    <p className="method-note">{graphic.methodNote}</p>
   </figure>;
 }
 
@@ -115,7 +112,7 @@ function PublisherArticle({ details }: { details: PublisherDetails }) {
       {details.sections[1].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
     </section>
 
-    <WorkforceChart stats={details.stats} />
+    <WorkforceChart stats={details.stats} chart={details.chart} />
     <ArticleBanner banner={details.banners[1]} position={2} />
 
     <section className="article-section">
@@ -124,12 +121,13 @@ function PublisherArticle({ details }: { details: PublisherDetails }) {
     </section>
 
     <section className="card role-table-card">
-      <h2>Recruiting work and decision boundaries</h2>
-      <p>Use this table to separate coordination from manager decisions. Change the proof column to match the records your team already keeps.</p>
-      <div className="role-table-scroll">
+      <h2>{details.table.title}</h2>
+      <p>{details.table.intro}</p>
+      <p className="scroll-cue">Swipe sideways to see every table column.</p>
+      <div className="role-table-scroll" tabIndex={0} aria-label="Talent role responsibility table. Scroll horizontally on a small screen.">
         <table className="role-table">
-          <caption>Recruitment coordinator responsibility table</caption>
-          <thead><tr><th>Stage</th><th>Coordinator handles</th><th>Manager owns</th><th>Proof to check</th></tr></thead>
+          <caption>{details.table.caption}</caption>
+          <thead><tr><th>Stage</th><th>Specialist handles</th><th>Manager owns</th><th>Proof to check</th></tr></thead>
           <tbody>{details.roleTable.map((row) => <tr key={row.stage}>
             <th scope="row">{row.stage}</th><td>{row.coordinator}</td><td>{row.manager}</td><td>{row.proof}</td>
           </tr>)}</tbody>
@@ -146,13 +144,13 @@ function PublisherArticle({ details }: { details: PublisherDetails }) {
       {details.sections[4].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
     </section>
 
-    <QueueGraphic />
+    <QueueGraphic graphic={details.queueGraphic} />
     <ArticleBanner banner={details.banners[2]} position={3} />
 
     <section className="article-section">
       <h2>{details.sections[5].heading}</h2>
       {details.sections[5].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-      <p>Read the <a href="/services/candidate-screening-coordination">candidate screening coordination</a> guide for a narrower screening lane. The <a href="/services/recruitment-administration">recruitment administration</a> page covers the records and handoffs around it.</p>
+      <p>{details.relatedLinks.intro} {details.relatedLinks.items.map((item, index) => <span key={item.href}>{index > 0 ? ' ' : ''}<a href={item.href}>{item.label}</a>{index === details.relatedLinks.items.length - 1 ? '.' : ';'}</span>)}</p>
     </section>
     <section className="article-section">
       <h2>{details.sections[6].heading}</h2>

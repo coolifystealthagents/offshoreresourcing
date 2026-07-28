@@ -63,6 +63,12 @@ export const blogPosts = [
     "title": "How to hire a Philippines recruitment coordinator",
     "excerpt": "Build a clear recruiting support role for candidate records, interview schedules, follow-ups, and manager handoffs.",
     "minutes": 12
+  },
+  {
+    "slug": "philippines-talent-sourcing-specialist-hiring-guide",
+    "title": "How to hire a Philippines talent sourcing specialist",
+    "excerpt": "Set up a focused sourcing role for search plans, candidate records, outreach drafts, and clean manager handoffs.",
+    "minutes": 13
   },] as const;
 
 export const guideBasics = {
@@ -100,6 +106,11 @@ export const blogDetails = {
       { label: 'Employment in services', value: 59.55, display: '59.55%', year: '2025', note: 'Share of total Philippine employment in services, modeled ILO estimate.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.SRV.EMPL.ZS?format=json&per_page=10' },
       { label: 'Tertiary enrollment', value: 47.41, display: '47.41%', year: '2024', note: 'Gross tertiary enrollment ratio for the Philippines.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SE.TER.ENRR?format=json&per_page=10' },
     ],
+    chart: {
+      title: 'Philippine workforce context',
+      subtitle: 'Percent, latest year shown for each World Bank indicator',
+      methodNote: 'Method note: Values come from the linked World Bank indicator series. Labor force participation and services employment are modeled ILO estimates; tertiary enrollment is a gross enrollment ratio. These country figures describe context, not the ability of an individual applicant.',
+    },
     sections: [
       {
         heading: 'Start with a support role, not a catch-all recruiter',
@@ -173,6 +184,31 @@ export const blogDetails = {
       { stage: 'Follow-up', coordinator: 'Send approved reminders and flag overdue decisions.', manager: 'Give the decision and approve any custom reply.', proof: 'Next action, due date, and last contact are visible.' },
       { stage: 'Close or handoff', coordinator: 'Update the final status and archive records under policy.', manager: 'Approve the outcome and any offer or rejection message.', proof: 'No open task, loose file, or unclear owner remains.' },
     ],
+    table: {
+      title: 'Recruiting work and decision boundaries',
+      intro: 'Use this table to separate coordination from manager decisions. Change the proof column to match the records your team already keeps.',
+      caption: 'Recruitment coordinator responsibility table',
+    },
+    queueGraphic: {
+      title: 'A visible recruiting queue',
+      subtitle: 'Each step ends with a record, owner, and next action',
+      description: 'Four connected boxes show a new request, candidate record, interview, and manager handoff. The manager owns the hiring decision.',
+      ownerNote: 'Manager owns selection, exceptions, and the final decision',
+      methodNote: 'Use the same sequence in your applicant tracking system or shared queue. The tool matters less than a current stage, named owner, due time, and written next action.',
+      steps: [
+        { label: 'New request', note: 'Check scope' },
+        { label: 'Candidate record', note: 'Update stage' },
+        { label: 'Interview', note: 'Confirm time zone' },
+        { label: 'Manager handoff', note: 'Record decision' },
+      ],
+    },
+    relatedLinks: {
+      intro: 'These pages explain the nearby recruiting handoffs. Read',
+      items: [
+        { label: 'candidate screening coordination', href: '/services/candidate-screening-coordination' },
+        { label: 'recruitment administration', href: '/services/recruitment-administration' },
+      ],
+    },
     expertQuote: {
       text: 'Effective LMI analysis can improve education and training programmes to meet current and future industry skills needs. However, such LMI analysis for improved skills needs anticipation and matching requires reliable and comprehensive information,',
       person: 'Khalid Hassan',
@@ -198,6 +234,154 @@ export const blogDetails = {
       { q: 'Should the coordinator reject applicants?', a: 'The hiring manager should own selection decisions. A coordinator may record and send an approved decision, but should not create a new rejection reason or change the selection rules.' },
       { q: 'How do I test a recruitment coordinator?', a: 'Use a short fictional scheduling exercise with calendars, candidate stages, a cancellation, and approved message templates. Score record accuracy, time-zone handling, message clarity, and the quality of the manager handoff.' },
       { q: 'What should the weekly scorecard include?', a: 'Track record accuracy, avoidable scheduling conflicts, overdue handoffs, and use of approved messages. Review a sample of records so the score reflects the actual work.' },
+    ],
+  },
+  'philippines-talent-sourcing-specialist-hiring-guide': {
+    articleType: 'publisher',
+    shortAnswer: [
+      'A Philippines talent sourcing specialist can turn an approved role brief into search strings, candidate lists, contact records, and outreach drafts. Your hiring manager should still set the job requirements, decide who advances, approve unusual messages, and make every hiring decision.',
+      'Keep the first search lane narrow enough to review by hand. Give the specialist a written target profile, named sources, a duplicate rule, approved contact wording, and one place to record why each person may fit.',
+    ],
+    takeaways: [
+      'Write the must-have work evidence before asking someone to search for candidates.',
+      'Judge a sample list by fit and record quality, not by the number of names.',
+      'Use approved sources and contact rules for every search lane.',
+      'Keep screening decisions and candidate promises with your hiring manager.',
+    ],
+    stats: [
+      { label: 'Labor force participation', value: 61.35, display: '61.35%', year: '2025', note: 'Share of the population age 15+ in the labor force, modeled ILO estimate.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.TLF.CACT.ZS?format=json&per_page=10' },
+      { label: 'Employment in services', value: 59.55, display: '59.55%', year: '2025', note: 'Share of total Philippine employment in services, modeled ILO estimate.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.SRV.EMPL.ZS?format=json&per_page=10' },
+      { label: 'Tertiary enrollment', value: 47.41, display: '47.41%', year: '2024', note: 'Gross tertiary enrollment ratio for the Philippines.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SE.TER.ENRR?format=json&per_page=10' },
+    ],
+    chart: {
+      title: 'Philippine workforce context for a sourcing plan',
+      subtitle: 'Percent, latest year shown for each World Bank indicator',
+      methodNote: 'Method note: Values come from the linked World Bank indicator series. Labor force participation and services employment are modeled ILO estimates; tertiary enrollment is a gross enrollment ratio. Use these country figures as search context, not as proof that one candidate fits a role.',
+    },
+    sections: [
+      {
+        heading: 'Define sourcing as research support',
+        paragraphs: [
+          'A talent sourcing specialist finds people who may match an approved role. The daily work can include building search strings, checking public work history, removing duplicates, recording source links, and drafting a first message from an approved template.',
+          'The specialist should not decide that a person is qualified just because a profile contains the right title. Your hiring manager owns the must-have criteria, reviews uncertain matches, chooses who enters screening, and decides what the company can promise.',
+          'This split is useful when the sourcer works from the Philippines and the hiring team sits in another time zone. The search can keep moving during agreed hours without turning a research task into an unsupervised hiring lane.',
+        ],
+      },
+      {
+        heading: 'Read national figures without turning them into claims',
+        paragraphs: [
+          'The World Bank reports Philippine labor force participation at 61.35 percent for 2025. Its services employment series puts services at 59.55 percent of total Philippine employment in 2025, which helps explain the broad setting for service support roles.',
+          'The World Bank also reports a 47.41 percent gross tertiary enrollment ratio for 2024. That is a country measure, so it cannot tell you whether a particular sourcer can understand a technical brief, check evidence, or write a careful candidate note.',
+          'Use public data to frame the search market, then test the actual work. A small research sample will show whether the person can follow criteria, cite the source of a profile, spot a missing fact, and leave a clean record for the manager.',
+        ],
+      },
+      {
+        heading: 'Turn the job request into a search brief',
+        paragraphs: [
+          'Start with the work that the new hire must perform in the first ninety days. Name the systems, shift overlap, writing level, required work evidence, and any condition that truly rules a person out.',
+          'Separate required evidence from useful extras. If the job needs monthly reconciliation work, for example, a profile should show that task or a close equivalent; a broad finance title alone should not earn a pass.',
+          'Add a stop rule for unclear profiles. The sourcer should mark the missing fact and send it to the manager instead of guessing a skill, location, notice period, or right to work.',
+        ],
+      },
+      {
+        heading: 'Test search judgment with one small assignment',
+        paragraphs: [
+          'Give each finalist the same fictional role brief and ask for five possible candidates from approved public sources. The exercise should require a source link, two lines of fit evidence, one open question, and a reason to leave out at least one tempting profile.',
+          'Score the result against the written brief before looking at presentation. A plain sheet with five defensible records is better than a polished list where titles replace evidence and source links are missing.',
+          'Check the search trail too. A good sourcer can explain which terms were too broad, which filters removed useful people, and what change produced a better set without pretending that every search worked.',
+        ],
+      },
+      {
+        heading: 'Keep source and contact records clean',
+        paragraphs: [
+          'Candidate records may contain names, contact details, work history, and notes about possible fit. The Philippine Data Privacy Act covers the processing of personal information, while your own privacy and legal owners must set the rules for every country where you recruit.',
+          'Use named accounts and approved sources, then store only the details needed for the search and hiring process. The record should show where the information came from, when it was checked, who can see it, and what happens when the search closes.',
+          'Do not let the sourcer copy profile data into personal files or build a private contact list. NIST Privacy Framework guidance can help your team map privacy risk, but your written retention and access rules need to say what staff should do each day.',
+        ],
+      },
+      {
+        heading: 'Run one queue from search to manager review',
+        paragraphs: [
+          'A sourcing queue should show the role, search lane, profile source, fit evidence, open question, current owner, and next action. One current record keeps a profile from being copied into several sheets or contacted twice by different people.',
+          'The specialist can clear obvious duplicates and records that miss a written requirement. Borderline profiles should go to a manager review column with the missing fact plainly stated, not a hidden guess added to the notes.',
+          'Close each shift with a short handoff that names new records, manager questions, search terms that failed, and any candidate message waiting for approval. The next person should be able to continue without reading a long chat history.',
+        ],
+      },
+      {
+        heading: 'Use a careful first-month ramp',
+        paragraphs: [
+          'During week one, let the specialist rebuild a completed search from a sample brief and compare the result with records your manager already reviewed. Check every source link, fit note, exclusion reason, and proposed outreach draft.',
+          'In week two, open one live search lane with a small daily review. Weeks three and four can add another role or approved source only after duplicate handling, evidence notes, and manager handoffs remain accurate.',
+          'Do not widen access simply because the list is growing. Keep candidate contact, screening questions, assessments, and offer details outside the role until your manager has written a reason and a review step for each new task.',
+        ],
+      },
+      {
+        heading: 'Review quality before search volume',
+        paragraphs: [
+          'A weekly scorecard should sample real records and compare them with the role brief. Track defensible matches, missing source links, duplicates, unsupported claims, overdue manager questions, and contact drafts that did not follow the approved wording.',
+          'Search volume can sit beside those checks, but it should not outrank them. A long list full of weak matches gives the screening team more work and hides whether the sourcer understood the role.',
+          'When the same miss appears twice, inspect the brief and the search rule before blaming effort. The fix may be a clearer example, a narrower must-have, a better exclusion rule, or a named manager who answers questions on time.',
+        ],
+      },
+    ],
+    roleTable: [
+      { stage: 'Role intake', coordinator: 'Turn approved criteria into a search checklist and record open questions.', manager: 'Approve must-haves, exclusions, target locations, and contact rules.', proof: 'One dated brief with a named owner.' },
+      { stage: 'Search setup', coordinator: 'Build search terms and use only approved public or licensed sources.', manager: 'Approve any new source or major change to the target profile.', proof: 'Saved search lane and source list.' },
+      { stage: 'Record review', coordinator: 'Add source links, fit evidence, missing facts, and duplicate checks.', manager: 'Decide whether uncertain profiles enter screening.', proof: 'Each record supports its fit note.' },
+      { stage: 'Outreach draft', coordinator: 'Prepare approved wording and flag any request for a custom message.', manager: 'Approve message rules, promises, and unusual replies.', proof: 'Template version and approval are visible.' },
+      { stage: 'Handoff', coordinator: 'Move reviewed records with their source trail and open questions.', manager: 'Own screening, candidate decisions, and next-stage communication.', proof: 'No loose record or unclear owner remains.' },
+    ],
+    table: {
+      title: 'Talent sourcing work and decision boundaries',
+      intro: 'Use this table to keep research tasks separate from hiring decisions. Match each proof item to the applicant tracking system or shared record your team already uses.',
+      caption: 'Talent sourcing specialist responsibility table',
+    },
+    queueGraphic: {
+      title: 'A source-to-review handoff',
+      subtitle: 'Every step leaves evidence for the next owner',
+      description: 'Four connected boxes show an approved role brief, a search lane, a candidate record, and manager review. The hiring manager owns screening and selection.',
+      ownerNote: 'Manager owns criteria, screening, exceptions, and selection',
+      methodNote: 'Method note: Keep the same record as a person moves through the queue. A source link, written fit evidence, current owner, and next action make the handoff reviewable.',
+      steps: [
+        { label: 'Role brief', note: 'Approve criteria' },
+        { label: 'Search lane', note: 'Record source' },
+        { label: 'Candidate record', note: 'Add evidence' },
+        { label: 'Manager review', note: 'Decide next step' },
+      ],
+    },
+    relatedLinks: {
+      intro: 'These pages explain the nearby sourcing handoffs. Read',
+      items: [
+        { label: 'talent sourcing support', href: '/services/talent-sourcing-support' },
+        { label: 'candidate screening coordination', href: '/services/candidate-screening-coordination' },
+        { label: 'workforce planning support', href: '/services/workforce-planning-support' },
+      ],
+    },
+    expertQuote: {
+      text: 'Effective LMI analysis can improve education and training programmes to meet current and future industry skills needs.',
+      person: 'Khalid Hassan',
+      title: 'Director, ILO Country Office for the Philippines',
+      sourceName: 'International Labour Organization, February 17, 2023',
+      url: 'https://www.ilo.org/resource/article/maximizing-philippine-labour-market-intelligence-local-skills-needs',
+    },
+    banners: [
+      { eyebrow: 'Role brief', title: 'Give the search a clear starting line.', body: 'Write the work evidence, search lanes, exclusions, and manager questions before the first profile is added. The sourcing service page can help you narrow that scope.', label: 'Review talent sourcing support', href: '/services/talent-sourcing-support' },
+      { eyebrow: 'Sample check', title: 'Test five records before opening a live queue.', body: 'Use one fictional brief, approved public sources, and the same scoring sheet for each finalist. Check evidence and source links before style.', label: 'See screening coordination', href: '/services/candidate-screening-coordination' },
+      { eyebrow: 'Manager handoff', title: 'Keep the final call with your hiring manager.', body: 'The specialist can prepare clean records and open questions. Your manager still sets criteria, chooses who advances, and approves every exception.', label: 'Open workforce planning support', href: '/services/workforce-planning-support' },
+    ],
+    sources: [
+      { name: 'World Bank: Labor force participation, Philippines', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.TLF.CACT.ZS?format=json&per_page=10', note: '2025 value: 61.35 percent. Modeled ILO estimate for people age 15 and older.' },
+      { name: 'World Bank: Employment in services, Philippines', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.SRV.EMPL.ZS?format=json&per_page=10', note: '2025 value: 59.548 percent of total employment, shown as 59.55 percent in this guide.' },
+      { name: 'World Bank: School enrollment, tertiary, Philippines', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SE.TER.ENRR?format=json&per_page=10', note: '2024 gross enrollment ratio: 47.4135 percent, shown as 47.41 percent in this guide.' },
+      { name: 'International Labour Organization: Maximizing Philippine labour market intelligence for local skills needs', url: 'https://www.ilo.org/resource/article/maximizing-philippine-labour-market-intelligence-local-skills-needs', note: 'Source for Khalid Hassan’s exact statement about labor market information and skills needs.' },
+      { name: 'Republic Act No. 10173, Data Privacy Act of 2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Full Philippine legal text used for the candidate-data boundary.' },
+      { name: 'NIST Privacy Framework', url: 'https://www.nist.gov/privacy-framework', note: 'Voluntary guidance for identifying and managing privacy risk.' },
+    ],
+    faqs: [
+      { q: 'What can a Philippines talent sourcing specialist handle?', a: 'The specialist can build searches from an approved brief, find possible candidates, remove duplicates, record source links, write fit notes, and prepare outreach drafts. Your manager should still decide who enters screening.' },
+      { q: 'How should I test a talent sourcer?', a: 'Give each finalist the same fictional role brief and ask for five records from approved sources. Score source quality, fit evidence, duplicate handling, open questions, and the reason for excluding one close but unsuitable profile.' },
+      { q: 'Should a sourcer contact candidates without review?', a: 'Use a written contact rule and approved templates. Your manager should approve any unusual message, promise, screening question, or change to the stated role.' },
+      { q: 'What belongs on the weekly scorecard?', a: 'Review a sample for supported matches, working source links, duplicates, missing facts, overdue manager questions, and use of approved messages. Keep search volume as context rather than the main quality measure.' },
     ],
   },
   'offshore-resourcing-provider-questions': {
