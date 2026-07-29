@@ -347,14 +347,23 @@ export default function ComparisonArticle() {
       </header>
 
       <article className={`${styles.shell} ${styles.body}`}>
-        <section className={styles.method}>
+        <section className={styles.method} id="how-to-use-this-list">
           <p className={styles.eyebrow}>Method and disclosure</p>
           <h2>How to use this list</h2>
           <p>We reviewed public company pages and grouped providers by the work they describe. For Offshore Resourcing, the first matches lean toward offshore staffing and resourcing; later entries are labeled as adjacent options for wider roles. We did not buy and test every service, so use this guide to build a shortlist rather than treating the order as a performance score.</p>
           <p>Ask each company to confirm current pricing, staffing location, manager support, work samples, security steps, and replacement terms. Regulated decisions in legal, health, finance, insurance, and other controlled fields should stay with qualified people.</p>
         </section>
 
-        <nav className={styles.jump} aria-label="Article sections"><a href="#company-list">See all {companies.length}</a><a href="#buyer-checklist">Buyer checklist</a><a href="#questions">Questions</a></nav>
+        <nav className={styles.jump} aria-labelledby="table-of-contents-heading">
+          <h2 id="table-of-contents-heading">Table of contents</h2>
+          <ol>
+            <li><a href="#how-to-use-this-list">How to use this list</a></li>
+            <li><a href="#company-list">{companies.length} companies, niches, and buyer benefits</a></li>
+            <li><a href="#buyer-checklist">What to verify before you sign</a></li>
+            <li><a href="#questions">Questions buyers ask</a></li>
+            <li><a href="#build-your-shortlist">Build your shortlist</a></li>
+          </ol>
+        </nav>
 
         <section id="company-list">
           <p className={styles.eyebrow}>The company list</p>
@@ -378,7 +387,7 @@ export default function ComparisonArticle() {
         </section>
 
         <section className={styles.faq} id="questions"><p className={styles.eyebrow}>Common questions</p><h2>Questions buyers ask</h2>{faqs.map(faq => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</section>
-        <section className={styles.cta}><p className={styles.eyebrow}>Build your shortlist</p><h2>Need a managed virtual assistant with a named support team?</h2><p>Share the work, hours, tools, and quality checks you need. Stealth Agents can help map the role and explain the matching process.</p><a href="/contact">Talk with the team</a></section>
+        <section className={styles.cta} id="build-your-shortlist"><p className={styles.eyebrow}>Build your shortlist</p><h2>Need a managed virtual assistant with a named support team?</h2><p>Share the work, hours, tools, and quality checks you need. Stealth Agents can help map the role and explain the matching process.</p><a href="/contact">Talk with the team</a></section>
       </article>
     </main>
     <Footer />
