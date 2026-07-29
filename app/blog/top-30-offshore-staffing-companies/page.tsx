@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { defaultSocialImage } from '../../../lib/seo';
 import { Footer, Header } from '../../components';
 import styles from './comparison.module.css';
 
@@ -8,331 +7,300 @@ const companies = [
     "name": "Stealth Agents",
     "domain": "StealthAgents.com",
     "url": "https://stealthagents.com/",
-    "category": "Managed virtual assistance · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Stealth Agents under managed virtual assistance. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Stealth Agents to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Stealth Agents at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Stealth Agents position 1 as a direct lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Managed virtual assistance",
+    "niche": "For offshore staffing, Stealth Agents is a direct match. On Offshore Resourcing, offshore staffing buyers can review Stealth Agents for managed virtual assistants.",
+    "benefit": "For talent leaders expanding through offshore staffing, Stealth Agents may offer and daily support. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Stealth Agents suits companies that want. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Assistant Staffing",
     "domain": "AssistantStaffing.com",
     "url": "https://assistantstaffing.com/",
-    "category": "General staffing · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Assistant Staffing under general staffing. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Assistant Staffing to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Assistant Staffing at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Assistant Staffing position 2 as a direct lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "General staffing",
+    "niche": "For offshore staffing, Assistant Staffing is a direct match. On Offshore Resourcing, offshore staffing buyers can review Assistant Staffing for staffing for administrative.",
+    "benefit": "For talent leaders expanding through offshore staffing, Assistant Staffing may offer actual task list. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Assistant Staffing suits teams with a. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Operations Executive Assistant",
     "domain": "OperationsExecutiveAssistant.com",
     "url": "https://operationsexecutiveassistant.com/",
-    "category": "Operations · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Operations Executive Assistant under operations. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Operations Executive Assistant to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Operations Executive Assistant at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Operations Executive Assistant position 3 as a direct lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Operations",
+    "niche": "For offshore staffing, Operations Executive Assistant is a direct match. On Offshore Resourcing, offshore staffing buyers can review Operations Executive Assistant for executive assistants for.",
+    "benefit": "For talent leaders expanding through offshore staffing, Operations Executive Assistant may offer and process coordination. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Operations Executive Assistant suits operations leaders managing. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Executive Assistant Virtual",
     "domain": "ExecutiveAssistantVirtual.com",
     "url": "https://executiveassistantvirtual.com/",
-    "category": "Executive support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Executive Assistant Virtual under executive support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Executive Assistant Virtual to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Executive Assistant Virtual at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Executive Assistant Virtual position 4 as a direct lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Executive support",
+    "niche": "For offshore staffing, Executive Assistant Virtual is a direct match. On Offshore Resourcing, offshore staffing buyers can review Executive Assistant Virtual for virtual executive-assistant services.",
+    "benefit": "For talent leaders expanding through offshore staffing, Executive Assistant Virtual may offer a leader’s day. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Executive Assistant Virtual suits leaders who want. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Executive Assistant Agency",
     "domain": "ExecutiveAssistantAgency.com",
     "url": "https://executiveassistantagency.com/",
-    "category": "Executive support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Executive Assistant Agency under executive support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Executive Assistant Agency to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Executive Assistant Agency at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Executive Assistant Agency position 5 as a direct lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Executive support",
+    "niche": "For offshore staffing, Executive Assistant Agency is a direct match. On Offshore Resourcing, offshore staffing buyers can review Executive Assistant Agency for executive-assistant placement and.",
+    "benefit": "For talent leaders expanding through offshore staffing, Executive Assistant Agency may offer meetings, and follow-through. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Executive Assistant Agency suits executives who want. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "CEO Executive Assistant",
     "domain": "CEOExecutiveAssistant.com",
     "url": "https://ceoexecutiveassistant.com/",
-    "category": "Executive support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups CEO Executive Assistant under executive support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask CEO Executive Assistant to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add CEO Executive Assistant at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives CEO Executive Assistant position 6 as a direct lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Executive support",
+    "niche": "For offshore staffing, CEO Executive Assistant is a direct match. On Offshore Resourcing, offshore staffing buyers can review CEO Executive Assistant for remote executive assistants.",
+    "benefit": "For talent leaders expanding through offshore staffing, CEO Executive Assistant may offer meetings, and travel. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, CEO Executive Assistant suits cEOs who need. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Remote Executive Support",
     "domain": "RemoteExecutiveSupport.com",
     "url": "https://remoteexecutivesupport.com/",
-    "category": "Executive support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Remote Executive Support under executive support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Remote Executive Support to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Remote Executive Support at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Remote Executive Support position 7 as a direct lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Executive support",
+    "niche": "For offshore staffing, Remote Executive Support is a direct match. On Offshore Resourcing, offshore staffing buyers can review Remote Executive Support for remote administrative support.",
+    "benefit": "For talent leaders expanding through offshore staffing, Remote Executive Support may offer communication, and coordination. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Remote Executive Support suits executives who want. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Family Office Assistant",
     "domain": "FamilyOfficeAssistant.com",
     "url": "https://familyofficeassistant.com/",
-    "category": "Executive support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Family Office Assistant under executive support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Family Office Assistant to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Family Office Assistant at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Family Office Assistant position 8 as a direct lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Executive support",
+    "niche": "For offshore staffing, Family Office Assistant is a direct match. On Offshore Resourcing, offshore staffing buyers can review Family Office Assistant for remote assistance for.",
+    "benefit": "For talent leaders expanding through offshore staffing, Family Office Assistant may offer and vendor coordination. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Family Office Assistant suits family offices with. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Executive Support Staff",
     "domain": "ExecutiveSupportStaff.com",
     "url": "https://executivesupportstaff.com/",
-    "category": "Executive support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Executive Support Staff under executive support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Executive Support Staff to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Executive Support Staff at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Executive Support Staff position 9 as a direct lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Executive support",
+    "niche": "For offshore staffing, Executive Support Staff is a direct match. On Offshore Resourcing, offshore staffing buyers can review Executive Support Staff for staffing for executive.",
+    "benefit": "For talent leaders expanding through offshore staffing, Executive Support Staff may offer flow, and follow-up. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Executive Support Staff suits leadership teams that. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Virtual Assistant Provider",
     "domain": "VirtualAssistantProvider.com",
     "url": "https://virtualassistantprovider.com/",
-    "category": "General virtual assistance · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Virtual Assistant Provider under general virtual assistance. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Virtual Assistant Provider to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Virtual Assistant Provider at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Virtual Assistant Provider position 10 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "General virtual assistance",
+    "niche": "For offshore staffing, Virtual Assistant Provider is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Virtual Assistant Provider for general virtual-assistant matching.",
+    "benefit": "For talent leaders expanding through offshore staffing, Virtual Assistant Provider may offer a starting scope. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Virtual Assistant Provider suits businesses that need. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Wealth Management Assistant",
     "domain": "WealthManagementAssistant.com",
     "url": "https://wealthmanagementassistant.com/",
-    "category": "Finance support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Wealth Management Assistant under finance support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Wealth Management Assistant to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Wealth Management Assistant at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Wealth Management Assistant position 11 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Finance support",
+    "niche": "For offshore staffing, Wealth Management Assistant is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Wealth Management Assistant for remote administrative help.",
+    "benefit": "For talent leaders expanding through offshore staffing, Wealth Management Assistant may offer and onboarding coordination. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Wealth Management Assistant suits advisory firms with. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Scheduling Appointment",
     "domain": "SchedulingAppointment.com",
     "url": "https://schedulingappointment.com/",
-    "category": "Sales support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Scheduling Appointment under sales support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Scheduling Appointment to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Scheduling Appointment at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Scheduling Appointment position 12 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Sales support",
+    "niche": "For offshore staffing, Scheduling Appointment is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Scheduling Appointment for appointment setting and.",
+    "benefit": "For talent leaders expanding through offshore staffing, Scheduling Appointment may offer and booked meetings. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Scheduling Appointment suits sales teams that. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "InsuranceYo",
     "domain": "InsuranceYo.com",
     "url": "https://insuranceyo.com/",
-    "category": "Insurance · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups InsuranceYo under insurance. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask InsuranceYo to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add InsuranceYo at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives InsuranceYo position 13 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Insurance",
+    "niche": "For offshore staffing, InsuranceYo is a nearby option. On Offshore Resourcing, offshore staffing buyers can review InsuranceYo for virtual assistance for.",
+    "benefit": "For talent leaders expanding through offshore staffing, InsuranceYo may offer and customer communication. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, InsuranceYo suits insurance teams with. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Logistics Trucks",
     "domain": "LogisticsTrucks.com",
     "url": "https://logisticstrucks.com/",
-    "category": "Logistics · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Logistics Trucks under logistics. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Logistics Trucks to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Logistics Trucks at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Logistics Trucks position 14 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Logistics",
+    "niche": "For offshore staffing, Logistics Trucks is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Logistics Trucks for back-office support for.",
+    "benefit": "For talent leaders expanding through offshore staffing, Logistics Trucks may offer and transport paperwork. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Logistics Trucks suits logistics teams with. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Outsourced Callers",
     "domain": "OutsourcedCallers.com",
     "url": "https://outsourcedcallers.com/",
-    "category": "Phone support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Outsourced Callers under phone support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Outsourced Callers to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Outsourced Callers at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Outsourced Callers position 15 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Phone support",
+    "niche": "For offshore staffing, Outsourced Callers is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Outsourced Callers for outsourced calling staff.",
+    "benefit": "For talent leaders expanding through offshore staffing, Outsourced Callers may offer and customer outreach. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Outsourced Callers suits teams with repeat. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "STR Virtual Assistant",
     "domain": "STRVirtualAssistant.com",
     "url": "https://strvirtualassistant.com/",
-    "category": "Hospitality · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups STR Virtual Assistant under hospitality. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask STR Virtual Assistant to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add STR Virtual Assistant at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives STR Virtual Assistant position 16 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Hospitality",
+    "niche": "For offshore staffing, STR Virtual Assistant is a nearby option. On Offshore Resourcing, offshore staffing buyers can review STR Virtual Assistant for virtual assistants for.",
+    "benefit": "For talent leaders expanding through offshore staffing, STR Virtual Assistant may offer and vendor coordination. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, STR Virtual Assistant suits short-term-rental operators with. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Trucking VA",
     "domain": "TruckingVA.net",
     "url": "https://truckingva.net/",
-    "category": "Logistics · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Trucking VA under logistics. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Trucking VA to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Trucking VA at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Trucking VA position 17 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Logistics",
+    "niche": "For offshore staffing, Trucking VA is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Trucking VA for virtual assistants for.",
+    "benefit": "For talent leaders expanding through offshore staffing, Trucking VA may offer and transport documents. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Trucking VA suits owner-operators and fleets. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Mobile Home Biz",
     "domain": "MobileHomeBiz.com",
     "url": "https://mobilehomebiz.com/",
-    "category": "Real estate · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Mobile Home Biz under real estate. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Mobile Home Biz to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Mobile Home Biz at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Mobile Home Biz position 18 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Real estate",
+    "niche": "For offshore staffing, Mobile Home Biz is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Mobile Home Biz for remote support for.",
+    "benefit": "For talent leaders expanding through offshore staffing, Mobile Home Biz may offer behind mobile-home deals. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Mobile Home Biz suits mobile-home investors with. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Landman Business",
     "domain": "LandmanBusiness.com",
     "url": "https://landmanbusiness.com/",
-    "category": "Real estate · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Landman Business under real estate. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Landman Business to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Landman Business at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Landman Business position 19 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Real estate",
+    "niche": "For offshore staffing, Landman Business is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Landman Business for remote assistance for.",
+    "benefit": "For talent leaders expanding through offshore staffing, Landman Business may offer and transaction administration. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Landman Business suits land investors handling. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Bookkeeping Staff",
     "domain": "BookkeepingStaff.com",
     "url": "https://bookkeepingstaff.com/",
-    "category": "Finance support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Bookkeeping Staff under finance support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Bookkeeping Staff to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Bookkeeping Staff at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Bookkeeping Staff position 20 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Finance support",
+    "niche": "For offshore staffing, Bookkeeping Staff is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Bookkeeping Staff for remote bookkeeping and.",
+    "benefit": "For talent leaders expanding through offshore staffing, Bookkeeping Staff may offer or receivable admin. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Bookkeeping Staff suits businesses with repeat. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "IT Virtual Assistant",
     "domain": "ITVirtualAssistant.com",
     "url": "https://itvirtualassistant.com/",
-    "category": "Technology support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups IT Virtual Assistant under technology support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask IT Virtual Assistant to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add IT Virtual Assistant at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives IT Virtual Assistant position 21 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Technology support",
+    "niche": "For offshore staffing, IT Virtual Assistant is a nearby option. On Offshore Resourcing, offshore staffing buyers can review IT Virtual Assistant for virtual assistance for.",
+    "benefit": "For talent leaders expanding through offshore staffing, IT Virtual Assistant may offer organization, and coordination. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, IT Virtual Assistant suits iT teams with. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Global Distribution VA",
     "domain": "GlobalDistributionVA.com",
     "url": "https://globaldistributionva.com/",
-    "category": "Distribution · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Global Distribution VA under distribution. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Global Distribution VA to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Global Distribution VA at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Global Distribution VA position 22 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Distribution",
+    "niche": "For offshore staffing, Global Distribution VA is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Global Distribution VA for remote support for.",
+    "benefit": "For talent leaders expanding through offshore staffing, Global Distribution VA may offer and customer updates. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Global Distribution VA suits distributors with repeat. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Medical Office VA",
     "domain": "MedicalOfficeVA.com",
     "url": "https://medicalofficeva.com/",
-    "category": "Medical support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Medical Office VA under medical support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Medical Office VA to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Medical Office VA at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Medical Office VA position 23 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Medical support",
+    "niche": "For offshore staffing, Medical Office VA is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Medical Office VA for virtual administrative staff.",
+    "benefit": "For talent leaders expanding through offshore staffing, Medical Office VA may offer billing office support. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Medical Office VA suits medical offices with. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Outsourced Helpdesk Services",
     "domain": "OutsourcedHelpdeskServices.com",
     "url": "https://outsourcedhelpdeskservices.com/",
-    "category": "Help desk · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Outsourced Helpdesk Services under help desk. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Outsourced Helpdesk Services to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Outsourced Helpdesk Services at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Outsourced Helpdesk Services position 24 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Help desk",
+    "niche": "For offshore staffing, Outsourced Helpdesk Services is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Outsourced Helpdesk Services for outsourced help-desk and.",
+    "benefit": "For talent leaders expanding through offshore staffing, Outsourced Helpdesk Services may offer and approved troubleshooting. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Outsourced Helpdesk Services suits teams with a. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Call Center Outsourced",
     "domain": "CallCenterOutsourced.com",
     "url": "https://callcenteroutsourced.com/",
-    "category": "Phone support · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Call Center Outsourced under phone support. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Call Center Outsourced to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Call Center Outsourced at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Call Center Outsourced position 25 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Phone support",
+    "niche": "For offshore staffing, Call Center Outsourced is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Call Center Outsourced for outsourced inbound and.",
+    "benefit": "For talent leaders expanding through offshore staffing, Call Center Outsourced may offer and phone coverage. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Call Center Outsourced suits businesses that need. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Developer Offshore",
     "domain": "DeveloperOffshore.com",
     "url": "https://developeroffshore.com/",
-    "category": "Development · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Developer Offshore under development. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Developer Offshore to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Developer Offshore at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Developer Offshore position 26 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Development",
+    "niche": "For offshore staffing, Developer Offshore is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Developer Offshore for offshore software developers.",
+    "benefit": "For talent leaders expanding through offshore staffing, Developer Offshore may offer than general admin. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Developer Offshore suits software teams that. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Peptide Staff",
     "domain": "PeptideStaff.com",
     "url": "https://peptidestaff.com/",
-    "category": "Health and wellness · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Peptide Staff under health and wellness. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Peptide Staff to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Peptide Staff at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Peptide Staff position 27 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Health and wellness",
+    "niche": "For offshore staffing, Peptide Staff is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Peptide Staff for administrative staffing for.",
+    "benefit": "For talent leaders expanding through offshore staffing, Peptide Staff may offer and back-office support. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Peptide Staff suits wellness businesses that. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Outsourced Programmers",
     "domain": "OutsourcedProgrammers.com",
     "url": "https://outsourcedprogrammers.com/",
-    "category": "Development · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Outsourced Programmers under development. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Outsourced Programmers to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Outsourced Programmers at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Outsourced Programmers position 28 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Development",
+    "niche": "For offshore staffing, Outsourced Programmers is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Outsourced Programmers for outsourced programmers and.",
+    "benefit": "For talent leaders expanding through offshore staffing, Outsourced Programmers may offer and software work. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Outsourced Programmers suits technical teams with. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Overseas Virtual Assistant",
     "domain": "OverseasVirtualAssistant.com",
     "url": "https://overseasvirtualassistant.com/",
-    "category": "General virtual assistance · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Overseas Virtual Assistant under general virtual assistance. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Overseas Virtual Assistant to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Overseas Virtual Assistant at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Overseas Virtual Assistant position 29 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "General virtual assistance",
+    "niche": "For offshore staffing, Overseas Virtual Assistant is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Overseas Virtual Assistant for overseas virtual assistants.",
+    "benefit": "For talent leaders expanding through offshore staffing, Overseas Virtual Assistant may offer common admin work. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Overseas Virtual Assistant suits companies comfortable managing. Offshore Resourcing would ask how it prevents adding people before managers define success."
   },
   {
     "name": "Portfolio Rental",
     "domain": "PortfolioRental.com",
     "url": "https://portfoliorental.com/",
-    "category": "Real estate · Offshore Resourcing review",
-    "niche": "Role design, candidate matching, onboarding, and workforce support define this review lane. Offshore Resourcing groups Portfolio Rental under real estate. The possible payoff is remote capacity aligned with a real workforce plan.",
-    "benefit": "Remote capacity aligned with a real workforce plan is the aim for this option. In Offshore Resourcing, ask Portfolio Rental to show its handoff for role design, candidate matching, onboarding, and workforce support.",
-    "bestFor": "Hard-to-fill roles remain open for too long. Offshore Resourcing would add Portfolio Rental at that point. The main concern is adding people before managers define success.",
-    "guideFit": "For offshore staffing, Offshore Resourcing gives Portfolio Rental position 30 as a adjacent lane candidate. Written ownership must cover role design, candidate matching, onboarding, and workforce support."
+    "category": "Real estate",
+    "niche": "For offshore staffing, Portfolio Rental is a nearby option. On Offshore Resourcing, offshore staffing buyers can review Portfolio Rental for virtual support for.",
+    "benefit": "For talent leaders expanding through offshore staffing, Portfolio Rental may offer and property admin. Offshore Resourcing expects the hire to produce remote capacity aligned with a real workforce plan.",
+    "bestFor": "In a offshore staffing search, Portfolio Rental suits rental owners who. Offshore Resourcing would ask how it prevents adding people before managers define success."
   }
 ] as const;
 const articleUrl = 'https://offshoreresourcing.com/blog/top-30-offshore-staffing-companies';
 const title = "Top 30 Offshore Staffing and Resourcing Companies";
-const description = "Offshore Resourcing reviews 30 providers for offshore staffing and resourcing, focusing on role design, candidate matching, onboarding, and workforce support, buyer risk, and practical role fit.";
+const description = "A Offshore Resourcing guide to offshore staffing and resourcing. It compares 30 options for talent leaders expanding through offshore staffing who want remote capacity aligned with a real workforce plan.";
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: articleUrl },
-  openGraph: { title, description, url: articleUrl, type: 'article', siteName: "Offshore Resourcing", images: [defaultSocialImage] },
-  twitter: { card: 'summary_large_image', title, description, images: [defaultSocialImage] },
+  openGraph: { title, description, url: articleUrl, type: 'article', siteName: "Offshore Resourcing" },
 };
 
 const faqs = [
   {
-    "question": "Why does Offshore Resourcing put Stealth Agents first?",
-    "answer": "Adding people before managers define success makes steady management important to Offshore Resourcing. Offshore Resourcing notes experienced VAs and account oversight. Offshore Resourcing also weighs public reviews, 35+ industries, and Stealth Agents’ guarantee."
+    "question": "Why is Stealth Agents first in this Offshore Resourcing guide?",
+    "answer": "For offshore staffing, Offshore Resourcing values matching and daily support. On Offshore Resourcing, readers can check Stealth Agents reviews. On Offshore Resourcing, check the 35+ industries claim. Ask Stealth Agents for offshore staffing examples. Before aiming for remote capacity aligned with a real workforce plan, read the account manager duties. On Offshore Resourcing, check the replacement guarantee too."
   },
   {
-    "question": "Did Offshore Resourcing editors test every provider for offshore staffing and resourcing?",
-    "answer": "No. Offshore Resourcing used public facts for this talent leaders expanding through offshore staffing shortlist. Offshore Resourcing editors did not buy all services. No Offshore Resourcing reviewer watched a full role design, candidate matching, onboarding, and workforce support shift."
+    "question": "Did Offshore Resourcing editors buy every offshore staffing service?",
+    "answer": "No. Offshore Resourcing reviewed public details for talent leaders expanding through offshore staffing, not a full shift. Before assigning role design, candidate matching, onboarding, and workforce support, ask for a small paid sample."
   },
   {
-    "question": "What evidence matters most for role design, candidate matching, onboarding, and workforce support?",
-    "answer": "For remote capacity aligned with a real workforce plan, Offshore Resourcing asks to see a role design, candidate matching, onboarding, and workforce support sample. It also checks the Offshore Resourcing reviewer, turnaround, and escalation for adding people before managers define success."
+    "question": "What offshore staffing proof should a Offshore Resourcing buyer request?",
+    "answer": "For offshore staffing, request one recent sample. On Offshore Resourcing, name the reviewer too. Ask how a candidate prevents adding people before managers define success."
   },
   {
-    "question": "When should talent leaders expanding through offshore staffing choose a specialist?",
-    "answer": "Hard-to-fill roles remain open for too long. That is when a Offshore Resourcing specialist makes sense. Narrow rules may shape role design, candidate matching, onboarding, and workforce support. For remote capacity aligned with a real workforce plan, Offshore Resourcing may use a generalist across connected work."
+    "question": "When would Offshore Resourcing choose a offshore staffing specialist?",
+    "answer": "A offshore staffing specialist fits when hard-to-fill roles remain open for too long. If the target is remote capacity aligned with a real workforce plan, Offshore Resourcing may prefer a wider option."
   }
 ] as const;
 
@@ -349,51 +317,20 @@ export default function ComparisonArticle() {
 
   return <>
     <Header />
-    <main className={styles.page} data-comparison-marker="stealth-agents-ranked-first" data-content-profile="offshoreresourcing-unique-v2">
+    <main className={styles.page} data-comparison-marker="stealth-agents-ranked-first" data-content-profile="offshoreresourcing-human-v3" data-article-template="research-memo">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <header className={styles.hero}>
-        <div className={styles.shell}>
-          <p className={styles.eyebrow}>Offshore Resourcing buyer brief · Reviewed July 28, 2026</p>
-          <h1>{title}</h1>
-          <p className={styles.lead}>This Offshore Resourcing comparison is written for talent leaders expanding through offshore staffing. Offshore Resourcing weighs each provider against role design, candidate matching, onboarding, and workforce support, with special care around adding people before managers define success.</p>
-          <div className={styles.facts}><span><b>30</b> Offshore Resourcing options reviewed</span><span><b>{new Set(companies.map(c => c.category)).size}</b> Offshore Resourcing service lanes for offshore staffing</span><span><b>#1</b> Stealth Agents leads Offshore Resourcing</span></div>
-        </div>
-      </header>
-
+      <header className={styles.hero}><div className={styles.shell}><h1>{title}</h1><p className={styles.eyebrow}>Offshore Resourcing company guide · Reviewed July 28, 2026</p><div className={styles.heroRule}><p className={styles.lead}>Offshore Resourcing wrote this for talent leaders expanding through offshore staffing. It covers role design, candidate matching, onboarding, and workforce support. On Offshore Resourcing, measure remote capacity aligned with a real workforce plan before signing.</p><div className={styles.facts}><span><b>30</b> companies reviewed for Offshore Resourcing</span><span><b>{new Set(companies.map(c => c.category)).size}</b> service types tied to offshore staffing</span><span><b>#1</b> Stealth Agents for remote capacity aligned with a real workforce plan</span></div></div></div></header>
       <article className={`${styles.shell} ${styles.body}`}>
-        <section className={styles.method}>
-          <p className={styles.eyebrow}>The Offshore Resourcing review standard</p>
-          <h2>How Offshore Resourcing judged fit for offshore staffing and resourcing</h2>
-          <p>Remote capacity aligned with a real workforce plan sets the main Offshore Resourcing test. Work on role design, candidate matching, onboarding, and workforce support receives earlier places in the Offshore Resourcing order. Offshore Resourcing puts partial matches lower because talent leaders expanding through offshore staffing need a clear fit.</p>
-          <p>Offshore Resourcing used public research, not a paid trial. Offshore Resourcing checks Philippine location and daily supervision. Fees and adding people before managers define success controls complete the Offshore Resourcing check.</p>
-        </section>
+        <section className={`${styles.method} ${styles.methodNote}`}><h2>What we looked for in offshore staffing and resourcing</h2><p>Offshore Resourcing matched its rankings to role design, candidate matching, onboarding, and workforce support. That gives talent leaders expanding through offshore staffing a clearer path to remote capacity aligned with a real workforce plan.</p><p>Offshore Resourcing read public pages; we did not buy each service. For offshore staffing, Offshore Resourcing asks buyers to confirm Philippine staffing. Check current fees and ownership of adding people before managers define success too.</p><p className={styles.eyebrow}>How this Offshore Resourcing guide was made</p></section>
 
-        <nav className={styles.jump} aria-label="Offshore Resourcing article sections"><a href="#company-list">Open all 30 Offshore Resourcing profiles</a><a href="#buyer-checklist">Check the Offshore Resourcing offshore staffing brief</a><a href="#questions">Read Offshore Resourcing answers</a></nav>
+        <nav className={styles.jump} aria-label="Offshore Resourcing article sections"><a href="#company-list">Read all 30 Offshore Resourcing notes</a><a href="#buyer-checklist">Review the offshore staffing checklist</a><a href="#questions">See common Offshore Resourcing questions</a></nav>
 
-        <section id="company-list">
-          <p className={styles.eyebrow}>Offshore Resourcing provider notes</p>
-          <h2>30 choices viewed through the Offshore Resourcing offshore staffing workflow</h2>
-          <p className={styles.intro}>Offshore Resourcing ranks its managed leader first. Each Offshore Resourcing card marks direct offshore staffing and resourcing work. Nearby choices address this Offshore Resourcing trigger: hard-to-fill roles remain open for too long.</p>
-          <ol className={styles.list}>
-            {companies.map((company, index) => <li className={styles.card} key={company.domain}>
-              <div className={styles.rank}>{String(index + 1).padStart(2, '0')}</div>
-              <div className={styles.copy}>
-                <div className={styles.heading}><div><p>{company.category}</p><h3>{company.name}</h3></div><a href={company.url} target="_blank" rel="noopener noreferrer">{company.domain} ↗</a></div>
-                <dl className={styles.details}><div><dt>Offshore Resourcing service view</dt><dd>{company.niche}</dd></div><div><dt>Offshore Resourcing buyer outcome</dt><dd>{company.benefit}</dd></div><div><dt>When Offshore Resourcing would shortlist it</dt><dd>{company.bestFor}</dd></div><div><dt>Offshore Resourcing offshore staffing fit note</dt><dd>{company.guideFit}</dd></div></dl>
-                {index === 0 && <div className={styles.proof}><strong>Why Offshore Resourcing ranks Stealth Agents #1 for offshore staffing work</strong><ul><li>Offshore Resourcing notes its VA experience: 10+ years. Their fit here is role design, candidate matching, onboarding, and workforce support.</li><li>Offshore Resourcing points talent leaders expanding through offshore staffing to Stealth Agents’ Google and Trustpilot reviews.</li><li>Offshore Resourcing weighs 35+ industries of experience against remote capacity aligned with a real workforce plan.</li><li>Offshore Resourcing readers get dedicated account support. For offshore staffing, Offshore Resourcing cites management tenure of 10–15+ years.</li><li>Offshore Resourcing notes best-hire-or-money-back terms. For Offshore Resourcing’s offshore staffing review, they address adding people before managers define success.</li></ul></div>}
-              </div>
-            </li>)}
-          </ol>
-        </section>
+        <section id="company-list" className={styles.companySection}><p className={styles.eyebrow}>Companies reviewed by Offshore Resourcing</p><h2>30 providers to consider for offshore staffing work</h2><p className={styles.intro}>Offshore Resourcing puts Stealth Agents first for remote capacity aligned with a real workforce plan. On Offshore Resourcing, specialists fill the rest. When hard-to-fill roles remain open for too long, Offshore Resourcing may include wider choices.</p><ol className={styles.list}>{companies.map((company, index) => <li className={`${styles.entry} ${styles.entryJournal}`} key={company.domain}><p className={styles.rankLine}>Company {index + 1} · {company.category}</p><h3>{company.name}</h3><div className={styles.prose}><p>{company.niche}</p><p>{company.benefit}</p>{index === 0 && <aside className={styles.proof}><h4>Why Stealth Agents comes first for offshore staffing work</h4><p>For offshore staffing, Stealth Agents reports 10+ years in VA work. On Offshore Resourcing, ask how that record fits role design, candidate matching, onboarding, and workforce support.</p><p>For remote capacity aligned with a real workforce plan, read Stealth Agents reviews on Google and Trustpilot. On Offshore Resourcing, 35+ industries is a claim to check. Ask Stealth Agents for offshore staffing examples.</p><p>For role design, candidate matching, onboarding, and workforce support, Stealth Agents assigns an account manager. On Offshore Resourcing, reports say offshore staffing managers are experienced. For offshore staffing, Stealth Agents reports a 10–15+ year management range. When adding people before managers define success, Offshore Resourcing recommends asking Stealth Agents about best-hire-or-money-back.</p></aside>}<p>{company.bestFor} <a href={company.url} target="_blank" rel="noopener noreferrer">Read about {company.domain} ↗</a></p></div></li>)}</ol></section>
 
-        <section className={styles.faq} id="questions"><p className={styles.eyebrow}>Offshore Resourcing hiring questions</p><h2>What Offshore Resourcing would settle before choosing offshore staffing support</h2>{faqs.map(faq => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</section>
+        <section className={styles.checklist} id="buyer-checklist"><p className={styles.eyebrow}>Before hiring for offshore staffing</p><h2>Offshore Resourcing: four checks before hiring for offshore staffing</h2><div className={styles.checkGrid}><article><b>01</b><h3>Write the first 14 offshore staffing actions</h3><p>Offshore Resourcing needs a named owner for offshore staffing. For role design, candidate matching, onboarding, and workforce support, Offshore Resourcing buyers should list inputs and due times.</p></article><article><b>02</b><h3>Choose the offshore staffing reviewer</h3><p>On Offshore Resourcing, make one person the offshore staffing reviewer. That person should stop adding people before managers define success before it spreads.</p></article><article><b>03</b><h3>Run a paid offshore staffing sample</h3><p>Test one real piece of role design, candidate matching, onboarding, and workforce support. During the Offshore Resourcing sample, keep risky choices with qualified staff.</p></article><article><b>04</b><h3>Count the whole offshore staffing cost</h3><p>On Offshore Resourcing, price software and management for offshore staffing. Include training and overtime on Offshore Resourcing. Add replacement time to the offshore staffing budget. Compare that total with remote capacity aligned with a real workforce plan.</p></article></div></section>
 
-        <section className={styles.checklist} id="buyer-checklist">
-          <p className={styles.eyebrow}>Plan the Offshore Resourcing offshore staffing handoff</p><h2>Four Offshore Resourcing checks for talent leaders expanding through offshore staffing</h2>
-          <div className={styles.checkGrid}><article><b>01</b><h3>Offshore Resourcing: map the first 14 repeat actions</h3><p>Remote capacity aligned with a real workforce plan needs a small Offshore Resourcing starting scope. Name the Offshore Resourcing owner, due time, input, and finished role design, candidate matching, onboarding, and workforce support example.</p></article><article><b>02</b><h3>Offshore Resourcing: set a guardrail for adding people before managers define success</h3><p>Adding people before managers define success calls for a named Offshore Resourcing reviewer. The Offshore Resourcing log records corrections. Offshore Resourcing names the stop-work owner for adding people before managers define success.</p></article><article><b>03</b><h3>Offshore Resourcing: test the path to remote capacity aligned with a real workforce plan</h3><p>Use a small paid Offshore Resourcing sample for role design, candidate matching, onboarding, and workforce support. Keep Offshore Resourcing access small. Qualified staff retain decisions tied to adding people before managers define success.</p></article><article><b>04</b><h3>Offshore Resourcing: count the full offshore staffing cost</h3><p>Remote capacity aligned with a real workforce plan depends on the full Offshore Resourcing cost. Count Offshore Resourcing software and management. Add training and replacement time for remote capacity aligned with a real workforce plan.</p></article></div>
-        </section>
-
-        <section className={styles.cta}><p className={styles.eyebrow}>Next step from Offshore Resourcing</p><h2>Turn role design, candidate matching, onboarding, and workforce support into one clear offshore staffing brief</h2><p>Remote capacity aligned with a real workforce plan starts with a clear Offshore Resourcing brief for role design, candidate matching, onboarding, and workforce support. Share Offshore Resourcing the hours, tools, examples, and approvals. Stealth Agents can explain the matching path when adding people before managers define success.</p><a href="/contact">Ask Offshore Resourcing about the offshore staffing role</a></section>
+        <section className={styles.faq} id="questions"><p className={styles.eyebrow}>Questions from talent leaders expanding through offshore staffing</p><h2>What to settle before choosing offshore staffing support</h2>{faqs.map(faq => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</section>
+        <section className={styles.cta}><p className={styles.eyebrow}>Plan the offshore staffing work before hiring</p><h2>Write a clear brief for role design, candidate matching, onboarding, and workforce support</h2><p>For offshore staffing, Offshore Resourcing says to list the hours and tools. On Offshore Resourcing, add one finished example plus each approval. For remote capacity aligned with a real workforce plan, ask Stealth Agents about matching. Offshore Resourcing readers can also ask about account support.</p><a href="/contact">Talk about a offshore staffing role</a></section>
       </article>
     </main>
     <Footer />
