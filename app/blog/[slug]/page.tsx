@@ -92,7 +92,7 @@ function QueueGraphic({ graphic }: { graphic: PublisherDetails['queueGraphic'] }
   </figure>;
 }
 
-function RelatedCards({ items }: { items: Array<{ label: string; href: string; description?: string }> }) {
+function RelatedCards({ items }: { items: ReadonlyArray<{ label: string; href: string; description?: string }> }) {
   const cards = items.slice(0, 3);
   return <section className="card article-related-module" aria-labelledby="article-related-heading">
     <h2 id="article-related-heading">Related content</h2>
