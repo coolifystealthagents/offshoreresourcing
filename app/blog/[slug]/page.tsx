@@ -217,7 +217,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'BlogPosting',
+        '@type': 'Article',
         headline: post.title,
         description: post.excerpt,
         url,
