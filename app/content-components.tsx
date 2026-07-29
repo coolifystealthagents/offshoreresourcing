@@ -67,7 +67,7 @@ export function ContentArticle({ document, related }: { document: ContentDocumen
       <h1>{document.title}</h1>
       <p className="lead">{document.description}</p>
       <div className="content-badges"><span>{document.category}</span>{document.type === 'research' && <span>{document.sourceCount} sources</span>}{document.alternativeType && <span>{document.alternativeType}</span>}</div>
-      <img className="content-hero" src={document.image} alt="" width="1200" height="630" />
+      <img className="content-hero" src={document.image} alt={`${document.title} article thumbnail`} width="1200" height="630" />
       <div className="content-layout">
         <aside className="content-toc"><strong>On this page</strong><ol>{document.headings.map((heading) => <li key={heading.id}><a href={`#${heading.id}`}>{heading.text}</a></li>)}</ol><a className="btn primary" href="/contact">Plan your offshore team</a></aside>
         <div><MarkdownBody body={document.body} /></div>
