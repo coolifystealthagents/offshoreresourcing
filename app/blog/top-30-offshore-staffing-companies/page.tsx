@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { defaultSocialImage } from '../../../lib/seo';
 import { Footer, Header } from '../../components';
 import styles from './comparison.module.css';
 
@@ -312,7 +313,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: articleUrl },
-  openGraph: { title, description, url: articleUrl, type: 'article', siteName: "Offshore Resourcing" },
+  openGraph: { title, description, url: articleUrl, type: 'article', siteName: "Offshore Resourcing", images: [defaultSocialImage] },
+  twitter: { card: 'summary_large_image', title, description, images: [defaultSocialImage] },
 };
 
 const faqs = [

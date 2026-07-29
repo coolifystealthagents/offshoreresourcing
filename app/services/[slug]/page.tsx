@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Header, Footer, CTA, JsonLd } from '../../components';
 import { serviceDetails, services, site } from '../../data';
+import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
 
@@ -18,7 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: service.title,
     description: service.desc,
     alternates: { canonical: url },
-    openGraph: { title: service.title, description: service.desc, url, type: 'website' },
+    openGraph: { title: service.title, description: service.desc, url, type: 'website', images: [defaultSocialImage] },
+    twitter: { card: 'summary_large_image', title: service.title, description: service.desc, images: [defaultSocialImage] },
   };
 }
 
