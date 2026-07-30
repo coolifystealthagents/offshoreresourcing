@@ -265,7 +265,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </section>)}
 
-          <section className="card">
+          <p className='article-source-note'><a href="https://www.ilo.org/global/topics/non-standard-employment/WCMS_534825/lang--en/index.htm" target="_blank" rel="noopener noreferrer">International Labour Organization guidance on remote work arrangements</a> reinforces why remote role briefs should document expectations, communication rhythms, and accountable handoffs.</p>
+          <p className='article-source-note'><a href='/contact-us'>Contact Us</a> to turn this article into a scoped Philippines-based staffing brief.</p><section className="card">
             <h2>Provider answer check</h2>
             <div className="comparison-table" role="table" aria-label="Weak and useful provider answers">
               <div className="comparison-row comparison-head" role="row"><span>Topic</span><span>Weak answer</span><span>Useful answer</span></div>

@@ -91,7 +91,7 @@ export default async function Service({ params }: { params: Promise<{ slug: stri
             <p className="eyebrow">Philippines-based service</p>
             <h1>{service.title}</h1>
             <p className="lead">{details?.summary ?? service.desc}</p>
-            <a className="btn primary" href="/contact">Discuss this role</a>
+            <a className="btn primary" href="/contact-us">Discuss this role</a>
           </div>
           <div className="support-strip">
             <h2>Built for a clear handoff</h2>
