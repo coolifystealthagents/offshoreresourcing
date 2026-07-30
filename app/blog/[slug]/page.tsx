@@ -251,7 +251,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <article className="container article-wrap">
         <p className="eyebrow">Philippines staffing guide · {post.minutes} min read</p>
         <h1>{post.title}</h1>
-        <p className="lead">{post.excerpt}</p>
+        <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
         {publisherDetails ? <PublisherArticle details={publisherDetails} /> : legacyDetails ? <>
           <section className="card evidence-card">
