@@ -386,7 +386,7 @@ export const blogDetails = {
   },
   'offshore-resourcing-provider-questions': {
     takeaways: [
-      'Ask who owns quality before you ask about price.',
+      'Ask who owns quality before you ask about terms.',
       'Get the replacement rule in writing before the first start date.',
       'Treat tool access, customer data, and approval limits as part of the role, not as setup after hiring.',
     ],
@@ -426,7 +426,7 @@ export const blogDetails = {
       { name: 'Microsoft identity security best practices', url: 'https://learn.microsoft.com/en-us/security/zero-trust/deploy/identity', note: 'Helpful background for least-privilege access and account controls.' },
     ],
     faqs: [
-      { q: 'Should I ask about price first?', a: 'Ask about scope and management first. Price only makes sense after the provider knows the role, hours, tools, and quality checks.' },
+      { q: 'Should I ask about terms first?', a: 'Ask about scope and management first. Commercial terms only make sense after the provider knows the role, hours, tools, and quality checks.' },
       { q: 'What is a red flag in an offshore provider call?', a: 'A provider who cannot explain screening, replacement, access controls, or who checks quality during the first two weeks is a risk.' },
       { q: 'Do I need SOPs before hiring?', a: 'You do not need a perfect manual. You do need examples, approval rules, and a short list of tasks for the first week.' },
     ],
