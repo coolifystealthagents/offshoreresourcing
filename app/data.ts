@@ -69,7 +69,28 @@ export const blogPosts = [
     "title": "How to hire a Philippines talent sourcing specialist",
     "excerpt": "Set up a focused sourcing role for search plans, candidate records, outreach drafts, and clean manager handoffs.",
     "minutes": 13
-  },] as const;
+  },
+  { slug: 'philippines-interview-scheduling-workflow', title: 'How to build a Philippines interview scheduling workflow', excerpt: 'Create a reliable scheduling lane with time zone checks, approved messages, and visible manager handoffs.', minutes: 9 },
+  { slug: 'philippines-recruitment-administration-checklist', title: 'Philippines recruitment administration checklist', excerpt: 'Use a practical checklist for requisitions, candidate records, approvals, and end-of-day recruiting handoffs.', minutes: 8 },
+  { slug: 'philippines-workforce-planning-support-guide', title: 'How to scope Philippines workforce planning support', excerpt: 'Define the records, planning views, and approval boundaries a workforce planning specialist can support.', minutes: 10 },
+  { slug: 'philippines-onboarding-coordinator-hiring-guide', title: 'How to hire a Philippines onboarding coordinator', excerpt: 'Plan onboarding coordination around access, equipment, training records, and manager-owned decisions.', minutes: 11 },
+  { slug: 'philippines-training-administration-workflow', title: 'Philippines training administration workflow', excerpt: 'Build a clear process for training schedules, attendance records, materials, and follow-up actions.', minutes: 8 },
+  { slug: 'philippines-performance-reporting-support', title: 'How to scope Philippines performance reporting support', excerpt: 'Create a reporting role that keeps metrics accurate while leaving performance decisions with managers.', minutes: 10 },
+  { slug: 'philippines-schedule-coordinator-hiring-guide', title: 'How to hire a Philippines schedule coordinator', excerpt: 'Test calendar accuracy, coverage judgment, change handling, and clean communication before hiring.', minutes: 10 },
+  { slug: 'philippines-people-operations-support-guide', title: 'Philippines people operations support guide', excerpt: 'Separate repeatable people operations administration from confidential decisions and policy ownership.', minutes: 9 },
+  { slug: 'philippines-compliance-document-administration', title: 'Philippines compliance document administration guide', excerpt: 'Set access, naming, review, and escalation rules for a compliance documentation support role.', minutes: 9 },
+  { slug: 'philippines-retention-program-support', title: 'How to scope Philippines retention program support', excerpt: 'Organize retention surveys, action logs, and follow-ups without outsourcing employee decisions.', minutes: 9 },
+  { slug: 'philippines-customer-support-coordinator-hiring', title: 'How to hire a Philippines customer support coordinator', excerpt: 'Define queue ownership, escalation rules, response quality checks, and the first-month ramp.', minutes: 11 },
+  { slug: 'philippines-admin-workflow-outsourcing-guide', title: 'Philippines admin workflow outsourcing guide', excerpt: 'Choose repeatable administrative work, document exceptions, and start with controlled system access.', minutes: 9 },
+  { slug: 'philippines-bookkeeping-support-role-scope', title: 'How to scope a Philippines bookkeeping support role', excerpt: 'Separate bookkeeping preparation from approvals, payment decisions, and accounting ownership.', minutes: 10 },
+  { slug: 'philippines-remote-team-handoff-checklist', title: 'Philippines remote team handoff checklist', excerpt: 'Use owners, due times, records, and escalation rules to keep work moving across time zones.', minutes: 8 },
+  { slug: 'philippines-offshore-role-scorecard-template', title: 'Philippines offshore role scorecard template', excerpt: 'Build a small scorecard that measures accuracy, queue health, handoffs, and quality before volume.', minutes: 9 },
+  { slug: 'philippines-offshore-staff-access-controls', title: 'Access controls for Philippines offshore staff', excerpt: 'Start with least privilege, named accounts, review dates, and clear rules for sensitive business data.', minutes: 10 },
+  { slug: 'philippines-offshore-staff-first-week-plan', title: 'First-week plan for Philippines offshore staff', excerpt: 'Make the first week measurable with sample work, limited access, daily review, and written questions.', minutes: 8 },
+  { slug: 'philippines-offshore-team-quality-review', title: 'How to review quality in a Philippines offshore team', excerpt: 'Use small work samples, documented misses, and clear owners to improve quality without guesswork.', minutes: 9 },
+  { slug: 'philippines-offshore-replacement-coverage-guide', title: 'Philippines offshore replacement coverage guide', excerpt: 'Prepare role notes, access ownership, and continuity steps before a replacement is ever needed.', minutes: 9 },
+  { slug: 'philippines-offshore-team-manager-handoff', title: 'Philippines offshore team manager handoff guide', excerpt: 'Make manager handoffs clear with decision logs, due times, queue ownership, and escalation rules.', minutes: 8 },
+] as const;
 
 export const guideBasics = {
   'offshore-resourcing-planning': {

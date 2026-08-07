@@ -297,10 +297,40 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <h2>The short answer</h2><p>{basics.answer}</p>
           <h2>What to prepare</h2><ul>{basics.prepare.map((item) => <li key={item}>{item}</li>)}</ul>
           <h2>Check these points</h2><ul>{basics.checks.map((item) => <li key={item}>{item}</li>)}</ul>
-        </div> : <div className="card fallback-guide">
-          <h2>Start with a defined role</h2><p>Write the recurring tasks, examples, tools, and approval boundaries before a Filipino specialist begins. This gives the role owner a practical basis for review.</p>
-          <h2>Review the workload</h2><p>Check completed work and open questions each week. Update the role notes when the process changes.</p>
-        </div>}
+        </div> : <>
+          <section className="card evidence-card">
+            <h2>The short answer</h2>
+            <p>{post.title} should begin with repeatable work, clear examples, named owners, and written approval limits. The role can prepare records and move an agreed queue, while your manager keeps decisions, exceptions, and sensitive access under review.</p>
+            <ul>
+              <li>Write the first-month task list before screening candidates.</li>
+              <li>Test the real work with a short fictional sample.</li>
+              <li>Start with limited access and add tasks only after quality is visible.</li>
+            </ul>
+          </section>
+          <section className="article-section">
+            <h2>Define the work and the handoff</h2>
+            <p>List daily, weekly, and occasional tasks in the order they happen. For each task, record the input, expected output, due time, system used, and the point where the staff member must stop and ask for help.</p>
+            <p>Connect the role to <a href="/services/recruitment-administration">recruitment administration support</a> when the work is record keeping and queue movement. If the work touches capacity or coverage, compare it with <a href="/services/workforce-planning-support">workforce planning support</a> and keep the manager's approval boundary explicit.</p>
+          </section>
+          <section className="article-section">
+            <h2>Test quality before adding volume</h2>
+            <p>Give each finalist the same small sample with one normal case, one missing detail, and one exception. Score accuracy, written reasoning, record hygiene, and the quality of the handoff. A polished answer should not hide an incorrect status or an unapproved decision.</p>
+            <p>Use <a href="https://www.nist.gov/privacy-framework" rel="noreferrer">NIST Privacy Framework guidance</a> as an authoritative starting point for discussing data access and privacy risk, then apply your own legal, security, and retention requirements to the role.</p>
+          </section>
+          <section className="article-section">
+            <h2>Run a controlled first month</h2>
+            <p>In week one, review sample work daily. In week two, assign one live queue with a named manager. In weeks three and four, add a second lane only if the first lane remains accurate and open questions are being escalated on time.</p>
+            <p>Track completed work beside quality checks: overdue items, avoidable rework, missing evidence, and unresolved handoffs. When the same miss repeats, improve the instruction or access rule before increasing the workload.</p>
+          </section>
+          <section className="card article-related-module">
+            <h2>Related Articles</h2>
+            <div className="article-related-grid">
+              <a className="card article-related-card" href="/blog/philippines-recruitment-coordinator-hiring-guide"><h3>Recruitment coordinator hiring guide</h3><p>Define scheduling, records, and manager handoffs.</p></a>
+              <a className="card article-related-card" href="/blog/philippines-talent-sourcing-specialist-hiring-guide"><h3>Talent sourcing specialist hiring guide</h3><p>Test search judgment and evidence quality.</p></a>
+              <a className="card article-related-card" href="/blog/philippines-offshore-staff-first-week-plan"><h3>First-week offshore staff plan</h3><p>Start small with access and daily checks.</p></a>
+            </div>
+          </section>
+        </>}
       </article>
       {!publisherDetails && <CTA />}
     </main>
