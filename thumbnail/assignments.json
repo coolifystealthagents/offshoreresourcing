@@ -1,8 +1,40 @@
 {
   "assignments": {
+    "article-performance-review-framework": {
+      "concept": "reliable-delivery",
+      "path": "/images/thumbnails/article-performance-review-framework.webp"
+    },
+    "content-brief-research-queue": {
+      "concept": "schedule-bridge",
+      "path": "/images/thumbnails/content-brief-research-queue.webp"
+    },
+    "knowledge-base-maintenance-routines": {
+      "concept": "global-team-grid",
+      "path": "/images/thumbnails/knowledge-base-maintenance-routines.webp"
+    },
+    "offshore-article-production-workflow": {
+      "concept": "compliance-files",
+      "path": "/images/thumbnails/offshore-article-production-workflow.webp"
+    },
+    "offshore-content-continuity-plan": {
+      "concept": "talent-map",
+      "path": "/images/thumbnails/offshore-content-continuity-plan.webp"
+    },
+    "offshore-content-qa-checklist": {
+      "concept": "remote-collaboration",
+      "path": "/images/thumbnails/offshore-content-qa-checklist.webp"
+    },
+    "offshore-editorial-review-sla": {
+      "concept": "onboarding-path",
+      "path": "/images/thumbnails/offshore-editorial-review-sla.webp"
+    },
     "offshore-resourcing-alternatives": {
       "concept": "candidate-records",
       "path": "/images/thumbnails/offshore-resourcing-alternatives.webp"
+    },
+    "offshore-seo-research-controls": {
+      "concept": "coverage-clock",
+      "path": "/images/thumbnails/offshore-seo-research-controls.webp"
     },
     "offshore-team-onboarding-controls": {
       "concept": "document-workflow",
@@ -23,6 +55,34 @@
     "recruitment-coordinator-alternatives": {
       "concept": "workforce-dashboard",
       "path": "/images/thumbnails/recruitment-coordinator-alternatives.webp"
+    },
+    "remote-content-calendar-controls": {
+      "concept": "talent-shortlist",
+      "path": "/images/thumbnails/remote-content-calendar-controls.webp"
+    },
+    "remote-research-team-capacity-planning": {
+      "concept": "skills-matrix",
+      "path": "/images/thumbnails/remote-research-team-capacity-planning.webp"
+    },
+    "remote-writer-handoff-controls": {
+      "concept": "sourcing-radar",
+      "path": "/images/thumbnails/remote-writer-handoff-controls.webp"
+    },
+    "research-brief-quality-gates": {
+      "concept": "manager-handoff",
+      "path": "/images/thumbnails/research-brief-quality-gates.webp"
+    },
+    "research-source-library-structure": {
+      "concept": "retention-loop",
+      "path": "/images/thumbnails/research-source-library-structure.webp"
+    },
+    "secure-remote-content-access": {
+      "concept": "team-bench",
+      "path": "/images/thumbnails/secure-remote-content-access.webp"
+    },
+    "source-verification-workflow": {
+      "concept": "approval-gates",
+      "path": "/images/thumbnails/source-verification-workflow.webp"
     },
     "talent-sourcing-alternatives": {
       "concept": "interview-calendar",
