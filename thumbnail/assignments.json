@@ -4,9 +4,41 @@
       "concept": "reliable-delivery",
       "path": "/images/thumbnails/article-performance-review-framework.webp"
     },
+    "content-accessibility-review": {
+      "concept": "role-scorecard",
+      "path": "/images/thumbnails/content-accessibility-review.webp"
+    },
+    "content-brief-handoff-checklist": {
+      "concept": "quality-review",
+      "path": "/images/thumbnails/content-brief-handoff-checklist.webp"
+    },
     "content-brief-research-queue": {
       "concept": "schedule-bridge",
       "path": "/images/thumbnails/content-brief-research-queue.webp"
+    },
+    "content-fact-checking-evidence-matrix": {
+      "concept": "recruitment-funnel",
+      "path": "/images/thumbnails/content-fact-checking-evidence-matrix.webp"
+    },
+    "content-performance-review-cadence": {
+      "concept": "process-blueprint",
+      "path": "/images/thumbnails/content-performance-review-cadence.webp"
+    },
+    "content-refresh-decision-rules": {
+      "concept": "candidate-pipeline",
+      "path": "/images/thumbnails/content-refresh-decision-rules.webp"
+    },
+    "content-risk-register": {
+      "concept": "capacity-planning",
+      "path": "/images/thumbnails/content-risk-register.webp"
+    },
+    "distributed-content-coverage-model": {
+      "concept": "people-network",
+      "path": "/images/thumbnails/distributed-content-coverage-model.webp"
+    },
+    "editorial-calendar-capacity-planning": {
+      "concept": "role-scorecard",
+      "path": "/images/thumbnails/editorial-calendar-capacity-planning.webp"
     },
     "knowledge-base-maintenance-routines": {
       "concept": "global-team-grid",
@@ -15,6 +47,10 @@
     "offshore-article-production-workflow": {
       "concept": "compliance-files",
       "path": "/images/thumbnails/offshore-article-production-workflow.webp"
+    },
+    "offshore-content-access-review": {
+      "concept": "global-team-grid",
+      "path": "/images/thumbnails/offshore-content-access-review.webp"
     },
     "offshore-content-continuity-plan": {
       "concept": "talent-map",
@@ -60,6 +96,10 @@
       "concept": "talent-shortlist",
       "path": "/images/thumbnails/remote-content-calendar-controls.webp"
     },
+    "remote-editorial-review-queue": {
+      "concept": "screening-checklist",
+      "path": "/images/thumbnails/remote-editorial-review-queue.webp"
+    },
     "remote-research-team-capacity-planning": {
       "concept": "skills-matrix",
       "path": "/images/thumbnails/remote-research-team-capacity-planning.webp"
@@ -72,9 +112,21 @@
       "concept": "manager-handoff",
       "path": "/images/thumbnails/research-brief-quality-gates.webp"
     },
+    "research-brief-version-control": {
+      "concept": "skills-matrix",
+      "path": "/images/thumbnails/research-brief-version-control.webp"
+    },
+    "research-intake-prioritization-framework": {
+      "concept": "retention-loop",
+      "path": "/images/thumbnails/research-intake-prioritization-framework.webp"
+    },
     "research-source-library-structure": {
       "concept": "retention-loop",
       "path": "/images/thumbnails/research-source-library-structure.webp"
+    },
+    "research-source-triangulation": {
+      "concept": "reliable-delivery",
+      "path": "/images/thumbnails/research-source-triangulation.webp"
     },
     "secure-remote-content-access": {
       "concept": "team-bench",
