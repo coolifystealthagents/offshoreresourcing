@@ -110,6 +110,30 @@ export const blogPosts = [
   { slug: 'philippines-authoritative-source-research-guide', title: 'Philippines authoritative source research guide', excerpt: 'Help researchers find primary and institutional sources that strengthen practical business articles.', minutes: 9 },
   { slug: 'philippines-content-team-replacement-coverage', title: 'Philippines content team replacement coverage guide', excerpt: 'Protect daily publishing with role notes, queue ownership, source records, and continuity steps.', minutes: 9 },
   { slug: 'philippines-daily-article-creation-routine', title: 'How to run a daily Philippines article creation routine', excerpt: 'Connect briefs, research, drafting, review, publishing, and evidence into one dependable daily rhythm.', minutes: 10 },
+  { slug: 'philippines-content-brief-approval-workflow', title: 'Philippines content brief approval workflow', excerpt: 'Set clear approval rules for intent, audience, sources, links, and the work a writer should begin.', minutes: 9 },
+  { slug: 'philippines-content-writer-brief-template', title: 'Philippines content writer brief template', excerpt: 'Give a writer the audience, search intent, evidence, structure, and review rules needed for a clean draft.', minutes: 9 },
+  { slug: 'philippines-blog-editor-review-queue', title: 'Philippines blog editor review queue', excerpt: 'Organize article reviews by risk, due date, source status, link checks, and the next accountable owner.', minutes: 9 },
+  { slug: 'philippines-content-source-log-workflow', title: 'Philippines content source log workflow', excerpt: 'Keep claims, URLs, access dates, notes, and unresolved questions together before an article reaches review.', minutes: 8 },
+  { slug: 'philippines-blog-content-brief-quality-check', title: 'Blog content brief quality check', excerpt: 'Use a short pre-draft check to catch unclear intent, thin evidence, weak differentiation, and missing internal links.', minutes: 8 },
+  { slug: 'philippines-content-draft-review-scorecard', title: 'Philippines content draft review scorecard', excerpt: 'Score accuracy, usefulness, structure, links, metadata, and revision discipline with one visible review record.', minutes: 9 },
+  { slug: 'philippines-daily-blog-queue-management', title: 'Philippines daily blog queue management', excerpt: 'Keep daily articles moving with intake rules, work-in-progress limits, review ownership, and exception notes.', minutes: 9 },
+  { slug: 'philippines-content-publishing-handoff-checklist', title: 'Philippines content publishing handoff checklist', excerpt: 'Pass a finished article to publishing with the right files, links, metadata, image, and approval evidence.', minutes: 8 },
+  { slug: 'philippines-blog-article-refresh-workflow', title: 'Philippines blog article refresh workflow', excerpt: 'Review older articles for changed facts, search intent, broken links, stale examples, and useful improvements.', minutes: 9 },
+  { slug: 'philippines-content-brief-search-intent-guide', title: 'Philippines content brief search intent guide', excerpt: 'Turn a query into a useful article angle by identifying the reader, decision, evidence, and next action.', minutes: 8 },
+  { slug: 'philippines-blog-internal-link-review', title: 'Philippines blog internal link review', excerpt: 'Choose two useful contextual links that support the reader without creating overlap or forcing a sales path.', minutes: 8 },
+  { slug: 'philippines-article-source-verification-checklist', title: 'Philippines article source verification checklist', excerpt: 'Check source authority, date, claim fit, link health, and the note a reviewer needs to repeat the check.', minutes: 9 },
+  { slug: 'philippines-content-editor-escalation-rules', title: 'Philippines content editor escalation rules', excerpt: 'Define when an editor can fix a draft, when a subject owner must decide, and how exceptions stay visible.', minutes: 8 },
+  { slug: 'philippines-blog-writer-quality-sample', title: 'Philippines blog writer quality sample', excerpt: 'Design a fair writing exercise that tests brief reading, evidence use, structure, links, and revision response.', minutes: 9 },
+  { slug: 'philippines-content-team-capacity-board', title: 'Philippines content team capacity board', excerpt: 'Match article commitments to research, writing, editing, approvals, and publishing capacity before setting dates.', minutes: 9 },
+  { slug: 'philippines-blog-article-brief-handoff', title: 'Philippines blog article brief handoff', excerpt: 'Move an approved brief between research and writing with owners, open questions, sources, and a dated next step.', minutes: 8 },
+  { slug: 'philippines-content-quality-exception-log', title: 'Philippines content quality exception log', excerpt: 'Record missed checks, decisions, owners, and fixes so recurring publication problems become easier to prevent.', minutes: 8 },
+  { slug: 'philippines-blog-fact-checking-role-scope', title: 'How to scope a Philippines blog fact-checking role', excerpt: 'Separate claim checking and source records from editorial judgment, legal advice, and final publication approval.', minutes: 9 },
+  { slug: 'philippines-content-operations-daily-standup', title: 'Philippines content operations daily standup', excerpt: 'Run a brief daily check around blocked work, review queues, source needs, due times, and clear ownership.', minutes: 8 },
+  { slug: 'philippines-blog-article-revision-workflow', title: 'Philippines blog article revision workflow', excerpt: 'Turn review notes into a controlled revision pass that preserves approved facts and closes each finding.', minutes: 8 },
+  { slug: 'philippines-content-metadata-publishing-checklist', title: 'Philippines content metadata publishing checklist', excerpt: 'Review titles, descriptions, canonical URLs, schema inputs, images, and index updates before publishing.', minutes: 8 },
+  { slug: 'philippines-blog-editor-manager-handoff', title: 'Philippines blog editor manager handoff', excerpt: 'Give the approving manager a concise record of the article, open decisions, sources, changes, and next action.', minutes: 8 },
+  { slug: 'philippines-content-calendar-approval-rules', title: 'Philippines content calendar approval rules', excerpt: 'Set a practical gate for topic fit, capacity, source readiness, owner availability, and changes to committed dates.', minutes: 8 },
+  { slug: 'philippines-daily-content-production-scorecard', title: 'Philippines daily content production scorecard', excerpt: 'Track article readiness, review quality, source completeness, handoff age, and exceptions without rewarding filler.', minutes: 9 },
 ] as const;
 
 export const guideBasics = {
@@ -129,6 +153,44 @@ export const guideBasics = {
     checks: ['Can the person find the current instructions?', 'Are approval limits written down?', 'Is completed work easy to see?', 'When will access and quality be reviewed?'],
   },
 } as const;
+
+const newBlogSlugs = [
+  'philippines-content-brief-approval-workflow', 'philippines-content-writer-brief-template', 'philippines-blog-editor-review-queue',
+  'philippines-content-source-log-workflow', 'philippines-blog-content-brief-quality-check', 'philippines-content-draft-review-scorecard',
+  'philippines-daily-blog-queue-management', 'philippines-content-publishing-handoff-checklist', 'philippines-blog-article-refresh-workflow',
+  'philippines-content-brief-search-intent-guide', 'philippines-blog-internal-link-review', 'philippines-article-source-verification-checklist',
+  'philippines-content-editor-escalation-rules', 'philippines-blog-writer-quality-sample', 'philippines-content-team-capacity-board',
+  'philippines-blog-article-brief-handoff', 'philippines-content-quality-exception-log', 'philippines-blog-fact-checking-role-scope',
+  'philippines-content-operations-daily-standup', 'philippines-blog-article-revision-workflow', 'philippines-content-metadata-publishing-checklist',
+  'philippines-blog-editor-manager-handoff', 'philippines-content-calendar-approval-rules', 'philippines-daily-content-production-scorecard',
+] as const;
+
+function makeBatchBlogDetails(slug: string) {
+  const topic = slug.replace(/^philippines-/, '').replace(/-/g, ' ');
+  const label = topic.charAt(0).toUpperCase() + topic.slice(1);
+  const sourceUrl = 'https://www.ilo.org/global/topics/labour-administration-inspection/resources-library/publications/WCMS_793281/lang--en/index.htm';
+  return {
+    articleType: 'publisher' as const,
+    shortAnswer: [`A useful ${topic} process starts with a written brief, a named owner, and a small review record. The support role can prepare and check repeatable work while the authorized manager keeps final editorial and business decisions.`, `Keep the first queue narrow. Give the Philippines-based team member approved examples, limited access, and a clear escalation path before adding more volume.`],
+    takeaways: ['Write the work and pass rules before assigning the queue.', 'Test a small sample for accuracy, evidence, and handoff quality.', 'Keep final approvals and unusual decisions with the authorized owner.', 'Review misses by cause and record the fix.'],
+    stats: [{ label: 'Labor force participation', value: 61.35, display: '61.35%', year: '2025', note: 'Modeled ILO estimate from the World Bank.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.TLF.CACT.ZS?format=json&per_page=10' }, { label: 'Employment in services', value: 59.55, display: '59.55%', year: '2025', note: 'Modeled ILO estimate from the World Bank.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.SRV.EMPL.ZS?format=json&per_page=10' }, { label: 'Tertiary enrollment', value: 47.41, display: '47.41%', year: '2024', note: 'Gross tertiary enrollment ratio from the World Bank.', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SE.TER.ENRR?format=json&per_page=10' }],
+    chart: { title: 'Philippine workforce context', subtitle: 'Percent, latest year shown for each World Bank indicator', methodNote: 'These country measures provide context for planning a support role. They do not establish an individual applicant’s skills or suitability.' },
+    sections: Array.from({ length: 8 }, (_, i) => ({ heading: [`Define the ${topic} lane`, 'Use a brief that another person can follow', 'Set evidence and source rules', 'Test the work with a small sample', 'Keep access and decisions separate', 'Run the daily handoff', 'Review quality before volume', 'Build a steady first month'][i], paragraphs: [
+      `Start the ${topic} lane with the recurring work that needs support. Name the inputs, the expected output, the usual finish time, and the person who owns the result. A job title is not enough to guide a careful handoff.`,
+      `The brief should show the systems, examples, coverage hours, and stop rules. If a step depends on a new judgment or an unusual request, the support role should record the question and send it to the named owner instead of guessing.`,
+      `Use an approved source list and keep the evidence beside the work record. The International Labour Organization’s guidance on teleworking is a useful reference for documenting work arrangements, communication, and responsibilities.`,
+    ] })),
+    roleTable: [{ stage: 'Intake', coordinator: 'Record the approved task, inputs, and open questions.', manager: 'Approve scope, priority, and exceptions.', proof: 'Dated brief with named owner.' }, { stage: 'Work', coordinator: 'Complete repeatable steps and record evidence.', manager: 'Answer escalations and quality questions.', proof: 'Current queue record.' }, { stage: 'Review', coordinator: 'Fix stated issues and note unresolved items.', manager: 'Accept the result or request a revision.', proof: 'Review decision and next action.' }, { stage: 'Handoff', coordinator: 'Pass files, links, and status to the next owner.', manager: 'Own the business decision and access changes.', proof: 'No loose work remains.' }],
+    table: { title: `${label} responsibilities and decision boundaries`, intro: 'Use this table to separate repeatable support from decisions that require the manager or subject owner.', caption: `${label} responsibility table` },
+    queueGraphic: { title: 'A brief-to-review handoff', subtitle: 'Each step leaves a record for the next owner', description: 'Four connected boxes show an approved brief, a work queue, an evidence record, and manager review.', ownerNote: 'Authorized manager owns approvals and exceptions', methodNote: 'Keep one current record as work moves between owners.', steps: [{ label: 'Approved brief', note: 'Set scope' }, { label: 'Work queue', note: 'Do steps' }, { label: 'Evidence', note: 'Show proof' }, { label: 'Review', note: 'Decide next' }] },
+    relatedLinks: { intro: 'For nearby operating guidance, review these three pages.', items: [{ label: 'Article production workflow', href: '/research/offshore-article-production-workflow' }, { label: 'Content QA checklist', href: '/research/offshore-content-qa-checklist' }, { label: 'Content continuity plan', href: '/research/offshore-content-continuity-plan' }] },
+    expertQuote: { text: 'Teleworking arrangements should be based on trust, respect and mutual benefit.', person: 'International Labour Organization', title: 'Teleworking guidance', sourceName: 'ILO teleworking resources', url: sourceUrl },
+    banners: [{ eyebrow: 'Role brief', title: 'Define the lane before adding volume.', body: 'Write the work, tools, review owner, and stop rules before the first handoff.', label: 'Review role scope', href: '/services' }, { eyebrow: 'Sample check', title: 'Test a small piece of real work.', body: 'Check evidence and accuracy before expanding access or queue size.', label: 'Review services', href: '/services' }, { eyebrow: 'Manager handoff', title: 'Keep the final call with the owner.', body: 'Support staff can prepare records and questions. The authorized manager decides exceptions.', label: 'Contact Us', href: '/contact-us' }],
+    sources: [{ name: 'International Labour Organization teleworking resources', url: sourceUrl, note: 'Reference for documenting responsibilities, communication, and work arrangements.' }, { name: 'World Bank labor force participation data', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.TLF.CACT.ZS?format=json&per_page=10', note: 'Country-level context for workforce planning.' }, { name: 'World Bank employment in services data', url: 'https://api.worldbank.org/v2/country/PHL/indicator/SL.SRV.EMPL.ZS?format=json&per_page=10', note: 'Country-level context for service work.' }],
+    faqs: [{ q: `What belongs in a ${topic} brief?`, a: 'Include the recurring tasks, inputs, output examples, tools, coverage hours, review owner, and stop rules.' }, { q: 'What should the support role not decide?', a: 'Keep final approvals, policy changes, sensitive exceptions, and business commitments with the authorized owner.' }, { q: 'How should quality be reviewed?', a: 'Sample completed work against the brief, record misses, and assign one dated next action.' }],
+  };
+}
+
 export const blogDetails = {
   'philippines-recruitment-coordinator-hiring-guide': {
     articleType: 'publisher',
@@ -472,6 +534,7 @@ export const blogDetails = {
       { q: 'Do I need SOPs before hiring?', a: 'You do not need a perfect manual. You do need examples, approval rules, and a short list of tasks for the first week.' },
     ],
   },
+  ...Object.fromEntries(newBlogSlugs.map((slug) => [slug, makeBatchBlogDetails(slug)])),
 } as const;
 
 export const staffingOffer = {
