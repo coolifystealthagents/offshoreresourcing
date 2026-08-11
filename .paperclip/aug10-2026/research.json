@@ -10,6 +10,7 @@
   "priorRunId": "e7201624-6652-4b47-93cf-ec689be2ce7b",
   "priorIssueId": "4a2e7297-5d3b-42de-8b7a-4d05f7adad4a",
   "validationCommands": [
+    "git diff --check",
     "node scripts/validate-content.mjs",
     "node scripts/validate-aug10-research.mjs",
     "npm run build"
