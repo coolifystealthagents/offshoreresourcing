@@ -136,21 +136,21 @@ const blogPostsSource = [
   { slug: 'philippines-daily-content-production-scorecard', title: 'Philippines daily content production scorecard', excerpt: 'Track article readiness, review quality, source completeness, handoff age, and exceptions without rewarding filler.', minutes: 9 },
 ] as const;
 
-const augustTenBlogSlugs = new Set([
-  'philippines-content-brief-approval-workflow', 'philippines-content-writer-brief-template', 'philippines-blog-editor-review-queue',
-  'philippines-content-source-log-workflow', 'philippines-blog-content-brief-quality-check', 'philippines-content-draft-review-scorecard',
-  'philippines-daily-blog-queue-management', 'philippines-content-publishing-handoff-checklist', 'philippines-blog-article-refresh-workflow',
-  'philippines-content-brief-search-intent-guide', 'philippines-blog-internal-link-review', 'philippines-article-source-verification-checklist',
-  'philippines-content-editor-escalation-rules', 'philippines-blog-writer-quality-sample', 'philippines-content-team-capacity-board',
-  'philippines-blog-article-brief-handoff', 'philippines-content-quality-exception-log', 'philippines-blog-fact-checking-role-scope',
-  'philippines-content-operations-daily-standup', 'philippines-blog-article-revision-workflow', 'philippines-content-metadata-publishing-checklist',
-  'philippines-blog-editor-manager-handoff', 'philippines-content-calendar-approval-rules', 'philippines-daily-content-production-scorecard',
-]);
+const augustTenBlogDates: Record<string, string> = {
+  'philippines-content-brief-approval-workflow': '2026-08-10', 'philippines-content-writer-brief-template': '2026-08-10', 'philippines-blog-editor-review-queue': '2026-08-10',
+  'philippines-content-source-log-workflow': '2026-08-10', 'philippines-blog-content-brief-quality-check': '2026-08-10', 'philippines-content-draft-review-scorecard': '2026-08-10',
+  'philippines-daily-blog-queue-management': '2026-08-10', 'philippines-content-publishing-handoff-checklist': '2026-08-10', 'philippines-blog-article-refresh-workflow': '2026-08-10',
+  'philippines-content-brief-search-intent-guide': '2026-08-10', 'philippines-blog-internal-link-review': '2026-08-10', 'philippines-article-source-verification-checklist': '2026-08-10',
+  'philippines-content-editor-escalation-rules': '2026-08-10', 'philippines-blog-writer-quality-sample': '2026-08-10', 'philippines-content-team-capacity-board': '2026-08-10',
+  'philippines-blog-article-brief-handoff': '2026-08-10', 'philippines-content-quality-exception-log': '2026-08-10', 'philippines-blog-fact-checking-role-scope': '2026-08-10',
+  'philippines-content-operations-daily-standup': '2026-08-10', 'philippines-blog-article-revision-workflow': '2026-08-10', 'philippines-content-metadata-publishing-checklist': '2026-08-10',
+  'philippines-blog-editor-manager-handoff': '2026-08-10', 'philippines-content-calendar-approval-rules': '2026-08-10', 'philippines-daily-content-production-scorecard': '2026-08-10',
+};
 
 type BlogPost = (typeof blogPostsSource[number]) & { publishedAt?: string };
 
 export const blogPosts: readonly BlogPost[] = [...blogPostsSource]
-  .map((post): BlogPost => augustTenBlogSlugs.has(post.slug) ? { ...post, publishedAt: '2026-08-10' } : post)
+  .map((post): BlogPost => augustTenBlogDates[post.slug] ? { ...post, publishedAt: augustTenBlogDates[post.slug] } : post)
   .sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || blogPostsSource.indexOf(a) - blogPostsSource.indexOf(b));
 
 export const guideBasics = {

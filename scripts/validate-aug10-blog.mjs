@@ -25,10 +25,10 @@ for (const entry of manifest.entries) {
   if (before.includes(entry.slug) || !after.includes(entry.slug)) throw new Error('introducing diff proof failed: ' + entry.slug);
   if (entry.renderedDate !== '2026-08-10' || !entry.renderedDateFields.includes('datePublished') || !entry.renderedDateFields.includes('time[datetime]')) throw new Error('rendered date manifest mismatch: ' + entry.slug);
 }
-if (!source.includes("publishedAt: '2026-08-10'")) throw new Error('source date implementation missing');
+if (!source.includes('const augustTenBlogDates: Record<string, string>')) throw new Error('explicit source date map missing');
+if ((source.match(/'2026-08-10'/g) || []).length < 24) throw new Error('source date map incomplete');
 if (!article.includes('datePublished') || !article.includes('time dateTime={post.publishedAt}')) throw new Error('rendered date implementation missing');
 if (!article.includes('alternates: { canonical: url }')) throw new Error('canonical implementation missing');
 if (!sitemap.includes('blogPosts.map(p=>`/blog/${p.slug}`)')) throw new Error('sitemap eligibility implementation missing');
 if (!source.includes(".sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '')")) throw new Error('newest-first index sort missing');
 console.log('PASS: 24 August 10 blog entries, provenance, source/rendered dates, canonical/sitemap, and newest-first controls verified');
-
