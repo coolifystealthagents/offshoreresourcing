@@ -63,7 +63,7 @@ export function ContentArticle({ document, related }: { document: ContentDocumen
   return <main className="section article-page">
     <JsonLd data={schema} />
     <article className="container content-article">
-      <p className="eyebrow">{section} · verified {document.verifiedAt}</p>
+      <p className="eyebrow">{section} · <time dateTime={document.publishedAt}>published {document.publishedAt}</time> · verified {document.verifiedAt}</p>
       <h1>{document.title}</h1>
       <p className="lead">{document.description}</p>
       <div className="content-badges"><span>{document.category}</span>{document.type === 'research' && <span>{document.sourceCount} sources</span>}{document.alternativeType && <span>{document.alternativeType}</span>}</div>

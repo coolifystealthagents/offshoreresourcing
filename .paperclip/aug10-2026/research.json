@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "contract": "sites3-aug10-public-date-v6",
+  "targetDate": "2026-08-10",
+  "family": "research",
+  "domain": "offshoreresourcing.com",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "minimum": 10,
+  "priorRunId": "e7201624-6652-4b47-93cf-ec689be2ce7b",
+  "priorIssueId": "4a2e7297-5d3b-42de-8b7a-4d05f7adad4a",
+  "validationCommands": [
+    "node scripts/validate-content.mjs",
+    "node scripts/validate-aug10-research.mjs",
+    "npm run build"
+  ],
+  "cleanBuildPassed": true,
+  "existingCompliancePassed": true,
+  "indexNewestFirstPassed": true,
+  "entries": [
+    {"slug":"content-claim-confidence-scoring","route":"/research/content-claim-confidence-scoring","sourcePath":"content/research/content-claim-confidence-scoring.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"content-research-query-clustering","route":"/research/content-research-query-clustering","sourcePath":"content/research/content-research-query-clustering.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"daily-research-source-budgeting","route":"/research/daily-research-source-budgeting","sourcePath":"content/research/daily-research-source-budgeting.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"offshore-article-rework-taxonomy","route":"/research/offshore-article-rework-taxonomy","sourcePath":"content/research/offshore-article-rework-taxonomy.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"offshore-content-handoff-risk","route":"/research/offshore-content-handoff-risk","sourcePath":"content/research/offshore-content-handoff-risk.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"offshore-research-role-scorecard","route":"/research/offshore-research-role-scorecard","sourcePath":"content/research/offshore-research-role-scorecard.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"remote-content-access-review-cadence","route":"/research/remote-content-access-review-cadence","sourcePath":"content/research/remote-content-access-review-cadence.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"remote-content-brief-acceptance-gates","route":"/research/remote-content-brief-acceptance-gates","sourcePath":"content/research/remote-content-brief-acceptance-gates.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"remote-editorial-capacity-buffer","route":"/research/remote-editorial-capacity-buffer","sourcePath":"content/research/remote-editorial-capacity-buffer.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-article-methodology-notes","route":"/research/research-article-methodology-notes","sourcePath":"content/research/research-article-methodology-notes.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-article-table-standards","route":"/research/research-article-table-standards","sourcePath":"content/research/research-article-table-standards.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-source-expiry-monitoring","route":"/research/research-source-expiry-monitoring","sourcePath":"content/research/research-source-expiry-monitoring.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"}
+  ]
+}
