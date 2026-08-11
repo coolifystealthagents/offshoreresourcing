@@ -13,6 +13,7 @@
     "node scripts/validate-aug10-blog.mjs",
     "npm run validate:content",
     "npm run build",
+    "git diff --check",
     "git fetch origin main",
     "git rev-parse origin/main"
   ],
@@ -358,4 +359,3 @@
     }
   ]
 }
-

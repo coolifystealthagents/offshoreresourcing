@@ -7,6 +7,7 @@ const manifest = JSON.parse(fs.readFileSync(path.join(root, '.paperclip/aug10-20
 const source = fs.readFileSync(path.join(root, 'app/data.ts'), 'utf8');
 const article = fs.readFileSync(path.join(root, 'app/blog/[slug]/page.tsx'), 'utf8');
 const sitemap = fs.readFileSync(path.join(root, 'app/sitemap.xml/route.ts'), 'utf8');
+const frozenSlugs = manifest.entries.map((entry) => entry.slug);
 if (manifest.schemaVersion !== 1 || manifest.contract !== 'sites3-aug10-public-date-v6') throw new Error('manifest contract mismatch');
 if (manifest.family !== 'blog' || manifest.domain !== 'offshoreresourcing.com' || manifest.branch !== 'main') throw new Error('manifest identity mismatch');
 if (manifest.entries.length < manifest.minimum || manifest.entries.length !== 24) throw new Error('accepted count mismatch');
@@ -31,4 +32,14 @@ if (!article.includes('datePublished') || !article.includes('time dateTime={post
 if (!article.includes('alternates: { canonical: url }')) throw new Error('canonical implementation missing');
 if (!sitemap.includes('blogPosts.map(p=>`/blog/${p.slug}`)')) throw new Error('sitemap eligibility implementation missing');
 if (!source.includes(".sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '')")) throw new Error('newest-first index sort missing');
+const builtIndexFiles = [
+  path.join(root, '.next/server/app/blog.html'),
+  ...fs.readdirSync(path.join(root, '.next/server/app/blog/page')).filter((name) => /^\d+\.html$/.test(name)).sort((a, b) => Number.parseInt(a) - Number.parseInt(b)).map((name) => path.join(root, '.next/server/app/blog/page', name)),
+];
+if (!fs.existsSync(builtIndexFiles[0])) throw new Error('built blog index missing; run npm run build first');
+const builtRoutes = builtIndexFiles.flatMap((file) => {
+  const html = fs.readFileSync(file, 'utf8');
+  return [...html.matchAll(/href="\/blog\/([a-z0-9-]+)"/g)].map((match) => match[1]).filter((slug) => frozenSlugs.includes(slug));
+});
+if (builtRoutes.length !== frozenSlugs.length || builtRoutes.some((slug, index) => slug !== frozenSlugs[index])) throw new Error(`built blog index order mismatch: ${builtRoutes.join(',')}`);
 console.log('PASS: 24 August 10 blog entries, provenance, source/rendered dates, canonical/sitemap, and newest-first controls verified');
