@@ -20,6 +20,22 @@ export type ContentDocument = {
 
 const root = path.join(process.cwd(), 'content');
 
+const frozenAug10ResearchOrder = [
+  'content-claim-confidence-scoring',
+  'content-research-query-clustering',
+  'daily-research-source-budgeting',
+  'offshore-article-rework-taxonomy',
+  'offshore-content-handoff-risk',
+  'offshore-research-role-scorecard',
+  'remote-content-access-review-cadence',
+  'remote-content-brief-acceptance-gates',
+  'remote-editorial-capacity-buffer',
+  'research-article-methodology-notes',
+  'research-article-table-standards',
+  'research-source-expiry-monitoring',
+];
+const frozenAug10ResearchRank = new Map(frozenAug10ResearchOrder.map((slug, index) => [slug, index]));
+
 function slugify(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
@@ -60,7 +76,16 @@ export function getDocuments(type: ContentType) {
   return fs.readdirSync(directory)
     .filter((file) => /\.mdx?$/.test(file))
     .map((file) => parse(path.join(directory, file), type))
-    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+    .sort((a, b) => {
+      const dateOrder = b.publishedAt.localeCompare(a.publishedAt);
+      if (dateOrder !== 0) return dateOrder;
+      if (type === 'research') {
+        const aRank = frozenAug10ResearchRank.get(a.slug) ?? Number.MAX_SAFE_INTEGER;
+        const bRank = frozenAug10ResearchRank.get(b.slug) ?? Number.MAX_SAFE_INTEGER;
+        if (aRank !== bRank) return aRank - bRank;
+      }
+      return a.slug.localeCompare(b.slug);
+    });
 }
 
 export function getDocument(type: ContentType, slug: string) {

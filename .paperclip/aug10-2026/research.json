@@ -19,6 +19,7 @@
   "existingCompliancePassed": true,
   "indexNewestFirstPassed": true,
   "entries": [
+
     {"slug":"content-claim-confidence-scoring","route":"/research/content-claim-confidence-scoring","sourcePath":"content/research/content-claim-confidence-scoring.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
     {"slug":"content-research-query-clustering","route":"/research/content-research-query-clustering","sourcePath":"content/research/content-research-query-clustering.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
     {"slug":"daily-research-source-budgeting","route":"/research/daily-research-source-budgeting","sourcePath":"content/research/daily-research-source-budgeting.md","provenance":"original-aug10-batch","introducedByCommit":"7abd20fc5297dc5fda691ad2788c1dac1c7b3467","sourceDateField":"publishedAt","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
