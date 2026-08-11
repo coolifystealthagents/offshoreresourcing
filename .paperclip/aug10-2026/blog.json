@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "contract": "sites3-aug10-public-date-v6",
+  "targetDate": "2026-08-10",
+  "family": "blog",
+  "domain": "offshoreresourcing.com",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "minimum": 22,
+  "priorRunId": "bd2b2b7b-43b7-430f-8db2-1ab19d76a77e",
+  "priorIssueId": "9a2a6fa5-fd3a-4b21-96ca-15bd339605db",
+  "validationCommands": [
+    "node scripts/validate-aug10-blog.mjs",
+    "npm run validate:content",
+    "npm run build",
+    "git fetch origin main",
+    "git rev-parse origin/main"
+  ],
+  "cleanBuildPassed": true,
+  "existingCompliancePassed": true,
+  "indexNewestFirstPassed": true,
+  "entries": [
+    {
+      "slug": "philippines-content-brief-approval-workflow",
+      "route": "/blog/philippines-content-brief-approval-workflow",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-writer-brief-template",
+      "route": "/blog/philippines-content-writer-brief-template",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-blog-editor-review-queue",
+      "route": "/blog/philippines-blog-editor-review-queue",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-source-log-workflow",
+      "route": "/blog/philippines-content-source-log-workflow",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-blog-content-brief-quality-check",
+      "route": "/blog/philippines-blog-content-brief-quality-check",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-draft-review-scorecard",
+      "route": "/blog/philippines-content-draft-review-scorecard",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-daily-blog-queue-management",
+      "route": "/blog/philippines-daily-blog-queue-management",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-publishing-handoff-checklist",
+      "route": "/blog/philippines-content-publishing-handoff-checklist",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-blog-article-refresh-workflow",
+      "route": "/blog/philippines-blog-article-refresh-workflow",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-brief-search-intent-guide",
+      "route": "/blog/philippines-content-brief-search-intent-guide",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-blog-internal-link-review",
+      "route": "/blog/philippines-blog-internal-link-review",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-article-source-verification-checklist",
+      "route": "/blog/philippines-article-source-verification-checklist",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-editor-escalation-rules",
+      "route": "/blog/philippines-content-editor-escalation-rules",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-blog-writer-quality-sample",
+      "route": "/blog/philippines-blog-writer-quality-sample",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-team-capacity-board",
+      "route": "/blog/philippines-content-team-capacity-board",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-blog-article-brief-handoff",
+      "route": "/blog/philippines-blog-article-brief-handoff",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-quality-exception-log",
+      "route": "/blog/philippines-content-quality-exception-log",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-blog-fact-checking-role-scope",
+      "route": "/blog/philippines-blog-fact-checking-role-scope",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-operations-daily-standup",
+      "route": "/blog/philippines-content-operations-daily-standup",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-blog-article-revision-workflow",
+      "route": "/blog/philippines-blog-article-revision-workflow",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-metadata-publishing-checklist",
+      "route": "/blog/philippines-content-metadata-publishing-checklist",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-blog-editor-manager-handoff",
+      "route": "/blog/philippines-blog-editor-manager-handoff",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-content-calendar-approval-rules",
+      "route": "/blog/philippines-content-calendar-approval-rules",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "philippines-daily-content-production-scorecard",
+      "route": "/blog/philippines-daily-content-production-scorecard",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "2dba94939634138049ffda9c1b1f12bf70450ff5",
+      "sourceDateField": "publishedAt",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    }
+  ]
+}
+

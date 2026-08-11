@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.title,
     description: post.excerpt,
     alternates: { canonical: url },
-    openGraph: { title: post.title, description: post.excerpt, url, type: 'article', images: [defaultSocialImage] },
+    openGraph: { title: post.title, description: post.excerpt, url, type: 'article', images: [defaultSocialImage], ...(post.publishedAt ? { publishedTime: post.publishedAt } : {}) },
     twitter: { card: 'summary_large_image', title: post.title, description: post.excerpt, images: [defaultSocialImage] },
   };
 }
@@ -222,6 +222,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         description: post.excerpt,
         url,
         mainEntityOfPage: url,
+        ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
         publisher: { '@type': 'Organization', name: site.brand, url: base },
         citation: sources.map((source) => source.url),
       },
@@ -249,7 +250,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     <main className="section article-page">
       <JsonLd data={schema} />
       <article className="container article-wrap">
-        <p className="eyebrow">Philippines staffing guide · {post.minutes} min read</p>
+        <p className="eyebrow">Philippines staffing guide · {post.minutes} min read{post.publishedAt ? <> · <time dateTime={post.publishedAt}>Published August 10, 2026</time></> : null}</p>
         <h1>{post.title}</h1>
         <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 

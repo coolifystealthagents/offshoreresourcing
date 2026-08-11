@@ -57,7 +57,7 @@ export const serviceDetails = {
   },
 } as const;
 
-export const blogPosts = [
+const blogPostsSource = [
   {
     "slug": "philippines-recruitment-coordinator-hiring-guide",
     "title": "How to hire a Philippines recruitment coordinator",
@@ -135,6 +135,23 @@ export const blogPosts = [
   { slug: 'philippines-content-calendar-approval-rules', title: 'Philippines content calendar approval rules', excerpt: 'Set a practical gate for topic fit, capacity, source readiness, owner availability, and changes to committed dates.', minutes: 8 },
   { slug: 'philippines-daily-content-production-scorecard', title: 'Philippines daily content production scorecard', excerpt: 'Track article readiness, review quality, source completeness, handoff age, and exceptions without rewarding filler.', minutes: 9 },
 ] as const;
+
+const augustTenBlogSlugs = new Set([
+  'philippines-content-brief-approval-workflow', 'philippines-content-writer-brief-template', 'philippines-blog-editor-review-queue',
+  'philippines-content-source-log-workflow', 'philippines-blog-content-brief-quality-check', 'philippines-content-draft-review-scorecard',
+  'philippines-daily-blog-queue-management', 'philippines-content-publishing-handoff-checklist', 'philippines-blog-article-refresh-workflow',
+  'philippines-content-brief-search-intent-guide', 'philippines-blog-internal-link-review', 'philippines-article-source-verification-checklist',
+  'philippines-content-editor-escalation-rules', 'philippines-blog-writer-quality-sample', 'philippines-content-team-capacity-board',
+  'philippines-blog-article-brief-handoff', 'philippines-content-quality-exception-log', 'philippines-blog-fact-checking-role-scope',
+  'philippines-content-operations-daily-standup', 'philippines-blog-article-revision-workflow', 'philippines-content-metadata-publishing-checklist',
+  'philippines-blog-editor-manager-handoff', 'philippines-content-calendar-approval-rules', 'philippines-daily-content-production-scorecard',
+]);
+
+type BlogPost = (typeof blogPostsSource[number]) & { publishedAt?: string };
+
+export const blogPosts: readonly BlogPost[] = [...blogPostsSource]
+  .map((post): BlogPost => augustTenBlogSlugs.has(post.slug) ? { ...post, publishedAt: '2026-08-10' } : post)
+  .sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || blogPostsSource.indexOf(a) - blogPostsSource.indexOf(b));
 
 export const guideBasics = {
   'offshore-resourcing-planning': {
