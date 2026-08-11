@@ -250,7 +250,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     <main className="section article-page">
       <JsonLd data={schema} />
       <article className="container article-wrap">
-        <p className="eyebrow">Philippines staffing guide · {post.minutes} min read{post.publishedAt ? <> · <time dateTime={post.publishedAt}>Published August 10, 2026</time></> : null}</p>
+        <p className="eyebrow">Philippines staffing guide · {post.minutes} min read{post.publishedAt ? <> · <time dateTime={post.publishedAt}>Published {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${post.publishedAt}T00:00:00Z`))}</time></> : null}</p>
         <h1>{post.title}</h1>
         <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 

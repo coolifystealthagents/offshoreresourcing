@@ -58,6 +58,28 @@ export const serviceDetails = {
 } as const;
 
 const blogPostsSource = [
+  { slug: 'philippines-virtual-assistant-workflow-guide', title: 'How to scope a Philippines virtual assistant workflow', excerpt: 'Choose repeatable tasks, clear handoffs, and manager-owned decisions before adding a Philippines virtual assistant.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-customer-support-team-lead-guide', title: 'How to hire a Philippines customer support team lead', excerpt: 'Define queue ownership, coaching habits, escalation judgment, and reporting before hiring a support lead.', minutes: 10, publishedAt: '2026-08-11' },
+  { slug: 'philippines-bookkeeping-assistant-hiring-guide', title: 'How to hire a Philippines bookkeeping assistant', excerpt: 'Separate transaction preparation, reconciliation support, and documentation from approvals and accounting decisions.', minutes: 10, publishedAt: '2026-08-11' },
+  { slug: 'philippines-executive-assistant-role-scope', title: 'How to scope a Philippines executive assistant role', excerpt: 'Build an executive assistant role around calendar control, briefing notes, follow-through, and confidentiality.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-ecommerce-support-specialist-guide', title: 'How to scope a Philippines ecommerce support specialist', excerpt: 'Plan order questions, returns records, customer updates, and escalation rules for an ecommerce support lane.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-data-entry-quality-checklist', title: 'Philippines data entry quality checklist', excerpt: 'Use field rules, sample checks, duplicate handling, and exception ownership to improve data entry accuracy.', minutes: 8, publishedAt: '2026-08-11' },
+  { slug: 'philippines-sales-operations-assistant-guide', title: 'How to hire a Philippines sales operations assistant', excerpt: 'Define CRM updates, pipeline hygiene, meeting preparation, and approval boundaries for sales operations support.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-recruiting-sourcer-scorecard', title: 'Philippines recruiting sourcer scorecard', excerpt: 'Score search quality, evidence, duplicate control, and useful handoffs when reviewing recruiting sourcer candidates.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-accounts-receivable-support-scope', title: 'How to scope Philippines accounts receivable support', excerpt: 'Keep invoice records, follow-up notes, and aging reports organized while payment decisions stay with your finance owner.', minutes: 10, publishedAt: '2026-08-11' },
+  { slug: 'philippines-property-management-assistant-guide', title: 'How to scope a Philippines property management assistant', excerpt: 'Organize maintenance requests, vendor records, resident updates, and manager escalations in one support lane.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-medical-admin-support-boundaries', title: 'Philippines medical administration support boundaries', excerpt: 'Plan scheduling and records support with careful access controls, approved scripts, and clear clinical boundaries.', minutes: 10, publishedAt: '2026-08-11' },
+  { slug: 'philippines-logistics-coordinator-hiring-guide', title: 'How to hire a Philippines logistics coordinator', excerpt: 'Test shipment tracking, exception notes, carrier follow-up, and time-zone communication before hiring.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-technical-support-specialist-scope', title: 'How to scope a Philippines technical support specialist', excerpt: 'Define troubleshooting tiers, documentation habits, escalation triggers, and customer communication standards.', minutes: 10, publishedAt: '2026-08-11' },
+  { slug: 'philippines-marketing-assistant-role-guide', title: 'How to scope a Philippines marketing assistant role', excerpt: 'Separate campaign administration, asset coordination, reporting preparation, and marketing decisions.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-hr-administration-support-guide', title: 'How to scope Philippines HR administration support', excerpt: 'Set careful boundaries for employee records, onboarding administration, reporting, and confidential decisions.', minutes: 10, publishedAt: '2026-08-11' },
+  { slug: 'philippines-quality-assurance-coordinator-guide', title: 'How to hire a Philippines quality assurance coordinator', excerpt: 'Test inspection discipline, defect notes, sample selection, and escalation judgment for a QA support role.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-real-estate-admin-assistant-guide', title: 'How to hire a Philippines real estate admin assistant', excerpt: 'Define listing records, appointment coordination, document follow-up, and agent-owned decisions.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-podcast-production-assistant-scope', title: 'How to scope a Philippines podcast production assistant', excerpt: 'Organize guest notes, episode assets, publishing records, and approval handoffs without losing editorial ownership.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-legal-admin-support-boundaries', title: 'Philippines legal administration support boundaries', excerpt: 'Separate document organization, scheduling, and status tracking from legal judgment and client advice.', minutes: 10, publishedAt: '2026-08-11' },
+  { slug: 'philippines-inventory-coordinator-hiring-guide', title: 'How to hire a Philippines inventory coordinator', excerpt: 'Build a role around stock records, discrepancy notes, reorder visibility, and manager-approved changes.', minutes: 9, publishedAt: '2026-08-11' },
+  { slug: 'philippines-email-inbox-management-guide', title: 'How to scope Philippines email inbox management', excerpt: 'Create practical triage rules, response templates, privacy limits, and escalation ownership for inbox support.', minutes: 8, publishedAt: '2026-08-11' },
+  { slug: 'philippines-remote-office-manager-guide', title: 'How to hire a Philippines remote office manager', excerpt: 'Define vendor coordination, meeting logistics, records, and service issues without transferring business authority.', minutes: 9, publishedAt: '2026-08-11' },
   {
     "slug": "philippines-recruitment-coordinator-hiring-guide",
     "title": "How to hire a Philippines recruitment coordinator",
@@ -147,11 +169,11 @@ const augustTenBlogDates: Record<string, string> = {
   'philippines-blog-editor-manager-handoff': '2026-08-10', 'philippines-content-calendar-approval-rules': '2026-08-10', 'philippines-daily-content-production-scorecard': '2026-08-10',
 };
 
-type BlogPost = (typeof blogPostsSource[number]) & { publishedAt?: string };
+type BlogPost = { slug: string; title: string; excerpt: string; minutes: number; publishedAt?: string };
 
 export const blogPosts: readonly BlogPost[] = [...blogPostsSource]
   .map((post): BlogPost => augustTenBlogDates[post.slug] ? { ...post, publishedAt: augustTenBlogDates[post.slug] } : post)
-  .sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || blogPostsSource.indexOf(a) - blogPostsSource.indexOf(b));
+  .sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || blogPostsSource.findIndex((item) => item.slug === a.slug) - blogPostsSource.findIndex((item) => item.slug === b.slug));
 
 export const guideBasics = {
   'offshore-resourcing-planning': {
@@ -172,6 +194,14 @@ export const guideBasics = {
 } as const;
 
 const newBlogSlugs = [
+  'philippines-virtual-assistant-workflow-guide', 'philippines-customer-support-team-lead-guide', 'philippines-bookkeeping-assistant-hiring-guide',
+  'philippines-executive-assistant-role-scope', 'philippines-ecommerce-support-specialist-guide', 'philippines-data-entry-quality-checklist',
+  'philippines-sales-operations-assistant-guide', 'philippines-recruiting-sourcer-scorecard', 'philippines-accounts-receivable-support-scope',
+  'philippines-property-management-assistant-guide', 'philippines-medical-admin-support-boundaries', 'philippines-logistics-coordinator-hiring-guide',
+  'philippines-technical-support-specialist-scope', 'philippines-marketing-assistant-role-guide', 'philippines-hr-administration-support-guide',
+  'philippines-quality-assurance-coordinator-guide', 'philippines-real-estate-admin-assistant-guide', 'philippines-podcast-production-assistant-scope',
+  'philippines-legal-admin-support-boundaries', 'philippines-inventory-coordinator-hiring-guide', 'philippines-email-inbox-management-guide',
+  'philippines-remote-office-manager-guide',
   'philippines-content-brief-approval-workflow', 'philippines-content-writer-brief-template', 'philippines-blog-editor-review-queue',
   'philippines-content-source-log-workflow', 'philippines-blog-content-brief-quality-check', 'philippines-content-draft-review-scorecard',
   'philippines-daily-blog-queue-management', 'philippines-content-publishing-handoff-checklist', 'philippines-blog-article-refresh-workflow',
