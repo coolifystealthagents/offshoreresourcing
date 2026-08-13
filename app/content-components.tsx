@@ -1,6 +1,8 @@
 import { CTA, JsonLd } from './components';
 import type { ContentDocument } from '../lib/content';
 
+const formatPublicDate = (date: string) => new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+
 function inline(text: string) {
   const pieces = text.split(/(\[[^\]]+\]\([^)]+\)|`[^`]+`|\*\*[^*]+\*\*)/g);
   return pieces.map((piece, index) => {
@@ -63,7 +65,7 @@ export function ContentArticle({ document, related }: { document: ContentDocumen
   return <main className="section article-page">
     <JsonLd data={schema} />
     <article className="container content-article">
-      <p className="eyebrow">{section} · <time dateTime={document.publishedAt}>published {document.publishedAt}</time> · verified {document.verifiedAt}</p>
+      <p className="eyebrow">{section} · <time dateTime={document.publishedAt}>published {formatPublicDate(document.publishedAt)}</time> · verified {formatPublicDate(document.verifiedAt)}</p>
       <h1>{document.title}</h1>
       <p className="lead">{document.description}</p>
       <div className="content-badges"><span>{document.category}</span>{document.type === 'research' && <span>{document.sourceCount} sources</span>}{document.alternativeType && <span>{document.alternativeType}</span>}</div>
