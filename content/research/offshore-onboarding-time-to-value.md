@@ -2,7 +2,7 @@
 title: Measuring time to value in offshore onboarding
 description: Which signals show whether a remote hire is becoming useful without confusing activity with readiness.
 category: Workflow design
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/offshore-team-onboarding-controls.webp
 sourceCount: 10

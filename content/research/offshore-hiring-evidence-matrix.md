@@ -2,7 +2,7 @@
 title: An evidence matrix for evaluating offshore candidates
 description: A source-backed way to connect role requirements with fair, observable hiring evidence.
 category: Hiring controls
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/offshore-team-quality-scorecard.webp
 sourceCount: 10

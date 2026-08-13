@@ -2,7 +2,7 @@
 title: Reading workforce data when hiring in the Philippines
 description: How to use public labor and skills evidence without turning national averages into promises about individual candidates.
 category: Scope benchmarks
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/philippines-services-workforce.webp
 sourceCount: 10

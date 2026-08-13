@@ -2,7 +2,7 @@
 title: Why accessibility capability belongs in content hiring
 description: A research-led case for assessing accessibility knowledge when resourcing remote editorial and web support roles.
 category: Workflow design
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/content-accessibility-review.webp
 sourceCount: 10

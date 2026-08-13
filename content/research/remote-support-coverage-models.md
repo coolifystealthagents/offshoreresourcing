@@ -2,7 +2,7 @@
 title: Comparing coverage models for remote support teams
 description: How overlap, handoffs, and service windows shape the right offshore support structure.
 category: Scope benchmarks
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/overlap-hours.webp
 sourceCount: 10

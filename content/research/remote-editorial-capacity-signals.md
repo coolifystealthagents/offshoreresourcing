@@ -2,7 +2,7 @@
 title: Signals for sizing remote editorial capacity
 description: How to estimate capacity from demand, complexity, and review effort without relying on simplistic article counts.
 category: Scope benchmarks
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/remote-research-team-capacity-planning.webp
 sourceCount: 10

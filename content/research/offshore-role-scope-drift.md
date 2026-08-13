@@ -2,7 +2,7 @@
 title: How role scope drift affects offshore hiring decisions
 description: A research view of why vague role boundaries create avoidable hiring and handoff risk for distributed support teams.
 category: Hiring controls
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/offshore-team-planning.webp
 sourceCount: 10

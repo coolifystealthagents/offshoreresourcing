@@ -2,7 +2,7 @@
 title: Why remote access risk should be mapped by role
 description: A practical analysis of least-privilege access for offshore support, research, and coordination roles.
 category: Hiring controls
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/secure-remote-content-access.webp
 sourceCount: 10

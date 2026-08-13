@@ -2,7 +2,7 @@
 title: A continuity risk model for offshore support teams
 description: How buyers can distinguish individual dependency from resilient remote team capacity.
 category: Scope benchmarks
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/offshore-content-continuity-plan.webp
 sourceCount: 10

@@ -2,7 +2,7 @@
 title: What makes a research brief decision-ready
 description: A framework for separating a useful evidence brief from a collection of disconnected links.
 category: Workflow design
-publishedAt: 2026-08-11
+publishedAt: 2026-08-12
 verifiedAt: 2026-08-11
 image: /images/thumbnails/content-brief-research-queue.webp
 sourceCount: 10
