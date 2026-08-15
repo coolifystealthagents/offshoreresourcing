@@ -3,7 +3,7 @@ title: Capacity variability in recurring offshore support work
 description: Evidence-led research on capacity variability in distributed support and operations roles.
 category: Capacity planning
 publishedAt: 2026-08-14
-verifiedAt: 2026-08-14
+verifiedAt: 2026-08-15
 image: /images/thumbnail-backgrounds/reliable-delivery.webp
 sourceCount: 10
 ---
@@ -33,6 +33,8 @@ Exit data is incomplete and self-reported reasons are not always comparable. Sma
 ## Implications for Offshore Resourcing buyers
 
 A useful brief for retention evidence names the customer or internal audience, the service window, the systems involved, and the escalation owner. It also states how success will be reviewed after the first 7, 14, and 30 days. These are not promises of a particular outcome; they are the conditions needed to learn whether the role is working.
+
+Use the [workforce planning support service](/services/workforce-planning-support) when those checks need to become a working role brief. It separates coverage records and draft planning views from headcount, budget, overtime, and hiring decisions that must stay with your manager.
 
 ## Measurement design
 
