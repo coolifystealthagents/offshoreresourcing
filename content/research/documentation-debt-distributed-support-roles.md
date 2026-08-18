@@ -35,6 +35,36 @@ The literature does not define a standard documentation-debt index for offshore 
 
 Documentation debt is visible when routine work depends on private memory, stale examples, or unnamed exception owners. A Philippines based role should inherit usable records and be tested on retrieval and application. Better documentation reduces ambiguity, but it does not replace training, review, or accountable management.
 
+## How documentation debt appears in support work
+
+Documentation debt is not simply a shortage of pages. It is the gap between what a support role must know to act safely and what the available record actually explains. A short instruction can be sufficient when the decision is obvious and the source record is reliable. A long manual can still leave a worker guessing when definitions conflict or ownership is missing. The useful unit of review is the decision that the document enables, not its page count.
+
+The gap often appears at handoff. A client may describe a task in a meeting, while the support specialist receives an old form and an incomplete example. The specialist can complete visible fields but cannot tell which exceptions matter. Rework then looks like an individual accuracy issue even though the missing context came from the role design. A documentation review should trace the question back to the first point where the rule was unclear.
+
+A team can sample returned work and classify the cause of each clarification: missing definition, conflicting source, absent owner, obsolete example, or genuine error. These categories distinguish knowledge transfer from personal execution. The sample should retain the original question and response so a reviewer can test whether the new explanation resolves the uncertainty.
+
+There is no universal debt threshold. A high-volume queue may tolerate more small clarifications than a low-volume queue with sensitive records. A recurring question can be more important than a dozen one-off questions if it affects a decision boundary. For a Philippines based role, the manager should also consider whether the support window gives the specialist a timely answer or forces work to wait across time zones.
+
+Good operating documentation names the source of truth, the normal case, the stop condition, and the person who resolves an exception. It gives one example of a completed record and one example of an incomplete record. It should say when the instruction was reviewed, but the review date does not prove that the instruction is still correct. The accountable owner remains responsible for checking policy and changing the text.
+
+The document should not ask the offshore specialist to remember hidden preferences. If a client wants a particular field checked, that requirement belongs in the record or role brief. If the client wants the specialist to recommend an action, the recommendation criteria and approval owner should be written down. Clear writing reduces unnecessary escalation while preserving the boundary between preparation and judgment.
+
+Clarification counts are affected by training, system usability, language, and the experience of the reviewer who labels them. They do not measure intelligence or commitment. A single sample can reveal a missing rule, but it cannot establish that the same problem occurs across all work. The evidence supports prioritizing documentation changes around repeated and consequential uncertainty. It does not support a claim that more documentation alone will improve outcomes.
+
+## Further operating implication
+
+Documentation should be improved at the point where work stops, not only in a central handbook. A short note beside the relevant field can prevent more uncertainty than a general policy page. The owner should still maintain a central source for the rule, but the support lane needs enough context to recognize a normal case and a stop condition while doing the work.
+
+The strongest evidence of improvement is a change in the type of question being asked. Repeated requests for the same definition should fall after the source is corrected. New questions about genuine exceptions may remain, and that is appropriate. The aim is to remove avoidable ambiguity while preserving escalation for decisions that belong to the client.
+
+## Additional interpretation
+
+A useful review also checks whether the document can be used by a person who did not attend the original explanation. If the answer is no, the document records the author's memory rather than the operating rule. The owner should remove unexplained acronyms, identify the record that supplies the input, and state whether an example is illustrative or binding. The goal is not to eliminate judgment. It is to make the point where judgment begins visible so that an offshore support role can stop and ask the right question.
+
+## Measurement boundary
+
+The review should preserve the old instruction when a rule changes, together with the reason for the change and the owner who approved it. That history helps a manager tell whether a later correction arose from a stale document or from an execution error. It also prevents a new specialist from being judged against a rule that was not available when the work was completed. Version history is useful only when the current source is easy to find and the support role knows which version governs the live task.
+
 ## Sources
 
 1. [ISO, quality management](https://www.iso.org/iso-9001-quality-management.html)

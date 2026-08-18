@@ -35,6 +35,40 @@ NIST and GAO guidance is general and does not replace Philippine or client-count
 
 Recruitment administration is easier to staff offshore when duties are separated by decision and consequence rather than by title. A Philippines based coordinator can prepare and route records within a clear boundary. Approval, access changes, and sensitive disclosure should remain with named owners, supported by least privilege and an auditable review.
 
+## Why the control is about authority
+
+Segregation of duties is often described as separating people, but the deeper issue is separating incompatible actions. A recruiting administrator may prepare a record and route it for review. The person who approves an exception or makes the hiring decision should be accountable for that consequence. If one role can create the source record, approve the change, and close the review without another check, the organization loses an opportunity to detect error or misuse.
+
+The control should match the actual recruitment process. A coordinator who only checks for missing fields does not need the same access as a hiring owner. A coordinator who can edit a score after review creates a different risk from one who can attach supporting evidence. Access descriptions should identify the action, the record, and the reviewer rather than rely on a broad job title.
+
+The useful test is whether a later reviewer can see what happened and who decided. Record the original value when a field changes, the reason for the change, and the owner who approved it where the system permits. If a system cannot preserve that history, the process may need a compensating review or a different access design. A policy statement alone does not prove that duties are separated in practice.
+
+For offshore recruitment administration, the coordinator can verify that an application packet is complete, request a missing document, and identify a conflict between the role brief and a candidate record. The hiring manager decides whether the packet is sufficient, whether a requirement may be waived, and whether to advance the applicant. This clarifies which work is administrative and which work carries selection authority.
+
+Access should be reviewed when the process changes, not only on a calendar. New fields, a new hiring stage, or a new integration can create a permission that was not part of the original boundary. The review should include a sample of real actions and a check that inactive access is removed under the organization's policy. Privacy rules vary by jurisdiction, so the accountable owner must confirm the applicable requirements.
+
+Segregation also has limits. Two people can repeat the same mistaken assumption, and an approval can be perfunctory. The control reduces one class of risk; it does not establish that a selection process is fair or predictive. A manager still needs a consistent requirement, relevant evidence, and a lawful assessment method. The evidence supports explicit authority and traceable review, not a claim that separation by itself guarantees a good hire.
+
+## The design implication
+
+The boundary should be written in action language. "Supports recruiting" is too broad to test. "Checks that required fields are present, requests missing evidence, and routes exceptions to the hiring owner" can be reviewed against access and records. The owner can then decide whether a new process step changes the permitted action.
+
+This is especially important when a coordinator becomes experienced. Familiarity may justify faster preparation, but it does not by itself justify approval access. Experience can improve the quality of escalation while the decision boundary remains intact. The control is strongest when the system and the written role description say the same thing.
+
+## Further operating implication
+
+The boundary should be written in action language. "Supports recruiting" is too broad to test. "Checks that required fields are present, requests missing evidence, and routes exceptions to the hiring owner" can be reviewed against access and records. The owner can then decide whether a new process step changes the permitted action.
+
+This is especially important when a coordinator becomes experienced. Familiarity may justify faster preparation, but it does not by itself justify approval access. Experience can improve the quality of escalation while the decision boundary remains intact. The control is strongest when the system and the written role description say the same thing.
+
+## Additional interpretation
+
+A control review should test the ordinary path as well as unusual access. It should ask whether the coordinator can change a field after approval, whether the hiring owner can see the evidence that prompted the change, and whether the record shows when the action occurred. The answer depends on the actual system, not on the process diagram. Where technical separation is not possible, the owner may need a compensating review with a defined sample and response. That review should be documented as a control, not assumed because two people are involved.
+
+## Measurement boundary
+
+A compensating review needs its own evidence. The reviewer should know which actions were sampled, what exceptions were found, and when the issue was closed. A review that simply says "checked" cannot show whether the separation worked. The support role may prepare the sample, but the accountable owner must decide whether the control is adequate and whether access should change. That distinction matters when the process includes sensitive candidate information or a consequential decision.
+
 ## Sources
 
 1. [NIST SP 800-53 Rev. 5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)

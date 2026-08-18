@@ -44,6 +44,28 @@ Modularity can also be overused. A task may look easy to separate while dependin
 
 Task modularity is a defensible screening lens for a Philippines based support role because it turns a vague title into observable work and explicit decision boundaries. It should be tested before recruiting, then checked against a realistic work sample. The evidence supports better matching and control design. It does not prove a candidate will perform well, remove the need for management, or justify moving every repeatable task offshore.
 
+## What makes a task modular
+
+Modularity is a property of the work, not a label attached to a job title. A task is easier to separate when its input is defined, its output can be checked, and its boundary with neighboring work is visible. A task that looks repetitive may still depend on hidden client judgment or a source record that changes without notice. That dependency is part of the task and should appear in the role analysis.
+
+The review should trace one item from intake to completion. Note what information arrives, which system is authoritative, what transformation the specialist performs, and who accepts the result. If the item cannot be completed without an undocumented conversation, it is not fully modular yet. The answer may be better documentation, a narrower scope, or a retained client decision. It is not automatically a reason to add more personal training.
+
+A Philippines based specialist can often handle a defined preparation lane when the client supplies examples, access, and an escalation owner. The role might organize records, check required fields, or prepare a status update. The client remains responsible for a decision when the output changes a customer commitment, a hiring outcome, or a sensitive record. The geographic location does not decide the boundary. The information and authority in the task do.
+
+Modular work also needs a reliable handoff. The output should state what was completed, what remains unresolved, and which evidence supports the result. A manager should be able to review it without asking the specialist to reconstruct the whole case. When a task crosses between systems, the handoff must identify the source of truth and the last verified point. Otherwise the role may appear modular in a diagram while remaining dependent on informal memory.
+
+Fictional sample cases can test whether the role brief is clear before live access expands. Include a normal case, a missing input, a conflicting record, and an exception that needs an owner. Ask the reviewer to state what can be completed and what must stop. The purpose is not to create a hiring score. It is to expose hidden decisions in the proposed work.
+
+Observed quality should be separated into output accuracy, evidence completeness, and escalation judgment. A person can enter fields correctly while failing to notice an authority boundary. Another person can identify the boundary but need a better system instruction. These are different findings and should not be collapsed into one impression of role fit.
+
+Research on job design and occupational tasks does not provide a universal modularity score. Client systems, policies, and exception patterns change the result. The evidence supports examining the work at the handoff and decision points, then assigning only the portion that has a clear input, checkable output, and accountable owner.
+
+## Further operating implication
+
+The client should review modularity when exceptions become a normal part of the job. A task can begin as a clean preparation lane and later acquire approvals, customer negotiation, or policy interpretation. At that point, the role brief needs revision. Keeping the old label hides a change in accountability and makes training an incomplete substitute for redesign.
+
+The evidence to retain is simple: the original input, the completed output, the point where judgment entered, and the owner who resolved it. Those records let the client decide whether to narrow the task, add a reviewer, or move the decision back to the business owner.
+
 ## Sources
 
 1. [O*NET Content Model](https://www.onetcenter.org/content.html)

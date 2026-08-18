@@ -35,6 +35,40 @@ Training transfer is affected by manager behavior, tools, workload, feedback, an
 
 Training should be judged by observable use in representative work, not completion alone. For Philippines based support, transfer evidence should include normal work, an exception, a stop point, and a reviewable handoff. That gives a manager a better decision signal while preserving the boundary between learning evidence and future performance.
 
+## What transfer means in this setting
+
+Training transfer is often reduced to whether a person remembers an instruction. In distributed support, the more useful question is whether the person can apply the instruction when the record is incomplete, the request arrives in a different form, or an exception needs an owner. A successful lesson can still fail to transfer if the work system does not contain the needed example or if the manager changes the rule without recording it.
+
+The evidence should include more than a quiz. Review a normal fictional case, a boundary case, and a case with missing information. Ask the learner to identify the source, complete what is permitted, and state where the work must stop. A reviewer can then separate knowledge of the task from willingness to escalate uncertainty. Those observations are more relevant to role design than a single completion percentage.
+
+A Philippines based specialist may work with a client whose terms, calendars, privacy expectations, and escalation habits differ from prior experience. Training should identify which parts of the task are stable and which depend on the client's own policy. General occupational information can describe the work family, but it cannot replace a client-specific source of truth.
+
+Language clarity also matters. Instructions that rely on idioms or local shorthand create an avoidable test of interpretation. Examples should use the same field names and record states that appear in the live process. The client owner should confirm that sensitive data is not included in training material unless the applicable policy permits it. A fictional record is often enough to test the decision boundary.
+
+Transfer should be reviewed after the specialist has handled enough cases to show the difference between recall and application. Sample corrections by cause: missing context, wrong field, skipped check, unsupported assumption, or correct escalation. The categories point to different remedies. A repeated missing-context error belongs in the role brief or system design, while a repeated skipped check may call for coaching or a clearer control.
+
+The review should not turn every clarification into a failure. Asking a precise question can show that the boundary works. The manager should track whether answers become reusable and whether the same issue returns. If an answer changes the normal process, the owner should update the source instruction rather than expect the offshore specialist to carry an undocumented exception.
+
+The cited occupational and organizational sources do not establish a transfer rate for a particular team. Local tools, supervision, task complexity, and language affect the outcome. The evidence supports testing application in context, preserving feedback, and keeping policy decisions with the accountable owner.
+
+## Further operating implication
+
+Transfer is more likely when the learner can find the rule while doing the work and knows what to do when the rule ends. That means training material, live instructions, examples, and escalation paths should agree. If they do not, a post-training error cannot be interpreted fairly because the work system itself supplies competing answers.
+
+The owner should revise the source after a material change and tell the support role what changed. A short follow-up sample can then test application without turning routine coaching into a new certification claim. The useful question remains whether the role can complete permitted work and stop reliably at the decision boundary.
+
+## Additional interpretation
+
+The manager should be careful when interpreting early results. A new specialist may ask more questions because the boundary is working, while an experienced person may act quickly because an undocumented habit has formed. Neither pattern proves transfer on its own. Compare the evidence used, the point of escalation, and the correction after feedback. The client can then decide whether the issue lies in the lesson, the source record, the tool, or the role's authority. This approach respects the specialist's context while keeping the final policy decision with the owner.
+
+## Measurement boundary
+
+A transfer review should also ask whether the learner had a reasonable chance to practice the actual boundary. If every exercise is a normal case, the person has not been tested on missing evidence or an exception. If every exercise is an unusual case, the review may measure caution rather than routine competence. A balanced sample helps the manager interpret results without turning one scenario into a broad claim about capability. The evidence remains local to the task and its documented rules.
+
+## Scope note
+
+The manager should record the conditions of the sample, including the instruction version and the source record available to the learner. Otherwise later reviewers cannot tell whether a result reflects learning or a changed task. That record also gives the owner a defensible basis for updating the role brief when the process changes.
+
 ## Sources
 
 1. [Kirkpatrick Partners, evaluation model](https://www.kirkpatrickpartners.com/the-kirkpatrick-model/)

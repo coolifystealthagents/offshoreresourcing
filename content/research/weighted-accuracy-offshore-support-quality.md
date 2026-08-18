@@ -37,6 +37,36 @@ The research does not show that weighted accuracy predicts retention, customer s
 
 Weighted accuracy is a better management instrument when defects have materially different consequences. Use it with raw counts, sample coverage, and a written severity definition. For Offshore Resourcing, the conclusion is narrow: a quality review for offshore support should make impact visible and keep the client owner responsible for the weights and response to high-impact findings.
 
+## Why one accuracy number can mislead
+
+An overall accuracy rate treats every field or case as equally important. In offshore support, that assumption may be wrong. A minor formatting error and an incorrect customer status can have different consequences, even when both count as one defect. A quality measure should state its unit and explain which errors carry more risk. A weighted measure can make the distinction visible, but the weights are judgments that need an owner.
+
+The first step is to define the denominator. Is accuracy measured per field, per record, or per completed case? A field rate may look strong while a small number of missing records delay the entire handoff. A case rate may hide one serious field inside an otherwise complete packet. Comparing two reports without matching the unit can create a false trend.
+
+For a Philippines based support lane, the client should identify the fields that affect access, customer commitments, payment, or a hiring decision. A reviewer can then classify defects by consequence, detectability, and reversibility. The classification should be written before results are reviewed. Otherwise a surprising defect may receive a weight chosen after the fact.
+
+The offshore specialist can prepare the record and flag uncertainty. The accountable owner decides whether the proposed weighting reflects the business risk. A quality reviewer should be able to see the source record, the defect type, and the reason for its category. A single score without those details is a reporting convenience, not reliable research evidence.
+
+If serious errors cluster in one field, the first question is whether the instruction and source system make that field clear. If errors appear after an exception, the handoff may need an explicit stop condition. If errors are spread across ordinary cases, the manager can examine training, workload, access, or the definition of done. The measure helps narrow the investigation; it does not identify the cause by itself.
+
+Weighted results should be read alongside unweighted counts and a sample of cases. A high weighted score can conceal many small errors that still create rework. A low score can reflect a small number of consequential items that deserve attention even when most work is correct. Trend comparisons should keep the category definitions and sampling method stable.
+
+The sources support careful measurement and internal control, not a universal acceptable accuracy rate. Weighting can create false confidence if categories are arbitrary or reviewers disagree. The evidence supports transparent units, documented severity logic, and manager-owned interpretation before using quality results to change an offshore role.
+
+## Further operating implication
+
+Quality reporting should make the tradeoff visible rather than conceal it in a single percentage. If a client chooses to weight a defect heavily, the report should show the category, the sample, and the reason. A manager can then ask whether the weight reflects actual consequence or merely a preference for one type of work.
+
+For an offshore support lane, the measure is most useful when it points to a change the owner can make: clarify a field, improve a source record, change review, or narrow the role. It should not be used as a stand-alone claim about the worker or as proof that the process is valid. Accuracy is evidence about observed outputs under a defined method.
+
+## Measurement boundary
+
+A quality measure also needs a clear response threshold. The threshold should describe what action follows a pattern, such as a source correction or added review, rather than promise that every score maps to performance. The owner should record whether the response addressed the defect category and whether the category remained stable. Without that follow-up, a weighted number may circulate as a headline while the underlying process stays unchanged.
+
+## Scope note
+
+The report should state the observation period and sample selection. A result from a small convenience sample cannot be treated as a stable quality estimate. Keeping those limits visible helps the manager use the measure as a signal for review rather than as a claim about all work.
+
 ## Sources
 
 1. [ISO, quality management principles](https://www.iso.org/iso-9001-quality-management.html)
