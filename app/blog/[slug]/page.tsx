@@ -107,6 +107,24 @@ function RelatedCards({ items }: { items: ReadonlyArray<{ label: string; href: s
   </section>;
 }
 
+function CustomArticle({ details }: { details: { sections: ReadonlyArray<{ heading: string; paragraphs: ReadonlyArray<string> }>; checklist: ReadonlyArray<string>; sources: ReadonlyArray<{ name: string; url: string; note: string }> } }) {
+  return <>
+    <section className="card evidence-card">
+      <h2>Decision in brief</h2>
+      {details.sections[0].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+      <ul>{details.checklist.map((item) => <li key={item}>{item}</li>)}</ul>
+    </section>
+    {details.sections.slice(1).map((section) => <section className="article-section" key={section.heading}>
+      <h2>{section.heading}</h2>
+      {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+    </section>)}
+    <section className="article-section numbered-sources">
+      <h2>Sources and further reading</h2>
+      <ol>{details.sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol>
+    </section>
+  </>;
+}
+
 function PublisherArticle({ details }: { details: PublisherDetails }) {
   return <>
     <section className="card evidence-card">
@@ -208,11 +226,12 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const details = blogDetails[slug as keyof typeof blogDetails];
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
+  const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
   const basics = guideBasics[slug as keyof typeof guideBasics];
   const url = `${base}/blog/${post.slug}`;
   const sources = details?.sources ?? [];
-  const faqs = details?.faqs ?? [];
+  const faqs = details && 'faqs' in details ? details.faqs : [];
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -254,7 +273,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <h1>{post.title}</h1>
         <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
-        {publisherDetails ? <PublisherArticle details={publisherDetails} /> : legacyDetails ? <>
+        {publisherDetails ? <PublisherArticle details={publisherDetails} /> : customDetails ? <CustomArticle details={customDetails} /> : legacyDetails ? <>
           <section className="card evidence-card">
             <h2>The short answer</h2>
             <p>A useful provider call should end with a role plan, a quality owner, a replacement rule, and clear account limits. A start date alone is not enough to protect the work.</p>
@@ -333,7 +352,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           </section>
         </>}
       </article>
-      {!publisherDetails && <CTA />}
+      {!publisherDetails && !customDetails && <CTA />}
     </main>
     <Footer />
   </>;
