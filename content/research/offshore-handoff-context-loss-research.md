@@ -48,6 +48,14 @@ The strongest test is performed by the receiver, not the author. Give a new edit
 
 If a packet repeatedly produces clarification requests, do not immediately add more prose. Check whether the question is too broad, the audience is undefined, or the reviewer lacks the necessary authority. A shorter brief with a clear pending decision may be more useful than a long background memo. For Offshore Resourcing readers, the test should keep role scope, handoff responsibility, and evidence limitations visible from research through publication.
 
+## Where the receiver should look first
+
+An independent receiver can test a packet in a fixed order. First identify the reader decision, then find the sentence expressing the proposed answer. Next inspect the evidence note for population, period, and source authority. Finally check exclusions and pending approvals. This order separates comprehension from stylistic preference. It is useful in offshore article work because a reviewer may have limited overlap with the researcher and still needs to decide whether drafting can begin.\n\nIf the receiver cannot find the decision quickly, the problem is usually interface design rather than missing background. If the decision is clear but the evidence boundary is not, the researcher needs to narrow the claim or add a qualification. If both are clear but an approval is missing, the packet should wait at that boundary. Recording these outcomes produces a more useful diagnosis than saying the handoff was unclear.
+
+## Reconstructing a lost decision
+
+When a handoff is incomplete, ask the receiver to write the decision they think the article serves and compare it with the original brief. Do not repair the gap by copying every prior message into the packet. Instead, preserve the missing assumption, its consequence, and the person who can confirm it. This approach is practical for offshore content work because it turns context loss into a visible field that can be corrected before drafting. It also prevents a confident but unsupported interpretation from becoming the article's central claim.
+
 ## Sources
 
 1. [NASA, systems engineering handbook](https://www.nasa.gov/reference/systems-engineering-handbook/)

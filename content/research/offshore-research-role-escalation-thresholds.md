@@ -48,6 +48,18 @@ An escalation should be easy for the receiver to act on. Include the question, t
 
 A role is not autonomous because it never escalates. It is autonomous when it can complete ordinary work and recognize the edge of its authority. Managers should review both missed escalations and unnecessary escalations. The first may require clearer triggers; the second may require better context or a more accessible owner. This distinction matters for offshore teams because silence can be caused by time-zone friction rather than confidence.
 
+## Thresholds should describe the decision
+
+An escalation threshold is stronger when it names the condition that changes the decision. Examples include a source that cannot establish the requested claim, a topic involving sensitive access or employment treatment, a disagreement about population or period, or a conclusion that would imply a guarantee. These are observable properties of the assignment. They should not be disguised as judgments about whether an offshore researcher is trusted or senior enough.\n\nThe packet can include three fields: trigger, required owner, and interim action. The interim action might be to narrow the claim, pause publication, seek a primary source, or publish only a descriptive finding. A threshold without an interim action creates another handoff delay because the next person knows there is a problem but not what can safely proceed. Reviewing outcomes later can show whether the rule is too broad, too narrow, or routed to the wrong owner.
+
+## Escalation evidence
+
+An escalation record should capture the claim, the unresolved question, the evidence already checked, and the decision needed from the owner. This keeps a distributed researcher from repeating the same search while waiting for an answer. It also lets the editor see whether the threshold was triggered by source weakness, topic sensitivity, or role authority. Over time, these records can reveal recurring ambiguity in briefs and improve the boundary between research, writing, and final publication judgment.
+
+## Reviewing threshold performance
+
+After publication, review whether escalations arrived early enough and whether owners received enough context to decide. A high number may indicate an unclear brief rather than unusually risky research. A low number may mean researchers are missing signals. Sample both cases and inspect the claim, evidence boundary, and role authority. This feedback improves the threshold as an operating control while preserving the editor's responsibility for the final public statement.
+
 ## Sources
 
 1. [NIST, Risk Management Framework](https://csrc.nist.gov/projects/risk-management)

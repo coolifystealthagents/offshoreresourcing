@@ -48,6 +48,14 @@ Trace each important statistic to its first available origin before calling the 
 
 Source roles should affect the conclusion. A definition can clarify a term, a dataset can establish a pattern, and a case can illustrate a condition. None of these roles automatically proves that a proposed offshore operating model will produce the same result. The final article should use the strongest source for the strongest claim and use examples as examples. That language preserves usefulness while keeping the inference bounded.
 
+## Diversity needs a reason
+
+A source mix should be designed around the claim, not a quota. A primary dataset may establish a measurement, an institutional explanation may clarify definitions, and an independent source may reveal a limitation. These roles are different even when all three are reputable. For an offshore resourcing article, the brief should state which role each source plays and where the evidence remains thin. That helps a writer avoid treating a contextual page as if it were direct proof.\n\nThe reviewer can test diversity by removing one source at a time. If the conclusion changes materially, the brief should explain that dependency. If no sentence changes, the extra link may be background rather than necessary evidence. Background sources can still help readers, but the article should distinguish evidence that carries the conclusion from material that only explains it. This keeps source selection purposeful when daily publishing creates pressure to accumulate links quickly.
+
+## The reader's evidence path
+
+Source diversity should be visible in the article's reasoning, not only in its bibliography. A reader should be able to see which source establishes the fact, which source supplies context, and where analysis begins. That sequence is especially valuable for offshore resourcing topics because a broad workforce observation can otherwise appear to be a direct service claim. A concise evidence path reduces the burden on later reviewers and makes it easier to update one part of the argument when a source changes.
+
 ## Sources
 
 1. [Cochrane, handbook](https://www.cochrane.org/handbook)

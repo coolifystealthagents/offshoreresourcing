@@ -48,6 +48,18 @@ For high-value terms, use a back-translation style check: ask the reader to expl
 
 Not every edit needs escalation. A style edit changes form while preserving the claim. A meaning edit changes scope, certainty, population, or responsibility and should be visible to the editor. Making that distinction helps a distributed researcher accept ordinary copy changes without losing track of evidence changes. It also prevents a polished translation from masking a material shift in what the source actually says.
 
+## A claim-level ambiguity test
+
+Review the terms that carry scope, responsibility, or measurement rather than translating every word with equal intensity. Copy the source phrase, write the intended article meaning, and list the qualification that must remain intact. Then ask a second reader to restate the claim without seeing the source. Compare the population, time period, certainty, and actor in both versions. A disagreement in any of those fields is a meaning issue, even if the sentence sounds fluent.\n\nThis test is valuable for offshore research because terminology can pass through several roles before publication. The researcher may understand a source nuance that the writer cannot see, while the editor may simplify it for readers. A short term note preserves the decision across that chain. It also provides a fair escalation path: the issue is a mismatch in meaning or evidence, not a vague concern about accent, nationality, or writing style.
+
+## Preserving qualifiers
+
+Qualifiers such as “may,” “in this sample,” “during the period,” and “the source reports” carry evidence meaning. Removing them can change a bounded observation into a promise or a general rule. A terminology review should therefore inspect certainty and scope alongside vocabulary. For an offshore article handoff, recording the original qualifier gives the writer a clear editing constraint and gives the editor a way to identify a substantive change. Fluent copy is not sufficient when the evidence boundary has moved.
+
+## When ambiguity remains
+
+Some terms cannot be resolved from the source alone because the reader's context changes the practical meaning. In that case, the article should state the ambiguity and use a narrower formulation. The researcher can identify the competing interpretations, while the editor decides whether the topic remains suitable for publication. This is preferable to choosing the smoothest translation and allowing a hidden assumption to travel through an offshore research handoff.
+
 ## Sources
 
 1. [W3C, WCAG](https://www.w3.org/TR/WCAG22/)

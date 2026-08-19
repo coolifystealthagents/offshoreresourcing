@@ -48,6 +48,18 @@ Calibration should happen when the rubric changes, when a new topic class appear
 
 Reviewer disagreement can come from missing context, not lack of skill. Examine the brief, source access, time available, and question wording before attributing the result to an individual. A fair calibration system improves the work interface and protects role boundaries. It also makes the manager's decision clearer: improve the rubric, change the brief, add subject review, or coach a specific research judgment.
 
+## Calibrate the boundary cases
+
+The most informative examples are often claims near the acceptance boundary. Include a sentence whose source is relevant but too broad, a figure with a correct number but a mismatched period, a recommendation that needs an owner, and a claim that should be removed. Reviewers should explain what they would change and why before seeing another score. The discussion can distinguish a missing rule from a legitimate difference in editorial judgment.\n\nFor an offshore team, retain the agreed examples with their source notes and limitation language. A new reviewer can use them to understand how the rubric behaves without relying on informal memory or time-zone overlap. Recalibrate when the audience, topic, or evidence type changes. Do not turn the examples into an inflexible template: their purpose is to expose reasoning at the boundary and show when escalation is appropriate.
+
+## From scores to reasons
+
+A total score can hide disagreement when two reviewers reach the same number for different reasons. Calibration should therefore preserve one sentence explaining each criterion, especially support, scope, limitation, and escalation. This is useful for offshore research because a written reason travels across time zones better than an unrecorded discussion. The rubric remains a decision aid, while the editor retains authority for cases that do not fit the examples or require subject knowledge.
+
+## The calibration record
+
+A short calibration record should preserve the sample claim, the independent judgments, the agreed rule, and the unresolved exception. It should also state who may change the rubric. This is important for offshore article research because a later reviewer needs to know whether a disagreement was resolved by evidence, by policy, or by editorial preference. The record supports consistent work without turning a prior decision into an unsupported fact about every future topic.
+
 ## Sources
 
 1. [American Statistical Association, ethics](https://www.amstat.org/your-career/ethical-guidelines-for-statistical-practice)

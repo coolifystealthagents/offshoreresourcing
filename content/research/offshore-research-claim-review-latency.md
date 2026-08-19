@@ -48,6 +48,14 @@ At approval, the reviewer should compare the claim with the source as it exists 
 
 Review capacity is part of evidence quality. When one editor is covering several time zones, the team should classify claims before the queue fills rather than treating every item as urgent. A clear freshness class lets a researcher continue with durable background while a consequential claim waits for the right owner. That separates a scheduling constraint from a research failure and gives managers a measurable choice about coverage.
 
+## Separating queue delay from evidence change
+
+A queue timestamp alone cannot show that a claim has become unsafe. The reviewer should compare the source period with the planned publication date and ask whether the article makes a current assertion or explains a durable concept. A delay may be harmless for a historical dataset whose period is clearly named. The same delay may matter for a policy page, service description, or current labour figure whose meaning depends on the latest version.\n\nThis distinction gives an offshore researcher a precise escalation message. Instead of reporting that a draft is late, the handoff can say that a claim is high freshness risk, its source was retrieved on a given date, and release requires a final check. The editor can move the article, narrow the wording, or assign a new retrieval. That decision is auditable and avoids treating an old source as current merely because the article is already drafted.
+
+## A release-window rule
+
+The release window should be attached to claims rather than to the whole article. A brief can identify which statements are durable and which require retrieval near approval. If a high-freshness claim cannot be checked, the writer can remove it or describe the historical period explicitly. The editor then has a bounded choice instead of an unexplained delay. This rule helps an offshore research routine preserve accuracy while allowing stable explanatory material to move through the queue.
+
 ## Sources
 
 1. [U.S. National Archives, records management](https://www.archives.gov/records-mgmt)

@@ -48,6 +48,18 @@ After forming a provisional thesis, write the strongest plausible objection as a
 
 The brief should state whether the evidence is descriptive, comparative, or explanatory. A descriptive source can show what was observed; it cannot by itself explain why it happened or predict the result for another offshore role. Keeping these verbs separate gives the editor a fast way to detect overreach. It also gives the writer a clear conclusion that remains useful without pretending the accessible sample is universal.
 
+## Practical interpretation for an offshore article
+
+The sample note should travel with the claim into the brief. It can state the population, selection method, geography, time period, response or missingness issue, and the comparison that the data cannot support. This is important when an article about offshore resourcing uses a survey or case study as a proxy for a broader workforce. The researcher can describe the observed sample without converting it into a universal statement about every role, provider, or location.\n\nAn editor can test the note by replacing the organisation name with “this sample” and reading the conclusion again. If the conclusion still sounds universal, the wording probably outruns the design. A second test is to ask which decision the evidence can inform and which decision requires additional evidence. These tests make uncertainty visible to the writer and reader without pretending that sampling error has disappeared.
+
+## What a sample can actually compare
+
+A sample can often support comparison inside its own defined groups, but it may not support a claim about a wider labour market or every offshore role. The brief should name the comparison unit and avoid implying representativeness unless the design supports it. For readers assessing offshore resourcing, this distinction keeps a case study useful as an example without presenting it as a benchmark. The editor should retain the sample's exclusions in the published limitation when they could change a reader's interpretation.
+
+## A bounded conclusion
+
+The conclusion should name the sample and the decision it can inform in the same paragraph. That wording keeps evidence useful without inviting a reader to treat a limited observation as a universal forecast. For Offshore Resourcing readers, the relevant question may be whether a finding deserves further investigation, not whether it proves one staffing model works everywhere. Keeping that distinction visible is a small but important control for research-led article writing.
+
 ## Sources
 
 1. [American Statistical Association, ethical guidelines](https://www.amstat.org/your-career/ethical-guidelines-for-statistical-practice)

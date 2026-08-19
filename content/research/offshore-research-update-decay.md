@@ -48,6 +48,18 @@ Triage should start with the claim, not the URL. A broken source supporting a mi
 
 When evidence no longer supports a published sentence, choose among correcting, narrowing, annotating, or removing it. Preserve the reason and the date of the decision. Do not silently re-date an article to make an old finding appear new. For offshore content work, an explicit correction path also teaches researchers what signals matter and gives editors a way to distinguish a routine refresh from a new research contribution.
 
+## Prioritising relationships, not pages
+
+The most useful maintenance queue groups claims by the decision they support. If five sentences depend on one changing dataset, a single source review may protect more of the article than five independent link checks. Conversely, a page can remain live while its definition changes enough to invalidate one narrow sentence. A researcher who records the claim relationship gives the editor a way to choose between a quick replacement, a wording change, and a deeper re-research task.\n\nFor a daily offshore routine, the queue should preserve the original evidence scope and the reason for the new review. That record prevents a maintenance update from becoming an untracked expansion of the article's thesis. It also helps a new researcher distinguish a genuine contradiction from a source redesign. The decision can be accepted, narrowed, escalated, or deferred with a stated rationale.
+
+## A maintenance evidence trail
+
+Each maintenance decision should point back to the affected claim and state whether the source changed, disappeared, or was contradicted. That distinction helps an offshore researcher choose a replacement search without assuming the old conclusion was false. It also gives the editor a concise basis for correcting, narrowing, annotating, or leaving the article unchanged. A visible evidence trail reduces repeated work and prevents routine link monitoring from silently altering the meaning of a published research page.
+
+## A useful review interval
+
+Review intervals should follow volatility and consequence rather than an arbitrary article age. A stable definition may need a lighter check than a current policy or time-sensitive workforce measure. The interval is only a prompt to inspect the claim. It is not evidence that the claim is still correct. Recording why the interval was chosen helps a distributed team adjust it when the subject changes and prevents maintenance from becoming a calendar exercise detached from reader risk.
+
 ## Sources
 
 1. [U.S. National Archives, records management](https://www.archives.gov/records-mgmt)

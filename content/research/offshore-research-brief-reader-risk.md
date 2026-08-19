@@ -48,6 +48,14 @@ Risk mapping should change the review plan, not merely add a label. A low-conseq
 
 The conclusion should tell readers what the finding supports and what it does not. Avoid broad language such as “the best model” when the evidence only describes a condition or tradeoff. Give a bounded next question instead: which role, audience, period, and control should the reader test? That framing makes the article practical while reducing the risk that a general research finding is mistaken for a guarantee about one team.
 
+## Risk should change the brief
+
+Reader risk is not a label added at the end of research. It should affect the question, evidence depth, wording, and approval path from the beginning. A descriptive explanation of a general term may need a clear definition and ordinary editorial review. A claim that could influence access, hiring treatment, data handling, or a service decision needs a tighter population match and a named owner for unresolved uncertainty. The same source can therefore be adequate for one sentence and inadequate for another.\n\nAn offshore researcher can make this visible by writing one sentence about the plausible reader action and one sentence about the harm of misunderstanding. The editor can decide whether to narrow the action, strengthen the evidence, or route the claim for subject review. This is more useful than assigning a high or low score without explaining what the score changes. It keeps risk connected to role boundaries rather than implying that a citation alone transfers accountability.
+
+## Reversibility as a review test
+
+Ask how easily a reader could undo a decision made from the article and how visible the uncertainty would be afterward. A low-reversibility decision deserves more explicit limitations and a stronger approval boundary. This does not make every offshore resourcing article a high-risk document. It gives the researcher a reason to distinguish an educational comparison from a claim likely to shape hiring, access, or operating policy. The review plan should follow that distinction.
+
 ## Sources
 
 1. [ISO, risk management](https://www.iso.org/iso-31000-risk-management.html)

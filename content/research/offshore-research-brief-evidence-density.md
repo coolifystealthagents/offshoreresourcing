@@ -48,6 +48,14 @@ Before drafting, give the brief to a reviewer who did not perform the search. As
 
 The evidence map should end with a decision boundary. State what the article can help a reader compare and what it cannot determine. This protects the offshore researcher from being asked to fill a commercial or operational gap with a citation. It also helps the editor decide whether a missing source is a blocker, a limitation to disclose, or a reason to remove the claim. Keeping this boundary visible is more durable than relying on a particular researcher to remember the discussion.
 
+## A better comparison than raw volume
+
+Two briefs can contain the same number of links and have very different editorial value. Compare them by asking whether a reader can trace the main conclusion backward to relevant evidence, whether competing evidence was considered, and whether the scope of each source is visible. This matters for offshore research because a writer may receive a packet after the original researcher has moved to another assignment. Traceability is therefore a property of the document, not of the relationship between two people.\n\nThe practical measure is a claim coverage table. For each material assertion, record the source, matching passage or data object, population covered, retrieval date, and remaining uncertainty. Then mark claims that are descriptive, comparative, or interpretive. A brief with fewer sources can outperform a larger packet when its rows answer those questions directly. Use the measure to improve the handoff, not to score a researcher by citation count.
+
+## Coverage review
+
+A reviewer can sample the highest-consequence claims first instead of counting every sentence equally. Check whether the source answers the exact question, whether its authority fits the claim, and whether the brief records a limit. If a claim is interpretive, label the transition from fact to analysis. This makes an offshore research handoff easier to inspect asynchronously and gives the editor a clear reason to request a narrower thesis. The resulting evidence map remains useful even when the writer changes the order of the article.
+
 ## Sources
 
 1. [Cochrane, evidence synthesis methods](https://www.cochrane.org/handbook)
