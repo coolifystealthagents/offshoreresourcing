@@ -19,6 +19,8 @@ O*NET provides a public structure for connecting occupations with tasks, knowled
 
 The record should distinguish source, observation, interpretation, and decision. Source may be a resume, work sample, or interview note. Observation describes what was actually provided. Interpretation explains how it relates to the requirement. Decision belongs to the authorized hiring owner. Keeping those fields separate reduces the risk that a coordinator's shorthand becomes an unsupported claim.
 
+If your team needs help keeping those records complete and comparable, see the [candidate screening coordination service](https://offshoreresourcing.com/services/candidate-screening-coordination). It covers the administrative lane while your hiring manager keeps the selection decision.
+
 ## Designing the Philippines support boundary
 
 A Filipino screening coordinator can check whether required evidence is present, organize comparable records, and flag missing or conflicting information. The hiring manager should set the threshold, assess protected or sensitive matters lawfully, and make the advance or reject decision. The role should not infer health, family status, age, nationality, or other sensitive attributes from a record.
