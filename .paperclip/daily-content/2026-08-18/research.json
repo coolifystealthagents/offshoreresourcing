@@ -1,0 +1,16 @@
+{
+  "campaignDate": "2026-08-18",
+  "family": "research",
+  "entries": [
+    {"route":"/research/offshore-research-brief-evidence-density","sourcePaths":["content/research/offshore-research-brief-evidence-density.md"]},
+    {"route":"/research/offshore-handoff-context-loss-research","sourcePaths":["content/research/offshore-handoff-context-loss-research.md"]},
+    {"route":"/research/offshore-research-claim-review-latency","sourcePaths":["content/research/offshore-research-claim-review-latency.md"]},
+    {"route":"/research/offshore-content-research-sample-bias","sourcePaths":["content/research/offshore-content-research-sample-bias.md"]},
+    {"route":"/research/offshore-research-role-escalation-thresholds","sourcePaths":["content/research/offshore-research-role-escalation-thresholds.md"]},
+    {"route":"/research/offshore-article-research-source-diversity","sourcePaths":["content/research/offshore-article-research-source-diversity.md"]},
+    {"route":"/research/offshore-research-brief-reader-risk","sourcePaths":["content/research/offshore-research-brief-reader-risk.md"]},
+    {"route":"/research/offshore-research-translation-ambiguity","sourcePaths":["content/research/offshore-research-translation-ambiguity.md"]},
+    {"route":"/research/offshore-research-update-decay","sourcePaths":["content/research/offshore-research-update-decay.md"]},
+    {"route":"/research/offshore-content-research-reviewer-calibration","sourcePaths":["content/research/offshore-content-research-reviewer-calibration.md"]}
+  ]
+}
