@@ -1,0 +1,58 @@
+export type DailyBlogArticle = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  minutes: number;
+  publishedAt: '2026-08-18';
+  focus: string;
+  risk: string;
+  test: string;
+  boundary: string;
+};
+
+const specs = [
+  ['philippines-offshore-content-brief-triage', 'How to triage Philippines offshore content briefs before drafting', 'brief completeness, audience fit, and evidence readiness', 'a writer begins on an unclear request and produces avoidable rework', 'score one sample brief against intent, sources, links, and approval owner', 'the coordinator may flag ambiguity but cannot approve strategy'],
+  ['philippines-offshore-article-source-expiry-review', 'Philippines offshore article source expiry review: a practical routine', 'checking whether sources still support claims in recurring articles', 'an old source remains linked after its facts or page context changes', 'review a mixed set of current, stale, and redirected sources', 'the reviewer records evidence and escalates material claim changes'],
+  ['philippines-offshore-daily-writing-capacity-plan', 'Daily writing capacity plan for a Philippines offshore content team', 'matching briefs, research, writing, editing, and approvals to real capacity', 'a publishing promise exceeds the slowest review or approval stage', 'build a one-week plan with buffers for exceptions and revisions', 'the planner recommends capacity but does not promise an unapproved date'],
+  ['philippines-offshore-content-claim-register', 'How to run a Philippines offshore content claim register', 'linking important statements to sources, dates, and review owners', 'a polished article contains a claim no reviewer can retrace', 'trace claims from a draft to source notes and an accountable decision', 'the researcher does not provide legal, medical, or financial advice'],
+  ['philippines-offshore-blog-revision-intake', 'Philippines offshore blog revision intake that keeps feedback actionable', 'turning editorial notes into owned, ordered revision work', 'a writer receives conflicting comments and edits the wrong passage', 'sort a realistic review into fixes, questions, and owner decisions', 'the coordinator manages the queue without overruling the editor'],
+  ['philippines-offshore-content-duplicate-topic-check', 'Duplicate-topic checks for Philippines offshore blog planning', 'separating adjacent search questions before assigning a new article', 'two articles compete because their decisions and examples overlap', 'compare proposed intent, audience, route, and internal-link purpose', 'the checker recommends consolidation but does not delete live content'],
+  ['philippines-offshore-editorial-calendar-change-control', 'Editorial calendar change control for Philippines offshore teams', 'recording why a topic, owner, or date changes', 'silent changes break handoffs and leave a queue full of stale assumptions', 'review a calendar change with impact, approver, and next action', 'the coordinator documents changes rather than changing business priorities'],
+  ['philippines-offshore-blog-outline-acceptance', 'Blog outline acceptance rules for Philippines offshore writers', 'checking whether an outline can support a useful, specific article', 'drafting starts before the structure answers the reader’s real decision', 'accept or return an outline using sections, examples, evidence, and scope', 'the reviewer does not rewrite the approved business position'],
+  ['philippines-offshore-content-fact-check-escalation', 'Fact-check escalation rules for Philippines offshore content', 'deciding which uncertainty can be fixed and which needs an owner', 'a reviewer silently guesses when a source conflicts with the brief', 'classify normal corrections, unresolved claims, and prohibited certainty', 'the checker escalates uncertain claims instead of inventing an answer'],
+  ['philippines-offshore-blog-internal-link-map', 'How to maintain a Philippines offshore blog internal-link map', 'connecting articles by reader need without forcing irrelevant links', 'links repeat mechanically and send readers to the wrong next decision', 'map supporting and destination articles around distinct intent', 'the map owner proposes links but cannot change navigation strategy'],
+  ['philippines-offshore-content-image-brief-workflow', 'Content image brief workflow for Philippines offshore publishing', 'giving thumbnails and diagrams a useful relationship to article meaning', 'an image is decorative, misleading, or missing useful accessibility text', 'review an image brief for purpose, caption, alt text, and rights notes', 'the coordinator does not claim ownership of licensed assets'],
+  ['philippines-offshore-blog-metadata-approval', 'Philippines offshore blog metadata approval checklist', 'checking titles, descriptions, canonicals, dates, and structured fields', 'metadata describes a different article or exposes an unapproved date', 'inspect a route record and compare it with the approved brief', 'the checker reports discrepancies without changing SEO strategy'],
+  ['philippines-offshore-content-draft-version-control', 'Draft version control for Philippines offshore content teams', 'making the current article, source notes, and review comments findable', 'an editor reviews an outdated draft and misses a later correction', 'reconcile filenames, status, owner, and change notes across a handoff', 'the coordinator preserves history and does not erase disputed work'],
+  ['philippines-offshore-blog-approval-queue-aging', 'Blog approval queue aging review for Philippines offshore teams', 'finding blocked approvals before they threaten daily publishing', 'drafts wait invisibly because “in review” has no next owner', 'group queue items by age, blocker, risk, and required decision', 'the analyst escalates overdue decisions instead of approving them'],
+  ['philippines-offshore-content-research-brief-handoff', 'Research brief handoff for Philippines offshore article creation', 'moving source findings into a brief a writer can actually use', 'research notes are comprehensive but do not explain the article’s job', 'turn notes into claims, counterpoints, examples, and open questions', 'the researcher supplies evidence while the editor owns framing'],
+  ['philippines-offshore-blog-editor-sampling-plan', 'Editor sampling plan for Philippines offshore blog quality', 'choosing review samples that reveal recurring defects', 'only easy articles are sampled and difficult misses remain hidden', 'select samples across writers, topics, risk, and revision history', 'the sampling owner measures patterns but does not punish without context'],
+  ['philippines-offshore-content-brief-rework-analysis', 'Content brief rework analysis for Philippines offshore operations', 'using revision causes to improve intake and briefing', 'the team repeatedly fixes the draft when the brief caused the problem', 'code rework by missing context, source gaps, scope drift, and owner delay', 'the analyst recommends process changes but does not assign blame'],
+  ['philippines-offshore-daily-blog-exception-log', 'Daily blog exception log for Philippines offshore publishing', 'recording unusual blockers without hiding them in chat', 'a repeated exception looks like a one-off and never receives an owner', 'write an exception with impact, interim action, and closure evidence', 'the log captures exceptions and does not expose internal operational details publicly'],
+  ['philippines-offshore-content-qa-severity-review', 'Content QA severity review for Philippines offshore articles', 'ranking defects by reader harm, trust, and publishing risk', 'minor formatting issues compete with unsupported claims for attention', 'classify a mixed defect set and justify the order of fixes', 'the QA role recommends severity while the accountable editor decides release'],
+  ['philippines-offshore-blog-publishing-window-plan', 'Publishing-window plan for a Philippines offshore blog routine', 'placing review, approval, and publishing work inside dependable windows', 'a time-zone handoff leaves a finished article waiting for a small decision', 'model normal and exception paths around the actual approval window', 'the planner coordinates timing without triggering deployment or publishing authority'],
+  ['philippines-offshore-content-team-backup-coverage', 'Backup coverage for a Philippines offshore content team', 'keeping briefs, sources, drafts, and approvals moving during absence', 'the only person who knows a queue’s status becomes unavailable', 'run a handover drill using current records and named escalation paths', 'backup staff follow documented scope and do not inherit editorial authority'],
+  ['philippines-offshore-daily-article-retrospective', 'Daily article retrospective for Philippines offshore content work', 'turning one publishing cycle into a small, evidence-based improvement', 'the team discusses impressions instead of observable queue and quality signals', 'review one completed cycle for wait time, rework, source gaps, and decisions', 'the facilitator records learning without publishing internal process details'],
+] as const;
+
+const sectionNames = ['Start with the reader decision', 'Make the work visible', 'Set the evidence standard', 'Design the handoff', 'Protect role boundaries', 'Use a small quality check', 'Handle exceptions deliberately', 'Review before increasing volume'];
+
+function paragraphs(item: typeof specs[number], index: number) {
+  const [, title, focus, risk, test, boundary] = item;
+  const perspective = ['the brief owner', 'the researcher', 'the writer', 'the editor', 'the publishing coordinator'][index % 5];
+  return sectionNames.map((heading, sectionIndex) => ({
+    heading,
+    paragraphs: [
+      `${title} works best when ${focus} is treated as an operating decision rather than a vague request. Begin by naming what the reader should understand, compare, or do after the article. For ${heading.toLowerCase()}, write that decision beside the responsible owner, the source of truth, and the point where uncertainty must stop the queue. This keeps a Philippines offshore support role useful because the work is concrete, reviewable, and connected to the company’s daily article routine.`,
+      `${perspective} should then separate normal work from the risk that matters most: ${risk}. A practical record includes the input received, the expected output, the due window, the evidence checked, and the next handoff. It should be possible for another person to understand the status without reconstructing a private conversation. That discipline reduces rework while preserving the manager’s authority over priorities, claims, and publication decisions.`,
+      `Use a short exercise to test the rule before expanding the queue. For this topic, ${test}. Look for accurate reading, useful notes, sensible questions, and a clean handoff, not merely fast completion. The role boundary remains explicit: ${boundary}. If the record crosses that boundary, pause, name the decision required, and escalate with the relevant evidence instead of filling the gap with an assumption.`,
+    ],
+  }));
+}
+
+export const dailyBlogPosts: readonly DailyBlogArticle[] = specs.map(([slug, title, focus, risk, test, boundary], index) => ({
+  slug, title, focus, risk, test, boundary, publishedAt: '2026-08-18', minutes: 10 + (index % 4),
+  excerpt: `A practical Philippines offshore guide to ${focus}, with clear evidence, handoffs, and decision boundaries.`,
+}));
+
+export const dailyBlogDetails = Object.fromEntries(specs.map((item, index) => [item[0], { sections: paragraphs(item, index) }])) as Record<string, { sections: ReturnType<typeof paragraphs> }>;

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Header, Footer, CTA, JsonLd } from '../../components';
 import { blogDetails, blogPosts, guideBasics, site } from '../../data';
+import { dailyBlogDetails } from '../../daily-blog-2026-08-18';
 import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
@@ -225,6 +226,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   if (!post) notFound();
 
   const details = blogDetails[slug as keyof typeof blogDetails];
+  const dailyDetails = dailyBlogDetails[slug];
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
   const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
@@ -273,7 +275,15 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <h1>{post.title}</h1>
         <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
-        {publisherDetails ? <PublisherArticle details={publisherDetails} /> : customDetails ? <CustomArticle details={customDetails} /> : legacyDetails ? <>
+        {dailyDetails ? <>
+          <section className="card evidence-card">
+            <h2>The short answer</h2>
+            <p>{post.excerpt} The reliable way to run this lane is to make the reader decision, evidence record, next owner, and approval boundary visible before work begins.</p>
+            <ul><li>Record the input and the expected outcome before assigning work.</li><li>Use examples and source notes so another reviewer can repeat the check.</li><li>Escalate uncertainty instead of converting it into unsupported copy.</li></ul>
+          </section>
+          {dailyDetails.sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
+          <section className="card article-related-module"><h2>Related content</h2><p>Keep this article connected to the wider Philippines offshore resourcing work: role scope, documented handoffs, quality review, and manager-owned decisions.</p></section>
+        </> : publisherDetails ? <PublisherArticle details={publisherDetails} /> : customDetails ? <CustomArticle details={customDetails} /> : legacyDetails ? <>
           <section className="card evidence-card">
             <h2>The short answer</h2>
             <p>A useful provider call should end with a role plan, a quality owner, a replacement rule, and clear account limits. A start date alone is not enough to protect the work.</p>
