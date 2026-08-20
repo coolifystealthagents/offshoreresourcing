@@ -1,0 +1,53 @@
+{
+  "date": "2026-08-19",
+  "articles": [
+    {
+      "route": "/blog/offshore-resourcing-intake-source-register",
+      "source": "content/blog/offshore-resourcing-intake-source-register.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-approval-evidence-matrix",
+      "source": "content/blog/offshore-resourcing-approval-evidence-matrix.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-exception-queue-triage",
+      "source": "content/blog/offshore-resourcing-exception-queue-triage.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-quality-review-cadence",
+      "source": "content/blog/offshore-resourcing-quality-review-cadence.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-handoff-acceptance-log",
+      "source": "content/blog/offshore-resourcing-handoff-acceptance-log.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-access-recertification-review",
+      "source": "content/blog/offshore-resourcing-access-recertification-review.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-weekly-decision-brief",
+      "source": "content/blog/offshore-resourcing-weekly-decision-brief.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-source-of-truth-map",
+      "source": "content/blog/offshore-resourcing-source-of-truth-map.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-change-control-record",
+      "source": "content/blog/offshore-resourcing-change-control-record.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-work-queue-ownership",
+      "source": "content/blog/offshore-resourcing-work-queue-ownership.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-escalation-path-design",
+      "source": "content/blog/offshore-resourcing-escalation-path-design.md"
+    },
+    {
+      "route": "/blog/offshore-resourcing-launch-readiness-review",
+      "source": "content/blog/offshore-resourcing-launch-readiness-review.md"
+    }
+  ]
+}
