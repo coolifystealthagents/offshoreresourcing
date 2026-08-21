@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "campaignDate": "2026-08-20",
+  "family": "research",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "entries": [
+    {"slug":"offshore-content-calendar-research","route":"/research/offshore-content-calendar-research","sourcePath":"content/research/offshore-content-calendar-research.md","imagePath":"public/images/research-2026-08-20/content-calendar-evidence.png"},
+    {"slug":"philippines-research-support-evidence-lane","route":"/research/philippines-research-support-evidence-lane","sourcePath":"content/research/philippines-research-support-evidence-lane.md","imagePath":"public/images/research-2026-08-20/research-evidence-lane.png"},
+    {"slug":"offshore-editorial-review-capacity","route":"/research/offshore-editorial-review-capacity","sourcePath":"content/research/offshore-editorial-review-capacity.md","imagePath":"public/images/research-2026-08-20/editorial-review-capacity.png"},
+    {"slug":"philippines-offshore-article-access-risk","route":"/research/philippines-offshore-article-access-risk","sourcePath":"content/research/philippines-offshore-article-access-risk.md","imagePath":"public/images/research-2026-08-20/article-access-risk.png"},
+    {"slug":"offshore-article-rework-research","route":"/research/offshore-article-rework-research","sourcePath":"content/research/offshore-article-rework-research.md","imagePath":"public/images/research-2026-08-20/article-rework-research.png"}
+  ]
+}
