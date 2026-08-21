@@ -1,0 +1,4 @@
+Gemini image generation receipt
+Route: /blog/offshore-resourcing-role-scorecard-signals
+Asset: public/images/daily-2026-08-20/role-scorecard-signals.png
+Prompt: distinct editorial productivity visual for offshore-resourcing-role-scorecard-signals, no text, no logo, no watermark.

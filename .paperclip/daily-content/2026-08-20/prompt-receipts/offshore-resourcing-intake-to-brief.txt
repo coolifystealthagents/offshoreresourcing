@@ -1,0 +1,4 @@
+Gemini image generation receipt
+Route: /blog/offshore-resourcing-intake-to-brief
+Asset: public/images/daily-2026-08-20/intake-to-brief.png
+Prompt: distinct editorial productivity visual for offshore-resourcing-intake-to-brief, no text, no logo, no watermark.

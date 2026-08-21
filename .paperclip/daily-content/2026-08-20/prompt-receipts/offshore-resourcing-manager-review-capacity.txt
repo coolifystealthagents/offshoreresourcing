@@ -1,0 +1,4 @@
+Gemini image generation receipt
+Route: /blog/offshore-resourcing-manager-review-capacity
+Asset: public/images/daily-2026-08-20/manager-review-capacity.png
+Prompt: distinct editorial productivity visual for offshore-resourcing-manager-review-capacity, no text, no logo, no watermark.

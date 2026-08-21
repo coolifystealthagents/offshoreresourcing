@@ -1,4 +1,5 @@
 import { dailyBlogPosts } from './daily-blog-2026-08-18';
+import { dailyBlog20Posts } from './daily-blog-2026-08-20';
 
 export const site = {
   "domain": "OffshoreResourcing.com",
@@ -239,7 +240,7 @@ const augustTenBlogDates: Record<string, string> = {
 
 type BlogPost = { slug: string; title: string; excerpt: string; minutes: number; publishedAt?: string };
 
-export const blogPosts: readonly BlogPost[] = [...(blogPostsSource as readonly BlogPost[]), ...dailyBlogPosts]
+export const blogPosts: readonly BlogPost[] = [...(blogPostsSource as readonly BlogPost[]), ...dailyBlogPosts, ...dailyBlog20Posts]
   .map((post): BlogPost => augustTenBlogDates[post.slug] ? { ...post, publishedAt: augustTenBlogDates[post.slug] } : post)
   .sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || (blogPostsSource.findIndex((item) => item.slug === a.slug) - blogPostsSource.findIndex((item) => item.slug === b.slug)));
 

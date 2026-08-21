@@ -1,0 +1,4 @@
+Gemini image generation receipt
+Route: /blog/offshore-resourcing-first-week-ramp
+Asset: public/images/daily-2026-08-20/first-week-ramp.png
+Prompt: distinct editorial productivity visual for offshore-resourcing-first-week-ramp, no text, no logo, no watermark.

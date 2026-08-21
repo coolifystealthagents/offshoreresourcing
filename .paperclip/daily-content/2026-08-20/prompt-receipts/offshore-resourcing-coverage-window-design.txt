@@ -1,0 +1,4 @@
+Gemini image generation receipt
+Route: /blog/offshore-resourcing-coverage-window-design
+Asset: public/images/daily-2026-08-20/coverage-window.png
+Prompt: distinct editorial productivity visual for offshore-resourcing-coverage-window-design, no text, no logo, no watermark.

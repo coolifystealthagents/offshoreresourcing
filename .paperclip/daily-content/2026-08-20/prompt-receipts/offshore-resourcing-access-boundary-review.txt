@@ -1,0 +1,4 @@
+Gemini image generation receipt
+Route: /blog/offshore-resourcing-access-boundary-review
+Asset: public/images/daily-2026-08-20/access-boundary-review.png
+Prompt: distinct editorial productivity visual for offshore-resourcing-access-boundary-review, no text, no logo, no watermark.

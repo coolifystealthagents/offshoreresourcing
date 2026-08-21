@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { Header, Footer, CTA, JsonLd } from '../../components';
 import { blogDetails, blogPosts, guideBasics, site } from '../../data';
 import { dailyBlogDetails } from '../../daily-blog-2026-08-18';
+import { dailyBlog20Details } from '../../daily-blog-2026-08-20';
+import { dailyBlog20Posts } from '../../daily-blog-2026-08-20';
 import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
@@ -226,7 +228,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   if (!post) notFound();
 
   const details = blogDetails[slug as keyof typeof blogDetails];
-  const dailyDetails = dailyBlogDetails[slug];
+  const dailyDetails = dailyBlogDetails[slug] || dailyBlog20Details[slug];
+  const daily20Post = dailyBlog20Posts.find((item) => item.slug === slug);
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
   const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
@@ -273,7 +276,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <article className="container article-wrap">
         <p className="eyebrow">Philippines staffing guide · {post.minutes} min read{post.publishedAt ? <> · <time dateTime={post.publishedAt}>Published {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${post.publishedAt}T00:00:00Z`))}</time></> : null}</p>
         <h1>{post.title}</h1>
-        <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
+        <p className="lead">{post.excerpt}</p>{daily20Post ? <img src={daily20Post.image} alt="Offshore resourcing operating workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : null}<div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
         {dailyDetails ? <>
           <section className="card evidence-card">

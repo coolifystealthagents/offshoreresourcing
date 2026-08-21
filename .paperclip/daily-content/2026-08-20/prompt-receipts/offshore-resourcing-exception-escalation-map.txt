@@ -1,0 +1,4 @@
+Gemini image generation receipt
+Route: /blog/offshore-resourcing-exception-escalation-map
+Asset: public/images/daily-2026-08-20/exception-escalation-map.png
+Prompt: distinct editorial productivity visual for offshore-resourcing-exception-escalation-map, no text, no logo, no watermark.

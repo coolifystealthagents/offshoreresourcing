@@ -1,0 +1,4 @@
+Gemini image generation receipt
+Route: /blog/offshore-resourcing-rework-diagnosis
+Asset: public/images/daily-2026-08-20/rework-diagnosis.png
+Prompt: distinct editorial productivity visual for offshore-resourcing-rework-diagnosis, no text, no logo, no watermark.

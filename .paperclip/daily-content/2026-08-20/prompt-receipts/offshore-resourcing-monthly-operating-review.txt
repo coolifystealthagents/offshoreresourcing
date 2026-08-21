@@ -1,0 +1,4 @@
+Gemini image generation receipt
+Route: /blog/offshore-resourcing-monthly-operating-review
+Asset: public/images/daily-2026-08-20/monthly-operating-review.png
+Prompt: distinct editorial productivity visual for offshore-resourcing-monthly-operating-review, no text, no logo, no watermark.
