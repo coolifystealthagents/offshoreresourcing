@@ -6,6 +6,7 @@ import { dailyBlogDetails } from '../../daily-blog-2026-08-18';
 import { dailyBlog20Details } from '../../daily-blog-2026-08-20';
 import { dailyBlog20Posts } from '../../daily-blog-2026-08-20';
 import { repairBlog21Details, repairBlog21Posts } from '../../daily-blog-2026-08-21-repair';
+import { sourceRepair2Details, sourceRepair2Posts } from '../../daily-blog-2026-08-21-source-repair-2';
 import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
@@ -232,6 +233,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const dailyDetails = dailyBlogDetails[slug] || dailyBlog20Details[slug];
   const daily20Post = dailyBlog20Posts.find((item) => item.slug === slug);
   const daily21Post = repairBlog21Posts.find((item) => item.slug === slug);
+  const sourceRepair2Post = sourceRepair2Posts.find((item) => item.slug === slug);
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
   const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
@@ -278,9 +280,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <article className="container article-wrap">
         <p className="eyebrow">Philippines staffing guide · {post.minutes} min read{post.publishedAt ? <> · <time dateTime={post.publishedAt}>Published {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${post.publishedAt}T00:00:00Z`))}</time></> : null}</p>
         <h1>{post.title}</h1>
-        <p className="lead">{post.excerpt}</p>{daily21Post ? <img src={daily21Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily20Post ? <img src={daily20Post.image} alt="Offshore resourcing operating workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : null}<div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
+        <p className="lead">{post.excerpt}</p>{sourceRepair2Post ? <img src={sourceRepair2Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily21Post ? <img src={daily21Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily20Post ? <img src={daily20Post.image} alt="Offshore resourcing operating workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : null}<div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
-        {daily21Post ? <>
+        {sourceRepair2Post ? <>
+          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt} A dependable lane makes the reader decision, evidence record, next owner, and approval boundary visible before work begins.</p><ul><li>Record the input and expected outcome before assigning work.</li><li>Use examples and source notes so another reviewer can repeat the check.</li><li>Escalate uncertainty instead of converting it into unsupported copy.</li></ul></section>
+          {sourceRepair2Details[sourceRepair2Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
+          <section className="card article-related-module"><h2>Related content</h2><p>Keep this article connected to offshore role scope, documented handoffs, quality review, and manager-owned decisions.</p></section>
+        </> : daily21Post ? <>
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt} A dependable lane makes the reader decision, evidence record, next owner, and approval boundary visible before work begins.</p><ul><li>Record the input and expected outcome before assigning work.</li><li>Use examples and source notes so another reviewer can repeat the check.</li><li>Escalate uncertainty instead of converting it into unsupported copy.</li></ul></section>
           {repairBlog21Details[daily21Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
           <section className="card article-related-module"><h2>Related content</h2><p>Keep this article connected to the wider Philippines offshore resourcing work: role scope, documented handoffs, quality review, and manager-owned decisions.</p></section>
