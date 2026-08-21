@@ -5,7 +5,7 @@ import { blogDetails, blogPosts, guideBasics, site } from '../../data';
 import { dailyBlogDetails } from '../../daily-blog-2026-08-18';
 import { dailyBlog20Details } from '../../daily-blog-2026-08-20';
 import { dailyBlog20Posts } from '../../daily-blog-2026-08-20';
-import { dailyBlog21Details, dailyBlog21Posts } from '../../daily-blog-2026-08-21';
+import { repairBlog21Details, repairBlog21Posts } from '../../daily-blog-2026-08-21-repair';
 import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
@@ -231,7 +231,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const details = blogDetails[slug as keyof typeof blogDetails];
   const dailyDetails = dailyBlogDetails[slug] || dailyBlog20Details[slug];
   const daily20Post = dailyBlog20Posts.find((item) => item.slug === slug);
-  const daily21Post = dailyBlog21Posts.find((item) => item.slug === slug);
+  const daily21Post = repairBlog21Posts.find((item) => item.slug === slug);
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
   const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
@@ -282,7 +282,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
         {daily21Post ? <>
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt} A dependable lane makes the reader decision, evidence record, next owner, and approval boundary visible before work begins.</p><ul><li>Record the input and expected outcome before assigning work.</li><li>Use examples and source notes so another reviewer can repeat the check.</li><li>Escalate uncertainty instead of converting it into unsupported copy.</li></ul></section>
-          {dailyBlog21Details[daily21Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
+          {repairBlog21Details[daily21Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
           <section className="card article-related-module"><h2>Related content</h2><p>Keep this article connected to the wider Philippines offshore resourcing work: role scope, documented handoffs, quality review, and manager-owned decisions.</p></section>
         </> : dailyDetails ? <>
           <section className="card evidence-card">

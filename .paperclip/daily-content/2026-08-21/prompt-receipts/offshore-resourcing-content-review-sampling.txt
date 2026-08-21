@@ -1,5 +1,0 @@
-Use case: productivity-visual
-Asset type: editorial hero image
-Primary request: a distinctive wide polished business illustration of editorial review table with sampled drafts, claim checks, and quality markers for an Offshore Resourcing article.
-Style: calm editorial 3D illustration, teal and slate palette, no readable text.
-Constraints: no logos, no watermark, no stock-photo look, no invented company claims.

@@ -1,1 +1,1 @@
-Gemini-generated hero prompt receipts for the August 21, 2026 Blog batch. Each receipt corresponds to one route and its distinct editorial workflow subject; no retained stock or prior-day image is used.
+Each receipt corresponds to one distinct August 21 repair-route hero asset. Assets are new to this repair batch.
