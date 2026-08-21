@@ -284,6 +284,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
         {sourceRepair2Post ? <>
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt} A dependable lane makes the reader decision, evidence record, next owner, and approval boundary visible before work begins.</p><ul><li>Record the input and expected outcome before assigning work.</li><li>Use examples and source notes so another reviewer can repeat the check.</li><li>Escalate uncertainty instead of converting it into unsupported copy.</li></ul></section>
+          <section className="article-section route-source-body"><h2>Route-specific operating guidance</h2><p>{sourceRepair2Post.sourceBody}</p></section>
           {sourceRepair2Details[sourceRepair2Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
           <section className="card article-related-module"><h2>Related content</h2><p>Keep this article connected to offshore role scope, documented handoffs, quality review, and manager-owned decisions.</p></section>
         </> : daily21Post ? <>
