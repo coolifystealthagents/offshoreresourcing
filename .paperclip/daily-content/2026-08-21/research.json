@@ -1,0 +1,7 @@
+[
+  {"route":"/research/offshore-editorial-evidence-retention","sourcePaths":["content/research/offshore-editorial-evidence-retention.md"],"imagePath":"public/images/research-2026-08-21/evidence-retention-handoff.png"},
+  {"route":"/research/offshore-editorial-review-queue-sampling","sourcePaths":["content/research/offshore-editorial-review-queue-sampling.md"],"imagePath":"public/images/research-2026-08-21/review-queue-sampling.png"},
+  {"route":"/research/offshore-editorial-access-recertification","sourcePaths":["content/research/offshore-editorial-access-recertification.md"],"imagePath":"public/images/research-2026-08-21/editorial-access-recertification.png"},
+  {"route":"/research/offshore-research-source-freshness-decay","sourcePaths":["content/research/offshore-research-source-freshness-decay.md"],"imagePath":"public/images/research-2026-08-21/source-freshness-decay.png"},
+  {"route":"/research/offshore-manager-span-recurring-publishing","sourcePaths":["content/research/offshore-manager-span-recurring-publishing.md"],"imagePath":"public/images/research-2026-08-21/manager-span-publishing.png"}
+]
