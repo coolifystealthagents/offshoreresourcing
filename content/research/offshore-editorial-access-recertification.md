@@ -15,6 +15,10 @@ sourceCount: "10"
 
 What should a recurring access recertification check when offshore editorial roles touch research sources, drafts, analytics, or publishing controls? The question is narrower than whether remote work is secure. It asks whether a manager can show that access still matches current responsibility, that exceptions have an owner, and that removal is possible when work changes. Offshore Resourcing needs this distinction because article routines can expand gradually: a researcher receives a shared folder, a reviewer receives an approval permission, and a coordinator later inherits a publishing account.
 
+## Methodology and evidence scope
+
+This is a qualitative documentary review. I compared the access-control principles in the public NIST, CISA, CIS, ISO, OWASP, GAO, ICO, and Australian Cyber Security Centre materials listed below, then translated recurring concepts into questions for an offshore editorial routine: role need, permission purpose, scope, ownership, review trigger, exception expiry, and removal evidence. I tested the questions against three illustrative work states, evidence preparation, editorial review, and publication coordination, to see whether each state could be assigned a proportionate permission boundary. The examples are analytical scenarios, not observations of a named team or an audit sample. The evidence can support a control model and identify what a manager should inspect; it cannot establish the security of any particular account, vendor, platform, or company.
+
 ## Role to permission mapping
 
 Begin with the work, not the application. A researcher may need to read approved sources and store evidence, while a writer needs draft access and an editor needs review comments. A publishing coordinator may require a controlled release action, but that does not imply authority to change a brief or approve a sensitive claim. Mapping permissions to tasks exposes accidental bundling. The map should name the accountable manager, the system owner, the purpose, the maximum sensitivity, and the condition that ends access.

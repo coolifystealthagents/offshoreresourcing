@@ -15,6 +15,10 @@ sourceCount: "10"
 
 What manager span can a recurring offshore publishing routine support before review quality, exception handling, or role clarity begins to deteriorate? This is not a search for one ideal ratio. The workload of a content manager depends on article complexity, source risk, reviewer skill, system friction, and the number of decisions that cannot be delegated. Offshore Resourcing needs a way to reason about capacity without turning a staffing choice into an unsupported benchmark or a claim about a particular team's results.
 
+## Methodology and evidence scope
+
+This is a qualitative, documentary methodology for designing a bounded capacity inquiry. I compared public guidance on span of control, measurement, risk management, internal control, productivity, accessibility, and distributed work from the sources listed below. I extracted concepts that can be observed in recurring offshore article operations, including active workstreams, decision categories, queue age, waiting reasons, rework, exception counts, and manager decision time, and used them to construct the proposed evidence frame and four-cycle experiment. The analysis does not estimate an ideal ratio from published statistics, and it does not use private personnel data, customer records, or a live team sample. Its evidence scope is therefore limited to showing how an authorized manager could examine workload and alternative explanations; it cannot prove causation, capability, financial return, or a universal span recommendation.
+
 ## Span is decision density
 
 Headcount alone is a poor proxy for manager load. One small team can create more attention demand than a larger team if every article needs custom research, repeated clarification, and approval. Define span as the number of active workstreams plus the decision density within them. Workstreams include research, drafting, review, revision, and release. Decision density includes exceptions, scope changes, source disputes, access issues, and escalations. This framing keeps the analysis tied to observable work rather than a universal management formula.
