@@ -1,0 +1,5 @@
+Use case: productivity-visual
+Asset type: editorial hero image
+Primary request: a distinctive wide polished business illustration of fair performance review desk with evidence cards, corrections, and coaching notes for an Offshore Resourcing article.
+Style: calm editorial 3D illustration, teal and slate palette, no readable text.
+Constraints: no logos, no watermark, no stock-photo look, no invented company claims.
