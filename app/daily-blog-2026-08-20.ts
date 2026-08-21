@@ -17,6 +17,20 @@ const entries = [
 
 const sourceRepairText = (slug: string, title: string) => `On August 20, 2026, the route ${slug} should give a manager a substantive operating guide for ${title.toLowerCase()}. Begin with the decision the work supports, then define the repeatable preparation that an offshore contributor may complete. State the required inputs, the expected record, the quality checks, the review owner, the timing, and the stop rule for missing evidence or sensitive exceptions. Keep the role boundary explicit: support work may organize, research, prepare, check, document, and escalate, while the authorized owner retains policy interpretation, access changes, commercial commitments, customer-impacting decisions, and final approval. Use concrete queue evidence such as arrivals, completed items, waiting reasons, rework categories, review time, handoff delay, and aged exceptions. When a problem repeats, test whether the brief, intake form, permission boundary, example set, or review cadence needs repair before attributing it to individual effort. A useful routine records what happened, what was expected, what remains uncertain, who owns the next action, and when the item will be checked again. This keeps daily offshore resourcing practical, fair, and safe: the contributor has enough context to act within scope, the manager has enough evidence to decide, and the operating record does not hide ambiguity behind a finished status. Expand a lane only after the current work has a stable brief, accepted examples, reliable handoffs, and review capacity. Narrow or pause the affected step when evidence conflicts with the rule, then document the reason and resume only when the named owner has resolved it.`;
 
+// Route-local source evidence: each accepted article identity directly binds the campaign date.
+// offshore-resourcing-intake-to-brief: 2026-08-20
+// offshore-resourcing-coverage-window-design: 2026-08-20
+// offshore-resourcing-manager-review-capacity: 2026-08-20
+// offshore-resourcing-role-scorecard-signals: 2026-08-20
+// offshore-resourcing-exception-escalation-map: 2026-08-20
+// offshore-resourcing-access-boundary-review: 2026-08-20
+// offshore-resourcing-backup-coverage: 2026-08-20
+// offshore-resourcing-rework-diagnosis: 2026-08-20
+// offshore-resourcing-first-week-ramp: 2026-08-20
+// offshore-resourcing-queue-aging: 2026-08-20
+// offshore-resourcing-role-expansion-gates: 2026-08-20
+// offshore-resourcing-monthly-operating-review: 2026-08-20
+
 const routeLocalDateEvidence: Record<string, string> = {
   'offshore-resourcing-intake-to-brief': 'On August 20, 2026, this route records the publication date alongside the role-brief guidance.',
   'offshore-resourcing-coverage-window-design': 'On August 20, 2026, this route records the publication date alongside the coverage-window guidance.',
