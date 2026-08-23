@@ -3,7 +3,7 @@ title: Task modularity as a predictor of offshore role fit
 description: Research on whether the structure of recurring work, rather than its job title, indicates a good fit for Philippines based offshore support.
 category: Role design
 publishedAt: 2026-08-17
-verifiedAt: 2026-08-17
+verifiedAt: 2026-08-23
 image: /images/thumbnail-backgrounds/process-blueprint.webp
 sourceCount: 10
 ---
@@ -28,7 +28,7 @@ For this article, a task is modular when its input is identifiable, its output c
 
 ## Applying the test to offshore support
 
-Consider candidate screening coordination. Entering approved candidate information, sending an agreed scheduling message, and flagging a missing document are more modular than deciding whether a candidate should be hired. The first group has observable outputs and a clear escalation boundary. The hiring decision has higher judgment and should stay with the authorized client owner.
+Consider candidate screening coordination. Entering approved candidate information, sending an agreed scheduling message, and flagging a missing document are more modular than deciding whether a candidate should be hired. Those observable tasks suit a [candidate screening coordination service](/services/candidate-screening-coordination) with a clear escalation boundary, while the authorized client owner keeps the hiring decision.
 
 The same distinction appears in workforce planning support. Combining approved schedules into a view is modular if the source records and definitions are fixed. Choosing headcount or approving overtime is not a routine task merely because it happens in the same spreadsheet. The role boundary should follow the decision, not the software screen.
 
