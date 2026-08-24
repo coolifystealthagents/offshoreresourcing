@@ -1,0 +1,7 @@
+{
+  "status": "blocked",
+  "provider": "Gemini",
+  "reason": "No Gemini image-generation capability is available in this execution environment.",
+  "fallback": "Text and route work completed without stock or substituted imagery; existing route imagery was not modified.",
+  "routes": []
+}
