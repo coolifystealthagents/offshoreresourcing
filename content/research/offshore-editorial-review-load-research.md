@@ -15,6 +15,12 @@ How much editorial review can a daily offshore article routine absorb before rev
 
 This research examines the shape of review load. It asks which work is repeatable, which work requires attention from an accountable editor, and which signals show that a daily target is outgrowing the review lane. The goal is not to set a universal staffing ratio. It is to give a site owner a way to inspect whether a routine is sustainable.
 
+## Methodology
+
+This route uses a qualitative workflow-analysis method. I first separated a recurring offshore article routine into five observable review units: mechanical checks, evidence checks, reader-fit decisions, risk escalations, and publication approval. I then compared the information each unit requires with the decision authority normally retained by a site owner or accountable editor. Finally, I tested the model against a small illustrative queue containing routine corrections, source disputes, audience changes, and approval exceptions. The comparison is designed to show where work can be prepared consistently and where a responsible decision still needs deliberate human attention.
+
+The evidence scope is limited to the public standards and guidance listed below, plus the operating distinctions stated in this article. Those sources inform the categories and safeguards; they do not provide a measured editor-to-article ratio or a benchmark for Offshore Resourcing. The queue is an analytical example, not customer data, a performance claim, or a controlled experiment. Facts drawn from the linked standards are kept separate from the article's analysis of how a distributed editorial routine might apply them. That distinction matters when a manager uses the model to design a local review lane.
+
 ## Approach and evidence limits
 
 The approach is a workflow analysis grounded in public quality, internal control, accessibility, privacy, and content-design guidance. Review activities are separated into mechanical checks, evidence checks, reader-fit decisions, risk escalations, and publication approval. The categories are then mapped to a sample queue and manager decision record.
