@@ -1,0 +1,7 @@
+[
+  {"route":"/research/offshore-article-queue-aging-research","sourcePaths":["content/research/offshore-article-queue-aging-research.md"],"imagePath":"public/images/research-2026-08-23/queue-aging-signals.svg"},
+  {"route":"/research/offshore-brief-decision-evidence-research","sourcePaths":["content/research/offshore-brief-decision-evidence-research.md"],"imagePath":"public/images/research-2026-08-23/brief-decision-evidence.svg"},
+  {"route":"/research/offshore-source-conflict-triage-research","sourcePaths":["content/research/offshore-source-conflict-triage-research.md"],"imagePath":"public/images/research-2026-08-23/source-conflict-triage.svg"},
+  {"route":"/research/offshore-editorial-review-load-research","sourcePaths":["content/research/offshore-editorial-review-load-research.md"],"imagePath":"public/images/research-2026-08-23/review-load-map.svg"},
+  {"route":"/research/offshore-content-continuity-handoff-research","sourcePaths":["content/research/offshore-content-continuity-handoff-research.md"],"imagePath":"public/images/research-2026-08-23/continuity-handoff-lanes.svg"}
+]
