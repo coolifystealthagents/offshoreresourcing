@@ -1,11 +1,11 @@
 ---
 title: "When Does an Offshore Article Queue Become Too Old to Trust?"
 description: "Research on how queue age, waiting states, and evidence freshness affect a recurring offshore article routine."
-datePublished: "2026-08-23"
-publishedAt: "2026-08-23"
-verifiedAt: "2026-08-23"
+datePublished: "2026-08-24"
+publishedAt: "2026-08-24"
+verifiedAt: "2026-08-24"
 category: offshore-editorial-operations
-image: "/images/research-2026-08-23/queue-aging-signals.svg"
+image: "/images/research-2026-08-24/queue-aging-signals.svg"
 sourceCount: "10"
 ---
 

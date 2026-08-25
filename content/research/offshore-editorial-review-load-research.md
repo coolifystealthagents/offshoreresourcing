@@ -1,11 +1,11 @@
 ---
 title: "How Much Editorial Review Can a Daily Offshore Article Routine Absorb?"
 description: "A bounded study of review load, correction depth, and manager capacity in recurring offshore article publishing."
-datePublished: "2026-08-23"
-publishedAt: "2026-08-23"
-verifiedAt: "2026-08-23"
+datePublished: "2026-08-24"
+publishedAt: "2026-08-24"
+verifiedAt: "2026-08-24"
 category: offshore-operating-models
-image: "/images/research-2026-08-23/review-load-map.svg"
+image: "/images/research-2026-08-24/review-load-map.svg"
 sourceCount: "10"
 ---
 

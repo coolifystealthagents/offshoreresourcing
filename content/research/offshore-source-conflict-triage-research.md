@@ -1,11 +1,11 @@
 ---
 title: "What Should an Offshore Researcher Do When Sources Conflict?"
 description: "Evidence-led research on source conflict, escalation, and editorial boundaries in distributed article research."
-datePublished: "2026-08-23"
-publishedAt: "2026-08-23"
-verifiedAt: "2026-08-23"
+datePublished: "2026-08-24"
+publishedAt: "2026-08-24"
+verifiedAt: "2026-08-24"
 category: offshore-research-methodology
-image: "/images/research-2026-08-23/source-conflict-triage.svg"
+image: "/images/research-2026-08-24/source-conflict-triage.svg"
 sourceCount: "10"
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: "Can a Content Brief Carry Enough Evidence for an Offshore Decision?"
 description: "A study of how recurring article briefs can preserve reader intent, evidence boundaries, and approval decisions across an offshore handoff."
-datePublished: "2026-08-23"
-publishedAt: "2026-08-23"
-verifiedAt: "2026-08-23"
+datePublished: "2026-08-24"
+publishedAt: "2026-08-24"
+verifiedAt: "2026-08-24"
 category: offshore-brief-design
-image: "/images/research-2026-08-23/brief-decision-evidence.svg"
+image: "/images/research-2026-08-24/brief-decision-evidence.svg"
 sourceCount: "10"
 ---
 

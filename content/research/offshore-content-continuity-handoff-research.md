@@ -1,11 +1,11 @@
 ---
 title: "Can an Offshore Content Handoff Preserve Continuity When Roles Change?"
 description: "Research on continuity records, relief coverage, and the information a daily offshore article routine must carry through a handoff."
-datePublished: "2026-08-23"
-publishedAt: "2026-08-23"
-verifiedAt: "2026-08-23"
+datePublished: "2026-08-24"
+publishedAt: "2026-08-24"
+verifiedAt: "2026-08-24"
 category: offshore-content-continuity
-image: "/images/research-2026-08-23/continuity-handoff-lanes.svg"
+image: "/images/research-2026-08-24/continuity-handoff-lanes.svg"
 sourceCount: "10"
 ---
 
