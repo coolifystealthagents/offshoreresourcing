@@ -1,6 +1,15 @@
 {
+  "campaignDate": "2026-08-31",
   "provider": "Gemini",
   "status": "unavailable",
-  "fallback": "Text and route work completed without stock or substitute images. New routes retain the loader's existing no-hero behavior.",
-  "routes": 12
+  "fallback": "Text and route work completed without stock imagery. Existing no-hero routes remain unchanged; the research batch uses original route-specific vector diagrams.",
+  "blocker": "No Gemini image-generation capability is available in this execution environment. The contract's text-complete fallback was applied without stock imagery.",
+  "routes": 17,
+  "originalVectorFallbacks": [
+    "public/images/research-2026-08-31/brief-ambiguity-cost.svg",
+    "public/images/research-2026-08-31/fact-correction-propagation.svg",
+    "public/images/research-2026-08-31/comment-decision-loss.svg",
+    "public/images/research-2026-08-31/negative-evidence.svg",
+    "public/images/research-2026-08-31/publishing-cutoff-stability.svg"
+  ]
 }
