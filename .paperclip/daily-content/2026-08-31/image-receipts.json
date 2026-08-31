@@ -1,0 +1,6 @@
+{
+  "provider": "Gemini",
+  "status": "unavailable",
+  "fallback": "Text and route work completed without stock or substitute images. New routes retain the loader's existing no-hero behavior.",
+  "routes": 12
+}
