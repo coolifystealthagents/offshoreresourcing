@@ -10,6 +10,7 @@ import { sourceRepair2Details, sourceRepair2Posts } from '../../daily-blog-2026-
 import { dailyBlog23Details, dailyBlog23Posts } from '../../daily-blog-2026-08-23';
 import { dailyBlog31Details, dailyBlog31Posts } from '../../daily-blog-2026-08-31';
 import { dailyBlogSep1Details, dailyBlogSep1Posts } from '../../daily-blog-2026-09-01';
+import { dailyBlogSep2Details, dailyBlogSep2Posts } from '../../daily-blog-2026-09-02';
 import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
@@ -240,6 +241,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const daily23Post = dailyBlog23Posts.find((item) => item.slug === slug);
   const daily31Post = dailyBlog31Posts.find((item) => item.slug === slug);
   const dailySep1Post = dailyBlogSep1Posts.find((item) => item.slug === slug);
+  const dailySep2Post = dailyBlogSep2Posts.find((item) => item.slug === slug);
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
   const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
@@ -288,7 +290,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <h1>{post.title}</h1>
         <p className="lead">{post.excerpt}</p>{sourceRepair2Post ? <img src={sourceRepair2Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily21Post ? <img src={daily21Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily20Post ? <img src={daily20Post.image} alt="Offshore resourcing operating workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : null}<div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
-        {dailySep1Post ? <>
+        {dailySep2Post ? <>
+          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the observable work and its acceptance evidence.</li><li>Keep authority, timing, and the next owner visible.</li><li>Change scope only after a reviewed operating cycle.</li></ul></section>
+          {dailyBlogSep2Details[dailySep2Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
+          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep2Details[dailySep2Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
+        </> : dailySep1Post ? <>
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the observable work and acceptance evidence.</li><li>Keep the decision owner and response time visible.</li><li>Expand scope only after a reviewed work cycle.</li></ul></section>
           {dailyBlogSep1Details[dailySep1Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
           <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep1Details[dailySep1Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
