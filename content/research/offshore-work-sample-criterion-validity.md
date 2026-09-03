@@ -2,9 +2,9 @@
 title: "Can a work sample predict readiness for an offshore support role?"
 description: "A research design for testing whether a realistic work sample adds useful evidence to Philippines-based offshore hiring decisions."
 category: Hiring Controls
-publishedAt: 2026-08-23
-verifiedAt: 2026-08-23
-image: /images/research-2026-08-23/offshore-work-sample-criterion-validity.png
+publishedAt: 2026-09-03
+verifiedAt: 2026-09-03
+image: /images/research-2026-09-03/offshore-work-sample-criterion-validity.png
 sourceCount: 10
 ---
 ## Research question

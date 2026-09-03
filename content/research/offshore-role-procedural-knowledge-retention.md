@@ -2,9 +2,9 @@
 title: "How quickly does procedural knowledge fade after offshore onboarding?"
 description: "An evidence-led method for testing whether a Philippines-based support specialist can retrieve and apply a newly learned procedure after training."
 category: Workflow Design
-publishedAt: 2026-08-23
-verifiedAt: 2026-08-23
-image: /images/research-2026-08-23/offshore-role-procedural-knowledge-retention.png
+publishedAt: 2026-09-03
+verifiedAt: 2026-09-03
+image: /images/research-2026-09-03/offshore-role-procedural-knowledge-retention.png
 sourceCount: 10
 ---
 ## Research question

@@ -2,9 +2,9 @@
 title: "What does a priority reversal cost an offshore support queue?"
 description: "A measurement model for separating useful reprioritization from avoidable switching, rework, and decision delay in Philippines-based support operations."
 category: Scope Benchmarks
-publishedAt: 2026-08-23
-verifiedAt: 2026-08-23
-image: /images/research-2026-08-23/offshore-queue-priority-reversal-cost.png
+publishedAt: 2026-09-03
+verifiedAt: 2026-09-03
+image: /images/research-2026-09-03/offshore-queue-priority-reversal-cost.png
 sourceCount: 10
 ---
 ## Research question

@@ -2,9 +2,9 @@
 title: "What makes an offshore support specialist raise uncertainty early?"
 description: "Research on speaking-up conditions, authority boundaries, and observable escalation behavior in Philippines-based support work."
 category: Role Design
-publishedAt: 2026-08-23
-verifiedAt: 2026-08-23
-image: /images/research-2026-08-23/offshore-support-escalation-speaking-up.png
+publishedAt: 2026-09-03
+verifiedAt: 2026-09-03
+image: /images/research-2026-09-03/offshore-support-escalation-speaking-up.png
 sourceCount: 10
 ---
 ## Research question

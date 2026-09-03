@@ -2,9 +2,9 @@
 title: "How much decision context survives an asynchronous offshore handoff?"
 description: "A trace-based study design for measuring which facts, qualifications, and open decisions survive handoffs in Philippines-based support work."
 category: Workflow Design
-publishedAt: 2026-08-23
-verifiedAt: 2026-08-23
-image: /images/research-2026-08-23/offshore-handoff-information-compression.png
+publishedAt: 2026-09-03
+verifiedAt: 2026-09-03
+image: /images/research-2026-09-03/offshore-handoff-information-compression.png
 sourceCount: 10
 ---
 ## Research question

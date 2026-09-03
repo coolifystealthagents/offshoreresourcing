@@ -1,6 +1,6 @@
 # Research hero prompt receipts
 
-Generated with the built-in image generation provider on 2026-09-03 for the 2026-08-23 research batch. Each prompt requested a 1200 by 630 editorial hero, no readable text, no numbers, no logos, no flags, no watermarks, no identifiable real people, and no stock-photo appearance.
+Generated with the built-in image generation provider on 2026-09-03 for the 2026-09-03 research batch. Each prompt requested a 1200 by 630 editorial hero, no readable text, no numbers, no logos, no flags, no watermarks, no identifiable real people, and no stock-photo appearance.
 
 ## offshore-work-sample-criterion-validity
 
