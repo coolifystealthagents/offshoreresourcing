@@ -1,0 +1,20 @@
+{
+  "provider": "Gemini",
+  "status": "unavailable",
+  "reason": "No Gemini image-generation provider or authenticated Gemini image tool is available in this execution environment.",
+  "fallback": "Text and route work completed without stock or substitute images. Existing route imagery was not changed.",
+  "routes": [
+    "/blog/offshore-role-workload-observability-map",
+    "/blog/philippines-offshore-shadow-queue-design",
+    "/blog/offshore-support-manager-exception-office-hours",
+    "/blog/philippines-offshore-reversible-task-ladder",
+    "/blog/offshore-role-probation-evidence-review",
+    "/blog/philippines-offshore-seasonal-ramp-down-plan",
+    "/blog/offshore-staff-tool-permission-request-packet",
+    "/blog/offshore-role-stakeholder-notification-coverage",
+    "/blog/offshore-meeting-to-work-queue-conversion",
+    "/blog/philippines-offshore-candidate-calibration-session",
+    "/blog/offshore-role-source-system-stewardship",
+    "/blog/offshore-support-ambiguity-budget"
+  ]
+}
