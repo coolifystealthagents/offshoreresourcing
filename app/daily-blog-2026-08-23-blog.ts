@@ -3,7 +3,7 @@ export type August23BlogPost = {
   title: string;
   excerpt: string;
   minutes: number;
-  publishedAt: '2026-08-23';
+  publishedAt: '2026-09-03';
   image: '';
   details: { sections: { heading: string; paragraphs: string[] }[]; faqs: { q: string; a: string }[] };
 };
@@ -709,7 +709,7 @@ export const august23BlogPosts = drafts.map((draft, index) => ({
   title: draft.title,
   excerpt: draft.excerpt,
   minutes: 10 + (index % 3),
-  publishedAt: '2026-08-23' as const,
+  publishedAt: '2026-09-03' as const,
   image: '' as const,
   details: { sections: parseSections(draft.body), faqs: draft.faqs },
 })) satisfies August23BlogPost[];
