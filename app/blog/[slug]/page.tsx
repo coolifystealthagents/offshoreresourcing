@@ -13,6 +13,7 @@ import { dailyBlog31Details, dailyBlog31Posts } from '../../daily-blog-2026-08-3
 import { dailyBlogSep1Details, dailyBlogSep1Posts } from '../../daily-blog-2026-09-01';
 import { dailyBlogSep2Details, dailyBlogSep2Posts } from '../../daily-blog-2026-09-02';
 import { dailyBlogSep4Details, dailyBlogSep4Posts } from '../../daily-blog-2026-09-04';
+import { dailyBlogSep7Details, dailyBlogSep7Posts } from '../../daily-blog-2026-09-07';
 import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
@@ -246,6 +247,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const dailySep1Post = dailyBlogSep1Posts.find((item) => item.slug === slug);
   const dailySep2Post = dailyBlogSep2Posts.find((item) => item.slug === slug);
   const dailySep4Post = dailyBlogSep4Posts.find((item) => item.slug === slug);
+  const dailySep7Post = dailyBlogSep7Posts.find((item) => item.slug === slug);
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
   const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
@@ -298,10 +300,10 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the work and its evidence before granting responsibility.</li><li>Make waiting, exceptions, and manager decisions visible.</li><li>Expand scope only after a reviewed operating cycle.</li></ul></section>
           {august23BlogDetails[august23BlogPost.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
           <section className="card faq-card"><h2>Questions managers ask</h2>{august23BlogDetails[august23BlogPost.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep4Post || dailySep2Post ? <>
+        </> : dailySep7Post || dailySep4Post || dailySep2Post ? <>
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the observable work and its acceptance evidence.</li><li>Keep authority, timing, and the next owner visible.</li><li>Change scope only after a reviewed operating cycle.</li></ul></section>
-          {(dailySep4Post ? dailyBlogSep4Details[dailySep4Post.slug] : dailyBlogSep2Details[dailySep2Post!.slug]).sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{(dailySep4Post ? dailyBlogSep4Details[dailySep4Post.slug] : dailyBlogSep2Details[dailySep2Post!.slug]).faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
+          {(dailySep7Post ? dailyBlogSep7Details[dailySep7Post.slug] : dailySep4Post ? dailyBlogSep4Details[dailySep4Post.slug] : dailyBlogSep2Details[dailySep2Post!.slug]).sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
+          <section className="card faq-card"><h2>Questions managers ask</h2>{(dailySep7Post ? dailyBlogSep7Details[dailySep7Post.slug] : dailySep4Post ? dailyBlogSep4Details[dailySep4Post.slug] : dailyBlogSep2Details[dailySep2Post!.slug]).faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
         </> : dailySep1Post ? <>
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the observable work and acceptance evidence.</li><li>Keep the decision owner and response time visible.</li><li>Expand scope only after a reviewed work cycle.</li></ul></section>
           {dailyBlogSep1Details[dailySep1Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
