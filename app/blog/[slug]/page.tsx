@@ -16,6 +16,7 @@ import { dailyBlogSep4Details, dailyBlogSep4Posts } from '../../daily-blog-2026-
 import { dailyBlogSep7Details, dailyBlogSep7Posts } from '../../daily-blog-2026-09-07';
 import { dailyBlogSep8Details, dailyBlogSep8Posts } from '../../daily-blog-2026-09-08';
 import { dailyBlogSep9Details, dailyBlogSep9Posts } from '../../daily-blog-2026-09-09';
+import { dailyBlogSep10Details, dailyBlogSep10Posts } from '../../daily-blog-2026-09-10';
 import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
@@ -252,6 +253,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const dailySep7Post = dailyBlogSep7Posts.find((item) => item.slug === slug);
   const dailySep8Post = dailyBlogSep8Posts.find((item) => item.slug === slug);
   const dailySep9Post = dailyBlogSep9Posts.find((item) => item.slug === slug);
+  const dailySep10Post = dailyBlogSep10Posts.find((item) => item.slug === slug);
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
   const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
@@ -298,9 +300,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <article className="container article-wrap">
         <p className="eyebrow">Philippines staffing guide · {post.minutes} min read{post.publishedAt ? <> · <time dateTime={post.publishedAt}>Published {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${post.publishedAt}T00:00:00Z`))}</time></> : null}</p>
         <h1>{post.title}</h1>
-        <p className="lead">{post.excerpt}</p>{dailySep9Post ? <img className="content-hero" src={dailySep9Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : dailySep8Post ? <img className="content-hero" src={dailySep8Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : sourceRepair2Post ? <img src={sourceRepair2Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily21Post ? <img src={daily21Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily20Post ? <img src={daily20Post.image} alt="Offshore resourcing operating workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : null}<div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
+        <p className="lead">{post.excerpt}</p>{dailySep10Post ? <img className="content-hero" src={dailySep10Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : dailySep9Post ? <img className="content-hero" src={dailySep9Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : dailySep8Post ? <img className="content-hero" src={dailySep8Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : sourceRepair2Post ? <img src={sourceRepair2Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily21Post ? <img src={daily21Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily20Post ? <img src={daily20Post.image} alt="Offshore resourcing operating workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : null}<div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
-        {dailySep9Post ? <>
+        {dailySep10Post ? <>
+          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the decision and evidence before work starts.</li><li>Keep manager authority and stop conditions explicit.</li><li>Review a small live-shaped pilot before scaling.</li></ul></section>
+          {dailyBlogSep10Details[dailySep10Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
+          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep10Details[dailySep10Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
+        </> : dailySep9Post ? <>
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Begin with one named publishing decision.</li><li>Leave evidence the next owner can verify.</li><li>Test the routine before making it permanent.</li></ul></section>
           {dailyBlogSep9Details[dailySep9Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
           <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep9Details[dailySep9Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
