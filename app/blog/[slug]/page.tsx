@@ -17,6 +17,7 @@ import { dailyBlogSep7Details, dailyBlogSep7Posts } from '../../daily-blog-2026-
 import { dailyBlogSep8Details, dailyBlogSep8Posts } from '../../daily-blog-2026-09-08';
 import { dailyBlogSep9Details, dailyBlogSep9Posts } from '../../daily-blog-2026-09-09';
 import { dailyBlogSep10Details, dailyBlogSep10Posts } from '../../daily-blog-2026-09-10';
+import { dailyBlogSep11Details, dailyBlogSep11Posts } from '../../daily-blog-2026-09-11';
 import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
@@ -254,6 +255,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const dailySep8Post = dailyBlogSep8Posts.find((item) => item.slug === slug);
   const dailySep9Post = dailyBlogSep9Posts.find((item) => item.slug === slug);
   const dailySep10Post = dailyBlogSep10Posts.find((item) => item.slug === slug);
+  const dailySep11Post = dailyBlogSep11Posts.find((item) => item.slug === slug);
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
   const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
@@ -300,9 +302,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <article className="container article-wrap">
         <p className="eyebrow">Philippines staffing guide · {post.minutes} min read{post.publishedAt ? <> · <time dateTime={post.publishedAt}>Published {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${post.publishedAt}T00:00:00Z`))}</time></> : null}</p>
         <h1>{post.title}</h1>
-        <p className="lead">{post.excerpt}</p>{dailySep10Post ? <img className="content-hero" src={dailySep10Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : dailySep9Post ? <img className="content-hero" src={dailySep9Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : dailySep8Post ? <img className="content-hero" src={dailySep8Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : sourceRepair2Post ? <img src={sourceRepair2Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily21Post ? <img src={daily21Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily20Post ? <img src={daily20Post.image} alt="Offshore resourcing operating workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : null}<div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
+        <p className="lead">{post.excerpt}</p>{dailySep11Post ? <img className="content-hero" src={dailySep11Post.image} alt="Offshore operations workflow illustration" width="1200" height="630" /> : dailySep10Post ? <img className="content-hero" src={dailySep10Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : dailySep9Post ? <img className="content-hero" src={dailySep9Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : dailySep8Post ? <img className="content-hero" src={dailySep8Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : sourceRepair2Post ? <img src={sourceRepair2Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily21Post ? <img src={daily21Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily20Post ? <img src={daily20Post.image} alt="Offshore resourcing operating workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : null}<div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
-        {dailySep10Post ? <>
+        {dailySep11Post ? <>
+          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Name the decision and accountable owner.</li><li>Preserve evidence and explicit authority boundaries.</li><li>Test ordinary and exception cases before scaling.</li></ul></section>
+          {dailyBlogSep11Details[dailySep11Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
+          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep11Details[dailySep11Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
+        </> : dailySep10Post ? <>
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the decision and evidence before work starts.</li><li>Keep manager authority and stop conditions explicit.</li><li>Review a small live-shaped pilot before scaling.</li></ul></section>
           {dailyBlogSep10Details[dailySep10Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
           <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep10Details[dailySep10Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
