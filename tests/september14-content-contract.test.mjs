@@ -14,7 +14,7 @@ test('September 14 campaign is exactly 12 Blog and 5 Research routes', () => {
   assert.equal((blog.match(/\[\'[^']+\',\'/g) || []).length, 12);
   assert.equal(research.length, 5);
   assert.match(blog, /publishedAt:'2026-09-14'/);
-  assert.match(blog, /Published September 14, 2026/);
+  assert.match(blog, /Published: September 14, 2026/);
 });
 
 test('September 14 research routes contain every required evidence section', () => {
