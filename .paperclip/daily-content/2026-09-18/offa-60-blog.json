@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "family": "blog",
+  "required": 12,
+  "publicationDate": "2026-09-18",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "contentCommit": "c089e5ad284596f5666edff0fe3587f9a9fd0227",
+  "contentHash": "ab859268973b8d9a2c8da47b48b95627eb820a954179c3c285ed81321059b4e7",
+  "deploymentResource": "configured COOLIFY_APPLICATION_UUID; authenticated API status unavailable",
+  "articles": [
+    {"slug":"philippines-training-needs-matrix","topic":"Training needs matrix","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"offshore-training-completion-evidence","topic":"Training completion evidence","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"offshore-performance-report-metric-dictionary","topic":"Performance metric dictionary","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"philippines-performance-report-correction-workflow","topic":"Performance report correction","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"philippines-schedule-coverage-constraint-register","topic":"Schedule coverage constraints","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"offshore-schedule-change-confirmation","topic":"Schedule change confirmation","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"philippines-people-operations-case-intake-boundary","topic":"People operations case intake","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"offshore-personnel-record-correction-request","topic":"Personnel record correction","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"philippines-compliance-document-expiry-register","topic":"Compliance document expiry","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"offshore-audit-evidence-request-queue","topic":"Audit evidence request queue","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"philippines-retention-pulse-survey-administration","topic":"Retention pulse survey","sources":["privacy.gov.ph","nist.gov","cisa.gov"]},
+    {"slug":"offshore-stay-interview-follow-up-tracker","topic":"Stay interview follow-up","sources":["privacy.gov.ph","nist.gov","cisa.gov"]}
+  ]
+}
