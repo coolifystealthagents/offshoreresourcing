@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "family": "research",
+  "required": 5,
+  "publishedAndVerified": 0,
+  "publicationDate": "2026-09-18",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "contentCommit": "ab8e0ecba67d7f03a611b8e9bb60da65198511bd",
+  "remoteShaAtPush": "ab8e0ecba67d7f03a611b8e9bb60da65198511bd",
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "applicationStatus": "running:healthy",
+    "queuedDeploymentUuids": [
+      "e0y3jjfnxqdsffkjtr9zkzeg",
+      "anu6oz7hru2ckn5kneyyxzka"
+    ],
+    "state": "queued",
+    "blocker": "Coolify queue has not started an OffshoreResourcing deployment; public routes returned HTTP 404 after standard and forced deployment requests."
+  },
+  "validation": {
+    "articleWordMinimum": 1200,
+    "articleWordCounts": [1669, 1692, 1696, 1668, 1717],
+    "sourcesPerArticle": 10,
+    "homepageContract": "passed",
+    "productionBuild": "passed with pre-existing CSS autoprefixer warnings",
+    "gitDiffCheck": "passed",
+    "repositoryContentValidator": "batch passed its rules; command remains nonzero because five pre-existing origin/main research files fail H1/source-count rules"
+  },
+  "articles": [
+    {
+      "topic": "Task-level suitability for a first Philippines-based offshore role",
+      "slug": "philippines-offshore-role-suitability-framework",
+      "contentHash": "sha256:71fd89b02396bf5b9e047934672306fbd7beb6a3f720c3c42e838b4a23845fb1",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/research/philippines-offshore-role-suitability-framework",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Progressive data-access tiers for Philippines-based offshore staff",
+      "slug": "philippines-offshore-data-access-tiering",
+      "contentHash": "sha256:7a01a370b4f9ab63bf555717a745971b3e0a3429e7b70db3a926d4cd19450364",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/research/philippines-offshore-data-access-tiering",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Choosing time-zone overlap from workflow dependencies",
+      "slug": "philippines-offshore-time-zone-overlap-model",
+      "contentHash": "sha256:f18fc47817994b19cce694ced427b1d602c4619d649a5ced92fba1d4c1df1da7",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/research/philippines-offshore-time-zone-overlap-model",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Fair and job-related offshore candidate work samples",
+      "slug": "offshore-candidate-work-sample-design",
+      "contentHash": "sha256:52b7013be02a57ed47009105668d5016e42deaaad884cc984a23b604bcdf3474",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-candidate-work-sample-design",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Total-cost comparison for Philippines-based staffing structures",
+      "slug": "philippines-offshore-hiring-total-cost-model",
+      "contentHash": "sha256:4f1da9c6af10c4e79d615b3f5cfc2eaccb99836e63988ff4481692f4d40550d8",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/research/philippines-offshore-hiring-total-cost-model",
+      "verificationTime": null,
+      "verified": false
+    }
+  ]
+}
