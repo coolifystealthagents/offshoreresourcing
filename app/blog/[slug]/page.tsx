@@ -20,6 +20,7 @@ import { dailyBlogSep10Details, dailyBlogSep10Posts } from '../../daily-blog-202
 import { dailyBlogSep11Details, dailyBlogSep11Posts } from '../../daily-blog-2026-09-11';
 import { dailyBlogSep14Details, dailyBlogSep14Posts } from '../../daily-blog-2026-09-14';
 import { dailyBlogSep18Details, dailyBlogSep18Posts } from '../../daily-blog-2026-09-18';
+import { dailyBlogSep18Offa60Details, dailyBlogSep18Offa60Posts } from '../../daily-blog-2026-09-18-offa-60';
 import { defaultSocialImage } from '../../../lib/seo';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
@@ -260,13 +261,14 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const dailySep11Post = dailyBlogSep11Posts.find((item) => item.slug === slug);
   const dailySep14Post = dailyBlogSep14Posts.find((item) => item.slug === slug);
   const dailySep18Post = dailyBlogSep18Posts.find((item) => item.slug === slug);
+  const dailySep18Offa60Post = dailyBlogSep18Offa60Posts.find((item) => item.slug === slug);
   const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
   const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
   const legacyDetails = details && 'comparison' in details ? details : null;
   const basics = guideBasics[slug as keyof typeof guideBasics];
   const url = `${base}/blog/${post.slug}`;
-  const sources = details?.sources ?? (dailySep18Post ? dailyBlogSep18Details[dailySep18Post.slug].sources : []);
-  const faqs = details && 'faqs' in details ? details.faqs : (dailySep18Post ? dailyBlogSep18Details[dailySep18Post.slug].faqs : []);
+  const sources = details?.sources ?? (dailySep18Offa60Post ? dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].sources : dailySep18Post ? dailyBlogSep18Details[dailySep18Post.slug].sources : []);
+  const faqs = details && 'faqs' in details ? details.faqs : (dailySep18Offa60Post ? dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].faqs : dailySep18Post ? dailyBlogSep18Details[dailySep18Post.slug].faqs : []);
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -308,7 +310,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <h1>{post.title}</h1>
         <p className="lead">{post.excerpt}</p>{dailySep18Post ? <img className="content-hero" src={dailySep18Post.image} alt={`${post.title} offshore staffing workflow illustration`} width="1200" height="630" /> : dailySep10Post ? <img className="content-hero" src={dailySep10Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : dailySep9Post ? <img className="content-hero" src={dailySep9Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : dailySep8Post ? <img className="content-hero" src={dailySep8Post.image} alt={`${post.title} editorial workflow illustration`} width="1200" height="630" /> : sourceRepair2Post ? <img src={sourceRepair2Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily21Post ? <img src={daily21Post.image} alt="Offshore resourcing editorial workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : daily20Post ? <img src={daily20Post.image} alt="Offshore resourcing operating workflow illustration" style={{ width: '100%', height: 'auto', borderRadius: '16px', margin: '1.5rem 0' }} /> : null}<div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
-        {dailySep18Post ? <>
+        {dailySep18Offa60Post ? <>
+          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner.</li><li>Test permissions with controlled data.</li><li>Expand only after exception work passes review.</li></ul></section>
+          {dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
+          <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
+          <section className="card article-related-module"><h2>Plan the role around your workflow</h2><p>Review <a href={dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].serviceHref}>{dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].service}</a>, or <a href="/contact-us">request a role plan</a>.</p></section>
+          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
+        </> : dailySep18Post ? <>
           <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner before work starts.</li><li>Test permissions with fictional data before using live records.</li><li>Expand only after ordinary and exception work passes review.</li></ul></section>
           {dailyBlogSep18Details[dailySep18Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
           <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogSep18Details[dailySep18Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
