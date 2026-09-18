@@ -54,7 +54,7 @@ export function ContentArticle({ document, related }: { document: ContentDocumen
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': document.type === 'research' ? 'Article' : 'ItemList', name: document.title, description: document.description, url, datePublished: document.publishedAt, dateModified: document.verifiedAt, image: `${base}${document.image}`, publisher: { '@type': 'Organization', name: 'Offshore Resourcing', url: base } },
+      { '@type': document.type === 'research' ? 'Article' : 'ItemList', name: document.title, description: document.description, url, datePublished: document.publishedAt, ...(document.verifiedAt !== document.publishedAt ? { dateModified: document.verifiedAt } : {}), image: `${base}${document.image}`, publisher: { '@type': 'Organization', name: 'Offshore Resourcing', url: base } },
       { '@type': 'BreadcrumbList', itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: base },
         { '@type': 'ListItem', position: 2, name: section, item: `${base}/${document.type}` },
