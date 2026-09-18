@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 2,
+  "issue": "OFFA-61",
+  "family": "research",
+  "required": 5,
+  "publishedAndVerified": 0,
+  "intendedPublicationDate": "2026-09-18",
+  "actualPublicationDate": null,
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "productionBranch": "master",
+  "contentCommit": "84d706f0b0187aa0ea20178c458822fdd4155580",
+  "remoteShaAtPush": "84d706f0b0187aa0ea20178c458822fdd4155580",
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "resourceUuid": "l13ylpiz5n7x3du8pnr1cdlx",
+    "configuredBranch": "master",
+    "authenticatedStatus": "unavailable: configured API credential redirected to login",
+    "state": "blocked",
+    "evidence": "Git push to master succeeded; application health returned HTTP 200; five bounded public transition checks returned HTTP 404 for every new route; sitemap contained none of the new routes.",
+    "recoveryAction": "Coolify3 owner must restore API authorization or clear/start the deployment for master commit 84d706f0b0187aa0ea20178c458822fdd4155580, then wake OFFA-61 so the assignee can set each article date to its actual UTC live-verification date, verify all five routes, and finalize the ledger."
+  },
+  "validation": {
+    "articleWordMinimum": 1200,
+    "articleWordCounts": [1651, 1731, 1741, 1770, 1768],
+    "sourcesPerArticle": 8,
+    "topicInventoryReview": "passed",
+    "distinctnessReview": "passed",
+    "humanizerEditorialPass": "passed",
+    "targetedContentContract": "passed",
+    "productionBuild": "passed with pre-existing CSS autoprefixer warnings",
+    "staticRoutesGenerated": 5,
+    "cleanRoutineDiff": "passed"
+  },
+  "articles": [
+    {
+      "topic": "Evidence-led review of an offshore staffing provider",
+      "slug": "offshore-staffing-provider-evidence-review",
+      "sources": ["Philippine National Privacy Commission: Data Privacy Act and implementing rules", "Philippine SEC: registration and verification services", "NIST: Cybersecurity Framework and Privacy Framework", "ILO: fair recruitment guidance", "Philippine DOLE: Labor Code"],
+      "contentHash": "sha256:91c0fcfbebf15a1802f114da6005de654300347f218815d3c6c73876e2802c15",
+      "actualPublicationDate": null,
+      "commitSha": "84d706f0b0187aa0ea20178c458822fdd4155580",
+      "deploymentEvidence": "HTTP 404 after master push",
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-provider-evidence-review",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Responsibility comparison for EOR, staffing, and managed services",
+      "slug": "eor-managed-service-responsibility-map-philippines",
+      "sources": ["Philippine DOLE: Labor Code and department resources", "Philippine National Privacy Commission: Data Privacy Act and implementing rules", "NIST: Cybersecurity Framework and Privacy Framework", "ILO: fair recruitment guidance", "Philippine SEC: company verification"],
+      "contentHash": "sha256:b39fa59b7d6520f2b82b10a692f43648d961774192e0a1b41645171aa017ad1c",
+      "actualPublicationDate": null,
+      "commitSha": "84d706f0b0187aa0ea20178c458822fdd4155580",
+      "deploymentEvidence": "HTTP 404 after master push",
+      "liveUrl": "https://offshoreresourcing.com/research/eor-managed-service-responsibility-map-philippines",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Subcontractor and subprocessor visibility in offshore staffing",
+      "slug": "offshore-staffing-subprocessor-visibility",
+      "sources": ["Philippine National Privacy Commission: Data Privacy Act, implementing rules, and circulars", "NIST: Cybersecurity Framework, Privacy Framework, supply-chain risk, security controls, and incident response"],
+      "contentHash": "sha256:34649300475c772596e7374e6ad878317192b239eca6c4dc053d2b802625d851",
+      "actualPublicationDate": null,
+      "commitSha": "84d706f0b0187aa0ea20178c458822fdd4155580",
+      "deploymentEvidence": "HTTP 404 after master push",
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-subprocessor-visibility",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Exit readiness for a Philippines-based offshore staffing arrangement",
+      "slug": "offshore-staffing-exit-readiness-plan",
+      "sources": ["Philippine National Privacy Commission: Data Privacy Act and implementing rules", "NIST: Cybersecurity Framework, security controls, media sanitization, contingency planning, and incident response", "ILO: fair recruitment guidance"],
+      "contentHash": "sha256:99e8177759fd7699f88d45600600043b67de8e7c87270d1214743197c3111d02",
+      "actualPublicationDate": null,
+      "commitSha": "84d706f0b0187aa0ea20178c458822fdd4155580",
+      "deploymentEvidence": "HTTP 404 after master push",
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-exit-readiness-plan",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Service-level design for Philippines-based offshore support",
+      "slug": "offshore-staffing-service-level-design",
+      "sources": ["ISO: quality management systems", "NIST: Cybersecurity Framework and Privacy Framework", "Philippine National Privacy Commission: Data Privacy Act and implementing rules", "Philippine Statistics Authority: Labor Force Survey", "ILO: fair recruitment guidance", "U.S. GAO: internal control standards"],
+      "contentHash": "sha256:6061f1b898781ef502f37739ff0de9b37c614784fb1cf769ee61cb532802fb6d",
+      "actualPublicationDate": null,
+      "commitSha": "84d706f0b0187aa0ea20178c458822fdd4155580",
+      "deploymentEvidence": "HTTP 404 after master push",
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-service-level-design",
+      "verificationTime": null,
+      "verified": false
+    }
+  ]
+}
