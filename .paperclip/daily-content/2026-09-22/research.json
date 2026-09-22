@@ -7,7 +7,7 @@
   "timezone": "UTC",
   "repository": "coolifystealthagents/offshoreresourcing",
   "branch": "main",
-  "contentCommit": null,
+  "contentCommit": "d6d80cc00d6d718af7d54bc0db08b20d49b948f9",
   "remoteShaAtPush": null,
   "deployment": {
     "platform": "Coolify3",
@@ -31,7 +31,7 @@
       "sources": 10,
       "contentHash": "sha256:a02b4fbc7aee4973450d096fc3778e7ec4c3fa7731c43a10e8e57d5f429b251e",
       "actualPublicationDate": null,
-      "commitSha": null,
+      "commitSha": "d6d80cc00d6d718af7d54bc0db08b20d49b948f9",
       "liveUrl": "https://offshoreresourcing.com/research/dedicated-staff-vs-managed-service-philippines",
       "verificationTime": null,
       "verified": false
@@ -42,7 +42,7 @@
       "sources": 10,
       "contentHash": "sha256:1f76fdb64c9a05211a9d0712433ea242e9a508b222458644e0202bd7e1bc0b89",
       "actualPublicationDate": null,
-      "commitSha": null,
+      "commitSha": "d6d80cc00d6d718af7d54bc0db08b20d49b948f9",
       "liveUrl": "https://offshoreresourcing.com/research/first-offshore-hire-vs-team-philippines",
       "verificationTime": null,
       "verified": false
@@ -53,7 +53,7 @@
       "sources": 10,
       "contentHash": "sha256:60ff079152a507a4423dafd25d8bd089af8d68366032f2488d73c292dfa92667",
       "actualPublicationDate": null,
-      "commitSha": null,
+      "commitSha": "d6d80cc00d6d718af7d54bc0db08b20d49b948f9",
       "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-quote-comparison-philippines",
       "verificationTime": null,
       "verified": false
@@ -64,7 +64,7 @@
       "sources": 10,
       "contentHash": "sha256:0e6cc0f5c2acf0200cf16ed9717d6a895c383e290c44a89d8c066c54fd758e90",
       "actualPublicationDate": null,
-      "commitSha": null,
+      "commitSha": "d6d80cc00d6d718af7d54bc0db08b20d49b948f9",
       "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-replacement-clause-philippines",
       "verificationTime": null,
       "verified": false
@@ -75,7 +75,7 @@
       "sources": 10,
       "contentHash": "sha256:513da66a26b1d8f833c883ce74dea675cdca4329c0bbef576129e8f06c28a369",
       "actualPublicationDate": null,
-      "commitSha": null,
+      "commitSha": "d6d80cc00d6d718af7d54bc0db08b20d49b948f9",
       "liveUrl": "https://offshoreresourcing.com/research/offshore-staff-equipment-responsibility-philippines",
       "verificationTime": null,
       "verified": false
