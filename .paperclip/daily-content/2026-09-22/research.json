@@ -13,9 +13,9 @@
     "platform": "Coolify3",
     "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
     "applicationStatus": "running:healthy",
-    "deploymentUuid": null,
-    "state": "blocked",
-    "blocker": "Coolify3 rejected three authenticated deployment requests because its shared deployment queue was full. The public domain and health endpoint returned HTTP 503, so no article can be counted as published or verified. Recovery: retry this application's existing Git deployment after shared queue capacity becomes available, then verify all five routes and reconcile dates if local midnight has passed."
+    "deploymentUuid": "7wimupcprdfq4ocjyzogz8nl",
+    "state": "queued",
+    "blocker": "The existing Coolify3 application source was repaired from stale branch master and commit 2f502cdd56333db66326230803293388f3658731 to production branch main and commit 3de4e4123255ee6da15a5f48e4dc31d0637bb341. Deployment 7wimupcprdfq4ocjyzogz8nl is queued for that exact commit but has not started. The public domain and health endpoint still return HTTP 503, so no article can be counted as published or verified. Recovery owner: Coolify3 platform capacity owner must allow the queued deployment to run; then verify all five routes and reconcile dates if local midnight has passed."
   },
   "validation": {
     "articleWordMinimum": 1200,
