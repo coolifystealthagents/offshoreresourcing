@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "family": "blog",
+  "required": 12,
+  "verified": 0,
+  "publicationDate": "2026-09-22",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "sourceProductionSha": "2f502cdd56333db66326230803293388f3658731",
+  "contentCommit": "pending",
+  "deploymentResource": "configured COOLIFY_APPLICATION_UUID; API redirected to login",
+  "deploymentEvidence": "Public homepage and sitemap returned HTTP 503 on three checks before publication.",
+  "articles": [
+    {"slug":"philippines-sourcing-channel-evidence-review","family":"blog","topic":"Sourcing channel evidence review","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/philippines-sourcing-channel-evidence-review","status":"built-not-live-verified"},
+    {"slug":"candidate-screening-evidence-disagreement-log","family":"blog","topic":"Candidate screening evidence disagreement","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/candidate-screening-evidence-disagreement-log","status":"built-not-live-verified"},
+    {"slug":"interview-no-show-recovery-workflow","family":"blog","topic":"Interview no-show recovery","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/interview-no-show-recovery-workflow","status":"built-not-live-verified"},
+    {"slug":"recruitment-requisition-change-control","family":"blog","topic":"Recruitment requisition change control","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/recruitment-requisition-change-control","status":"built-not-live-verified"},
+    {"slug":"workforce-plan-service-level-assumptions","family":"blog","topic":"Workforce planning service-level assumptions","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/workforce-plan-service-level-assumptions","status":"built-not-live-verified"},
+    {"slug":"onboarding-first-access-exception-register","family":"blog","topic":"Onboarding access exceptions","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/onboarding-first-access-exception-register","status":"built-not-live-verified"},
+    {"slug":"training-practice-sample-version-control","family":"blog","topic":"Training sample version control","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/training-practice-sample-version-control","status":"built-not-live-verified"},
+    {"slug":"performance-report-denominator-check","family":"blog","topic":"Performance report denominator check","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/performance-report-denominator-check","status":"built-not-live-verified"},
+    {"slug":"schedule-swap-approval-record","family":"blog","topic":"Schedule swap approval record","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/schedule-swap-approval-record","status":"built-not-live-verified"},
+    {"slug":"people-operations-request-routing-matrix","family":"blog","topic":"People operations request routing","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/people-operations-request-routing-matrix","status":"built-not-live-verified"},
+    {"slug":"compliance-document-superseded-copy-check","family":"blog","topic":"Superseded compliance document copies","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/compliance-document-superseded-copy-check","status":"built-not-live-verified"},
+    {"slug":"retention-action-owner-follow-through","family":"blog","topic":"Retention action follow-through","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/retention-action-owner-follow-through","status":"built-not-live-verified"}
+  ]
+}
