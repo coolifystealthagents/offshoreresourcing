@@ -8,7 +8,8 @@
   "repository": "coolifystealthagents/offshoreresourcing",
   "branch": "main",
   "sourceProductionSha": "2f502cdd56333db66326230803293388f3658731",
-  "contentCommit": "pending",
+  "contentCommit": "fd11051fdb2bd4abb375cfc5d2a4bb8966868705",
+  "contentHash": "b05c8ecf145409c18394b8b395fe00779ebd641cce33cf9a9dab7641b6ea4e17",
   "deploymentResource": "configured COOLIFY_APPLICATION_UUID; API redirected to login",
   "deploymentEvidence": "Public homepage and sitemap returned HTTP 503 on three checks before publication.",
   "articles": [
