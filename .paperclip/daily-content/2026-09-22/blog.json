@@ -9,9 +9,10 @@
   "branch": "main",
   "sourceProductionSha": "2f502cdd56333db66326230803293388f3658731",
   "contentCommit": "fd11051fdb2bd4abb375cfc5d2a4bb8966868705",
+  "remoteSha": "5b12faafff10a5d1dede6e4f083d5730f011ddd8",
   "contentHash": "b05c8ecf145409c18394b8b395fe00779ebd641cce33cf9a9dab7641b6ea4e17",
   "deploymentResource": "configured COOLIFY_APPLICATION_UUID; API redirected to login",
-  "deploymentEvidence": "Public homepage and sitemap returned HTTP 503 on three checks before publication.",
+  "deploymentEvidence": "Public homepage, sitemap, and a new article URL returned HTTP 503 on three checks before and after push; authenticated Coolify application status redirected to login.",
   "articles": [
     {"slug":"philippines-sourcing-channel-evidence-review","family":"blog","topic":"Sourcing channel evidence review","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/philippines-sourcing-channel-evidence-review","status":"built-not-live-verified"},
     {"slug":"candidate-screening-evidence-disagreement-log","family":"blog","topic":"Candidate screening evidence disagreement","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/candidate-screening-evidence-disagreement-log","status":"built-not-live-verified"},
