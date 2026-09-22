@@ -7,10 +7,11 @@
   "branch": "master",
   "sourceProductionSha": "88f8675f7210406b531bae4744adb5f6d01c4606",
   "contentCommit": "af2c49718b36dc922ff361d5b3145d7fa11466ef",
+  "remoteSha": "893da6045f1fcb9daaa97d9618d151ffc147a163",
   "contentHash": "fd738ab74ccb63e1b7f77f0e8443cc8521824e194ae1d78046f2e4182f78bafb",
   "validation": "TypeScript passed; production build passed with 619 static pages; all 12 rendered pages contain 1176-1199 words, canonical URL, datePublished, and hero asset.",
   "deploymentResource": "Coolify3 application qnel5n8i8ffgr82c773ftonl, configured production branch master",
-  "deploymentEvidence": "Pending Git-to-Coolify deployment and live verification.",
+  "deploymentEvidence": "Pushed to production branch master. Public homepage and sitemap returned HTTP 200, but the representative new article returned HTTP 404 and the sitemap omitted its slug on three checks at 2026-09-22T23:42:05Z, 23:42:23Z, and 23:42:40Z. The configured Coolify API credential redirects application status to login, matching the existing deployment-control blocker.",
   "articles": [
     "talent-source-consent-status-register",
     "candidate-screening-adverse-evidence-review",
