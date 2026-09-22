@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 2,
+  "family": "research",
+  "required": 5,
+  "publishedAndVerified": 0,
+  "publicationDate": "2026-09-22",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "contentCommit": null,
+  "remoteShaAtPush": null,
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": null,
+    "applicationStatus": null,
+    "deploymentUuid": null,
+    "state": "not-started",
+    "blocker": null
+  },
+  "validation": {
+    "articleWordMinimum": 1200,
+    "articleWordCounts": [1583, 1523, 1637, 1549, 1664],
+    "sourcesPerArticle": 10,
+    "productionBuild": "passed with pre-existing CSS autoprefixer warnings",
+    "repositoryContentValidator": "batch passed; repository command remains nonzero for pre-existing origin/main content defects"
+  },
+  "articles": [
+    {
+      "topic": "Dedicated offshore staff compared with a managed service",
+      "slug": "dedicated-staff-vs-managed-service-philippines",
+      "sources": 10,
+      "contentHash": "sha256:a02b4fbc7aee4973450d096fc3778e7ec4c3fa7731c43a10e8e57d5f429b251e",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "liveUrl": "https://offshoreresourcing.com/research/dedicated-staff-vs-managed-service-philippines",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "One Philippines-based offshore hire compared with a small team",
+      "slug": "first-offshore-hire-vs-team-philippines",
+      "sources": 10,
+      "contentHash": "sha256:1f76fdb64c9a05211a9d0712433ea242e9a508b222458644e0202bd7e1bc0b89",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "liveUrl": "https://offshoreresourcing.com/research/first-offshore-hire-vs-team-philippines",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Normalizing Philippines offshore staffing quotes",
+      "slug": "offshore-staffing-quote-comparison-philippines",
+      "sources": 10,
+      "contentHash": "sha256:60ff079152a507a4423dafd25d8bd089af8d68366032f2488d73c292dfa92667",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-quote-comparison-philippines",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Reviewing an offshore staffing replacement clause",
+      "slug": "offshore-staffing-replacement-clause-philippines",
+      "sources": 10,
+      "contentHash": "sha256:0e6cc0f5c2acf0200cf16ed9717d6a895c383e290c44a89d8c066c54fd758e90",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-replacement-clause-philippines",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Assigning equipment responsibility for Philippines-based offshore staff",
+      "slug": "offshore-staff-equipment-responsibility-philippines",
+      "sources": 10,
+      "contentHash": "sha256:513da66a26b1d8f833c883ce74dea675cdca4329c0bbef576129e8f06c28a369",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staff-equipment-responsibility-philippines",
+      "verificationTime": null,
+      "verified": false
+    }
+  ]
+}

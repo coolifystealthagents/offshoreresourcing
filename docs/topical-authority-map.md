@@ -2,6 +2,16 @@
 
 Last reviewed: 2026-08-19
 
+## September 22, 2026 buyer-decision research ledger
+
+| Proposed slug | Primary intent | Audience | Funnel stage | Target service | Closest existing URL | Differentiation | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `dedicated-staff-vs-managed-service-philippines` | Choose an operating model | Buyers comparing delivery structures | Evaluation | Workforce Planning Support | `/research/eor-managed-service-responsibility-map-philippines` | Compares day-to-day operating ownership rather than legal or entity structure | Published candidate |
+| `first-offshore-hire-vs-team-philippines` | Choose the smallest safe starting unit | First-time offshore hiring managers | Planning | Workforce Planning Support | `/research/manager-span-control-offshore-support` | Integrates demand, coverage, continuity, and buyer capacity into the one-versus-team decision | Published candidate |
+| `offshore-staffing-quote-comparison-philippines` | Normalize provider quotes | Commercial evaluators | Evaluation | Workforce Planning Support | `/research/philippines-offshore-hiring-total-cost-model` | Provides a quote-level normalization record rather than a general total-cost model | Published candidate |
+| `offshore-staffing-replacement-clause-philippines` | Review replacement terms | Buyers reviewing staffing proposals | Evaluation | Recruitment Administration | `/research/offshore-staffing-exit-readiness-plan` | Focuses on replacement triggers and interim continuity rather than full arrangement exit | Published candidate |
+| `offshore-staff-equipment-responsibility-philippines` | Assign the equipment lifecycle | Buyers designing remote delivery | Planning | Onboarding Coordination | `/research/philippines-offshore-data-access-tiering` | Covers device ownership, support, connectivity, asset, and recovery duties rather than access tiers | Published candidate |
+
 This is an internal execution ledger. It keeps each published research page tied to one reader question and, where the next step is useful, one generated Philippines-only service route. It does not promise rankings, placement speed, savings, or a staffing outcome.
 
 ## Pillars and supporting pages
