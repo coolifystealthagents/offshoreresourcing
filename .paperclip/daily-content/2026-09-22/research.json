@@ -8,14 +8,14 @@
   "repository": "coolifystealthagents/offshoreresourcing",
   "branch": "main",
   "contentCommit": "d6d80cc00d6d718af7d54bc0db08b20d49b948f9",
-  "remoteShaAtPush": null,
+  "remoteShaAtPush": "b639400184db32f3569d12e65f45168285a68f29",
   "deployment": {
     "platform": "Coolify3",
-    "applicationUuid": null,
-    "applicationStatus": null,
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "applicationStatus": "running:healthy",
     "deploymentUuid": null,
-    "state": "not-started",
-    "blocker": null
+    "state": "blocked",
+    "blocker": "Coolify3 rejected three authenticated deployment requests because its shared deployment queue was full. The public domain and health endpoint returned HTTP 503, so no article can be counted as published or verified. Recovery: retry this application's existing Git deployment after shared queue capacity becomes available, then verify all five routes and reconcile dates if local midnight has passed."
   },
   "validation": {
     "articleWordMinimum": 1200,
