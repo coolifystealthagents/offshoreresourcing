@@ -1,0 +1,30 @@
+{
+  "issue": "OFFA-64",
+  "required": 12,
+  "publicationDate": "2026-09-22",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "master",
+  "sourceProductionSha": "88f8675f7210406b531bae4744adb5f6d01c4606",
+  "contentCommit": "af2c49718b36dc922ff361d5b3145d7fa11466ef",
+  "contentHash": "fd738ab74ccb63e1b7f77f0e8443cc8521824e194ae1d78046f2e4182f78bafb",
+  "validation": "TypeScript passed; production build passed with 619 static pages; all 12 rendered pages contain 1176-1199 words, canonical URL, datePublished, and hero asset.",
+  "deploymentResource": "Coolify3 application qnel5n8i8ffgr82c773ftonl, configured production branch master",
+  "deploymentEvidence": "Pending Git-to-Coolify deployment and live verification.",
+  "articles": [
+    "talent-source-consent-status-register",
+    "candidate-screening-adverse-evidence-review",
+    "interview-panel-time-zone-check",
+    "recruitment-offer-approval-handoff",
+    "workforce-forecast-variance-notes",
+    "onboarding-system-owner-acceptance",
+    "training-reviewer-calibration-session",
+    "performance-dashboard-late-data-label",
+    "schedule-holiday-coverage-assumption-review",
+    "people-operations-case-access-review",
+    "compliance-evidence-retention-disposition",
+    "retention-program-action-impact-review"
+  ],
+  "commonSources": ["privacy.gov.ph", "nist.gov", "cisa.gov"],
+  "status": "built-not-live-verified"
+}
