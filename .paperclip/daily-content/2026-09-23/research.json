@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "family": "research",
+  "required": 5,
+  "publishedAndVerified": 0,
+  "publicationDate": "2026-09-23",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "contentCommit": "7db1745c1ca6a7336388ae6fa29834edf41bcbf5",
+  "remoteShaAtPush": null,
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "applicationStatus": "running:healthy",
+    "deploymentUuid": null,
+    "state": "pending"
+  },
+  "validation": {
+    "articleWordMinimum": 1200,
+    "articleWordCounts": [1255, 1282, 1355, 1281, 1274],
+    "sourcesPerArticle": 10,
+    "batchValidation": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed with pre-existing CSS autoprefixer warnings",
+    "repositoryContentValidator": "batch passed; repository command remains nonzero for pre-existing origin/main content defects"
+  },
+  "articles": [
+    {
+      "topic": "Pre-start access readiness for offshore staff",
+      "slug": "offshore-staffing-access-readiness-before-start",
+      "sources": 10,
+      "contentHash": "sha256:a49966f3b12f78dbdb7246637d1b9fa33b1bde0e268f0801d882bd645b61d37c",
+      "actualPublicationDate": null,
+      "commitSha": "7db1745c1ca6a7336388ae6fa29834edf41bcbf5",
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-access-readiness-before-start",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Buyer approval capacity for an offshore team",
+      "slug": "offshore-staffing-buyer-approval-capacity",
+      "sources": 10,
+      "contentHash": "sha256:3d6b92d0d474db02ea055043e7d3c73fa4f45ca7a3c51c84c4e695412ef9e1dc",
+      "actualPublicationDate": null,
+      "commitSha": "7db1745c1ca6a7336388ae6fa29834edf41bcbf5",
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-buyer-approval-capacity",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Data processing agreement review for Philippines offshore staffing",
+      "slug": "offshore-staffing-data-processing-agreement-philippines",
+      "sources": 10,
+      "contentHash": "sha256:d019d43bdda85e07f2ffdf3f36726f6bcf3be15f874f7876b413c324814aa46a",
+      "actualPublicationDate": null,
+      "commitSha": "7db1745c1ca6a7336388ae6fa29834edf41bcbf5",
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-data-processing-agreement-philippines",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Connectivity continuity for Philippines offshore staff",
+      "slug": "philippines-offshore-connectivity-continuity-plan",
+      "sources": 10,
+      "contentHash": "sha256:e4142e5105bb817f96d64b87a17b0ad75a1995f23217f2a6967671e1816a8d6c",
+      "actualPublicationDate": null,
+      "commitSha": "7db1745c1ca6a7336388ae6fa29834edf41bcbf5",
+      "liveUrl": "https://offshoreresourcing.com/research/philippines-offshore-connectivity-continuity-plan",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "topic": "Holiday coverage planning for Philippines offshore staffing",
+      "slug": "philippines-offshore-staffing-holiday-coverage-plan",
+      "sources": 10,
+      "contentHash": "sha256:968607f04daf90a82c31f1da26ddb70526862d323345e453ab72dbb2a9888be6",
+      "actualPublicationDate": null,
+      "commitSha": "7db1745c1ca6a7336388ae6fa29834edf41bcbf5",
+      "liveUrl": "https://offshoreresourcing.com/research/philippines-offshore-staffing-holiday-coverage-plan",
+      "verificationTime": null,
+      "verified": false
+    }
+  ]
+}
