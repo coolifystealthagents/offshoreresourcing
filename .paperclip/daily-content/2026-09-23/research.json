@@ -8,13 +8,14 @@
   "repository": "coolifystealthagents/offshoreresourcing",
   "branch": "main",
   "contentCommit": "7db1745c1ca6a7336388ae6fa29834edf41bcbf5",
-  "remoteShaAtPush": null,
+  "remoteShaAtPush": "d8900012ca9652fbd5f2063e58f4190bf25a228b",
   "deployment": {
     "platform": "Coolify3",
     "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
     "applicationStatus": "running:healthy",
-    "deploymentUuid": null,
-    "state": "pending"
+    "deploymentUuid": "xga0wefzikqymmmo11pa9s6d",
+    "state": "queued",
+    "blocker": "Coolify3 accepted three bounded deployment attempts. The first queued stale configured commit 3de4e4123255ee6da15a5f48e4dc31d0637bb341. The application configuration was repaired to production branch main and remote commit d8900012ca9652fbd5f2063e58f4190bf25a228b; corrected deployments gycbuirhoqecdqeekwllqt9c and xga0wefzikqymmmo11pa9s6d remain queued and have not started. The public site is healthy but the five new routes are not yet deployed, so none are counted. Recovery owner: Coolify3 platform capacity owner must allow the corrected queued deployment to run; then verify all five routes and reconcile publication dates if UTC midnight has passed."
   },
   "validation": {
     "articleWordMinimum": 1200,
