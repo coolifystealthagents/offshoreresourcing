@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "family": "blog",
+  "required": 12,
+  "verified": 0,
+  "publicationDate": "2026-09-23",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "sourceProductionSha": "ff410083c00e9b2ac7f50eb46d77c88363dca1a8",
+  "contentCommit": "2d99ad008dc5327a9d860d8caff70f1f9fe9be5f",
+  "remoteSha": "2d99ad008dc5327a9d860d8caff70f1f9fe9be5f",
+  "contentHash": "98d380af8ff4a30c75705b1df07fb7eb2c872d16920f20620be8a5757aada344",
+  "build": "passed: TypeScript and Next.js production build; repository validator blocked only by pre-existing research files",
+  "deploymentResource": "configured COOLIFY_APPLICATION_UUID; authenticated API redirected to login",
+  "deploymentEvidence": "Push reached origin/main. Configured deployment trigger timed out. New article probe returned HTTP 404 in six bounded checks; live verification is pending.",
+  "articles": [
+    {"slug":"offshore-sourcing-brief-evidence-completeness","family":"blog","topic":"Sourcing brief evidence completeness","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/offshore-sourcing-brief-evidence-completeness","status":"built-not-live-verified"},
+    {"slug":"candidate-work-sample-reviewer-calibration","family":"blog","topic":"Candidate work-sample reviewer calibration","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/candidate-work-sample-reviewer-calibration","status":"built-not-live-verified"},
+    {"slug":"offshore-interview-timezone-confirmation-protocol","family":"blog","topic":"Interview timezone confirmation","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/offshore-interview-timezone-confirmation-protocol","status":"built-not-live-verified"},
+    {"slug":"candidate-withdrawal-closure-record","family":"blog","topic":"Candidate withdrawal closure","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/candidate-withdrawal-closure-record","status":"built-not-live-verified"},
+    {"slug":"offshore-workforce-seasonality-assumption-register","family":"blog","topic":"Workforce seasonality assumptions","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/offshore-workforce-seasonality-assumption-register","status":"built-not-live-verified"},
+    {"slug":"offshore-onboarding-day-one-dependency-map","family":"blog","topic":"Onboarding day-one dependencies","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/offshore-onboarding-day-one-dependency-map","status":"built-not-live-verified"},
+    {"slug":"offshore-training-remediation-plan","family":"blog","topic":"Training remediation planning","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/offshore-training-remediation-plan","status":"built-not-live-verified"},
+    {"slug":"performance-report-late-data-cutoff-log","family":"blog","topic":"Performance-report late-data cutoff","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/performance-report-late-data-cutoff-log","status":"built-not-live-verified"},
+    {"slug":"offshore-schedule-skill-coverage-matrix","family":"blog","topic":"Schedule skill coverage","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/offshore-schedule-skill-coverage-matrix","status":"built-not-live-verified"},
+    {"slug":"people-operations-shared-mailbox-access-review","family":"blog","topic":"People-operations mailbox access","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/people-operations-shared-mailbox-access-review","status":"built-not-live-verified"},
+    {"slug":"compliance-evidence-retention-schedule","family":"blog","topic":"Compliance evidence retention","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/compliance-evidence-retention-schedule","status":"built-not-live-verified"},
+    {"slug":"offshore-exit-theme-action-log","family":"blog","topic":"Exit-theme action tracking","sources":["privacy.gov.ph","nist.gov","cisa.gov"],"liveUrl":"https://offshoreresourcing.com/blog/offshore-exit-theme-action-log","status":"built-not-live-verified"}
+  ]
+}
