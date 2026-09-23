@@ -2,6 +2,18 @@
 
 Last reviewed: 2026-08-19
 
+## September 23, 2026 operational-readiness research ledger
+
+| Slug | Buyer decision | Service path | Distinction from existing inventory |
+| --- | --- | --- | --- |
+| `offshore-staffing-data-processing-agreement-philippines` | Review processing terms before personal-data access | Compliance Document Administration | Clause-to-workflow review rather than general access tiering or provider evidence |
+| `philippines-offshore-staffing-holiday-coverage-plan` | Choose a safe holiday coverage pattern | Schedule Coordination | Calendar, capacity, and handoff design rather than ordinary time-zone overlap |
+| `offshore-staffing-buyer-approval-capacity` | Size buyer decision capacity before adding staff | Workforce Planning Support | Buyer-side approval queue rather than offshore worker productivity |
+| `philippines-offshore-connectivity-continuity-plan` | Test connectivity and power fallback against critical work | Onboarding Coordination | Continuity validation rather than assigning equipment ownership |
+| `offshore-staffing-access-readiness-before-start` | Release a new role into live systems | Onboarding Coordination | Pre-start evidence gate rather than ongoing access governance |
+
+All five pages are new decision guides for buyers of Philippines-based offshore staffing support. They preserve legal, employment, security, budget, and policy authority with authorized parties and make no staffing outcome, savings, or compliance promise.
+
 ## September 22, 2026 buyer-decision research ledger
 
 | Proposed slug | Primary intent | Audience | Funnel stage | Target service | Closest existing URL | Differentiation | Status |
