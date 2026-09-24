@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "family": "blog",
+  "required": 12,
+  "verified": 0,
+  "publicationDate": null,
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "sourceProductionSha": "8c1850c408145f283f53448503c75a495d32dc71",
+  "contentCommit": "05d7504642c11e6c08ac16520daf29840fdf4531",
+  "remoteSha": "05d7504642c11e6c08ac16520daf29840fdf4531",
+  "build": "passed: TypeScript and Next.js production build (694 static pages)",
+  "deploymentResource": "Coolify3 application qnel5n8i8ffgr82c773ftonl",
+  "deploymentUuid": "unavailable: configured API redirected to login",
+  "verificationTime": null,
+  "deploymentEvidence": "Content commit is present on origin/main. Coolify API authentication was unavailable; two bounded public transition checks (six requests) still returned HTTP 404 for the first new route, so no article is counted as published.",
+  "recoveryAction": "Restore or trigger the configured Coolify3 Git deployment for origin/main at 05d7504642c11e6c08ac16520daf29840fdf4531, then verify all 12 routes and replace this queued manifest with per-article live evidence and the actual UTC publication date.",
+  "articles": [
+    "offshore-talent-source-channel-review", "candidate-screening-evidence-gap-log", "offshore-interview-panel-availability-lock", "recruitment-offer-document-handoff-checklist",
+    "offshore-workforce-vacancy-coverage-scenario", "offshore-onboarding-access-sequencing-plan", "offshore-training-version-change-brief", "offshore-performance-report-exception-denominator",
+    "offshore-schedule-change-impact-check", "people-operations-request-identity-check", "offshore-compliance-document-superseded-copy-control", "offshore-retention-action-effectiveness-review"
+  ]
+}
