@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 3,
+  "family": "research",
+  "required": 5,
+  "publishedAndVerified": 0,
+  "publicationDate": null,
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "master",
+  "contentCommit": null,
+  "remoteShaAtPush": null,
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "resourceUuid": "l13ylpiz5n7x3du8pnr1cdlx",
+    "state": "prepared",
+    "deploymentUuid": null,
+    "evidence": null,
+    "blocker": null
+  },
+  "validation": {
+    "articleWordMinimum": 1200,
+    "articleWordCounts": [
+      1303,
+      1313,
+      1304,
+      1297,
+      1302
+    ],
+    "sourcesPerArticle": 10,
+    "productionBuild": null,
+    "repositoryContentValidator": "batch passed; repository command remains nonzero for pre-existing content defects"
+  },
+  "articles": [
+    {
+      "family": "research",
+      "topic": "Which facts should a buyer verify before placing a Philippines-based offshore worker in a specific role?",
+      "slug": "philippines-offshore-background-check-scope",
+      "sources": [
+        {
+          "title": "Philippine Statistics Authority, Labor and Employment",
+          "publisher": "psa.gov.ph",
+          "url": "https://psa.gov.ph/statistics/labor-force-survey",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Department of Labor and Employment",
+          "publisher": "www.dole.gov.ph",
+          "url": "https://www.dole.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "National Privacy Commission, Data Privacy Act implementing rules",
+          "publisher": "privacy.gov.ph",
+          "url": "https://privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "International Labour Organization, fair recruitment guidance",
+          "publisher": "www.ilo.org",
+          "url": "https://www.ilo.org/publications/general-principles-and-operational-guidelines-fair-recruitment-and",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Cybersecurity Framework 2.0",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/cyberframework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Privacy Framework",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/privacy-framework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "ISO 9001 quality management systems",
+          "publisher": "www.iso.org",
+          "url": "https://www.iso.org/iso-9001-quality-management.html",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Philippine Securities and Exchange Commission",
+          "publisher": "www.sec.gov.ph",
+          "url": "https://www.sec.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Bangko Sentral ng Pilipinas, statistics",
+          "publisher": "www.bsp.gov.ph",
+          "url": "https://www.bsp.gov.ph/SitePages/Statistics/Statistics.aspx",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "World Bank, Philippines data",
+          "publisher": "data.worldbank.org",
+          "url": "https://data.worldbank.org/country/philippines",
+          "checkedDate": "2026-09-24"
+        }
+      ],
+      "contentHash": "sha256:97721e09daa56c6fca256de7819f1da355d3c6cd900fee7cf9df8d0bbede6c56",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/philippines-offshore-background-check-scope",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How can a buyer verify a Philippines offshore staffing invoice without confusing price review with payroll or employment authority?",
+      "slug": "offshore-staffing-invoice-reconciliation-philippines",
+      "sources": [
+        {
+          "title": "Philippine Statistics Authority, Labor and Employment",
+          "publisher": "psa.gov.ph",
+          "url": "https://psa.gov.ph/statistics/labor-force-survey",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Department of Labor and Employment",
+          "publisher": "www.dole.gov.ph",
+          "url": "https://www.dole.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "National Privacy Commission, Data Privacy Act implementing rules",
+          "publisher": "privacy.gov.ph",
+          "url": "https://privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "International Labour Organization, fair recruitment guidance",
+          "publisher": "www.ilo.org",
+          "url": "https://www.ilo.org/publications/general-principles-and-operational-guidelines-fair-recruitment-and",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Cybersecurity Framework 2.0",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/cyberframework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Privacy Framework",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/privacy-framework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "ISO 9001 quality management systems",
+          "publisher": "www.iso.org",
+          "url": "https://www.iso.org/iso-9001-quality-management.html",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Philippine Securities and Exchange Commission",
+          "publisher": "www.sec.gov.ph",
+          "url": "https://www.sec.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Bangko Sentral ng Pilipinas, statistics",
+          "publisher": "www.bsp.gov.ph",
+          "url": "https://www.bsp.gov.ph/SitePages/Statistics/Statistics.aspx",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "World Bank, Philippines data",
+          "publisher": "data.worldbank.org",
+          "url": "https://data.worldbank.org/country/philippines",
+          "checkedDate": "2026-09-24"
+        }
+      ],
+      "contentHash": "sha256:87ea54bda40d4ea7d88d2753257c9e1f5d617248ffd52c795353af6d64e254db",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-invoice-reconciliation-philippines",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "What operating evidence should support confidentiality and work-product handoffs in a Philippines offshore staffing arrangement?",
+      "slug": "offshore-staffing-confidentiality-ip-handoff-philippines",
+      "sources": [
+        {
+          "title": "Philippine Statistics Authority, Labor and Employment",
+          "publisher": "psa.gov.ph",
+          "url": "https://psa.gov.ph/statistics/labor-force-survey",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Department of Labor and Employment",
+          "publisher": "www.dole.gov.ph",
+          "url": "https://www.dole.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "National Privacy Commission, Data Privacy Act implementing rules",
+          "publisher": "privacy.gov.ph",
+          "url": "https://privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "International Labour Organization, fair recruitment guidance",
+          "publisher": "www.ilo.org",
+          "url": "https://www.ilo.org/publications/general-principles-and-operational-guidelines-fair-recruitment-and",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Cybersecurity Framework 2.0",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/cyberframework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Privacy Framework",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/privacy-framework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "ISO 9001 quality management systems",
+          "publisher": "www.iso.org",
+          "url": "https://www.iso.org/iso-9001-quality-management.html",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Philippine Securities and Exchange Commission",
+          "publisher": "www.sec.gov.ph",
+          "url": "https://www.sec.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Bangko Sentral ng Pilipinas, statistics",
+          "publisher": "www.bsp.gov.ph",
+          "url": "https://www.bsp.gov.ph/SitePages/Statistics/Statistics.aspx",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "World Bank, Philippines data",
+          "publisher": "data.worldbank.org",
+          "url": "https://data.worldbank.org/country/philippines",
+          "checkedDate": "2026-09-24"
+        }
+      ],
+      "contentHash": "sha256:81f4d264867b05b5b3c45b1e6929d8e38576007bbc958fc002fb6d4aedda63d8",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-confidentiality-ip-handoff-philippines",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How much buyer management capacity does a new offshore staffing role require before it becomes operationally viable?",
+      "slug": "offshore-staffing-management-time-budget",
+      "sources": [
+        {
+          "title": "Philippine Statistics Authority, Labor and Employment",
+          "publisher": "psa.gov.ph",
+          "url": "https://psa.gov.ph/statistics/labor-force-survey",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Department of Labor and Employment",
+          "publisher": "www.dole.gov.ph",
+          "url": "https://www.dole.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "National Privacy Commission, Data Privacy Act implementing rules",
+          "publisher": "privacy.gov.ph",
+          "url": "https://privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "International Labour Organization, fair recruitment guidance",
+          "publisher": "www.ilo.org",
+          "url": "https://www.ilo.org/publications/general-principles-and-operational-guidelines-fair-recruitment-and",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Cybersecurity Framework 2.0",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/cyberframework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Privacy Framework",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/privacy-framework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "ISO 9001 quality management systems",
+          "publisher": "www.iso.org",
+          "url": "https://www.iso.org/iso-9001-quality-management.html",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Philippine Securities and Exchange Commission",
+          "publisher": "www.sec.gov.ph",
+          "url": "https://www.sec.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Bangko Sentral ng Pilipinas, statistics",
+          "publisher": "www.bsp.gov.ph",
+          "url": "https://www.bsp.gov.ph/SitePages/Statistics/Statistics.aspx",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "World Bank, Philippines data",
+          "publisher": "data.worldbank.org",
+          "url": "https://data.worldbank.org/country/philippines",
+          "checkedDate": "2026-09-24"
+        }
+      ],
+      "contentHash": "sha256:10c89d50fd339d8c5825e6897cf1916eeb3358619bcb56c0a14e62fafe407800",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-management-time-budget",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How should an offshore recruitment support lane recover when a candidate or interviewer does not attend?",
+      "slug": "offshore-recruitment-interview-no-show-recovery",
+      "sources": [
+        {
+          "title": "Philippine Statistics Authority, Labor and Employment",
+          "publisher": "psa.gov.ph",
+          "url": "https://psa.gov.ph/statistics/labor-force-survey",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Department of Labor and Employment",
+          "publisher": "www.dole.gov.ph",
+          "url": "https://www.dole.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "National Privacy Commission, Data Privacy Act implementing rules",
+          "publisher": "privacy.gov.ph",
+          "url": "https://privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "International Labour Organization, fair recruitment guidance",
+          "publisher": "www.ilo.org",
+          "url": "https://www.ilo.org/publications/general-principles-and-operational-guidelines-fair-recruitment-and",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Cybersecurity Framework 2.0",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/cyberframework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "NIST Privacy Framework",
+          "publisher": "www.nist.gov",
+          "url": "https://www.nist.gov/privacy-framework",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "ISO 9001 quality management systems",
+          "publisher": "www.iso.org",
+          "url": "https://www.iso.org/iso-9001-quality-management.html",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Philippine Securities and Exchange Commission",
+          "publisher": "www.sec.gov.ph",
+          "url": "https://www.sec.gov.ph/",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "Bangko Sentral ng Pilipinas, statistics",
+          "publisher": "www.bsp.gov.ph",
+          "url": "https://www.bsp.gov.ph/SitePages/Statistics/Statistics.aspx",
+          "checkedDate": "2026-09-24"
+        },
+        {
+          "title": "World Bank, Philippines data",
+          "publisher": "data.worldbank.org",
+          "url": "https://data.worldbank.org/country/philippines",
+          "checkedDate": "2026-09-24"
+        }
+      ],
+      "contentHash": "sha256:869e9293eab7450ef69f9d1872fa41ce13816885424ada25e87b8b529908aceb",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-recruitment-interview-no-show-recovery",
+      "verificationTime": null,
+      "verified": false
+    }
+  ]
+}
