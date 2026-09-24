@@ -7,16 +7,16 @@
   "timezone": "UTC",
   "repository": "coolifystealthagents/offshoreresourcing",
   "branch": "master",
-  "contentCommit": null,
-  "remoteShaAtPush": null,
+  "contentCommit": "7067adad852ce072ddb3642c5203aac4d2a3c924",
+  "remoteShaAtPush": "7067adad852ce072ddb3642c5203aac4d2a3c924",
   "deployment": {
     "platform": "Coolify3",
     "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
     "resourceUuid": "l13ylpiz5n7x3du8pnr1cdlx",
-    "state": "prepared",
+    "state": "blocked",
     "deploymentUuid": null,
-    "evidence": null,
-    "blocker": null
+    "evidence": "Configured Coolify API returned HTTP 401; three bounded public route checks returned HTTP 404 after the production-branch push.",
+    "blocker": "Deployment cannot be observed or triggered with the configured unauthorized Coolify API credential. Restore access for application qnel5n8i8ffgr82c773ftonl, deploy master SHA 7067adad852ce072ddb3642c5203aac4d2a3c924, then set each article date to its UTC live-verification date and verify all five routes plus sitemap."
   },
   "validation": {
     "articleWordMinimum": 1200,
@@ -28,7 +28,7 @@
       1302
     ],
     "sourcesPerArticle": 10,
-    "productionBuild": null,
+    "productionBuild": "blocked locally: repository dependencies were absent in the isolated worktree; linked dependency attempt did not produce a BUILD_ID",
     "repositoryContentValidator": "batch passed; repository command remains nonzero for pre-existing content defects"
   },
   "articles": [
