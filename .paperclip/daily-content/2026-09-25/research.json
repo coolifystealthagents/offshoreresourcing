@@ -5,10 +5,10 @@
   "required": 5,
   "staged": 5,
   "publishedAndVerified": 0,
-  "publicationDate": null,
+  "publicationDate": "2026-09-25",
   "timezone": "UTC",
   "repository": "coolifystealthagents/offshoreresourcing",
-  "branch": "routine/offa-69-20260925",
+  "branch": "master",
   "baseProductionSha": "880ec07b73d4ff42303c13b616d087676a1ea24c",
   "integrationOwner": "Blog routine",
   "deploymentOwner": "Browser operator",
@@ -98,8 +98,8 @@
           "checkedDate": "2026-09-25"
         }
       ],
-      "contentHash": "sha256:180983109c2cea12a4be0d52cd9e2c0e8dd56bfbe7070bfb02fca785eaea9c94",
-      "actualPublicationDate": null,
+      "contentHash": "sha256:29e30d18ce142b3b5c4b92af55a439e79c023f97bc60809ff484002c545a30e3",
+      "actualPublicationDate": "2026-09-25",
       "commitSha": null,
       "deploymentEvidence": null,
       "liveUrl": "https://offshoreresourcing.com/research/offshore-sourcing-list-acceptance-evidence",
@@ -172,8 +172,8 @@
           "checkedDate": "2026-09-25"
         }
       ],
-      "contentHash": "sha256:e37bae8377d6f724b902ee160c58cdf6e034fe1edf69ab02ad8114711501b2b4",
-      "actualPublicationDate": null,
+      "contentHash": "sha256:48049b798e004582fbcb8c521db4fec29097462bff6c0d399f56adaf56039bae",
+      "actualPublicationDate": "2026-09-25",
       "commitSha": null,
       "deploymentEvidence": null,
       "liveUrl": "https://offshoreresourcing.com/research/candidate-screening-false-negative-review",
@@ -246,8 +246,8 @@
           "checkedDate": "2026-09-25"
         }
       ],
-      "contentHash": "sha256:a20728db544e1c0986c0fe9a9dd7698745d839bc4d478f1a805aae73e4f31185",
-      "actualPublicationDate": null,
+      "contentHash": "sha256:43537515db449134eecfecf9c010c9d81372f2bd6010023ecf78b27746a098e9",
+      "actualPublicationDate": "2026-09-25",
       "commitSha": null,
       "deploymentEvidence": null,
       "liveUrl": "https://offshoreresourcing.com/research/interview-scheduling-exception-capacity",
@@ -320,8 +320,8 @@
           "checkedDate": "2026-09-25"
         }
       ],
-      "contentHash": "sha256:907e8a56d0a413bd52d39a4d7ae77c79da1303e305aa11cb5a051c67a6b31442",
-      "actualPublicationDate": null,
+      "contentHash": "sha256:43953908a8be2e2284d4f2c1509257ba05c4cb2b73d645930e0956125de9a53c",
+      "actualPublicationDate": "2026-09-25",
       "commitSha": null,
       "deploymentEvidence": null,
       "liveUrl": "https://offshoreresourcing.com/research/onboarding-evidence-completeness-rate",
@@ -394,8 +394,8 @@
           "checkedDate": "2026-09-25"
         }
       ],
-      "contentHash": "sha256:38fc618a6f8abd2a5ea51f39e1bcce4f41ab3b3119ba3d8122ffa49c0e4d8e88",
-      "actualPublicationDate": null,
+      "contentHash": "sha256:159cfe805fea53af7dd9d94adc20b5c962da5152c66c9cf0bef8782cd2615504",
+      "actualPublicationDate": "2026-09-25",
       "commitSha": null,
       "deploymentEvidence": null,
       "liveUrl": "https://offshoreresourcing.com/research/offshore-retention-signal-interpretation",

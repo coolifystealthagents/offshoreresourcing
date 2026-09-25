@@ -1,15 +1,15 @@
 ---
 title: "Acceptance Evidence for an Offshore Candidate Sourcing List"
 description: "A research framework for deciding whether a candidate list is usable before outreach or screening begins."
-datePublished: "pending"
-publishedAt: "pending"
+datePublished: "2026-09-25"
+publishedAt: "2026-09-25"
 verifiedAt: "pending"
 category: talent-sourcing
 image: "/icons/getillustrations/blueprint-business-icons-svg/role-brief.svg"
 sourceCount: "10"
 ---
 
-*Publication date pending combined release. Sources checked: September 25, 2026.*
+*Published September 25, 2026. Sources checked: September 25, 2026.*
 
 ## Decision in brief
 

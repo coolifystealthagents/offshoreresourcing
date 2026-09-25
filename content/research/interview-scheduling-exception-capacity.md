@@ -1,15 +1,15 @@
 ---
 title: "Capacity Planning for Interview-Scheduling Exceptions"
 description: "Research on measuring reschedules, time-zone conflicts, missing confirmations, and interviewer changes as real queue demand."
-datePublished: "pending"
-publishedAt: "pending"
+datePublished: "2026-09-25"
+publishedAt: "2026-09-25"
 verifiedAt: "pending"
 category: interview-scheduling
 image: "/icons/getillustrations/blueprint-business-icons-svg/role-brief.svg"
 sourceCount: "10"
 ---
 
-*Publication date pending combined release. Sources checked: September 25, 2026.*
+*Published September 25, 2026. Sources checked: September 25, 2026.*
 
 ## Decision in brief
 

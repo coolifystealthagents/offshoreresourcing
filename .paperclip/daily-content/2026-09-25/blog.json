@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 3,
+  "family": "blog",
+  "cycleLabel": "September 25, 2026 recovery",
+  "required": 12,
+  "staged": 12,
+  "publishedAndVerified": 0,
+  "publicationDate": "2026-09-25",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "master",
+  "baseProductionSha": "880ec07b73d4ff42303c13b616d087676a1ea24c",
+  "integrationOwner": "Blog routine",
+  "deploymentOwner": "Browser operator",
+  "deployment": {"platform":"Coolify3","applicationUuid":"qnel5n8i8ffgr82c773ftonl","state":"not-requested","deploymentUuid":null,"evidence":"Combined production push pending final integration checks; browser operator owns the single deployment."},
+  "validation": {"articleWordMinimum":900,"productionBuild":"passed before Research integration: Next.js production build, 649 static pages","batchContentValidation":"12 unique slugs and service-aligned topics staged"},
+  "articles": [
+    ["offshore-talent-pipeline-stage-exit-criteria","Define exit criteria for an offshore talent pipeline","e50288e22152149781f21aeea7bbc3abe37f9b919880ebe2d0da262c92d66dd0"],
+    ["candidate-screening-rubric-change-control","Control changes to an offshore candidate screening rubric","51540871003ff349dd250ba4892e10f1ed6f16245bab4660f0276272e963efc8"],
+    ["offshore-interview-reschedule-priority-rules","Set fair priority rules for offshore interview rescheduling","9035ae9ce7e49e7e35527ec9d7abd1ba7689c48550ac89d41bb95029a2f477fb"],
+    ["recruitment-reference-check-consent-handoff","Build a consent handoff for offshore reference-check coordination","4b2193914366c5e145e0bae52cf73dbe66044e26ad4b2cda16b84c3a66441744"],
+    ["offshore-workforce-demand-assumption-register","Use an assumption register in offshore workforce planning","40105d59b4bb6c4fa1f53e2c2765422c59c26b8522f07a3976c0355276447bb5"],
+    ["offshore-new-starter-first-day-readiness-check","Run a first-day readiness check for an offshore new starter","63197ed2a46a4c75b3b3c8a5a1b40c68c4ff200d77799d424986371bc62424bc"],
+    ["offshore-training-remediation-plan","Create a remediation plan after offshore training review","1e28a16a2b20f11e367b29f46a30b8d5876dcd41b04f628280399754a26e109c"],
+    ["offshore-performance-report-late-data-policy","Define a late-data policy for offshore performance reporting","06cf9ac11b4b76813a54caa951ea103d972c886f4f9029fc2af6c5761166e838"],
+    ["offshore-shift-handoff-acceptance-window","Set an acceptance window for offshore shift handoffs","6a252199e11f1880e69abdc5f5cf2fdd039fec1b3bdee0b76d99df7a8f8124ac"],
+    ["people-operations-document-access-request","Route people-operations document access requests offshore","1bfd7745272d1260211d3c2f590df04c8675302084a7dbfa9136f5bdbe73165f"],
+    ["offshore-compliance-attestation-follow-up","Coordinate compliance attestation follow-up offshore","1352ca959f62897c2c86603f4b0fea9f0d26512012f9eb991cedeab5da325d46"],
+    ["offshore-retention-commitment-register","Maintain a retention commitment register for offshore teams","70449ede451a1efc9f18c63012dd119959450020c1238e984559dec43a8446bf"]
+  ],
+  "articleRecordShape": ["slug","topic","sha256(module+slug)"],
+  "liveVerification": {"verified":0,"verificationTime":null,"note":"The user/browser operator owns article-by-article public route verification."}
+}

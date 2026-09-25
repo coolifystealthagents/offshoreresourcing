@@ -51,10 +51,11 @@ export function ContentArticle({ document, related }: { document: ContentDocumen
   const base = 'https://offshoreresourcing.com';
   const section = document.type === 'research' ? 'Research' : 'Alternatives';
   const url = `${base}/${document.type}/${document.slug}`;
+  const hasVerificationDate = /^\d{4}-\d{2}-\d{2}$/.test(document.verifiedAt);
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': document.type === 'research' ? 'Article' : 'ItemList', name: document.title, description: document.description, url, datePublished: document.publishedAt, dateModified: document.verifiedAt, image: `${base}${document.image}`, publisher: { '@type': 'Organization', name: 'Offshore Resourcing', url: base } },
+      { '@type': document.type === 'research' ? 'Article' : 'ItemList', name: document.title, description: document.description, url, datePublished: document.publishedAt, ...(hasVerificationDate ? { dateModified: document.verifiedAt } : {}), image: `${base}${document.image}`, publisher: { '@type': 'Organization', name: 'Offshore Resourcing', url: base } },
       { '@type': 'BreadcrumbList', itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: base },
         { '@type': 'ListItem', position: 2, name: section, item: `${base}/${document.type}` },
@@ -65,7 +66,7 @@ export function ContentArticle({ document, related }: { document: ContentDocumen
   return <main className="section article-page">
     <JsonLd data={schema} />
     <article className="container content-article">
-      <p className="eyebrow">{section} · <time dateTime={document.publishedAt}>published {formatPublicDate(document.publishedAt)}</time> · verified {formatPublicDate(document.verifiedAt)}</p>
+      <p className="eyebrow">{section} · <time dateTime={document.publishedAt}>published {formatPublicDate(document.publishedAt)}</time>{hasVerificationDate ? <> · verified {formatPublicDate(document.verifiedAt)}</> : null}</p>
       <h1>{document.title}</h1>
       <p className="lead">{document.description}</p>
       <div className="content-badges"><span>{document.category}</span>{document.type === 'research' && <span>{document.sourceCount} sources</span>}{document.alternativeType && <span>{document.alternativeType}</span>}</div>

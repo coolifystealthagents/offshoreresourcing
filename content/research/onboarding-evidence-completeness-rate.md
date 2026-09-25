@@ -1,15 +1,15 @@
 ---
 title: "Measuring Evidence Completeness in Offshore Onboarding Coordination"
 description: "A bounded way to measure whether onboarding records support safe access, training, and manager decisions."
-datePublished: "pending"
-publishedAt: "pending"
+datePublished: "2026-09-25"
+publishedAt: "2026-09-25"
 verifiedAt: "pending"
 category: onboarding
 image: "/icons/getillustrations/blueprint-business-icons-svg/role-brief.svg"
 sourceCount: "10"
 ---
 
-*Publication date pending combined release. Sources checked: September 25, 2026.*
+*Published September 25, 2026. Sources checked: September 25, 2026.*
 
 ## Decision in brief
 

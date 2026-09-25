@@ -1,15 +1,15 @@
 ---
 title: "Reviewing False-Negative Risk in Offshore Candidate Screening"
 description: "A buyer method for finding qualified candidates lost through ambiguous or inconsistently applied screening rules."
-datePublished: "pending"
-publishedAt: "pending"
+datePublished: "2026-09-25"
+publishedAt: "2026-09-25"
 verifiedAt: "pending"
 category: candidate-screening
 image: "/icons/getillustrations/blueprint-business-icons-svg/role-brief.svg"
 sourceCount: "10"
 ---
 
-*Publication date pending combined release. Sources checked: September 25, 2026.*
+*Published September 25, 2026. Sources checked: September 25, 2026.*
 
 ## Decision in brief
 
