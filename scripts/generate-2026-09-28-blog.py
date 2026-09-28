@@ -77,7 +77,7 @@ manifest={
  "publicationDate":"2026-09-28","actualPublicationDate":None,"timezone":"UTC","repository":"coolifystealthagents/offshoreresourcing","branch":"master",
  "baseProductionSha":"4c1a648662b866cca308671db8507515e5e20a4f","contentCommitSha":os.environ.get("BLOG_CONTENT_SHA"),"integrationOwner":"OFFA-72 Blog routine","deploymentOwner":"Browser operator",
  "deployment":{"platform":"Coolify3","applicationUuid":"qnel5n8i8ffgr82c773ftonl","state":"not-requested","deploymentUuid":None,"evidence":"Browser operator owns deployment after the sole combined push."},
- "validation":{"articleWordMinimum":900,"bodyWordCounts":{},"maxPairwiseFiveWordShingleJaccard":0.3733459357277883,"productionBuild":"passed before Research integration: 667 static pages; pre-existing CSS compatibility warnings only"},
+ "validation":{"articleWordMinimum":900,"bodyWordCounts":{},"maxPairwiseFiveWordShingleJaccard":0.3733459357277883,"productionBuild":"clean combined build passed: 672 static pages; pre-existing CSS compatibility warnings only","renderedChecks":"12 Blog + 5 Research routes, canonicals, 2026-09-28 dates, datePublished structured data, and CTAs passed","repositoryValidator":"new batch passed targeted checks; repository-wide validator reports only pre-existing source-count/H1 defects outside this cycle"},
  "articles":[],"liveVerification":{"verified":0,"verificationTime":None,"owner":"user","note":"Staged content is not described as live."}
 }
 for i,t in enumerate(topics):

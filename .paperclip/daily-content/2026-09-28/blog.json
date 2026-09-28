@@ -38,7 +38,9 @@
       "offshore-staffing-exit-plan": 4545
     },
     "maxPairwiseFiveWordShingleJaccard": 0.3733459357277883,
-    "productionBuild": "passed before Research integration: 667 static pages; pre-existing CSS compatibility warnings only"
+    "productionBuild": "clean combined build passed: 672 static pages; pre-existing CSS compatibility warnings only",
+    "renderedChecks": "12 Blog + 5 Research routes, canonicals, 2026-09-28 dates, datePublished structured data, and CTAs passed",
+    "repositoryValidator": "new batch passed targeted checks; repository-wide validator reports only pre-existing source-count/H1 defects outside this cycle"
   },
   "articles": [
     {
