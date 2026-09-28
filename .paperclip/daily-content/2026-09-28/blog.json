@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 3,
+  "family": "blog",
+  "cycleLabel": "September 28, 2026 combined release",
+  "required": 12,
+  "staged": 12,
+  "publishedAndVerified": 0,
+  "publicationDate": "2026-09-28",
+  "actualPublicationDate": null,
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "master",
+  "baseProductionSha": "4c1a648662b866cca308671db8507515e5e20a4f",
+  "contentCommitSha": "47dfcd93d656216e80bc41d139e02521c7b1f9c2",
+  "integrationOwner": "OFFA-72 Blog routine",
+  "deploymentOwner": "Browser operator",
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "state": "not-requested",
+    "deploymentUuid": null,
+    "evidence": "Browser operator owns deployment after the sole combined push."
+  },
+  "validation": {
+    "articleWordMinimum": 900,
+    "bodyWordCounts": {
+      "offshore-staffing-rfp-requirements": 4103,
+      "offshore-staffing-provider-discovery-call": 4150,
+      "compare-offshore-staffing-pricing-models": 4453,
+      "offshore-staffing-security-due-diligence": 4322,
+      "philippines-offshore-holiday-coverage-plan": 4313,
+      "offshore-staffing-transition-plan": 4307,
+      "offshore-staffing-pilot-scorecard": 4322,
+      "offshore-staffing-replacement-coverage": 4324,
+      "offshore-team-equipment-ownership-checklist": 4362,
+      "offshore-staffing-invoice-controls": 4518,
+      "offshore-team-knowledge-transfer-acceptance": 4426,
+      "offshore-staffing-exit-plan": 4545
+    },
+    "maxPairwiseFiveWordShingleJaccard": 0.3733459357277883,
+    "productionBuild": "passed before Research integration: 667 static pages; pre-existing CSS compatibility warnings only"
+  },
+  "articles": [
+    {
+      "slug": "offshore-staffing-rfp-requirements",
+      "topic": "What to Put in an Offshore Staffing RFP",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "95af3e80a5404a0cbc2c71b1465fd31f272377e26b99c2f30fd2854b0aaa1a62",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-rfp-requirements",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-provider-discovery-call",
+      "topic": "How to Run an Offshore Staffing Provider Discovery Call",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "05e8663c16e300a63aa4af0b9e27f968d6bb8518b034d5a725b8ab883bbe8397",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-provider-discovery-call",
+      "verifiedAt": null
+    },
+    {
+      "slug": "compare-offshore-staffing-pricing-models",
+      "topic": "How to Compare Offshore Staffing Pricing Models",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "1e4fbd7cc343996a52cbab837cea24fa0075fd0533fde01c4333cd19f46bf4ba",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/compare-offshore-staffing-pricing-models",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-security-due-diligence",
+      "topic": "Security Due Diligence for an Offshore Staffing Partner",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "b0cc8c3ac4cd72b80f93ad4df735756d55071f82a9bdf1d000641e55ffbfa759",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-security-due-diligence",
+      "verifiedAt": null
+    },
+    {
+      "slug": "philippines-offshore-holiday-coverage-plan",
+      "topic": "Plan Holiday Coverage for a Philippines Offshore Team",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "601de3ae4a804a34d3448aa2e01bda506caa95cd65626ab3cd13d1add0bd24fd",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/philippines-offshore-holiday-coverage-plan",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-transition-plan",
+      "topic": "Build a 30-Day Offshore Staffing Transition Plan",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "3b54cc930aa5113e52af6a237c756f302bbabb297c2cf0cd797860b5d5f99f34",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-transition-plan",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-pilot-scorecard",
+      "topic": "Design an Offshore Staffing Pilot Scorecard",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "f3a13ef3a9efe458e68473ce329f746f8c043113cb5e91bff29d9ddf7b01e4a0",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-pilot-scorecard",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-replacement-coverage",
+      "topic": "Evaluate Replacement and Absence Coverage in Offshore Staffing",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "fe3aaab3b983f950faa6402bd760bc6504d79fa43fb3030e31b729d97f94801c",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-replacement-coverage",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-team-equipment-ownership-checklist",
+      "topic": "Equipment Ownership Checklist for an Offshore Team",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "75d63a80e2bf89b5b29a525b6aff6e8386993adb2c7024842b4ffadcc42d25fe",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-team-equipment-ownership-checklist",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-invoice-controls",
+      "topic": "Invoice Controls for Offshore Staffing Services",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "fb4d863f5b0eedb87f7c7e2f8bc07eb499682ea1e3af4530020ca95bd4c39a12",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-invoice-controls",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-team-knowledge-transfer-acceptance",
+      "topic": "Accept Knowledge Transfer Before Offshore Work Goes Live",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "d8ad284d22be1758d16ba9434c4e9f704e80d829d3f0dbe479a6ba36b19c627e",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-team-knowledge-transfer-acceptance",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-exit-plan",
+      "topic": "Create an Exit Plan Before Starting an Offshore Staffing Engagement",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "e5c1875801468de82d57f046234f2c65f17061134ddf26e50365fa892b89e106",
+      "stagedDate": "2026-09-28",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-exit-plan",
+      "verifiedAt": null
+    }
+  ],
+  "liveVerification": {
+    "verified": 0,
+    "verificationTime": null,
+    "owner": "user",
+    "note": "Staged content is not described as live."
+  }
+}

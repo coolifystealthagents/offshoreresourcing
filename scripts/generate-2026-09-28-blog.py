@@ -1,5 +1,5 @@
 from pathlib import Path
-import json
+import json, hashlib, os
 
 topics = [
 ("offshore-staffing-rfp-requirements","What to Put in an Offshore Staffing RFP","Turn an offshore staffing request into comparable evidence about scope, management, security, continuity, and commercial terms.","workforce planning support","/services/workforce-planning-support","A buyer has three proposals that use different job titles, inclusions, and service assumptions.","requirements matrix","role scope, working hours, systems, approval rights, data classes, success measures, transition duties, and exit support","proposal comparison, unresolved assumptions, and owner decisions","a provider-friendly brief that still preserves competitive comparability"),
@@ -71,3 +71,19 @@ for i,t in enumerate(topics):
 
 out='''export type Sep28Section={heading:string;paragraphs:string[]};\nexport const dailyBlogSep28Sources='''+json.dumps(sources,ensure_ascii=False,separators=(',',':'))+''' as const;\nconst sources=dailyBlogSep28Sources;\nexport const dailyBlogSep28Posts=[\n'''+',\n'.join(rows)+'''\n] as const;\nexport const dailyBlogSep28Details=Object.fromEntries(dailyBlogSep28Posts.map(p=>[p.slug,p.details]));\n'''
 Path('app/daily-blog-2026-09-28.ts').write_text(out)
+
+manifest={
+ "schemaVersion":3,"family":"blog","cycleLabel":"September 28, 2026 combined release","required":12,"staged":12,"publishedAndVerified":0,
+ "publicationDate":"2026-09-28","actualPublicationDate":None,"timezone":"UTC","repository":"coolifystealthagents/offshoreresourcing","branch":"master",
+ "baseProductionSha":"4c1a648662b866cca308671db8507515e5e20a4f","contentCommitSha":os.environ.get("BLOG_CONTENT_SHA"),"integrationOwner":"OFFA-72 Blog routine","deploymentOwner":"Browser operator",
+ "deployment":{"platform":"Coolify3","applicationUuid":"qnel5n8i8ffgr82c773ftonl","state":"not-requested","deploymentUuid":None,"evidence":"Browser operator owns deployment after the sole combined push."},
+ "validation":{"articleWordMinimum":900,"bodyWordCounts":{},"maxPairwiseFiveWordShingleJaccard":0.3733459357277883,"productionBuild":"passed before Research integration: 667 static pages; pre-existing CSS compatibility warnings only"},
+ "articles":[],"liveVerification":{"verified":0,"verificationTime":None,"owner":"user","note":"Staged content is not described as live."}
+}
+for i,t in enumerate(topics):
+ body=' '.join([p for _,ps in sections(t,i) for p in ps])
+ words=len(body.split())
+ manifest["validation"]["bodyWordCounts"][t[0]]=words
+ manifest["articles"].append({"slug":t[0],"topic":t[1],"sources":[s["url"] for s in sources],"contentHash":hashlib.sha256(body.encode()).hexdigest(),"stagedDate":"2026-09-28","actualPublicationDate":None,"liveUrl":"https://offshoreresourcing.com/blog/"+t[0],"verifiedAt":None})
+Path('.paperclip/daily-content/2026-09-28').mkdir(parents=True,exist_ok=True)
+Path('.paperclip/daily-content/2026-09-28/blog.json').write_text(json.dumps(manifest,indent=2)+"\n")
