@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 3,
+  "family": "research",
+  "cycleLabel": "September 28, 2026 combined release",
+  "taskId": "7dbbc061-16f7-4169-8b35-a24a54709186",
+  "taskIdentifier": "OFFA-71",
+  "required": 5,
+  "staged": 5,
+  "publishedAndVerified": 0,
+  "publicationDate": null,
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "routine/offa-71-20260928",
+  "baseProductionSha": "4c1a648662b866cca308671db8507515e5e20a4f",
+  "integrationOwner": "September 28 Blog routine",
+  "deploymentOwner": "Browser operator",
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "state": "not-requested",
+    "deploymentUuid": null,
+    "evidence": "Research staged and committed locally only. OFFA-71 did not push or submit a deployment."
+  },
+  "validation": {
+    "articleWordMinimum": 1200,
+    "bodyOnlyWordCounts": [1311, 1341, 1305, 1366, 1286],
+    "maximumPairwiseFiveWordShingleJaccard": 0.0035,
+    "newArticleValidation": "passed",
+    "repositoryWideContentValidation": "reports pre-existing historical defects outside this routine",
+    "productionBuild": "passed with pre-existing CSS compatibility warnings"
+  },
+  "articles": [
+    {
+      "family": "research",
+      "topic": "How should a buyer size recruiting support when requisitions and candidate activity arrive unevenly?",
+      "slug": "offshore-recruiting-demand-variability-capacity",
+      "sources": { "record": "content/research/offshore-recruiting-demand-variability-capacity.md#sources", "checkedDate": "2026-09-28", "count": 10 },
+      "contentHash": "sha256:f6a8054822d96aa91445ab16166d447ef29e42791841755ffb3a1746c3fd2f6a",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-recruiting-demand-variability-capacity",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "What evidence should precede broader responsibility for a new Philippines offshore role?",
+      "slug": "offshore-role-ramp-milestone-evidence",
+      "sources": { "record": "content/research/offshore-role-ramp-milestone-evidence.md#sources", "checkedDate": "2026-09-28", "count": 10 },
+      "contentHash": "sha256:c440ec35b0f6c808e90171428210afcc85cfc54db0efcc759a48a74592e92bd0",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-role-ramp-milestone-evidence",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How should a buyer sample language quality in offshore customer support without using accent proxies?",
+      "slug": "offshore-customer-support-language-quality-sampling",
+      "sources": { "record": "content/research/offshore-customer-support-language-quality-sampling.md#sources", "checkedDate": "2026-09-28", "count": 10 },
+      "contentHash": "sha256:a62ca32b987465335d08c82b5dd3a0fbdb11434d3a8375e411710fd5a06293b6",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-customer-support-language-quality-sampling",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How much synchronous working-time overlap should a Philippines offshore role require?",
+      "slug": "offshore-time-zone-overlap-decision-model",
+      "sources": { "record": "content/research/offshore-time-zone-overlap-decision-model.md#sources", "checkedDate": "2026-09-28", "count": 10 },
+      "contentHash": "sha256:a1a5eaf296fcb78f247ef09cddd83a53f02fb04761ec11e0a9f8976ebd092539",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-time-zone-overlap-decision-model",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How should system access expand during offshore onboarding?",
+      "slug": "offshore-onboarding-access-sequencing",
+      "sources": { "record": "content/research/offshore-onboarding-access-sequencing.md#sources", "checkedDate": "2026-09-28", "count": 10 },
+      "contentHash": "sha256:3660f4e68f84995f0fdc6f2068cb31b6e9e72a1648f5e38d41e1322f1665843e",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-onboarding-access-sequencing",
+      "verificationTime": null,
+      "verified": false
+    }
+  ]
+}
