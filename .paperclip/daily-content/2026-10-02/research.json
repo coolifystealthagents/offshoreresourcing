@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 3,
+  "family": "research",
+  "cycleLabel": "2026-10-02 combined release",
+  "taskId": "a329c7a3-7abc-4d9b-9c37-5e76f529c7ba",
+  "taskIdentifier": "OFFA-74",
+  "runId": "c07498df-db6e-46f7-b2c6-79f9996c33c8",
+  "required": 5,
+  "staged": 5,
+  "publishedAndVerified": 0,
+  "publicationDate": null,
+  "timezone": "UTC",
+  "datePolicy": "October 2 is the cycle label. OFFA-75 must reconcile all source and rendered dates to each route's actual first-publication date before the sole combined push; user-owned public verification remains pending.",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "productionBranch": "master",
+  "branch": "routine/offa-74-20261002",
+  "worktree": "/paperclip/instances/default/projects/5564385b-3b0f-4b90-bf15-50db3b1fe70e/7551b112-4886-49c0-9979-6583a2753789/_default/worktrees/offa-74-20261002",
+  "baseProductionSha": "0ae6924495557a5de3734c1bfa3a4138afdd9f07",
+  "contentCommitSha": "18396ce90d0a99f9f030f0175c5d454530203d40",
+  "integrationOwner": {
+    "taskIdentifier": "OFFA-75",
+    "taskId": "e6643e5c-230f-4aaa-9048-69c7d4089af9"
+  },
+  "deploymentOwner": "Browser operator",
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "state": "not-requested",
+    "deploymentUuid": null,
+    "evidence": "OFFA-74 staged and committed locally only. It did not push production or request deployment."
+  },
+  "validation": {
+    "articleWordMinimum": 1200,
+    "wordCountScope": "Frontmatter, Buyer checklist/CTA, Sources, and FAQ excluded.",
+    "bodyOnlyWordCounts": {
+      "offshore-staffing-data-flow-due-diligence": 1229,
+      "offshore-support-work-observability-without-surveillance": 1289,
+      "interview-scheduling-failure-recovery-offshore": 1336,
+      "offshore-role-key-person-dependency-test": 1343,
+      "offshore-controlled-document-version-authority": 1340
+    },
+    "maximumPairwiseFiveWordShingleJaccard": 0.002676,
+    "maximumOverlapPair": [
+      "offshore-support-work-observability-without-surveillance",
+      "offshore-role-key-person-dependency-test"
+    ],
+    "repeatedSubstantiveParagraphs": 0,
+    "sharedArgumentCheck": "passed: the articles use separate structures and decisions for data-flow due diligence, workflow measurement, scheduling recovery, key-person continuity, and controlled-document authority; no article is a title or keyword swap",
+    "newArticleValidation": "passed",
+    "sourceLinkCheck": "checked 2026-10-02; primary and authoritative URLs returned 200 or an origin-level 403, except the OECD instrument endpoint timed out during the bounded check",
+    "repositoryWideContentValidation": "new batch has zero findings; validator continues to report pre-existing historical defects outside this routine",
+    "homepageContractTest": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed with pre-existing CSS compatibility and workspace-root warnings"
+  },
+  "articles": [
+    {
+      "family": "research",
+      "topic": "How should a buyer trace personal and business data before an offshore staffing role receives production access?",
+      "slug": "offshore-staffing-data-flow-due-diligence",
+      "sources": { "record": "content/research/offshore-staffing-data-flow-due-diligence.md#sources", "checkedDate": "2026-10-02", "count": 10 },
+      "contentHash": "sha256:008ce167f217220641d5589200780b97c1186adb3f899f8cdbe36abe0acf3229",
+      "actualPublicationDate": null,
+      "commitSha": "18396ce90d0a99f9f030f0175c5d454530203d40",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-staffing-data-flow-due-diligence",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How can a buyer measure distributed support work through workflow evidence rather than invasive activity monitoring?",
+      "slug": "offshore-support-work-observability-without-surveillance",
+      "sources": { "record": "content/research/offshore-support-work-observability-without-surveillance.md#sources", "checkedDate": "2026-10-02", "count": 10 },
+      "contentHash": "sha256:85685d85b69c5afa3b38d305d19c78066ec9d3588ce7627b8f122a8c3fd02843",
+      "actualPublicationDate": null,
+      "commitSha": "18396ce90d0a99f9f030f0175c5d454530203d40",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-support-work-observability-without-surveillance",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How should an offshore interview-scheduling lane recover from no-shows, calendar conflicts, and late changes?",
+      "slug": "interview-scheduling-failure-recovery-offshore",
+      "sources": { "record": "content/research/interview-scheduling-failure-recovery-offshore.md#sources", "checkedDate": "2026-10-02", "count": 10 },
+      "contentHash": "sha256:d0f22b4baac4a1dd65c341e3b5ae1c7dce8b10020b256f9c3ea750a28db5785b",
+      "actualPublicationDate": null,
+      "commitSha": "18396ce90d0a99f9f030f0175c5d454530203d40",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/interview-scheduling-failure-recovery-offshore",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How can a buyer test whether an offshore support role depends on one person's knowledge, access, or availability?",
+      "slug": "offshore-role-key-person-dependency-test",
+      "sources": { "record": "content/research/offshore-role-key-person-dependency-test.md#sources", "checkedDate": "2026-10-02", "count": 10 },
+      "contentHash": "sha256:0092289caee8684a3a3520b88b6faccc58516b5dd203b287d8ec01bb2ea4bf93",
+      "actualPublicationDate": null,
+      "commitSha": "18396ce90d0a99f9f030f0175c5d454530203d40",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-role-key-person-dependency-test",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "How should a buyer ensure offshore teams use the approved procedure, template, and decision record?",
+      "slug": "offshore-controlled-document-version-authority",
+      "sources": { "record": "content/research/offshore-controlled-document-version-authority.md#sources", "checkedDate": "2026-10-02", "count": 10 },
+      "contentHash": "sha256:94f845bfa208da029d8a040ad8bf93c3d6c735d33a8ca27fe55ad6e4318bc3c1",
+      "actualPublicationDate": null,
+      "commitSha": "18396ce90d0a99f9f030f0175c5d454530203d40",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-controlled-document-version-authority",
+      "verificationTime": null,
+      "verified": false
+    }
+  ]
+}
