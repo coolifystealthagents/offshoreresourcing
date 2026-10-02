@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 3,
+  "family": "blog",
+  "cycleLabel": "October 2, 2026 combined release",
+  "required": 12,
+  "staged": 12,
+  "publishedAndVerified": 0,
+  "publicationDate": "2026-10-02",
+  "actualPublicationDate": null,
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "master",
+  "baseProductionSha": "0ae6924495557a5de3734c1bfa3a4138afdd9f07",
+  "integrationOwner": "OFFA-75",
+  "deploymentOwner": "Browser operator",
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "state": "not-requested",
+    "deploymentUuid": null
+  },
+  "validation": {
+    "bodyWordCounts": {
+      "offshore-customer-complaint-escalation-record": 1232,
+      "offshore-knowledge-base-change-control": 1063,
+      "offshore-onboarding-access-request-pack": 1139,
+      "offshore-recruiting-source-quality-review": 1066,
+      "offshore-role-scope-change-trigger": 1102,
+      "offshore-staffing-governance-meeting-agenda": 1265,
+      "offshore-staffing-invoice-discrepancy-workflow": 1321,
+      "offshore-staffing-service-level-ownership-matrix": 1437,
+      "offshore-team-action-register": 1086,
+      "offshore-team-manager-span-of-control": 1346,
+      "offshore-vendor-exit-data-return-checklist": 1005,
+      "philippines-offshore-peak-season-capacity-test": 993
+    },
+    "maxPairwiseFiveWordShingleJaccard": 0.0021061499578770007,
+    "repeatedSubstantiveParagraphs": 0,
+    "qualitativeSharedArgumentCheck": "passed: distinct structure, worked example, and outcome per article"
+  },
+  "articles": [
+    {
+      "slug": "offshore-customer-complaint-escalation-record",
+      "topic": "Build a Customer Complaint Escalation Record for Offshore Support",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:1c6fcea564d1580f9a728b781df74d58467fd9ec8def11ad677577121e3f306e",
+      "strictBodyWords": 1232,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-customer-complaint-escalation-record",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-knowledge-base-change-control",
+      "topic": "Control Knowledge Base Changes in an Offshore Support Team",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:8af41e22901c64f0af9d34d3526b44d5449c136352fdc7b00dc748cafd7448ac",
+      "strictBodyWords": 1063,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-knowledge-base-change-control",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-onboarding-access-request-pack",
+      "topic": "Build an Access Request Pack for Offshore Onboarding",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:23eb07375d5f3bff53e1dca6ff2ba0bb6126854e109634df3b2a1e3802e76619",
+      "strictBodyWords": 1139,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-onboarding-access-request-pack",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-recruiting-source-quality-review",
+      "topic": "Review Candidate Source Quality in an Offshore Recruiting Lane",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:d5fafd5a7c20d1bf70ae8aa9b985a0efe68aa7a85b0684167f9e22f4933f1b7c",
+      "strictBodyWords": 1066,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-recruiting-source-quality-review",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-role-scope-change-trigger",
+      "topic": "Set Change Triggers for an Offshore Role Scope",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:7f0686182048a1e5bb3923e8d34e10f5228784e30d70b9011c2886d368e6d32f",
+      "strictBodyWords": 1102,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-role-scope-change-trigger",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-governance-meeting-agenda",
+      "topic": "Run an Offshore Staffing Governance Meeting That Resolves Decisions",
+      "sources": [
+        "https://www.iso.org/publication/PUB100080.html",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:c12e8eeb7b5c4fc5c9648edd6a9bfe1a0b8ca908cd345c8e4810befad85dfa36",
+      "strictBodyWords": 1265,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-governance-meeting-agenda",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-invoice-discrepancy-workflow",
+      "topic": "Design an Invoice Discrepancy Workflow for Offshore Finance Support",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:cdc977d413436a5efb8a19aa0cee74f788dba9a009a2751c13a1632bd750f5f7",
+      "strictBodyWords": 1321,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-invoice-discrepancy-workflow",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-staffing-service-level-ownership-matrix",
+      "topic": "Build a Service-Level Ownership Matrix for an Offshore Team",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:40a7f9a6973d6b9eeb633dee742ddf6252076ca718868902434439c30842f436",
+      "strictBodyWords": 1437,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-staffing-service-level-ownership-matrix",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-team-action-register",
+      "topic": "Run an Action Register for a Distributed Offshore Team",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:580032d49bf000d84fa634219c8a362e1f13f57f4b64b2b0f7c0ef4bdbed9233",
+      "strictBodyWords": 1086,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-team-action-register",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-team-manager-span-of-control",
+      "topic": "Choose a Manager Span of Control for an Offshore Team",
+      "sources": [
+        "https://www.iso.org/publication/PUB100080.html",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:ecba8b1b1ef3ee2b2907341bcc8f6f04f971023096e9b4e791a1277f52109f2a",
+      "strictBodyWords": 1346,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-team-manager-span-of-control",
+      "verifiedAt": null
+    },
+    {
+      "slug": "offshore-vendor-exit-data-return-checklist",
+      "topic": "Plan Data Return and Deletion at the End of Offshore Staffing",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:2ce34e7ade8c9d589f346b349283457a122a4de7ee3bd8c9d7964f39ac1855f8",
+      "strictBodyWords": 1005,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-vendor-exit-data-return-checklist",
+      "verifiedAt": null
+    },
+    {
+      "slug": "philippines-offshore-peak-season-capacity-test",
+      "topic": "Test Peak-Season Capacity for a Philippines Offshore Team",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:a9a6c4feac71a653df38be6430e3c4227b4a3f9dd4c44ea65ae89096023ac9c6",
+      "strictBodyWords": 993,
+      "stagedDate": "2026-10-02",
+      "actualPublicationDate": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/philippines-offshore-peak-season-capacity-test",
+      "verifiedAt": null
+    }
+  ]
+}
