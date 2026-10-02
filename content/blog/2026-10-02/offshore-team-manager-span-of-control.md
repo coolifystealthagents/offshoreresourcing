@@ -7,7 +7,7 @@ publishedAt: "2026-10-02"
 verifiedAt: "pending"
 category: "offshore-operations"
 sourceCount: "4"
-image: "/images/thumbnail-backgrounds/team-standup.webp"
+image: "/images/thumbnail-backgrounds/talent-map.webp"
 ---
 
 # Choose a Manager Span of Control for an Offshore Team

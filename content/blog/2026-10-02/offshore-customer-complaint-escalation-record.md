@@ -7,7 +7,7 @@ publishedAt: "2026-10-02"
 verifiedAt: "pending"
 category: "offshore-operations"
 sourceCount: "4"
-image: "/images/thumbnail-backgrounds/customer-support.webp"
+image: "/images/thumbnail-backgrounds/talent-map.webp"
 ---
 
 # Build a customer complaint escalation record for offshore support

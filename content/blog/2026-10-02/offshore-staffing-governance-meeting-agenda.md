@@ -7,7 +7,7 @@ publishedAt: "2026-10-02"
 verifiedAt: "pending"
 category: "offshore-operations"
 sourceCount: "4"
-image: "/images/thumbnail-backgrounds/client-success.webp"
+image: "/images/thumbnail-backgrounds/talent-map.webp"
 ---
 
 # Run an Offshore Staffing Governance Meeting That Resolves Decisions

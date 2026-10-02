@@ -7,7 +7,7 @@ publishedAt: "2026-10-02"
 verifiedAt: "pending"
 category: "offshore-operations"
 sourceCount: "4"
-image: "/images/thumbnail-backgrounds/finance-desk.webp"
+image: "/images/thumbnail-backgrounds/talent-map.webp"
 ---
 
 # Design an invoice discrepancy workflow for offshore finance support
