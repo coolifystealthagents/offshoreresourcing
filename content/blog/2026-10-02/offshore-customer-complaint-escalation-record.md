@@ -2,7 +2,11 @@
 title: "Build a Customer Complaint Escalation Record for Offshore Support"
 slug: "offshore-customer-complaint-escalation-record"
 description: "Help offshore support staff preserve the customer's account, contain immediate harm, and route decisions with a clear evidence record."
-date: "2026-10-02"
+datePublished: "2026-10-02"
+publishedAt: "2026-10-02"
+verifiedAt: "pending"
+category: "offshore-operations"
+sourceCount: "4"
 image: "/images/thumbnail-backgrounds/customer-support.webp"
 ---
 

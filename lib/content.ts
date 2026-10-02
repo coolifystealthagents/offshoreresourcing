@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-export type ContentType = 'research' | 'alternatives';
+export type ContentType = 'research' | 'alternatives' | 'blog';
 export type ContentDocument = {
   slug: string;
   type: ContentType;

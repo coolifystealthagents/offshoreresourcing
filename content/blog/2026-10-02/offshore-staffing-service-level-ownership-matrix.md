@@ -2,7 +2,11 @@
 title: "Build a Service-Level Ownership Matrix for an Offshore Team"
 slug: "offshore-staffing-service-level-ownership-matrix"
 description: "Turn response targets into an operating agreement that names the queue owner, decision owner, evidence, exceptions, and review rhythm."
-date: "2026-10-02"
+datePublished: "2026-10-02"
+publishedAt: "2026-10-02"
+verifiedAt: "pending"
+category: "offshore-operations"
+sourceCount: "4"
 image: "/images/thumbnail-backgrounds/talent-map.webp"
 ---
 

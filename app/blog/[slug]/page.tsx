@@ -24,6 +24,8 @@ import { dailyBlogSep24Details, dailyBlogSep24Posts } from '../../daily-blog-202
 import { dailyBlogSep25Details, dailyBlogSep25Posts } from '../../daily-blog-2026-09-25';
 import { dailyBlogSep28Details, dailyBlogSep28Posts } from '../../daily-blog-2026-09-28';
 import { defaultSocialImage } from '../../../lib/seo';
+import { getDocument, getDocuments } from '../../../lib/content';
+import { ContentArticle } from '../../content-components';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
 
@@ -244,6 +246,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) notFound();
+  const oct2Document = post.publishedAt === '2026-10-02' ? getDocument('blog', slug) : null;
+  if (oct2Document) {
+    const related = getDocuments('blog').filter((item) => item.slug !== slug);
+    return <><Header/><ContentArticle document={oct2Document} related={related}/><Footer/></>;
+  }
 
   const details = blogDetails[slug as keyof typeof blogDetails];
   const dailyDetails = dailyBlogDetails[slug] || dailyBlog20Details[slug];

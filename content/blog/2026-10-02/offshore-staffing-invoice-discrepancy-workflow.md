@@ -2,7 +2,11 @@
 title: "Design an Invoice Discrepancy Workflow for Offshore Finance Support"
 slug: "offshore-staffing-invoice-discrepancy-workflow"
 description: "Give offshore finance support a clear method for matching records, documenting differences, and routing decisions without transferring payment authority."
-date: "2026-10-02"
+datePublished: "2026-10-02"
+publishedAt: "2026-10-02"
+verifiedAt: "pending"
+category: "offshore-operations"
+sourceCount: "4"
 image: "/images/thumbnail-backgrounds/finance-desk.webp"
 ---
 

@@ -2,7 +2,11 @@
 title: "Run an Offshore Staffing Governance Meeting That Resolves Decisions"
 slug: "offshore-staffing-governance-meeting-agenda"
 description: "Replace status recitals with a governance agenda built around evidence, exceptions, decisions, owners, and controlled changes."
-date: "2026-10-02"
+datePublished: "2026-10-02"
+publishedAt: "2026-10-02"
+verifiedAt: "pending"
+category: "offshore-operations"
+sourceCount: "4"
 image: "/images/thumbnail-backgrounds/client-success.webp"
 ---
 

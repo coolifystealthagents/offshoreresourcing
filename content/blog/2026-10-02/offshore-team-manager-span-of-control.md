@@ -2,7 +2,11 @@
 title: "Choose a Manager Span of Control for an Offshore Team"
 slug: "offshore-team-manager-span-of-control"
 description: "Estimate how many offshore roles one manager can support by measuring decisions, coaching, exceptions, and workflow maturity—not headcount alone."
-date: "2026-10-02"
+datePublished: "2026-10-02"
+publishedAt: "2026-10-02"
+verifiedAt: "pending"
+category: "offshore-operations"
+sourceCount: "4"
 image: "/images/thumbnail-backgrounds/team-standup.webp"
 ---
 
