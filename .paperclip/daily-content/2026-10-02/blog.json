@@ -36,7 +36,13 @@
     },
     "maxPairwiseFiveWordShingleJaccard": 0.0021061499578770007,
     "repeatedSubstantiveParagraphs": 0,
-    "qualitativeSharedArgumentCheck": "passed: distinct structure, worked example, and outcome per article"
+    "qualitativeSharedArgumentCheck": "passed: distinct structure, worked example, and outcome per article",
+    "productionBuild": "passed: 689 static pages; pre-existing CSS compatibility warnings only",
+    "typecheck": "passed",
+    "tests": "homepage contract passed",
+    "renderedChecks": "12/12 titles, 2026-10-02 dates, canonical URLs, image refs, and sitemap entries passed",
+    "sourceChecks": "NIST and CISA HTTP 200; Philippine NPC and ISO returned origin-level 403; URLs retained as authoritative primary sources",
+    "dependencyAudit": "compatible npm audit fix applied; residual postcss advisory requires breaking Next 16 upgrade and is recorded, not force-applied"
   },
   "articles": [
     {
@@ -231,5 +237,6 @@
       "liveUrl": "https://offshoreresourcing.com/blog/philippines-offshore-peak-season-capacity-test",
       "verifiedAt": null
     }
-  ]
+  ],
+  "contentCommitSha": "b929ebf06a6c34c9d3212abde3d8ef2d5612869f"
 }
