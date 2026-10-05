@@ -77,6 +77,6 @@ For help turning a role into a candidate exercise, review Offshore Resourcing's 
 ## Sources and further reading
 
 - [U.S. EEOC: Employment tests and selection procedures](https://www.eeoc.gov/laws/guidance/employment-tests-and-selection-procedures)
-- [Philippine National Privacy Commission: Data Privacy Act resources](https://privacy.gov.ph/data-privacy-act/)
-- [SIOP: Principles for the Validation and Use of Personnel Selection Procedures](https://www.siop.org/Research-Publications/Professional-Practice/Principles-for-the-Validation-and-Use-of-Personnel-Selection-Procedures)
-- [ISO: Quality management principles](https://www.iso.org/publication/PUB100080.html)
+- [NIST Privacy Framework](https://www.nist.gov/privacy-framework)
+- [U.S. Code of Federal Regulations: Uniform Guidelines on Employee Selection Procedures](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607)
+- [U.S. OPM: Structured interviews](https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/)

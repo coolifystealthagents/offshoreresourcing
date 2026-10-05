@@ -1,0 +1,192 @@
+{
+  "checkedAt": "2026-10-05T16:30:23.127476+00:00",
+  "timezone": "UTC",
+  "count": 17,
+  "routes": [
+    {
+      "family": "blog",
+      "slug": "offshore-hire-first-10-deliverables-feedback-loop",
+      "http": 200,
+      "sourceParagraphs": 23,
+      "renderedParagraphsMatched": 23,
+      "orderedParagraphHash": "sha256:63daa34da73bfa4dba5a934935253ebf3aba1afbbfcbc4f0f09c0b4f55144911",
+      "title": "Set a Feedback Loop for an Offshore Hire's First 10 Deliverables",
+      "canonical": "https://offshoreresourcing.com/blog/offshore-hire-first-10-deliverables-feedback-loop"
+    },
+    {
+      "family": "blog",
+      "slug": "one-person-offshore-function-backup-coverage",
+      "http": 200,
+      "sourceParagraphs": 23,
+      "renderedParagraphsMatched": 23,
+      "orderedParagraphHash": "sha256:d24a064137c1749b30220619b955e7e10b0b555d2343794a9820706ce7e9fab1",
+      "title": "Design Backup Coverage for a One-Person Offshore Function",
+      "canonical": "https://offshoreresourcing.com/blog/one-person-offshore-function-backup-coverage"
+    },
+    {
+      "family": "blog",
+      "slug": "philippines-offshore-hire-first-30-days-scorecard",
+      "http": 200,
+      "sourceParagraphs": 24,
+      "renderedParagraphsMatched": 24,
+      "orderedParagraphHash": "sha256:4e590a77ca6c5c47316603ed14604cace5f356bf7700068becc32abb3e675231",
+      "title": "Build a First-30-Days Scorecard for a Philippines Offshore Hire",
+      "canonical": "https://offshoreresourcing.com/blog/philippines-offshore-hire-first-30-days-scorecard"
+    },
+    {
+      "family": "blog",
+      "slug": "offshore-bookkeeping-support-quality-metrics",
+      "http": 200,
+      "sourceParagraphs": 27,
+      "renderedParagraphsMatched": 27,
+      "orderedParagraphHash": "sha256:604ee45bdbc26a87d574afcf63f1661741d6f7d55483d249be74127090efc60d",
+      "title": "Choose Evidence-Based Quality Metrics for Offshore Bookkeeping Support",
+      "canonical": "https://offshoreresourcing.com/blog/offshore-bookkeeping-support-quality-metrics"
+    },
+    {
+      "family": "blog",
+      "slug": "offshore-support-overlap-hours-vs-follow-the-sun",
+      "http": 200,
+      "sourceParagraphs": 21,
+      "renderedParagraphsMatched": 21,
+      "orderedParagraphHash": "sha256:889b9d7e8c29ec23a091e7452013a1bf605ceea77f2f7f17ea7ba1db9f814030",
+      "title": "Choose Overlap Hours or Follow-the-Sun Coverage for Offshore Support",
+      "canonical": "https://offshoreresourcing.com/blog/offshore-support-overlap-hours-vs-follow-the-sun"
+    },
+    {
+      "family": "blog",
+      "slug": "founder-informal-process-offshore-role-brief",
+      "http": 200,
+      "sourceParagraphs": 23,
+      "renderedParagraphsMatched": 23,
+      "orderedParagraphHash": "sha256:edb785946c00ad219feefd83ea376adfc6b393e2160ca4ac17f3c0a0cfe5e6d8",
+      "title": "Turn a Founder's Informal Process into an Offshore-Ready Role Brief",
+      "canonical": "https://offshoreresourcing.com/blog/founder-informal-process-offshore-role-brief"
+    },
+    {
+      "family": "blog",
+      "slug": "philippines-remote-staff-secure-offboarding-plan",
+      "http": 200,
+      "sourceParagraphs": 27,
+      "renderedParagraphsMatched": 27,
+      "orderedParagraphHash": "sha256:c8a372cfc11f0a2731d44b0c5b64febf7891e97c0e19a3aaf40af461d203dff7",
+      "title": "Plan Secure Offboarding for a Philippines-Based Remote Staff Member",
+      "canonical": "https://offshoreresourcing.com/blog/philippines-remote-staff-secure-offboarding-plan"
+    },
+    {
+      "family": "blog",
+      "slug": "offshore-administrative-candidate-work-sample",
+      "http": 200,
+      "sourceParagraphs": 24,
+      "renderedParagraphsMatched": 24,
+      "orderedParagraphHash": "sha256:caf1670e4c6a8de141b620a18df527a23a0404b8d63e4e7a503929687618a5aa",
+      "title": "Create a Work-Sample Exercise for Offshore Administrative Candidates",
+      "canonical": "https://offshoreresourcing.com/blog/offshore-administrative-candidate-work-sample"
+    },
+    {
+      "family": "blog",
+      "slug": "offshore-operations-coordinator-decision-rights-charter",
+      "http": 200,
+      "sourceParagraphs": 27,
+      "renderedParagraphsMatched": 27,
+      "orderedParagraphHash": "sha256:181e0e918297866e1ede0b3c5ca0ceee0fedb8f72669cbdd68d8c3cbd2f69cf7",
+      "title": "Write a Decision-Rights Charter for an Offshore Operations Coordinator",
+      "canonical": "https://offshoreresourcing.com/blog/offshore-operations-coordinator-decision-rights-charter"
+    },
+    {
+      "family": "blog",
+      "slug": "offshore-customer-support-seasonal-volume-plan",
+      "http": 200,
+      "sourceParagraphs": 25,
+      "renderedParagraphsMatched": 25,
+      "orderedParagraphHash": "sha256:cac1c86b7dd6c1a9ce750f0f2958c2289a058d27b761f6e350ff8028796571f1",
+      "title": "Prepare an Offshore Customer Support Role for Seasonal Volume Changes",
+      "canonical": "https://offshoreresourcing.com/blog/offshore-customer-support-seasonal-volume-plan"
+    },
+    {
+      "family": "blog",
+      "slug": "offshore-team-60-day-role-fit-review",
+      "http": 200,
+      "sourceParagraphs": 26,
+      "renderedParagraphsMatched": 26,
+      "orderedParagraphHash": "sha256:9d15cb41fec3feef17d4dd8a55b167ef47ac2229b9ef222ed34701c1d3930267",
+      "title": "Run a 60-Day Role-Fit Review Before Expanding an Offshore Team",
+      "canonical": "https://offshoreresourcing.com/blog/offshore-team-60-day-role-fit-review"
+    },
+    {
+      "family": "blog",
+      "slug": "keep-onshore-vs-offshore-task-decisions",
+      "http": 200,
+      "sourceParagraphs": 27,
+      "renderedParagraphsMatched": 27,
+      "orderedParagraphHash": "sha256:e0c14b8f8cb3050eb49037b0ec74646171fc041a695262859a32c56f735f2938",
+      "title": "Decide Which Tasks to Keep Onshore When Building an Offshore Role",
+      "canonical": "https://offshoreresourcing.com/blog/keep-onshore-vs-offshore-task-decisions"
+    },
+    {
+      "family": "research",
+      "slug": "offshore-recruitment-applicant-data-retention",
+      "http": 200,
+      "sourceParagraphs": 27,
+      "renderedParagraphsMatched": 27,
+      "orderedParagraphHash": "sha256:59f5b7f0529c5b3be6ada39a62a28839bc53e1bb4648bc37af5dd5310d4c8d0e",
+      "title": "How Long Should an Offshore Recruitment Team Keep Applicant Data?",
+      "canonical": "https://offshoreresourcing.com/research/offshore-recruitment-applicant-data-retention"
+    },
+    {
+      "family": "research",
+      "slug": "offshore-interview-panel-calibration",
+      "http": 200,
+      "sourceParagraphs": 29,
+      "renderedParagraphsMatched": 29,
+      "orderedParagraphHash": "sha256:ebb1ee2fb5e4aa146128b185a4638bcf6c3838ed5ed4931c7894a15eebb3d8b4",
+      "title": "How to Calibrate Interview Panels Before Offshore Recruiting Support Scales",
+      "canonical": "https://offshoreresourcing.com/research/offshore-interview-panel-calibration"
+    },
+    {
+      "family": "research",
+      "slug": "offshore-onboarding-access-acceptance-evidence",
+      "http": 200,
+      "sourceParagraphs": 28,
+      "renderedParagraphsMatched": 28,
+      "orderedParagraphHash": "sha256:1c7cd601a7b843e930a70abf9b7a903a4351f88d06db96d3665501e7fc837ffa",
+      "title": "What Evidence Should Approve System Access for an Offshore New Starter?",
+      "canonical": "https://offshoreresourcing.com/research/offshore-onboarding-access-acceptance-evidence"
+    },
+    {
+      "family": "research",
+      "slug": "offshore-talent-sourcing-provenance",
+      "http": 200,
+      "sourceParagraphs": 30,
+      "renderedParagraphsMatched": 30,
+      "orderedParagraphHash": "sha256:d9ed3db1c57329e70f24211945ae4674af716ca7665091efbb25f5f04820de5f",
+      "title": "Can You Trace Where Every Candidate in an Offshore Sourcing Pipeline Came From?",
+      "canonical": "https://offshoreresourcing.com/research/offshore-talent-sourcing-provenance"
+    },
+    {
+      "family": "research",
+      "slug": "offshore-retention-survey-confidentiality-thresholds",
+      "http": 200,
+      "sourceParagraphs": 32,
+      "renderedParagraphsMatched": 32,
+      "orderedParagraphHash": "sha256:0e2cbfbfb31764014a39b156c6ff62442443f2f511f1407b7d02a1551e4d144f",
+      "title": "When Is an Offshore Employee Retention Survey Group Too Small to Report?",
+      "canonical": "https://offshoreresourcing.com/research/offshore-retention-survey-confidentiality-thresholds"
+    }
+  ],
+  "sitemap": "17/17",
+  "internalLinks": "all HTTP 200",
+  "images": {
+    "paths": [
+      "/aug19-heroes/offshore-resourcing-access-governance-research.webp",
+      "/aug19-heroes/offshore-resourcing-approval-evidence-matrix.webp",
+      "/aug19-heroes/offshore-resourcing-review-consistency-research.webp",
+      "/aug19-heroes/offshore-resourcing-source-of-truth-map.webp",
+      "/aug19-heroes/offshore-resourcing-source-quality-evidence-research.webp",
+      "/images/thumbnail-backgrounds/talent-map.webp"
+    ],
+    "http": "200",
+    "signature": "RIFF/WEBP",
+    "decode": "sharp passed"
+  }
+}

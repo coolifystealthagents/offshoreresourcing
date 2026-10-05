@@ -1,0 +1,173 @@
+{
+  "checkedAt": "2026-10-05T16:31:00Z",
+  "uniqueUrls": 40,
+  "results": [
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+      "http": 200
+    },
+    {
+      "url": "https://csrc.nist.gov/pubs/sp/800/188/final",
+      "http": 200
+    },
+    {
+      "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+      "http": 200
+    },
+    {
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "http": 200
+    },
+    {
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-sharing/anonymisation/",
+      "http": 200
+    },
+    {
+      "url": "https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0188",
+      "http": 0
+    },
+    {
+      "url": "https://nces.ed.gov/FCSM/pdf/SPWP22_rev.pdf",
+      "http": 200
+    },
+    {
+      "url": "https://pages.nist.gov/800-63-4/",
+      "http": 200
+    },
+    {
+      "url": "https://privacy.gov.ph/data-privacy-act/",
+      "http": 403
+    },
+    {
+      "url": "https://privacy.gov.ph/day-to-day/",
+      "http": 403
+    },
+    {
+      "url": "https://privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012/",
+      "http": 403
+    },
+    {
+      "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/NPC_AdvisoryOpinionNo._2017-024.pdf",
+      "http": 403
+    },
+    {
+      "url": "https://prod.cipd.org/en/knowledge/factsheets/engagement-factsheet/",
+      "http": 200
+    },
+    {
+      "url": "https://www.cipd.org/en/knowledge/factsheets/recruitment-factsheet/",
+      "http": 200
+    },
+    {
+      "url": "https://www.cipd.org/en/knowledge/factsheets/selection-factsheet/",
+      "http": 200
+    },
+    {
+      "url": "https://www.cisa.gov/cybersecurity-performance-goals",
+      "http": 200
+    },
+    {
+      "url": "https://www.cisa.gov/resources-tools/resources/enhanced-visibility-and-hardening-guidance-communications-infrastructure",
+      "http": 200
+    },
+    {
+      "url": "https://www.cisa.gov/secure-our-world",
+      "http": 200
+    },
+    {
+      "url": "https://www.cisa.gov/sites/default/files/2023-12/ESF%20IDENTITY%20AND%20ACCESS%20MANAGEMENT%20RECOMMENDED%20BEST%20PRACTICES%20FOR%20ADMINISTRATORS%20PP-23-0248_508C.pdf",
+      "http": 200
+    },
+    {
+      "url": "https://www.cisecurity.org/controls/v8",
+      "http": 200
+    },
+    {
+      "url": "https://www.dol.gov/agencies/eta/research/publications/testing-and-assessment-employers-guide-good-practices-assessment",
+      "http": 403
+    },
+    {
+      "url": "https://www.dole.gov.ph/",
+      "http": 403
+    },
+    {
+      "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607",
+      "http": 200
+    },
+    {
+      "url": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1226",
+      "http": 200
+    },
+    {
+      "url": "https://www.eeoc.gov/best-practices-private-sector-employers",
+      "http": 200
+    },
+    {
+      "url": "https://www.eeoc.gov/employers/small-business/3-im-recruiting-hiring-or-promoting-employees",
+      "http": 200
+    },
+    {
+      "url": "https://www.eeoc.gov/federal-sector/management-directive/barrier-analysis-questions-guide-process",
+      "http": 200
+    },
+    {
+      "url": "https://www.eeoc.gov/laws/guidance/employment-tests-and-selection-procedures",
+      "http": 200
+    },
+    {
+      "url": "https://www.ftc.gov/reports/privacy-online-fair-information-practices-electronic-marketplace-federal-trade-commission",
+      "http": 301
+    },
+    {
+      "url": "https://www.iso.org/publication/PUB100080.html",
+      "http": 403
+    },
+    {
+      "url": "https://www.nist.gov/cyberframework",
+      "http": 200
+    },
+    {
+      "url": "https://www.nist.gov/privacy-framework",
+      "http": 200
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.html",
+      "http": 403
+    },
+    {
+      "url": "https://www.officialgazette.gov.ph/2012/08/15/republic-act-no-10173/",
+      "http": 403
+    },
+    {
+      "url": "https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/disclosurecontrol",
+      "http": 200
+    },
+    {
+      "url": "https://www.opm.gov/fevs/reports/technical-reports/",
+      "http": 200
+    },
+    {
+      "url": "https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/",
+      "http": 200
+    },
+    {
+      "url": "https://www.privacy.gov.ph/wp-content/uploads/2020/10/Redacted-Advisory-Opinion-No.-2020-006.pdf",
+      "http": 403
+    },
+    {
+      "url": "https://www.siop.org/Portals/84/docs/PrinciplesforValidationandUseofPersonnelSelectionProcedures.pdf",
+      "http": 403
+    },
+    {
+      "url": "https://www.siop.org/Research-Publications/Professional-Practice/Principles-for-the-Validation-and-Use-of-Personnel-Selection-Procedures",
+      "http": 403
+    }
+  ],
+  "summary": {
+    "reachable200orRedirect": 27,
+    "origin403": 12,
+    "timeout": 1,
+    "404": 0
+  },
+  "notes": "403 responses are bounded origin restrictions on authoritative NPC, Official Gazette, OECD, ISO, DOL, and SIOP pages. Titles and claimed subject matter were verified in article source labels and the Research handoff audit; no article makes a numeric claim dependent on blocked content. The one OECD timeout is a named legal instrument also supported by the working OECD publication URL in the same Research article. Blog-only 403 sources used for general framework pointers were partially replaced with working NIST, eCFR, and OPM primary equivalents."
+}

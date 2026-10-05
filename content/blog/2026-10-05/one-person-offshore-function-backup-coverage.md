@@ -76,5 +76,5 @@ For help building continuity into a role, review Offshore Resourcing's [workforc
 
 - [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework)
 - [CISA: Secure Our World](https://www.cisa.gov/secure-our-world)
-- [Philippine Department of Labor and Employment](https://www.dole.gov.ph/)
-- [ISO: Quality management principles](https://www.iso.org/publication/PUB100080.html)
+- [NIST Privacy Framework](https://www.nist.gov/privacy-framework)
+- [NIST SP 800-53 Rev. 5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)

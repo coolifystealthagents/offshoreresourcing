@@ -8,7 +8,7 @@
   "required": 5,
   "staged": 5,
   "publishedAndVerified": 0,
-  "publicationDate": null,
+  "publicationDate": "2026-10-05",
   "timezone": "UTC",
   "datePolicy": "October 5 is a cycle label. Frontmatter is staged for October 5 UTC, but OFFA-77 must reconcile every date to the actual first-publication date before its sole combined push. If publication occurs after UTC midnight, it must update source, rendered metadata, index, sitemap, and this manifest before push.",
   "repository": "coolifystealthagents/offshoreresourcing",
@@ -17,7 +17,10 @@
   "worktree": "/paperclip/instances/default/projects/5564385b-3b0f-4b90-bf15-50db3b1fe70e/7551b112-4886-49c0-9979-6583a2753789/worktrees/offa-76-20261005",
   "baseProductionSha": "29d0f9f026df89516a01d86453af2e0741fe9425",
   "contentCommitSha": "3fc11d699860106ce15ef46309a1b1869ee148bc",
-  "integrationOwner": { "taskIdentifier": "OFFA-77", "taskId": "52355c54-b4cf-4516-b429-1a07bf86ce40" },
+  "integrationOwner": {
+    "taskIdentifier": "OFFA-77",
+    "taskId": "52355c54-b4cf-4516-b429-1a07bf86ce40"
+  },
   "deploymentOwner": "Browser operator",
   "deployment": {
     "platform": "Coolify3",
@@ -37,9 +40,15 @@
       "offshore-retention-survey-confidentiality-thresholds": 1457
     },
     "maximumPairwiseFiveWordShingleJaccard": 0.001004,
-    "maximumOverlapPair": ["offshore-recruitment-applicant-data-retention", "offshore-interview-panel-calibration"],
+    "maximumOverlapPair": [
+      "offshore-recruitment-applicant-data-retention",
+      "offshore-interview-panel-calibration"
+    ],
     "maximumExistingArticleFiveWordShingleJaccard": 0.001824,
-    "nearestExistingArticlePair": ["offshore-interview-panel-calibration", "offshore-customer-support-language-quality-sampling"],
+    "nearestExistingArticlePair": [
+      "offshore-interview-panel-calibration",
+      "offshore-customer-support-language-quality-sampling"
+    ],
     "repeatedSubstantiveParagraphs": 0,
     "sharedArgumentCheck": "passed: retention clocks, panel calibration, access acceptance, candidate provenance, and survey disclosure use different decisions, examples, structures, and reader outcomes",
     "humanizerAudit": "passed: no em/en dashes, inflated claims, promotional language, chatbot artifacts, or repeated template conclusions found",
@@ -54,10 +63,91 @@
     "productionBuild": "passed with pre-existing CSS compatibility and workspace-root warnings"
   },
   "articles": [
-    {"family":"research","topic":"Purpose-based retention for offshore recruitment applicant records","slug":"offshore-recruitment-applicant-data-retention","sources":{"record":"content/research/offshore-recruitment-applicant-data-retention.md#sources","checkedDate":"2026-10-05","count":10},"contentHash":"sha256:3db0d18709f3a8f78806b541a73aeaaef844066f542304c518ec8457fac66a33","actualPublicationDate":null,"commitSha":"3fc11d699860106ce15ef46309a1b1869ee148bc","deploymentEvidence":null,"liveUrl":"https://offshoreresourcing.com/research/offshore-recruitment-applicant-data-retention","verificationTime":null,"verified":false},
-    {"family":"research","topic":"Interview panel calibration for offshore recruiting support","slug":"offshore-interview-panel-calibration","sources":{"record":"content/research/offshore-interview-panel-calibration.md#sources","checkedDate":"2026-10-05","count":10},"contentHash":"sha256:e36114115ca780ba37b3fd524e26df71c0e60db8873bdf1f5212e59ee5cbf908","actualPublicationDate":null,"commitSha":"3fc11d699860106ce15ef46309a1b1869ee148bc","deploymentEvidence":null,"liveUrl":"https://offshoreresourcing.com/research/offshore-interview-panel-calibration","verificationTime":null,"verified":false},
-    {"family":"research","topic":"Acceptance evidence for offshore new-starter system access","slug":"offshore-onboarding-access-acceptance-evidence","sources":{"record":"content/research/offshore-onboarding-access-acceptance-evidence.md#sources","checkedDate":"2026-10-05","count":10},"contentHash":"sha256:1228acbef27a21b736a40860419737a0b789947d29f8b7fb34dd9e3ef58ff73c","actualPublicationDate":null,"commitSha":"3fc11d699860106ce15ef46309a1b1869ee148bc","deploymentEvidence":null,"liveUrl":"https://offshoreresourcing.com/research/offshore-onboarding-access-acceptance-evidence","verificationTime":null,"verified":false},
-    {"family":"research","topic":"Candidate provenance through an offshore talent sourcing pipeline","slug":"offshore-talent-sourcing-provenance","sources":{"record":"content/research/offshore-talent-sourcing-provenance.md#sources","checkedDate":"2026-10-05","count":10},"contentHash":"sha256:49136fad224c9a194726982b23834788648f96945b9738fda87a61d21ca66502","actualPublicationDate":null,"commitSha":"3fc11d699860106ce15ef46309a1b1869ee148bc","deploymentEvidence":null,"liveUrl":"https://offshoreresourcing.com/research/offshore-talent-sourcing-provenance","verificationTime":null,"verified":false},
-    {"family":"research","topic":"Confidentiality thresholds for offshore employee retention surveys","slug":"offshore-retention-survey-confidentiality-thresholds","sources":{"record":"content/research/offshore-retention-survey-confidentiality-thresholds.md#sources","checkedDate":"2026-10-05","count":10},"contentHash":"sha256:1a46de08f4848f6a815274ff6a85bb324b55b599b0be7fe0ad887ff12d63b72c","actualPublicationDate":null,"commitSha":"3fc11d699860106ce15ef46309a1b1869ee148bc","deploymentEvidence":null,"liveUrl":"https://offshoreresourcing.com/research/offshore-retention-survey-confidentiality-thresholds","verificationTime":null,"verified":false}
-  ]
+    {
+      "family": "research",
+      "topic": "Purpose-based retention for offshore recruitment applicant records",
+      "slug": "offshore-recruitment-applicant-data-retention",
+      "sources": {
+        "record": "content/research/offshore-recruitment-applicant-data-retention.md#sources",
+        "checkedDate": "2026-10-05",
+        "count": 10
+      },
+      "contentHash": "sha256:3db0d18709f3a8f78806b541a73aeaaef844066f542304c518ec8457fac66a33",
+      "actualPublicationDate": "2026-10-05",
+      "commitSha": "3fc11d699860106ce15ef46309a1b1869ee148bc",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-recruitment-applicant-data-retention",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "Interview panel calibration for offshore recruiting support",
+      "slug": "offshore-interview-panel-calibration",
+      "sources": {
+        "record": "content/research/offshore-interview-panel-calibration.md#sources",
+        "checkedDate": "2026-10-05",
+        "count": 10
+      },
+      "contentHash": "sha256:e36114115ca780ba37b3fd524e26df71c0e60db8873bdf1f5212e59ee5cbf908",
+      "actualPublicationDate": "2026-10-05",
+      "commitSha": "3fc11d699860106ce15ef46309a1b1869ee148bc",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-interview-panel-calibration",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "Acceptance evidence for offshore new-starter system access",
+      "slug": "offshore-onboarding-access-acceptance-evidence",
+      "sources": {
+        "record": "content/research/offshore-onboarding-access-acceptance-evidence.md#sources",
+        "checkedDate": "2026-10-05",
+        "count": 10
+      },
+      "contentHash": "sha256:1228acbef27a21b736a40860419737a0b789947d29f8b7fb34dd9e3ef58ff73c",
+      "actualPublicationDate": "2026-10-05",
+      "commitSha": "3fc11d699860106ce15ef46309a1b1869ee148bc",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-onboarding-access-acceptance-evidence",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "Candidate provenance through an offshore talent sourcing pipeline",
+      "slug": "offshore-talent-sourcing-provenance",
+      "sources": {
+        "record": "content/research/offshore-talent-sourcing-provenance.md#sources",
+        "checkedDate": "2026-10-05",
+        "count": 10
+      },
+      "contentHash": "sha256:49136fad224c9a194726982b23834788648f96945b9738fda87a61d21ca66502",
+      "actualPublicationDate": "2026-10-05",
+      "commitSha": "3fc11d699860106ce15ef46309a1b1869ee148bc",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-talent-sourcing-provenance",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "research",
+      "topic": "Confidentiality thresholds for offshore employee retention surveys",
+      "slug": "offshore-retention-survey-confidentiality-thresholds",
+      "sources": {
+        "record": "content/research/offshore-retention-survey-confidentiality-thresholds.md#sources",
+        "checkedDate": "2026-10-05",
+        "count": 10
+      },
+      "contentHash": "sha256:1a46de08f4848f6a815274ff6a85bb324b55b599b0be7fe0ad887ff12d63b72c",
+      "actualPublicationDate": "2026-10-05",
+      "commitSha": "3fc11d699860106ce15ef46309a1b1869ee148bc",
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/research/offshore-retention-survey-confidentiality-thresholds",
+      "verificationTime": null,
+      "verified": false
+    }
+  ],
+  "actualPublicationDate": "2026-10-05"
 }

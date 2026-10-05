@@ -73,9 +73,16 @@ function parse(file: string, type: ContentType): ContentDocument {
 export function getDocuments(type: ContentType) {
   const directory = path.join(root, type);
   if (!fs.existsSync(directory)) return [];
-  return (fs.readdirSync(directory, { recursive: type === 'blog' }) as string[])
-    .filter((file) => /\.mdx?$/.test(file))
-    .map((file) => parse(path.join(directory, file), type))
+  const files = type === 'blog'
+    ? ['2026-10-05', '2026-10-02'].flatMap((date) => {
+        const datedDirectory = path.join(directory, date);
+        return fs.existsSync(datedDirectory)
+          ? fs.readdirSync(datedDirectory).filter((file) => /\.mdx?$/.test(file)).map((file) => path.join(datedDirectory, file))
+          : [];
+      })
+    : fs.readdirSync(directory).filter((file) => /\.mdx?$/.test(file)).map((file) => path.join(directory, file));
+  return files
+    .map((file) => parse(file, type))
     .sort((a, b) => {
       const dateOrder = b.publishedAt.localeCompare(a.publishedAt);
       if (dateOrder !== 0) return dateOrder;
