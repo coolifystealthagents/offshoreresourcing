@@ -71,9 +71,9 @@ function parse(file: string, type: ContentType): ContentDocument {
 }
 
 export function getDocuments(type: ContentType) {
-  const directory = type === 'blog' ? path.join(root, type, '2026-10-02') : path.join(root, type);
+  const directory = path.join(root, type);
   if (!fs.existsSync(directory)) return [];
-  return fs.readdirSync(directory)
+  return (fs.readdirSync(directory, { recursive: type === 'blog' }) as string[])
     .filter((file) => /\.mdx?$/.test(file))
     .map((file) => parse(path.join(directory, file), type))
     .sort((a, b) => {

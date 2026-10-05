@@ -19,6 +19,7 @@ import { dailyBlogSep24Posts } from './daily-blog-2026-09-24';
 import { dailyBlogSep25Posts } from './daily-blog-2026-09-25';
 import { dailyBlogSep28Posts } from './daily-blog-2026-09-28';
 import { dailyBlogOct2Posts } from './daily-blog-2026-10-02';
+import { dailyBlogOct5Posts } from './daily-blog-2026-10-05';
 
 export const site = {
   "domain": "OffshoreResourcing.com",
@@ -259,7 +260,7 @@ const augustTenBlogDates: Record<string, string> = {
 
 type BlogPost = { slug: string; title: string; excerpt: string; minutes: number; publishedAt?: string };
 
-export const blogPosts: readonly BlogPost[] = [...dailyBlogOct2Posts, ...dailyBlogSep28Posts, ...dailyBlogSep25Posts, ...dailyBlogSep24Posts, ...dailyBlogSep22Offa64Posts, ...dailyBlogSep22Posts, ...dailyBlogSep18Offa60Posts, ...(blogPostsSource as readonly BlogPost[]), ...dailyBlogPosts, ...dailyBlog20Posts, ...repairBlog21Posts, ...sourceRepair2Posts, ...dailyBlog23Posts, ...august23BlogPosts, ...dailyBlog31Posts, ...dailyBlogSep1Posts, ...dailyBlogSep2Posts, ...dailyBlogSep4Posts, ...dailyBlogSep7Posts, ...dailyBlogSep8Posts, ...dailyBlogSep9Posts, ...dailyBlogSep10Posts]
+export const blogPosts: readonly BlogPost[] = [...dailyBlogOct5Posts, ...dailyBlogOct2Posts, ...dailyBlogSep28Posts, ...dailyBlogSep25Posts, ...dailyBlogSep24Posts, ...dailyBlogSep22Offa64Posts, ...dailyBlogSep22Posts, ...dailyBlogSep18Offa60Posts, ...(blogPostsSource as readonly BlogPost[]), ...dailyBlogPosts, ...dailyBlog20Posts, ...repairBlog21Posts, ...sourceRepair2Posts, ...dailyBlog23Posts, ...august23BlogPosts, ...dailyBlog31Posts, ...dailyBlogSep1Posts, ...dailyBlogSep2Posts, ...dailyBlogSep4Posts, ...dailyBlogSep7Posts, ...dailyBlogSep8Posts, ...dailyBlogSep9Posts, ...dailyBlogSep10Posts]
   .map((post): BlogPost => augustTenBlogDates[post.slug] ? { ...post, publishedAt: augustTenBlogDates[post.slug] } : post)
   .sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || (blogPostsSource.findIndex((item) => item.slug === a.slug) - blogPostsSource.findIndex((item) => item.slug === b.slug)));
 

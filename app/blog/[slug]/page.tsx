@@ -246,7 +246,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) notFound();
-  const oct2Document = post.publishedAt === '2026-10-02' ? getDocument('blog', slug) : null;
+  const oct2Document = post.publishedAt >= '2026-10-02' ? getDocument('blog', slug) : null;
   if (oct2Document) {
     const related = getDocuments('blog').filter((item) => item.slug !== slug);
     return <><Header/><ContentArticle document={oct2Document} related={related}/><Footer/></>;

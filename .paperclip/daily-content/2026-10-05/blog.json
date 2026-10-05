@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 3,
+  "family": "blog",
+  "cycleLabel": "2026-10-05 combined release",
+  "required": 12,
+  "staged": 12,
+  "publishedAndVerified": 0,
+  "publicationDate": null,
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "master",
+  "baseProductionSha": "29d0f9f026df89516a01d86453af2e0741fe9425",
+  "integrationOwner": "OFFA-77",
+  "deploymentOwner": "Browser operator",
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "qnel5n8i8ffgr82c773ftonl",
+    "state": "not-requested",
+    "deploymentUuid": null
+  },
+  "validation": {
+    "bodyWordCounts": {
+      "founder-informal-process-offshore-role-brief": 954,
+      "keep-onshore-vs-offshore-task-decisions": 1247,
+      "offshore-administrative-candidate-work-sample": 1074,
+      "offshore-bookkeeping-support-quality-metrics": 951,
+      "offshore-customer-support-seasonal-volume-plan": 921,
+      "offshore-hire-first-10-deliverables-feedback-loop": 993,
+      "offshore-operations-coordinator-decision-rights-charter": 1261,
+      "offshore-support-overlap-hours-vs-follow-the-sun": 996,
+      "offshore-team-60-day-role-fit-review": 946,
+      "one-person-offshore-function-backup-coverage": 936,
+      "philippines-offshore-hire-first-30-days-scorecard": 1303,
+      "philippines-remote-staff-secure-offboarding-plan": 1238
+    },
+    "maxPairwiseFiveWordShingleJaccard": 0.007828810020876827,
+    "maxPair": [
+      "offshore-hire-first-10-deliverables-feedback-loop",
+      "offshore-team-60-day-role-fit-review"
+    ],
+    "maxPriorInventoryFiveWordShingleJaccard": 0.0061823802163833074,
+    "nearestPriorPair": [
+      "offshore-customer-support-seasonal-volume-plan",
+      "philippines-offshore-peak-season-capacity-test"
+    ],
+    "repeatedSubstantiveParagraphs": 0,
+    "repeatedSubstantiveSentences": 0,
+    "qualitativeSharedArgumentCheck": "passed: twelve distinct reader decisions, examples, structures, and outcomes; manual review recorded in integration report"
+  },
+  "articles": [
+    {
+      "family": "blog",
+      "topic": "Turn a Founder",
+      "slug": "founder-informal-process-offshore-role-brief",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:5cbedc39ef751ac3d079144e45d31a47c095cabf04d796b4cfba843a57ff9992",
+      "strictBodyWords": 954,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/founder-informal-process-offshore-role-brief",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Decide Which Tasks to Keep Onshore When Building an Offshore Role",
+      "slug": "keep-onshore-vs-offshore-task-decisions",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:9e569578f6ac2a66bdc58aad575dff708c6b02ed409170ae1e6990b2813fc318",
+      "strictBodyWords": 1247,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/keep-onshore-vs-offshore-task-decisions",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Create a Work-Sample Exercise for Offshore Administrative Candidates",
+      "slug": "offshore-administrative-candidate-work-sample",
+      "sources": [
+        "https://www.eeoc.gov/laws/guidance/employment-tests-and-selection-procedures",
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.siop.org/Research-Publications/Professional-Practice/Principles-for-the-Validation-and-Use-of-Personnel-Selection-Procedures",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:156330a6db326798006e436e513974edd714197083744c79ed7f64c7e89a667f",
+      "strictBodyWords": 1074,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-administrative-candidate-work-sample",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Choose Evidence-Based Quality Metrics for Offshore Bookkeeping Support",
+      "slug": "offshore-bookkeeping-support-quality-metrics",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:fc16ac9e689f557bf23e5d2ef315ee2bf691f01364228d993756bea328569187",
+      "strictBodyWords": 951,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-bookkeeping-support-quality-metrics",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Prepare an Offshore Customer Support Role for Seasonal Volume Changes",
+      "slug": "offshore-customer-support-seasonal-volume-plan",
+      "sources": [
+        "https://www.iso.org/publication/PUB100080.html",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:742460cea1d62403d734e1debcd68ebbeac82e67ec118111a0a568785b344d4f",
+      "strictBodyWords": 921,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-customer-support-seasonal-volume-plan",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Set a Feedback Loop for an Offshore Hire",
+      "slug": "offshore-hire-first-10-deliverables-feedback-loop",
+      "sources": [
+        "https://www.iso.org/publication/PUB100080.html",
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world"
+      ],
+      "contentHash": "sha256:e89f71dedaccb3620dab68fd843fd60e50d1001d445bb30db38a75ff1b9ed1cd",
+      "strictBodyWords": 993,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-hire-first-10-deliverables-feedback-loop",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Write a Decision-Rights Charter for an Offshore Operations Coordinator",
+      "slug": "offshore-operations-coordinator-decision-rights-charter",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:1c049e4eb05690179ea3c49f765d0224b1a44fef0770d0716acf5f1f1b88a685",
+      "strictBodyWords": 1261,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-operations-coordinator-decision-rights-charter",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Choose Overlap Hours or Follow-the-Sun Coverage for Offshore Support",
+      "slug": "offshore-support-overlap-hours-vs-follow-the-sun",
+      "sources": [
+        "https://www.dole.gov.ph/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:132d9ea8e3c722b03357d1f9c070cbdda96f60bcc058d887c3cc495d3909a6ee",
+      "strictBodyWords": 996,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-support-overlap-hours-vs-follow-the-sun",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Run a 60-Day Role-Fit Review Before Expanding an Offshore Team",
+      "slug": "offshore-team-60-day-role-fit-review",
+      "sources": [
+        "https://www.iso.org/publication/PUB100080.html",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:cb29a11e8503215bd532e9266a4348647d2318250383b9b168159ccbe47c9689",
+      "strictBodyWords": 946,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/offshore-team-60-day-role-fit-review",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Design Backup Coverage for a One-Person Offshore Function",
+      "slug": "one-person-offshore-function-backup-coverage",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.dole.gov.ph/",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:4169f152ae8ac985aeb164b6e3f8e57bb5167687fae6f9d93661c3f1299011c6",
+      "strictBodyWords": 936,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/one-person-offshore-function-backup-coverage",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Build a First-30-Days Scorecard for a Philippines Offshore Hire",
+      "slug": "philippines-offshore-hire-first-30-days-scorecard",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:e5676e95c5bd53ac2ba1bb04d55d7e6f74680bd9b81408558e1cfc45ffadd9c6",
+      "strictBodyWords": 1303,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/philippines-offshore-hire-first-30-days-scorecard",
+      "verificationTime": null,
+      "verified": false
+    },
+    {
+      "family": "blog",
+      "topic": "Plan Secure Offboarding for a Philippines-Based Remote Staff Member",
+      "slug": "philippines-remote-staff-secure-offboarding-plan",
+      "sources": [
+        "https://privacy.gov.ph/data-privacy-act/",
+        "https://www.nist.gov/cyberframework",
+        "https://www.cisa.gov/secure-our-world",
+        "https://www.iso.org/publication/PUB100080.html"
+      ],
+      "contentHash": "sha256:675a11916384f86913f8568f71c093c74925f769f50fcbee526f07557a8ed474",
+      "strictBodyWords": 1238,
+      "stagedDate": "2026-10-05",
+      "actualPublicationDate": null,
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://offshoreresourcing.com/blog/philippines-remote-staff-secure-offboarding-plan",
+      "verificationTime": null,
+      "verified": false
+    }
+  ]
+}
