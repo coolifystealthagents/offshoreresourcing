@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "family": "research",
+  "required": 5,
+  "publicationDate": "2026-10-08",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "articles": [
+    {
+      "slug": "offshore-resourcing-manager-review-capacity-study",
+      "route": "/research/offshore-resourcing-manager-review-capacity-study",
+      "title": "Manager Review Capacity in Offshore Resourcing: A Bounded Observational Study",
+      "publishedAt": "2026-10-08",
+      "sourceCount": 10
+    },
+    {
+      "slug": "offshore-resourcing-access-revocation-evidence-study",
+      "route": "/research/offshore-resourcing-access-revocation-evidence-study",
+      "title": "Access Revocation Evidence for Offshore Role Changes",
+      "publishedAt": "2026-10-08",
+      "sourceCount": 10
+    },
+    {
+      "slug": "offshore-resourcing-handoff-completeness-study",
+      "route": "/research/offshore-resourcing-handoff-completeness-study",
+      "title": "Measuring Handoff Completeness Across an Offshore Team",
+      "publishedAt": "2026-10-08",
+      "sourceCount": 10
+    },
+    {
+      "slug": "offshore-resourcing-scope-drift-observation",
+      "route": "/research/offshore-resourcing-scope-drift-observation",
+      "title": "Observing Scope Drift in an Offshore Resourcing Engagement",
+      "publishedAt": "2026-10-08",
+      "sourceCount": 10
+    },
+    {
+      "slug": "offshore-resourcing-backup-coverage-reliability",
+      "route": "/research/offshore-resourcing-backup-coverage-reliability",
+      "title": "Backup Coverage Reliability in Offshore Operations",
+      "publishedAt": "2026-10-08",
+      "sourceCount": 10
+    }
+  ]
+}

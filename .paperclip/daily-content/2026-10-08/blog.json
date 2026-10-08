@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "family": "blog",
+  "required": 12,
+  "publicationDate": "2026-10-08",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "articles": [
+    {
+      "slug": "offshore-resourcing-intake-readiness-gate",
+      "route": "/blog/offshore-resourcing-intake-readiness-gate",
+      "title": "Build an Intake Readiness Gate for Offshore Resourcing",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-role-evidence-packet",
+      "route": "/blog/offshore-resourcing-role-evidence-packet",
+      "title": "Create a Role Evidence Packet Before Offshore Recruitment Starts",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-candidate-work-sample-calibration",
+      "route": "/blog/offshore-resourcing-candidate-work-sample-calibration",
+      "title": "Calibrate Candidate Work Samples for an Offshore Resourcing Role",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-overlap-window-design",
+      "route": "/blog/offshore-resourcing-overlap-window-design",
+      "title": "Design Overlap Windows Around Decisions, Not Habit",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-access-staging-plan",
+      "route": "/blog/offshore-resourcing-access-staging-plan",
+      "title": "Stage System Access During an Offshore Role Launch",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-review-capacity-budget",
+      "route": "/blog/offshore-resourcing-review-capacity-budget",
+      "title": "Budget Manager Review Capacity for an Offshore Team",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-first-thirty-days-scorecard",
+      "route": "/blog/offshore-resourcing-first-thirty-days-scorecard",
+      "title": "Use a First 30 Days Scorecard for Offshore Resourcing",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-coverage-rehearsal",
+      "route": "/blog/offshore-resourcing-coverage-rehearsal",
+      "title": "Rehearse Backup Coverage Before an Offshore Absence",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-change-request-control",
+      "route": "/blog/offshore-resourcing-change-request-control",
+      "title": "Control Scope Changes in an Offshore Resourcing Engagement",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-quality-sample-selection",
+      "route": "/blog/offshore-resourcing-quality-sample-selection",
+      "title": "Select a Representative Quality Sample for Offshore Work",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-transition-handoff-register",
+      "route": "/blog/offshore-resourcing-transition-handoff-register",
+      "title": "Maintain a Transition Handoff Register When an Offshore Role Changes",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "offshore-resourcing-quarterly-role-boundary-review",
+      "route": "/blog/offshore-resourcing-quarterly-role-boundary-review",
+      "title": "Run a Quarterly Role Boundary Review for Offshore Resourcing",
+      "publishedAt": "2026-10-08"
+    }
+  ]
+}
