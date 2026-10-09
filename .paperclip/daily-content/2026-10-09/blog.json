@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-09",
+  "kind": "blog",
+  "count": 12,
+  "publicationDateVisible": true,
+  "items": [
+    {
+      "slug": "offshoreresourcing-priority-intake-triage",
+      "title": "Offshore Resourcing Priority Intake Triage",
+      "excerpt": "A practical guide to sequence new requests by evidence, impact, and accepted ownership.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-priority-intake-triage"
+    },
+    {
+      "slug": "offshoreresourcing-exception-owner-map",
+      "title": "Offshore Resourcing Exception Owner Map",
+      "excerpt": "A practical guide to route ambiguous work to an authorized decision owner.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-exception-owner-map"
+    },
+    {
+      "slug": "offshoreresourcing-source-record-verification",
+      "title": "Offshore Resourcing Source Record Verification",
+      "excerpt": "A practical guide to confirm the governing record before work begins.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-source-record-verification"
+    },
+    {
+      "slug": "offshoreresourcing-handoff-acceptance-receipt",
+      "title": "Offshore Resourcing Handoff Acceptance Receipt",
+      "excerpt": "A practical guide to prove the receiving team accepted the next action.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-handoff-acceptance-receipt"
+    },
+    {
+      "slug": "offshoreresourcing-backlog-aging-review",
+      "title": "Offshore Resourcing Backlog Aging Review",
+      "excerpt": "A practical guide to separate active handling from documented waiting states.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-backlog-aging-review"
+    },
+    {
+      "slug": "offshoreresourcing-quality-sample-calibration",
+      "title": "Offshore Resourcing Quality Sample Calibration",
+      "excerpt": "A practical guide to align reviewers on observable acceptance evidence.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-quality-sample-calibration"
+    },
+    {
+      "slug": "offshoreresourcing-access-scope-recertification",
+      "title": "Offshore Resourcing Access Scope Recertification",
+      "excerpt": "A practical guide to keep permissions aligned with current duties.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-access-scope-recertification"
+    },
+    {
+      "slug": "offshoreresourcing-change-control-release-note",
+      "title": "Offshore Resourcing Change Control Release Note",
+      "excerpt": "A practical guide to publish a dated rule change with rollback context.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-change-control-release-note"
+    },
+    {
+      "slug": "offshoreresourcing-capacity-overflow-trigger",
+      "title": "Offshore Resourcing Capacity Overflow Trigger",
+      "excerpt": "A practical guide to surface demand that exceeds the safe service window.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-capacity-overflow-trigger"
+    },
+    {
+      "slug": "offshoreresourcing-client-decision-packet",
+      "title": "Offshore Resourcing Client Decision Packet",
+      "excerpt": "A practical guide to prepare facts without transferring client authority.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-client-decision-packet"
+    },
+    {
+      "slug": "offshoreresourcing-correction-propagation-check",
+      "title": "Offshore Resourcing Correction Propagation Check",
+      "excerpt": "A practical guide to reconcile corrected facts across dependent systems.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-correction-propagation-check"
+    },
+    {
+      "slug": "offshoreresourcing-monthly-control-closeout",
+      "title": "Offshore Resourcing Monthly Control Closeout",
+      "excerpt": "A practical guide to close open exceptions and preserve review evidence.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/offshoreresourcing-monthly-control-closeout"
+    }
+  ]
+}
