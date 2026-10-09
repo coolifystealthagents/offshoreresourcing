@@ -24,7 +24,7 @@ export default function Blog() {
               <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
                 <h2>{p.title}</h2>
                 <p>{p.excerpt}</p>
-                {"publishedAt" in p && p.publishedAt && <time dateTime={p.publishedAt}>Published {formatDate(p.publishedAt)}</time>}
+                {"publishedAt" in p && typeof p.publishedAt === "string" ? <time dateTime={p.publishedAt}>Published {formatDate(p.publishedAt)}</time> : null}
                 <span>{p.minutes} min read</span>
               </a>
             ))}
