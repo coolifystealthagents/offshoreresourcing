@@ -1,0 +1,179 @@
+{
+  "site": "OffshoreResourcing.com",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "baseSha": "bf4d272240cb9784553ac83ceac3f775c8511fba",
+  "publicationDate": "2026-10-12",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "thumbnails": 17
+  },
+  "registryPaths": [
+    "app/data.ts",
+    "content/research"
+  ],
+  "routePaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexPaths": [
+    "app/blog/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "articles": [
+    {
+      "section": "Blog",
+      "title": "Map Service Boundaries Before an Offshore Role Goes Live",
+      "slug": "offshore-role-service-boundary-map",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-role-service-boundary-map",
+      "thumbnailPath": "public/images/october-12/offshore-role-service-boundary-map.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Build an Assumption Register for an Offshore Work Queue",
+      "slug": "offshore-queue-assumption-register",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-queue-assumption-register",
+      "thumbnailPath": "public/images/october-12/offshore-queue-assumption-register.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Run a Coverage Overlap Decision Log Across Time Zones",
+      "slug": "offshore-coverage-overlap-decision-log",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-coverage-overlap-decision-log",
+      "thumbnailPath": "public/images/october-12/offshore-coverage-overlap-decision-log.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Rehearse Exceptions Before Expanding Offshore Work",
+      "slug": "offshore-exception-rehearsal",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-exception-rehearsal",
+      "thumbnailPath": "public/images/october-12/offshore-exception-rehearsal.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Set an Approval Latency Budget for Offshore Operations",
+      "slug": "offshore-approval-latency-budget",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-approval-latency-budget",
+      "thumbnailPath": "public/images/october-12/offshore-approval-latency-budget.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Create an Access Dependency Map for Offshore Staff",
+      "slug": "offshore-access-dependency-map",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-access-dependency-map",
+      "thumbnailPath": "public/images/october-12/offshore-access-dependency-map.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Use a Pilot Acceptance Rubric for Offshore Resourcing",
+      "slug": "offshore-pilot-acceptance-rubric",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-pilot-acceptance-rubric",
+      "thumbnailPath": "public/images/october-12/offshore-pilot-acceptance-rubric.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Add a Manager Capacity Checkpoint Before Offshore Expansion",
+      "slug": "offshore-manager-capacity-checkpoint",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-manager-capacity-checkpoint",
+      "thumbnailPath": "public/images/october-12/offshore-manager-capacity-checkpoint.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Review Instruction Decay in a Mature Offshore Workflow",
+      "slug": "offshore-instruction-decay-review",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-instruction-decay-review",
+      "thumbnailPath": "public/images/october-12/offshore-instruction-decay-review.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Design an Incident Handoff Across Offshore Time Zones",
+      "slug": "offshore-incident-handoff-across-time-zones",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-incident-handoff-across-time-zones",
+      "thumbnailPath": "public/images/october-12/offshore-incident-handoff-across-time-zones.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Prepare an Evidence Pack for an Offshore Vendor Transition",
+      "slug": "offshore-vendor-transition-evidence-pack",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-vendor-transition-evidence-pack",
+      "thumbnailPath": "public/images/october-12/offshore-vendor-transition-evidence-pack.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Build a Queue Recovery Playbook After an Offshore Disruption",
+      "slug": "offshore-queue-recovery-playbook",
+      "sourcePath": "app/daily-blog-2026-10-12.ts",
+      "recordSlug": "offshore-queue-recovery-playbook",
+      "thumbnailPath": "public/images/october-12/offshore-queue-recovery-playbook.webp",
+      "registryPath": "app/data.ts"
+    },
+    {
+      "section": "Research",
+      "title": "Manager Review Latency and Distributed Service Reliability",
+      "slug": "manager-review-latency-distributed-service-reliability",
+      "sourcePath": "content/research/manager-review-latency-distributed-service-reliability.md",
+      "recordSlug": "manager-review-latency-distributed-service-reliability",
+      "thumbnailPath": "public/images/october-12/manager-review-latency-distributed-service-reliability.webp",
+      "registryPath": "content/research"
+    },
+    {
+      "section": "Research",
+      "title": "Evidence Completeness in Offshore Role Pilots",
+      "slug": "evidence-completeness-offshore-role-pilots",
+      "sourcePath": "content/research/evidence-completeness-offshore-role-pilots.md",
+      "recordSlug": "evidence-completeness-offshore-role-pilots",
+      "thumbnailPath": "public/images/october-12/evidence-completeness-offshore-role-pilots.webp",
+      "registryPath": "content/research"
+    },
+    {
+      "section": "Research",
+      "title": "Least-Privilege Decay in Distributed Staffing",
+      "slug": "least-privilege-decay-distributed-staffing",
+      "sourcePath": "content/research/least-privilege-decay-distributed-staffing.md",
+      "recordSlug": "least-privilege-decay-distributed-staffing",
+      "thumbnailPath": "public/images/october-12/least-privilege-decay-distributed-staffing.webp",
+      "registryPath": "content/research"
+    },
+    {
+      "section": "Research",
+      "title": "Queue Age Distribution Versus Average Response Time",
+      "slug": "queue-age-distribution-versus-average-response",
+      "sourcePath": "content/research/queue-age-distribution-versus-average-response.md",
+      "recordSlug": "queue-age-distribution-versus-average-response",
+      "thumbnailPath": "public/images/october-12/queue-age-distribution-versus-average-response.webp",
+      "registryPath": "content/research"
+    },
+    {
+      "section": "Research",
+      "title": "Backup Coverage Activation Reliability in Offshore Operations",
+      "slug": "backup-coverage-activation-reliability",
+      "sourcePath": "content/research/backup-coverage-activation-reliability.md",
+      "recordSlug": "backup-coverage-activation-reliability",
+      "thumbnailPath": "public/images/october-12/backup-coverage-activation-reliability.webp",
+      "registryPath": "content/research"
+    }
+  ]
+}
