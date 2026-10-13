@@ -1,0 +1,197 @@
+{
+  "site": "OffshoreResourcing.com",
+  "canonicalDomain": "https://offshoreresourcing.com",
+  "repository": "coolifystealthagents/offshoreresourcing",
+  "branch": "main",
+  "baseSha": "a5c5f4459fc1a91ff19286e6ed6ee873db3d2970",
+  "publicationDate": "2026-10-13",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "thumbnails": 17
+  },
+  "registryPaths": [
+    "app/data.ts",
+    "content/research"
+  ],
+  "routePaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexPaths": [
+    "app/blog/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "articles": [
+    {
+      "section": "Blog",
+      "title": "Close Shadow Access after an Offshore Role Launch",
+      "slug": "offshore-role-shadow-access-exit",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-role-shadow-access-exit",
+      "thumbnailPath": "public/images/october-13/offshore-role-shadow-access-exit.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Verify Acceptance of Offshore Coverage Swaps",
+      "slug": "offshore-coverage-swap-acceptance",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-coverage-swap-acceptance",
+      "thumbnailPath": "public/images/october-13/offshore-coverage-swap-acceptance.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Control Custody of Candidate Work Samples",
+      "slug": "offshore-candidate-work-sample-custody",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-candidate-work-sample-custody",
+      "thumbnailPath": "public/images/october-13/offshore-candidate-work-sample-custody.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Reclaim Tool Licenses after Offshore Role Changes",
+      "slug": "offshore-role-tool-license-reclamation",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-role-tool-license-reclamation",
+      "thumbnailPath": "public/images/october-13/offshore-role-tool-license-reclamation.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Expire Temporary Coaching Actions with Evidence",
+      "slug": "offshore-coaching-action-expiry",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-coaching-action-expiry",
+      "thumbnailPath": "public/images/october-13/offshore-coaching-action-expiry.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Check Attachments before an Offshore Shift Handoff",
+      "slug": "offshore-shift-handoff-attachment-check",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-shift-handoff-attachment-check",
+      "thumbnailPath": "public/images/october-13/offshore-shift-handoff-attachment-check.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Run an Offshore Role Backup Readiness Drill",
+      "slug": "offshore-role-backup-readiness-drill",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-role-backup-readiness-drill",
+      "thumbnailPath": "public/images/october-13/offshore-role-backup-readiness-drill.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Retire Obsolete Offshore Training Examples",
+      "slug": "offshore-training-example-retirement",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-training-example-retirement",
+      "thumbnailPath": "public/images/october-13/offshore-training-example-retirement.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Route Offshore Timesheet Corrections with Source Evidence",
+      "slug": "offshore-timesheet-correction-route",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-timesheet-correction-route",
+      "thumbnailPath": "public/images/october-13/offshore-timesheet-correction-route.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Review Sensitive Exports before Offshore Use",
+      "slug": "offshore-role-sensitive-export-review",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-role-sensitive-export-review",
+      "thumbnailPath": "public/images/october-13/offshore-role-sensitive-export-review.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Control a Manager Decision Backlog for Offshore Work",
+      "slug": "offshore-manager-decision-backlog",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-manager-decision-backlog",
+      "thumbnailPath": "public/images/october-13/offshore-manager-decision-backlog.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Blog",
+      "title": "Reconcile Open Items during an Offshore Team Transition",
+      "slug": "offshore-transition-open-item-reconciliation",
+      "sourcePath": "app/daily-blog-2026-10-13.ts",
+      "recordSlug": "offshore-transition-open-item-reconciliation",
+      "thumbnailPath": "public/images/october-13/offshore-transition-open-item-reconciliation.webp",
+      "registryPath": "app/data.ts",
+      "sha256": "989b3c4d6b781bb1da2120e074aa69f0a7bafa881a85007b7887a88d50b2e309"
+    },
+    {
+      "section": "Research",
+      "title": "Study Recovery Evidence from Offshore Backup Drills",
+      "slug": "offshore-backup-drill-recovery-study",
+      "sourcePath": "content/research/offshore-backup-drill-recovery-study.md",
+      "recordSlug": "offshore-backup-drill-recovery-study",
+      "thumbnailPath": "public/images/october-13/offshore-backup-drill-recovery-study.webp",
+      "registryPath": "content/research",
+      "sha256": "b7ed9e4327e9aa84c54d3531d6ecb9934c69050856e7135b6c718b061f7d996a"
+    },
+    {
+      "section": "Research",
+      "title": "Analyze Selection Bias in Offshore Quality Reviews",
+      "slug": "offshore-review-queue-selection-bias",
+      "sourcePath": "content/research/offshore-review-queue-selection-bias.md",
+      "recordSlug": "offshore-review-queue-selection-bias",
+      "thumbnailPath": "public/images/october-13/offshore-review-queue-selection-bias.webp",
+      "registryPath": "content/research",
+      "sha256": "df9315b4b18a424701cf0599d908abf91897d025adf15da6ad1b902bec646bde"
+    },
+    {
+      "section": "Research",
+      "title": "Measure Access-Removal Latency after Role Changes",
+      "slug": "offshore-access-removal-latency-research",
+      "sourcePath": "content/research/offshore-access-removal-latency-research.md",
+      "recordSlug": "offshore-access-removal-latency-research",
+      "thumbnailPath": "public/images/october-13/offshore-access-removal-latency-research.webp",
+      "registryPath": "content/research",
+      "sha256": "8649fd41080276f942a72de7e0ebe05f706a61ec909b0566e3556dfa32d11c6d"
+    },
+    {
+      "section": "Research",
+      "title": "Evaluate Consistency between Instructions and Examples",
+      "slug": "offshore-instruction-example-consistency",
+      "sourcePath": "content/research/offshore-instruction-example-consistency.md",
+      "recordSlug": "offshore-instruction-example-consistency",
+      "thumbnailPath": "public/images/october-13/offshore-instruction-example-consistency.webp",
+      "registryPath": "content/research",
+      "sha256": "f062eb3f2a56029e60168481793271d900d0019c786d5be990dd69270c868e11"
+    },
+    {
+      "section": "Research",
+      "title": "Study Aging in Client Decision Wait Queues",
+      "slug": "offshore-decision-wait-aging-study",
+      "sourcePath": "content/research/offshore-decision-wait-aging-study.md",
+      "recordSlug": "offshore-decision-wait-aging-study",
+      "thumbnailPath": "public/images/october-13/offshore-decision-wait-aging-study.webp",
+      "registryPath": "content/research",
+      "sha256": "1bc6aa7bcaece0f951157ed80d12ee91e441e4f02e7875d69578d0c4142b9e4a"
+    }
+  ]
+}

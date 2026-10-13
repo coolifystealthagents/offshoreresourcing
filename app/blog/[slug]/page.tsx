@@ -26,8 +26,12 @@ import { dailyBlogSep23Details, dailyBlogSep23Posts } from '../../daily-blog-202
 import { dailyBlogSep24Details, dailyBlogSep24Posts } from '../../daily-blog-2026-09-24';
 import { dailyBlogOct8Details, dailyBlogOct8Posts } from '../../daily-blog-2026-10-08';
 import { dailyBlogOct9Details, dailyBlogOct9Posts } from '../../daily-blog-2026-10-09';
-import { dailyBlogOct12Details, dailyBlogOct12Posts } from '../../daily-blog-2026-10-12';
+import { dailyBlogOct12Details as originalOct12Details, dailyBlogOct12Posts as originalOct12Posts } from '../../daily-blog-2026-10-12';
+import { dailyBlogOct13Details, dailyBlogOct13Posts } from '../../daily-blog-2026-10-13';
 import { defaultSocialImage } from '../../../lib/seo';
+
+const dailyBlogOct12Details = { ...originalOct12Details, ...dailyBlogOct13Details };
+const dailyBlogOct12Posts = [...dailyBlogOct13Posts, ...originalOct12Posts];
 
 const base = `https://${String(site.domain).toLowerCase()}`;
 
