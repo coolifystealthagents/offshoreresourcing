@@ -14,6 +14,22 @@ const form = read('app/contact-us/StandardContactForm.tsx');
 const contactApi = read('app/api/contact/route.ts');
 const globalCss = read('app/globals.css');
 
+function jpegDimensions(file) {
+  const bytes = readFileSync(path.join(root, file));
+  for (let offset = 2; offset < bytes.length - 9;) {
+    if (bytes[offset] !== 0xff) { offset += 1; continue; }
+    const marker = bytes[offset + 1];
+    offset += 2;
+    if (marker === 0xd8 || marker === 0xd9) continue;
+    const length = bytes.readUInt16BE(offset);
+    if ((marker >= 0xc0 && marker <= 0xc3) || (marker >= 0xc5 && marker <= 0xc7) || (marker >= 0xc9 && marker <= 0xcb) || (marker >= 0xcd && marker <= 0xcf)) {
+      return { width: bytes.readUInt16BE(offset + 5), height: bytes.readUInt16BE(offset + 3) };
+    }
+    offset += length;
+  }
+  throw new Error(`${file} has no readable JPEG dimensions`);
+}
+
 function slugsFrom(source, start, end) {
   const section = source.slice(source.indexOf(start), end ? source.indexOf(end, source.indexOf(start)) : undefined);
   return [...section.matchAll(/slug:\s*["']([^"']+)["']/g)].map(match => match[1]);
@@ -123,8 +139,9 @@ test('commercial copy avoids prohibited dash punctuation and keeps section label
 });
 
 test('commercial image declarations match source dimensions and social metadata', () => {
+  assert.deepEqual(jpegDimensions('public/brand/stealth-agents-team-bacolod.jpg'), { width: 1906, height: 1080 });
   for (const file of ['app/page.tsx', 'app/contact-us/page.tsx', 'app/about/page.tsx', 'app/thanks-whats-next/page.tsx']) {
-    for (const tag of read(file).matchAll(/<img[^>]+stealth-agents-team-bacolod\.jpg[^>]*>/g)) assert.match(tag[0], /width="953" height="540"/, `${file} has incorrect team image dimensions`);
+    for (const tag of read(file).matchAll(/<img[^>]+stealth-agents-team-bacolod\.jpg[^>]*>/g)) assert.match(tag[0], /width="1906" height="1080"/, `${file} has incorrect team image dimensions`);
   }
   for (const file of ['app/components.tsx', 'app/contact-us/page.tsx', 'app/about/page.tsx']) {
     for (const tag of read(file).matchAll(/<img[^>]+stealth-agents-logo\.png[^>]*>/g)) assert.match(tag[0], /width="149" height="50"/, `${file} has incorrect logo dimensions`);
