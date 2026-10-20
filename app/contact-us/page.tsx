@@ -1,19 +1,28 @@
-import type { Metadata } from "next";
-import { Header, Footer } from "../components";
-import { services, site } from "../data";
-import StandardContactForm from "./StandardContactForm";
-import styles from "./contact.module.css";
+import type { Metadata } from 'next';
+import { Header, Footer, ReviewsMarquee } from '../components';
+import { services } from '../data';
+import StandardContactForm from './StandardContactForm';
+import styles from './contact.module.css';
 
-const canonical = "https://offshoreresourcing.com/contact-us";
-const description = "Plan an offshore resourcing team around clear roles, access boundaries, handoffs, and manager-owned decisions.";
-export const metadata: Metadata = { title: "Contact Offshore Resourcing | Plan Your Team", description, alternates: { canonical }, robots: { index: true, follow: true }, openGraph: { title: "Plan Your Offshore Resourcing Team", description, url: canonical, type: "website", images: [{ url: "/aug19-heroes/offshore-resourcing-launch-readiness-review.webp", width: 1536, height: 1024, alt: site.alt }] } };
-const brief = [["Role and workload", "Share recurring tasks, weekly volume, source systems, and one example of a finished result."], ["Coverage and tools", "Name working hours, collaboration channels, software, and access that must remain restricted."], ["Handoffs and review", "Identify who assigns work, approves exceptions, and checks quality before scope expands."]];
+const canonical = 'https://offshoreresourcing.com/contact-us';
+const description = 'Share the workload, coverage, tools, and approval boundaries for a Philippines based staffing plan.';
+const socialImage = { url: '/brand/stealth-agents-team-bacolod.jpg', width: 953, height: 540, alt: 'Stealth Agents team in Bacolod' };
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description,
+  alternates: { canonical },
+  openGraph: { title: 'Plan Your Offshore Role', description, url: canonical, type: 'website', images: [socialImage] },
+  twitter: { card: 'summary_large_image', title: 'Plan Your Offshore Role', description, images: [socialImage] },
+};
 
-export default function ContactUsPage() { return <><Header/><main className={styles.page}>
-  <section className={styles.hero}><div className={styles.grid}><div className={styles.copy}><p className={styles.kicker}>Offshore teams, deliberately scoped</p><h1>Build an offshore resourcing plan your managers can review.</h1><p>Tell us which work needs consistent ownership, which decisions stay internal, and what success should look like. We’ll use those details to guide a practical staffing conversation.</p><ul><li>Philippines-based specialists matched to a defined work lane</li><li>Access, approval, and escalation boundaries captured early</li><li>A review rhythm designed before responsibilities expand</li></ul><a href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer">Powered by Stealth Agents</a></div><div id="consultation"><StandardContactForm endpoint="/api/contact" encoding="form"/></div></div></section>
-  <section className={styles.section}><div className={styles.shell}><p className={styles.kicker}>Prepare the brief</p><h2>Bring the operating details that shape the role.</h2><div className={styles.cards}>{brief.map(([title,body],i)=><article key={title}><b>0{i+1}</b><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
-  <section className={styles.about}><div className={styles.grid}><img src="/aug19-heroes/offshore-resourcing-launch-readiness-review.webp" width="1536" height="1024" alt="Offshore resourcing specialists reviewing a team launch plan"/><div><p className={styles.kicker}>The staffing partner</p><h2>About Stealth Agents</h2><p className={styles.trust}>Stealth Agents works with over 35+ different industries. We&apos;re featured on Forbes as the top rated virtual assistant company.</p><p>That experience supports the conversation, while your team still defines the work, safeguards, and decisions that remain with accountable managers.</p><a href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer">Powered by Stealth Agents</a></div></div></section>
-  <section className={`${styles.section} ${styles.dark}`}><div className={styles.shell}><p className={styles.kicker}>Possible work lanes</p><h2>Start with repeatable work your team can explain.</h2><div className={styles.tags}>{services.slice(0,8).map(service=><span key={service.slug}>✓ {service.title}</span>)}</div></div></section>
-  <section className={styles.section}><div className={styles.shell}><p className={styles.kicker}>A controlled start</p><h2>Turn a staffing idea into a testable work lane.</h2><div className={styles.steps}><article><b>1</b><div><h3>Document the queue</h3><p>Capture inputs, outputs, frequency, tools, and examples.</p></div></article><article><b>2</b><div><h3>Name the boundaries</h3><p>Keep budget, access, policy, and exception decisions with the right owner.</p></div></article><article><b>3</b><div><h3>Review before expanding</h3><p>Check early work against an agreed sample and correction path.</p></div></article></div></div></section>
-  <section className={styles.close}><div><p className={styles.kicker}>Ready to scope the role?</p><h2>Plan a clearer offshore resourcing conversation.</h2><p>Share your workload, tools, schedule, and review needs in the consultation form.</p></div><a href="#consultation">Book a free consultation</a></section>
-</main><Footer/></>; }
+export default function ContactUsPage() {
+  return <><Header/><main className={styles.page}>
+    <section className={styles.hero}><div className={styles.heroGrid}>
+      <div className={styles.copy}><p className={styles.kicker}>Staffing intake</p><h1>Turn a workload into a role your manager can run.</h1><p className={styles.lead}>Share the recurring work, tools, coverage, and decisions that stay internal. We will use the detail to guide a practical staffing conversation.</p><div className={styles.scopeLabels}><span>Role scope</span><span>Access limits</span><span>Review rhythm</span><span>Philippines based talent</span></div></div>
+      <div id="consultation" className={styles.formColumn}><StandardContactForm endpoint="/api/contact" encoding="form"/></div>
+      <div className={styles.reviews}><ReviewsMarquee/></div>
+    </div></section>
+    <section className={styles.teamSection}><div className={styles.teamGrid}><figure><img src="/brand/stealth-agents-team-bacolod.jpg" width="953" height="540" alt="Official Stealth Agents team together in Bacolod, Philippines"/><figcaption><img src="/brand/stealth-agents-logo.png" width="149" height="50" alt=""/><strong>Official team, Bacolod</strong></figcaption></figure><div><p className={styles.kicker}>The staffing partner</p><h2>People and process behind the handoff.</h2><p>Offshore Resourcing helps buyers define the work and operating boundaries. Staffing requests may be routed to StealthAgents, which recruits and hires talent in the Philippines.</p><p>Your team remains responsible for role priorities, system access, review standards, and consequential decisions. The staffing conversation starts with those controls, not with a generic job title.</p><a className={styles.partnerPlate} href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer"><img src="/brand/stealth-agents-logo.png" width="149" height="50" alt=""/><span>Visit Stealth Agents</span></a></div></div></section>
+    <section className={styles.scopeSection}><div className={styles.shell}><p className={styles.kicker}>Prepare the brief</p><h2>Bring enough context to test the role.</h2><div className={styles.scopeGrid}><article><h3>Work and volume</h3><p>List recurring tasks, frequency, current owner, backlog, and one example of a complete result.</p></article><article><h3>Systems and coverage</h3><p>Name the tools, working window, source of truth, and permissions that must stay restricted.</p></article><article><h3>Review and exceptions</h3><p>Identify who checks quality, approves sensitive actions, and answers work that falls outside the normal lane.</p></article></div><div className={styles.serviceLinks}>{services.map(service=><a href={`/services/${service.slug}`} key={service.slug}>{service.title}</a>)}</div></div></section>
+  </main><Footer/></>;
+}

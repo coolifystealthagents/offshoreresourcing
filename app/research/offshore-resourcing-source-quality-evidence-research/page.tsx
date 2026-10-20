@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
-import { getAug19Metadata, renderAug19Article } from '../../aug19-content';
-export const metadata: Metadata = getAug19Metadata('research','offshore-resourcing-source-quality-evidence-research');
-export default function Page(){return renderAug19Article('research','offshore-resourcing-source-quality-evidence-research')}
+import DynamicPost, { generateMetadata as dynamicMetadata } from '../[slug]/page';
+const slug = 'offshore-resourcing-source-quality-evidence-research';
+export function generateMetadata() { return dynamicMetadata({ params: Promise.resolve({ slug }) }); }
+export default function Page() { return DynamicPost({ params: Promise.resolve({ slug }) }); }

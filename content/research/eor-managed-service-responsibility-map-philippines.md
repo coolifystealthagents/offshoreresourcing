@@ -122,3 +122,7 @@ The [Offshore Resourcing services overview](/services) provides concrete support
 6. [NIST Privacy Framework](https://www.nist.gov/privacy-framework), National Institute of Standards and Technology, checked September 18, 2026.
 7. [General principles and operational guidelines for fair recruitment](https://www.ilo.org/publications/general-principles-and-operational-guidelines-fair-recruitment-and), International Labour Organization, checked September 18, 2026.
 8. [SEC Check with SEC](https://checkwithsec.sec.gov.ph/), Philippine Securities and Exchange Commission, checked September 18, 2026.
+
+9. [NIST SP 800-161 Rev. 1, Cybersecurity Supply Chain Risk Management](https://csrc.nist.gov/pubs/sp/800/161/r1/final), checked against the source for this review.
+
+10. [The IIA's Three Lines Model](https://www.theiia.org/en/content/position-papers/2020/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense/), checked against the source for this review.

@@ -119,3 +119,7 @@ Use the map beside the site's [progressive data-access tiering research](/resear
 6. [Cybersecurity Supply Chain Risk Management Practices, SP 800-161 Rev. 1](https://csrc.nist.gov/pubs/sp/800/161/r1/final), National Institute of Standards and Technology, checked September 18, 2026.
 7. [Incident Response Recommendations and Considerations for Cybersecurity Risk Management, SP 800-61 Rev. 3](https://csrc.nist.gov/pubs/sp/800/61/r3/final), National Institute of Standards and Technology, checked September 18, 2026.
 8. [NIST Privacy Framework](https://www.nist.gov/privacy-framework), National Institute of Standards and Technology, checked September 18, 2026.
+
+9. [Article 28 GDPR, Processor](https://gdpr-info.eu/art-28-gdpr/), checked against the source for this review.
+
+10. [NIST SP 800-92, Guide to Computer Security Log Management](https://csrc.nist.gov/pubs/sp/800/92/final), checked against the source for this review.

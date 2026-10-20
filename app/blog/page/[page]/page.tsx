@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import { Header, Footer } from "../../../components";
 import { blogPosts } from "../../../data";
+import { editorialText } from "../../../../lib/content";
 export function generateStaticParams() {
   const n = Math.max(1, Math.ceil(blogPosts.length / 20));
   return Array.from({ length: n }, (_, i) => ({ page: String(i + 1) }));
@@ -26,8 +27,8 @@ export default async function BlogPage({
           <div className="cards">
             {posts.map((p) => (
               <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
-                <h2>{p.title}</h2>
-                <p>{p.excerpt}</p>
+                <h2>{editorialText(p.title)}</h2>
+                <p>{editorialText(p.excerpt)}</p>
               </a>
             ))}
           </div>

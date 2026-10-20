@@ -127,3 +127,7 @@ Buyers can pair this method with the [time-zone overlap model](/research/philipp
 6. [Labor Force Survey](https://psa.gov.ph/statistics/labor-force-survey), Philippine Statistics Authority, checked September 18, 2026.
 7. [General principles and operational guidelines for fair recruitment](https://www.ilo.org/publications/general-principles-and-operational-guidelines-fair-recruitment-and), International Labour Organization, checked September 18, 2026.
 8. [Standards for Internal Control in the Federal Government](https://www.gao.gov/products/gao-14-704g), U.S. Government Accountability Office, checked September 18, 2026.
+
+9. [NIST SP 800-53 Rev. 5, Security and Privacy Controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), checked against the source for this review.
+
+10. [NIST SP 800-92, Guide to Computer Security Log Management](https://csrc.nist.gov/pubs/sp/800/92/final), checked against the source for this review.

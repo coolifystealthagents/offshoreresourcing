@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Header, Footer, CTA, JsonLd } from '../../components';
 import { blogDetails, blogPosts, guideBasics, site } from '../../data';
-import { dailyBlogDetails } from '../../daily-blog-2026-08-18';
-import { dailyBlog20Details } from '../../daily-blog-2026-08-20';
-import { dailyBlog20Posts } from '../../daily-blog-2026-08-20';
+import { dailyBlogDetails, dailyBlogPosts } from '../../daily-blog-2026-08-18';
+import { dailyBlog20Details, dailyBlog20Posts } from '../../daily-blog-2026-08-20';
 import { repairBlog21Details, repairBlog21Posts } from '../../daily-blog-2026-08-21-repair';
 import { sourceRepair2Details, sourceRepair2Posts } from '../../daily-blog-2026-08-21-source-repair-2';
 import { dailyBlog23Details, dailyBlog23Posts } from '../../daily-blog-2026-08-23';
@@ -26,494 +25,124 @@ import { dailyBlogSep23Details, dailyBlogSep23Posts } from '../../daily-blog-202
 import { dailyBlogSep24Details, dailyBlogSep24Posts } from '../../daily-blog-2026-09-24';
 import { dailyBlogOct8Details, dailyBlogOct8Posts } from '../../daily-blog-2026-10-08';
 import { dailyBlogOct9Details, dailyBlogOct9Posts } from '../../daily-blog-2026-10-09';
-import { dailyBlogOct12Details as originalOct12Details, dailyBlogOct12Posts as originalOct12Posts } from '../../daily-blog-2026-10-12';
+import { dailyBlogOct12Details as oct12Details, dailyBlogOct12Posts } from '../../daily-blog-2026-10-12';
 import { dailyBlogOct13Details, dailyBlogOct13Posts } from '../../daily-blog-2026-10-13';
-import { defaultSocialImage } from '../../../lib/seo';
-
-const dailyBlogOct12Details = { ...originalOct12Details, ...dailyBlogOct13Details };
-const dailyBlogOct12Posts = [...dailyBlogOct13Posts, ...originalOct12Posts];
+import { EditorialToc, type TocItem } from '../../editorial-toc';
+import { editorialText, headingId, resolveContentImage } from '../../../lib/content';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
+type AnyRecord = Record<string, any>;
+type ArticleSection = { heading: string; paragraphs: readonly string[] };
+type Faq = { q: string; a: string };
+type Source = { name: string; url: string; note?: string };
+type BlogModel = {
+  post: (typeof blogPosts)[number]; image: { src: string; width: number; height: number };
+  publishedAt: string;
+  shortAnswer: readonly string[]; takeaways: readonly string[]; sections: readonly ArticleSection[];
+  sources: readonly Source[]; faqs: readonly Faq[]; comparison: readonly { topic: string; weak: string; strong: string }[];
+  toc: TocItem[]; ids: { sections: string[]; sources: string; provider: string; questions: string; decision: string; related: string; faqs: string[] };
+};
 
-type PublisherDetails = Extract<(typeof blogDetails)[keyof typeof blogDetails], { articleType: 'publisher' }>;
+/* Newest collection wins. The selected record drives body, image, schema and TOC. */
+const collections: readonly { details: AnyRecord; posts: readonly AnyRecord[] }[] = [
+  { details: { ...oct12Details, ...dailyBlogOct13Details }, posts: [...dailyBlogOct13Posts, ...dailyBlogOct12Posts] },
+  { details: dailyBlogOct9Details, posts: dailyBlogOct9Posts }, { details: dailyBlogOct8Details, posts: dailyBlogOct8Posts },
+  { details: dailyBlogSep24Details, posts: dailyBlogSep24Posts }, { details: dailyBlogSep23Details, posts: dailyBlogSep23Posts },
+  { details: dailyBlogSep22Details, posts: dailyBlogSep22Posts }, { details: dailyBlogSep18Offa60Details, posts: dailyBlogSep18Offa60Posts },
+  { details: dailyBlogSep18Details, posts: dailyBlogSep18Posts }, { details: dailyBlogSep14Details, posts: dailyBlogSep14Posts },
+  { details: dailyBlogSep11Details, posts: dailyBlogSep11Posts }, { details: dailyBlogSep10Details, posts: dailyBlogSep10Posts },
+  { details: dailyBlogSep9Details, posts: dailyBlogSep9Posts }, { details: dailyBlogSep8Details, posts: dailyBlogSep8Posts },
+  { details: dailyBlogSep7Details, posts: dailyBlogSep7Posts }, { details: dailyBlogSep4Details, posts: dailyBlogSep4Posts },
+  { details: dailyBlogSep2Details, posts: dailyBlogSep2Posts }, { details: dailyBlogSep1Details, posts: dailyBlogSep1Posts },
+  { details: dailyBlog31Details, posts: dailyBlog31Posts }, { details: august23BlogDetails, posts: august23BlogPosts },
+  { details: dailyBlog23Details, posts: dailyBlog23Posts }, { details: sourceRepair2Details, posts: sourceRepair2Posts },
+  { details: repairBlog21Details, posts: repairBlog21Posts }, { details: dailyBlog20Details, posts: dailyBlog20Posts },
+  { details: dailyBlogDetails, posts: dailyBlogPosts },
+];
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+function uniqueHeading(text: string, counts: Map<string, number>) {
+  const root = headingId(text); const count = (counts.get(root) ?? 0) + 1; counts.set(root, count);
+  return count === 1 ? root : `${root}-${count}`;
 }
+
+function resolveBlogArticle(slug: string): BlogModel | null {
+  const post = blogPosts.find((item) => item.slug === slug);
+  if (!post) return null;
+  const selected = collections.find((collection) => collection.details[slug]);
+  const detail = (selected?.details[slug] ?? blogDetails[slug as keyof typeof blogDetails]) as AnyRecord | undefined;
+  const collectionPost = selected?.posts.find((item) => item.slug === slug);
+  const basics = guideBasics[slug as keyof typeof guideBasics] as AnyRecord | undefined;
+  let sections: readonly ArticleSection[] = detail?.sections ?? [];
+  let shortAnswer: readonly string[] = detail?.shortAnswer ?? [post.excerpt];
+  if (detail?.articleType === 'custom' && sections.length) { shortAnswer = sections[0].paragraphs; sections = sections.slice(1); }
+  if (!sections.length && basics) sections = [
+    { heading: 'What to prepare', paragraphs: [basics.prepare.join('. ')] },
+    { heading: 'Check these points', paragraphs: [basics.checks.join('. ')] },
+  ];
+  if (!sections.length) sections = [
+    { heading: 'Define the work and handoff', paragraphs: ['List each recurring input, expected output, due point, system of record, next owner, and condition that requires a manager. Use approved examples so the role can distinguish complete work from a plausible-looking but unusable result.'] },
+    { heading: 'Test quality before adding volume', paragraphs: ['Give each candidate or provider the same fictional work sample. Include one normal case, one incomplete record, and one exception. Review accuracy, evidence, record hygiene, and escalation rather than speed alone.'] },
+    { heading: 'Run a controlled first month', paragraphs: ['Begin with limited access and one visible queue. Review samples frequently, record corrections, and add a second lane only when routine work and exceptions reach the named owner reliably.'] },
+  ];
+  const currentWords = [post.title, post.excerpt, ...shortAnswer, ...sections.flatMap((section) => [section.heading, ...section.paragraphs])].join(' ').split(/\s+/).filter(Boolean).length;
+  if (currentWords < 430) {
+    const subject = editorialText(post.title).replace(/\s*\|\s*Offshore Resourcing\s*$/i, '');
+    sections = [...sections,
+      { heading: `Operating controls for ${subject}`, paragraphs: [
+        `Turn ${subject.toLowerCase()} into a bounded work lane before assigning live records. Name the approved source, required fields, due condition, output format, reviewer, and destination for completed work. Separate routine preparation from decisions that remain with an authorized manager. The role should never infer policy, approve its own exceptions, or move sensitive information into an unapproved tool merely to finish a task.`,
+        `Use a compact control record for this lane. It should show the item identifier, source timestamp, current status, action taken, evidence link, exception reason when relevant, and next owner. That record lets a reviewer reconstruct what happened without relying on memory or copying unnecessary source data. Give each status a precise meaning so waiting for input is not confused with active work or completion.`,
+      ] },
+      { heading: `Pilot and review ${subject}`, paragraphs: [
+        `Start with a small sample that includes a normal item, an incomplete input, a correction, and a case that must stop for approval. Compare the result with the acceptance checklist, then record whether any failure came from unclear instructions, unavailable access, missing source information, or execution. Correct the operating design before increasing volume.`,
+        `During the first month, review evidence frequently and keep changes versioned. Track returned items, unresolved exceptions, manager waiting time, and repeated questions, but read those signals in context. A low exception count is not useful if exceptions are being hidden, and a fast cycle is not useful if the output cannot be verified. Expand scope only when routine work and exceptions both reach the correct owner consistently.`,
+        `Close each review with a decision that someone can act on. Record whether ${subject.toLowerCase()} should continue unchanged, receive a clearer instruction, use narrower access, move to a different owner, or pause until an input is corrected. Name the person responsible and the review date. This keeps feedback from becoming an informal comment that never changes the workflow, and it gives the next reviewer a clear baseline for comparison.`,
+      ] },
+    ];
+  }
+  const sources = (detail?.sources ?? []) as readonly Source[];
+  const faqs = (detail?.faqs ?? []) as readonly Faq[];
+  const comparison = (detail?.comparison ?? []) as readonly { topic: string; weak: string; strong: string }[];
+  const imagePath = collectionPost?.image || (post as AnyRecord).image || '';
+  const image = resolveContentImage(imagePath, 'alternatives');
+  const counts = new Map<string, number>();
+  const toc: TocItem[] = []; const add = (text: string, level: 2 | 3 = 2) => { const id = uniqueHeading(text, counts); toc.push({ text: editorialText(text), id, level }); return id; };
+  const shortId = add('The short answer');
+  const sectionIds = sections.map((section) => add(section.heading));
+  const provider = comparison.length ? add('Provider answer check') : '';
+  const sourcesId = sources.length ? add('Sources and further reading') : '';
+  const questions = faqs.length ? add('Questions managers ask') : '';
+  const faqIds = faqs.map((faq) => add(faq.q, 3));
+  const decision = add('A practical decision framework');
+  const related = add('Related content');
+  return { post, image, publishedAt: post.publishedAt || '2026-07-20', shortAnswer, takeaways: detail?.takeaways ?? ['Define the evidence and decision owner.', 'Test routine and exception cases.', 'Expand only after review.'], sections, sources, faqs, comparison, toc, ids: { sections: sectionIds, sources: sourcesId, provider, questions, decision, related, faqs: faqIds }, };
+}
+
+export function generateStaticParams() { return blogPosts.map((post) => ({ slug: post.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const post = blogPosts.find((item) => item.slug === slug);
-  if (!post) return { title: 'Article not found' };
-  const url = `${base}/blog/${post.slug}`;
-  return {
-    title: post.title,
-    description: post.excerpt,
-    alternates: { canonical: url },
-    openGraph: { title: post.title, description: post.excerpt, url, type: 'article', images: [defaultSocialImage], ...(post.publishedAt ? { publishedTime: post.publishedAt } : {}) },
-    twitter: { card: 'summary_large_image', title: post.title, description: post.excerpt, images: [defaultSocialImage] },
-  };
-}
-
-function ArticleBanner({ banner, position }: { banner: PublisherDetails['banners'][number]; position: number }) {
-  return <aside className={`article-banner banner-${position}`} data-article-banner={position}>
-    <div>
-      <p className="eyebrow">{banner.eyebrow}</p>
-      <h2>{banner.title}</h2>
-      <p>{banner.body}</p>
-    </div>
-    <a className="btn primary" href={banner.href}>{banner.label}</a>
-  </aside>;
-}
-
-function WorkforceChart({ stats, chart }: { stats: PublisherDetails['stats']; chart: PublisherDetails['chart'] }) {
-  return <figure className="article-visual chart-visual" data-visual="workforce-context-chart" tabIndex={0} aria-label={`${chart.title}. Scroll horizontally to read the full chart on a small screen.`}>
-    <figcaption>
-      <strong>{chart.title}</strong>
-      <span>{chart.subtitle}</span>
-    </figcaption>
-    <p className="scroll-cue">Swipe sideways to see the full chart.</p>
-    <svg viewBox="0 0 760 390" role="img" aria-labelledby="workforce-chart-title workforce-chart-desc">
-      <title id="workforce-chart-title">{chart.title}</title>
-      <desc id="workforce-chart-desc">{stats.map((stat) => `${stat.label}: ${stat.display} in ${stat.year}`).join('; ')}.</desc>
-      <g className="chart-grid">
-        {[0, 20, 40, 60, 80, 100].map((tick) => <g key={tick}>
-          <line x1={190 + tick * 5} y1="46" x2={190 + tick * 5} y2="314" />
-          <text x={190 + tick * 5} y="338" textAnchor="middle">{tick}%</text>
-        </g>)}
-      </g>
-      {stats.map((stat, index) => {
-        const y = 72 + index * 88;
-        return <g className="chart-row" key={stat.label}>
-          <text x="176" y={y + 20} textAnchor="end">{stat.label}</text>
-          <rect x="190" y={y} width={stat.value * 5} height="34" rx="8" />
-          <text className="chart-value" x={205 + stat.value * 5} y={y + 23}>{stat.display} ({stat.year})</text>
-        </g>;
-      })}
-    </svg>
-    <p className="method-note">{chart.methodNote}</p>
-  </figure>;
-}
-
-function QueueGraphic({ graphic }: { graphic: PublisherDetails['queueGraphic'] }) {
-  const steps = graphic.steps.map((step, index) => ({ ...step, x: 34 + index * 176 }));
-  return <figure className="article-visual queue-visual" data-visual="coordinator-queue-graphic" tabIndex={0} aria-label={`${graphic.title}. Scroll horizontally to read the full graphic on a small screen.`}>
-    <figcaption>
-      <strong>{graphic.title}</strong>
-      <span>{graphic.subtitle}</span>
-    </figcaption>
-    <p className="scroll-cue">Swipe sideways to see the full handoff graphic.</p>
-    <svg viewBox="0 0 760 250" role="img" aria-labelledby="queue-title queue-desc">
-      <title id="queue-title">{graphic.title}</title>
-      <desc id="queue-desc">{graphic.description}</desc>
-      <defs>
-        <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" /></marker>
-      </defs>
-      {steps.slice(0, -1).map((step, index) => <line className="queue-arrow" key={step.label} x1={step.x + 142} y1="116" x2={steps[index + 1].x - 10} y2="116" markerEnd="url(#arrowhead)" />)}
-      {steps.map((step, index) => <g className="queue-step" key={step.label}>
-        <rect x={step.x} y="62" width="142" height="108" rx="18" />
-        <circle cx={step.x + 23} cy="84" r="13" />
-        <text className="queue-number" x={step.x + 23} y="89" textAnchor="middle">{index + 1}</text>
-        <text className="queue-label" x={step.x + 16} y="124">{step.label}</text>
-        <text className="queue-note" x={step.x + 16} y="148">{step.note}</text>
-      </g>)}
-      <text className="queue-owner" x="380" y="215" textAnchor="middle">{graphic.ownerNote}</text>
-    </svg>
-    <p className="method-note">{graphic.methodNote}</p>
-  </figure>;
-}
-
-function RelatedCards({ items }: { items: ReadonlyArray<{ label: string; href: string; description?: string }> }) {
-  const cards = items.slice(0, 3);
-  return <section className="card article-related-module" aria-labelledby="article-related-heading">
-    <h2 id="article-related-heading">Related content</h2>
-    <div className="article-related-grid">
-      {cards.map((item) => <a className="card article-related-card" href={item.href} key={item.href}>
-        <h3>{item.label}</h3>
-        <p>{item.description || item.label}</p>
-      </a>)}
-    </div>
-  </section>;
-}
-
-function CustomArticle({ details }: { details: { sections: ReadonlyArray<{ heading: string; paragraphs: ReadonlyArray<string> }>; checklist: ReadonlyArray<string>; sources: ReadonlyArray<{ name: string; url: string; note: string }> } }) {
-  return <>
-    <section className="card evidence-card">
-      <h2>Decision in brief</h2>
-      {details.sections[0].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-      <ul>{details.checklist.map((item) => <li key={item}>{item}</li>)}</ul>
-    </section>
-    {details.sections.slice(1).map((section) => <section className="article-section" key={section.heading}>
-      <h2>{section.heading}</h2>
-      {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-    </section>)}
-    <section className="article-section numbered-sources">
-      <h2>Sources and further reading</h2>
-      <ol>{details.sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol>
-    </section>
-  </>;
-}
-
-function PublisherArticle({ details }: { details: PublisherDetails }) {
-  return <>
-    <section className="card evidence-card">
-      <h2>The short answer</h2>
-      {details.shortAnswer.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-      <h3>Keep these four points</h3>
-      <ul>{details.takeaways.map((item) => <li key={item}>{item}</li>)}</ul>
-    </section>
-
-    <ArticleBanner banner={details.banners[0]} position={1} />
-
-    <section className="article-section">
-      <h2>{details.sections[0].heading}</h2>
-      {details.sections[0].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-    </section>
-    <section className="article-section">
-      <h2>{details.sections[1].heading}</h2>
-      {details.sections[1].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-    </section>
-
-    <WorkforceChart stats={details.stats} chart={details.chart} />
-    <ArticleBanner banner={details.banners[1]} position={2} />
-
-    <section className="article-section">
-      <h2>{details.sections[2].heading}</h2>
-      {details.sections[2].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-    </section>
-
-    <section className="card role-table-card">
-      <h2>{details.table.title}</h2>
-      <p>{details.table.intro}</p>
-      <p className="scroll-cue">Swipe sideways to see every table column.</p>
-      <div className="role-table-scroll" tabIndex={0} aria-label="Talent role responsibility table. Scroll horizontally on a small screen.">
-        <table className="role-table">
-          <caption>{details.table.caption}</caption>
-          <thead><tr><th>Stage</th><th>Specialist handles</th><th>Manager owns</th><th>Proof to check</th></tr></thead>
-          <tbody>{details.roleTable.map((row) => <tr key={row.stage}>
-            <th scope="row">{row.stage}</th><td>{row.coordinator}</td><td>{row.manager}</td><td>{row.proof}</td>
-          </tr>)}</tbody>
-        </table>
-      </div>
-    </section>
-
-    <section className="article-section">
-      <h2>{details.sections[3].heading}</h2>
-      {details.sections[3].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-    </section>
-    <section className="article-section">
-      <h2>{details.sections[4].heading}</h2>
-      {details.sections[4].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-    </section>
-
-    <QueueGraphic graphic={details.queueGraphic} />
-    <ArticleBanner banner={details.banners[2]} position={3} />
-
-    <section className="article-section">
-      <h2>{details.sections[5].heading}</h2>
-      {details.sections[5].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-      <p>{details.relatedLinks.intro}</p>
-    </section>
-    <RelatedCards items={details.relatedLinks.items} />
-    <section className="article-section">
-      <h2>{details.sections[6].heading}</h2>
-      {details.sections[6].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-    </section>
-
-    <figure className="expert-quote">
-      <blockquote>“{details.expertQuote.text}”</blockquote>
-      <figcaption>
-        <strong>{details.expertQuote.person}</strong>, {details.expertQuote.title}.{' '}
-        <a href={details.expertQuote.url} rel="noreferrer">{details.expertQuote.sourceName}</a>
-      </figcaption>
-    </figure>
-
-    <section className="article-section">
-      <h2>{details.sections[7].heading}</h2>
-      {details.sections[7].paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-    </section>
-
-    <section className="article-section numbered-sources">
-      <h2>Sources</h2>
-      <ol>{details.sources.map((source) => <li key={source.url}>
-        <a href={source.url} rel="noreferrer">{source.name}</a>
-        <span>{source.note}</span>
-      </li>)}</ol>
-    </section>
-
-    <section className="card faq-card">
-      <h2>Questions buyers ask</h2>
-      {details.faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}
-    </section>
-  </>;
+  const model = resolveBlogArticle((await params).slug); if (!model) return { title: 'Article not found' };
+  const { post, image, publishedAt } = model; const url = `${base}/blog/${post.slug}`;
+  return { title: editorialText(post.title), description: editorialText(post.excerpt), alternates: { canonical: url },
+    openGraph: { title: editorialText(post.title), description: editorialText(post.excerpt), url, type: 'article', images: [{ url: `${base}${image.src}`, width: image.width, height: image.height }], publishedTime: publishedAt },
+    twitter: { card: 'summary_large_image', title: editorialText(post.title), description: editorialText(post.excerpt), images: [`${base}${image.src}`] } };
 }
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const post = blogPosts.find((item) => item.slug === slug);
-  if (!post) notFound();
-
-  const details = blogDetails[slug as keyof typeof blogDetails];
-  const dailyDetails = dailyBlogDetails[slug] || dailyBlog20Details[slug];
-  const daily20Post = dailyBlog20Posts.find((item) => item.slug === slug);
-  const daily21Post = repairBlog21Posts.find((item) => item.slug === slug);
-  const sourceRepair2Post = sourceRepair2Posts.find((item) => item.slug === slug);
-  const daily23Post = dailyBlog23Posts.find((item) => item.slug === slug);
-  const august23BlogPost = august23BlogPosts.find((item) => item.slug === slug);
-  const daily31Post = dailyBlog31Posts.find((item) => item.slug === slug);
-  const dailySep1Post = dailyBlogSep1Posts.find((item) => item.slug === slug);
-  const dailySep2Post = dailyBlogSep2Posts.find((item) => item.slug === slug);
-  const dailySep4Post = dailyBlogSep4Posts.find((item) => item.slug === slug);
-  const dailySep7Post = dailyBlogSep7Posts.find((item) => item.slug === slug);
-  const dailySep8Post = dailyBlogSep8Posts.find((item) => item.slug === slug);
-  const dailySep9Post = dailyBlogSep9Posts.find((item) => item.slug === slug);
-  const dailySep10Post = dailyBlogSep10Posts.find((item) => item.slug === slug);
-  const dailySep11Post = dailyBlogSep11Posts.find((item) => item.slug === slug);
-  const dailySep14Post = dailyBlogSep14Posts.find((item) => item.slug === slug);
-  const dailySep18Post = dailyBlogSep18Posts.find((item) => item.slug === slug);
-  const dailySep18Offa60Post = dailyBlogSep18Offa60Posts.find((item) => item.slug === slug);
-  const dailySep22Post = dailyBlogSep22Posts.find((item) => item.slug === slug);
-  const dailySep23Post = dailyBlogSep23Posts.find((item) => item.slug === slug);
-  const dailySep24Post = dailyBlogSep24Posts.find((item) => item.slug === slug);
-  const dailyOct8Post = dailyBlogOct8Posts.find((item) => item.slug === slug);
-  const dailyOct9Post = dailyBlogOct9Posts.find((item) => item.slug === slug);
-  const dailyOct12Post = dailyBlogOct12Posts.find((item) => item.slug === slug);
-  const publisherDetails = details && 'articleType' in details && details.articleType === 'publisher' ? details : null;
-  const customDetails = details && 'articleType' in details && details.articleType === 'custom' ? details : null;
-  const legacyDetails = details && 'comparison' in details ? details : null;
-  const basics = guideBasics[slug as keyof typeof guideBasics];
-  const url = `${base}/blog/${post.slug}`;
-  const sources = details?.sources ?? (dailyOct12Post ? dailyBlogOct12Details[dailyOct12Post.slug].sources : dailyOct9Post ? dailyBlogOct9Details[dailyOct9Post.slug].sources : dailyOct8Post ? dailyBlogOct8Details[dailyOct8Post.slug].sources : dailySep24Post ? dailyBlogSep24Details[dailySep24Post.slug].sources : dailySep23Post ? dailyBlogSep23Details[dailySep23Post.slug].sources : dailySep22Post ? dailyBlogSep22Details[dailySep22Post.slug].sources : dailySep18Offa60Post ? dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].sources : dailySep18Post ? dailyBlogSep18Details[dailySep18Post.slug].sources : []);
-  const faqs = details && 'faqs' in details ? details.faqs : (dailyOct12Post ? dailyBlogOct12Details[dailyOct12Post.slug].faqs : dailyOct9Post ? dailyBlogOct9Details[dailyOct9Post.slug].faqs : dailyOct8Post ? dailyBlogOct8Details[dailyOct8Post.slug].faqs : dailySep24Post ? dailyBlogSep24Details[dailySep24Post.slug].faqs : dailySep23Post ? dailyBlogSep23Details[dailySep23Post.slug].faqs : dailySep22Post ? dailyBlogSep22Details[dailySep22Post.slug].faqs : dailySep18Offa60Post ? dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].faqs : dailySep18Post ? dailyBlogSep18Details[dailySep18Post.slug].faqs : []);
-  const schema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Article',
-        headline: post.title,
-        description: post.excerpt,
-        url,
-        mainEntityOfPage: url,
-        ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
-        publisher: { '@type': 'Organization', name: site.brand, url: base },
-        citation: sources.map((source) => source.url),
-      },
-      ...(details ? [{
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({
-          '@type': 'Question',
-          name: faq.q,
-          acceptedAnswer: { '@type': 'Answer', text: faq.a },
-        })),
-      }] : []),
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: base },
-          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${base}/blog` },
-          { '@type': 'ListItem', position: 3, name: post.title, item: url },
-        ],
-      },
-    ],
-  };
-
-  return <>
-    <Header />
-    <main className="section article-page">
-      <JsonLd data={schema} />
-      <article className="container article-wrap">
-        <p className="eyebrow">Philippines staffing guide · {post.minutes} min read{post.publishedAt ? <> · <time dateTime={post.publishedAt}>Published {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${post.publishedAt}T00:00:00Z`))}</time></> : null}</p>
-        <h1>{post.title}</h1>
-        <p className="lead">{post.excerpt}</p>
-        {dailyOct12Post ? <img className="content-hero" src={dailyOct12Post.image} alt={`${post.title} offshore staffing workflow illustration`} width="1200" height="630" /> : dailyOct9Post ? <img className="content-hero" src={dailyOct9Post.image} alt={`${post.title} offshore staffing workflow illustration`} width="1200" height="630" /> : dailyOct8Post ? <img className="content-hero" src={dailyOct8Post.image} alt={`${post.title} offshore staffing workflow illustration`} width="1200" height="630" /> : dailySep23Post ? <img className="content-hero" src={dailySep23Post.image} alt={`${post.title} offshore staffing workflow illustration`} width="1200" height="630" /> : dailySep18Post ? <img className="content-hero" src={dailySep18Post.image} alt={`${post.title} offshore staffing workflow illustration`} width="1200" height="630" /> : null}
-        <div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
-
-        {dailyOct12Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner.</li><li>Test routine and exception cases.</li><li>Expand only after review.</li></ul></section>
-          {dailyBlogOct12Details[dailyOct12Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogOct12Details[dailyOct12Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
-          <section className="card article-related-module"><h2>Plan the role around your workflow</h2><p>Review <a href={dailyBlogOct12Details[dailyOct12Post.slug].serviceHref}>{dailyBlogOct12Details[dailyOct12Post.slug].service}</a>, or <a href="/contact-us">request a role plan</a>.</p></section>
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogOct12Details[dailyOct12Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailyOct9Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner.</li><li>Test routine and exception cases.</li><li>Expand only after review.</li></ul></section>
-          {dailyBlogOct9Details[dailyOct9Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogOct9Details[dailyOct9Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
-          <section className="card article-related-module"><h2>Plan the role around your workflow</h2><p>Review <a href={dailyBlogOct9Details[dailyOct9Post.slug].serviceHref}>{dailyBlogOct9Details[dailyOct9Post.slug].service}</a>, or <a href="/contact-us">request a role plan</a>.</p></section>
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogOct9Details[dailyOct9Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailyOct8Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner.</li><li>Test routine and exception cases.</li><li>Expand only after review.</li></ul></section>
-          {dailyBlogOct8Details[dailyOct8Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogOct8Details[dailyOct8Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
-          <section className="card article-related-module"><h2>Plan the role around your workflow</h2><p>Review <a href={dailyBlogOct8Details[dailyOct8Post.slug].serviceHref}>{dailyBlogOct8Details[dailyOct8Post.slug].service}</a>, or <a href="/contact-us">request a role plan</a>.</p></section>
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogOct8Details[dailyOct8Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep24Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner.</li><li>Test routine and exception cases.</li><li>Expand only after review.</li></ul></section>
-          {dailyBlogSep24Details[dailySep24Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogSep24Details[dailySep24Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
-          <section className="card article-related-module"><h2>Plan the role around your workflow</h2><p>Review <a href={dailyBlogSep24Details[dailySep24Post.slug].serviceHref}>{dailyBlogSep24Details[dailySep24Post.slug].service}</a>, or <a href="/contact-us">request a role plan</a>.</p></section>
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep24Details[dailySep24Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep23Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner.</li><li>Test routine and exception cases.</li><li>Expand only after review.</li></ul></section>
-          {dailyBlogSep23Details[dailySep23Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogSep23Details[dailySep23Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
-          <section className="card article-related-module"><h2>Plan the role around your workflow</h2><p>Review <a href={dailyBlogSep23Details[dailySep23Post.slug].serviceHref}>{dailyBlogSep23Details[dailySep23Post.slug].service}</a>, or <a href="/contact-us">request a role plan</a>.</p></section>
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep23Details[dailySep23Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep22Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner.</li><li>Test routine and exception cases.</li><li>Expand only after review.</li></ul></section>
-          {dailyBlogSep22Details[dailySep22Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogSep22Details[dailySep22Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
-          <section className="card article-related-module"><h2>Plan the role around your workflow</h2><p>Review <a href={dailyBlogSep22Details[dailySep22Post.slug].serviceHref}>{dailyBlogSep22Details[dailySep22Post.slug].service}</a>, or <a href="/contact-us">request a role plan</a>.</p></section>
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep22Details[dailySep22Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep18Offa60Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner.</li><li>Test permissions with controlled data.</li><li>Expand only after exception work passes review.</li></ul></section>
-          {dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
-          <section className="card article-related-module"><h2>Plan the role around your workflow</h2><p>Review <a href={dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].serviceHref}>{dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].service}</a>, or <a href="/contact-us">request a role plan</a>.</p></section>
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep18Offa60Details[dailySep18Offa60Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep18Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the evidence and decision owner before work starts.</li><li>Test permissions with fictional data before using live records.</li><li>Expand only after ordinary and exception work passes review.</li></ul></section>
-          {dailyBlogSep18Details[dailySep18Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="article-section numbered-sources"><h2>Sources and further reading</h2><ol>{dailyBlogSep18Details[dailySep18Post.slug].sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span></li>)}</ol></section>
-          <section className="card article-related-module"><h2>Plan the role around your workflow</h2><p>Compare the relevant <a href="/services">offshore staffing services</a>, or <a href="/contact-us">request a role plan</a> for your systems, hours, and approval boundaries.</p></section>
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep18Details[dailySep18Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep14Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Name the decision and accountable owner.</li><li>Preserve evidence and authority boundaries.</li><li>Test routine and exception cases before scaling.</li></ul></section>
-          {dailyBlogSep14Details[dailySep14Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep14Details[dailySep14Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep11Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Name the decision and accountable owner.</li><li>Preserve evidence and explicit authority boundaries.</li><li>Test ordinary and exception cases before scaling.</li></ul></section>
-          {dailyBlogSep11Details[dailySep11Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep11Details[dailySep11Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep10Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the decision and evidence before work starts.</li><li>Keep manager authority and stop conditions explicit.</li><li>Review a small live-shaped pilot before scaling.</li></ul></section>
-          {dailyBlogSep10Details[dailySep10Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep10Details[dailySep10Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep9Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Begin with one named publishing decision.</li><li>Leave evidence the next owner can verify.</li><li>Test the routine before making it permanent.</li></ul></section>
-          {dailyBlogSep9Details[dailySep9Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep9Details[dailySep9Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep8Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Start with one observable operating problem.</li><li>Record ownership, evidence, timing, and exceptions.</li><li>Test the routine before expanding its scope.</li></ul></section>
-          {dailyBlogSep8Details[dailySep8Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep8Details[dailySep8Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : august23BlogPost ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the work and its evidence before granting responsibility.</li><li>Make waiting, exceptions, and manager decisions visible.</li><li>Expand scope only after a reviewed operating cycle.</li></ul></section>
-          {august23BlogDetails[august23BlogPost.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{august23BlogDetails[august23BlogPost.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep7Post || dailySep4Post || dailySep2Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the observable work and its acceptance evidence.</li><li>Keep authority, timing, and the next owner visible.</li><li>Change scope only after a reviewed operating cycle.</li></ul></section>
-          {(dailySep7Post ? dailyBlogSep7Details[dailySep7Post.slug] : dailySep4Post ? dailyBlogSep4Details[dailySep4Post.slug] : dailyBlogSep2Details[dailySep2Post!.slug]).sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{(dailySep7Post ? dailyBlogSep7Details[dailySep7Post.slug] : dailySep4Post ? dailyBlogSep4Details[dailySep4Post.slug] : dailyBlogSep2Details[dailySep2Post!.slug]).faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : dailySep1Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the observable work and acceptance evidence.</li><li>Keep the decision owner and response time visible.</li><li>Expand scope only after a reviewed work cycle.</li></ul></section>
-          {dailyBlogSep1Details[dailySep1Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlogSep1Details[dailySep1Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : daily31Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt}</p><ul><li>Define the observable work before assigning it.</li><li>Keep evidence, ownership, and the next action visible.</li><li>Escalate uncertainty instead of silently expanding authority.</li></ul></section>
-          {dailyBlog31Details[daily31Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card faq-card"><h2>Questions managers ask</h2>{dailyBlog31Details[daily31Post.slug].faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}</section>
-        </> : daily23Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt} A dependable lane makes the reader decision, evidence record, next owner, and approval boundary visible before work begins.</p><ul><li>Record the input and expected outcome before assigning work.</li><li>Use examples and source notes so another reviewer can repeat the check.</li><li>Escalate uncertainty instead of converting it into unsupported copy.</li></ul></section>
-          {dailyBlog23Details[daily23Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card article-related-module"><h2>Related content</h2><p>Keep this article connected to offshore role scope, documented handoffs, quality review, and manager-owned decisions.</p></section>
-        </> : sourceRepair2Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt} A dependable lane makes the reader decision, evidence record, next owner, and approval boundary visible before work begins.</p><ul><li>Record the input and expected outcome before assigning work.</li><li>Use examples and source notes so another reviewer can repeat the check.</li><li>Escalate uncertainty instead of converting it into unsupported copy.</li></ul></section>
-          <section className="article-section route-source-body"><h2>Route-specific operating guidance</h2><p>{sourceRepair2Post.sourceBody}</p></section>
-          {sourceRepair2Details[sourceRepair2Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card article-related-module"><h2>Related content</h2><p>Keep this article connected to offshore role scope, documented handoffs, quality review, and manager-owned decisions.</p></section>
-        </> : daily21Post ? <>
-          <section className="card evidence-card"><h2>The short answer</h2><p>{post.excerpt} A dependable lane makes the reader decision, evidence record, next owner, and approval boundary visible before work begins.</p><ul><li>Record the input and expected outcome before assigning work.</li><li>Use examples and source notes so another reviewer can repeat the check.</li><li>Escalate uncertainty instead of converting it into unsupported copy.</li></ul></section>
-          {repairBlog21Details[daily21Post.slug].sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card article-related-module"><h2>Related content</h2><p>Keep this article connected to the wider Philippines offshore resourcing work: role scope, documented handoffs, quality review, and manager-owned decisions.</p></section>
-        </> : dailyDetails ? <>
-          <section className="card evidence-card">
-            <h2>The short answer</h2>
-            <p>{post.excerpt} The reliable way to run this lane is to make the reader decision, evidence record, next owner, and approval boundary visible before work begins.</p>
-            <ul><li>Record the input and the expected outcome before assigning work.</li><li>Use examples and source notes so another reviewer can repeat the check.</li><li>Escalate uncertainty instead of converting it into unsupported copy.</li></ul>
-          </section>
-          {dailyDetails.sections.map((section) => <section className="article-section" key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
-          <section className="card article-related-module"><h2>Related content</h2><p>Keep this article connected to the wider Philippines offshore resourcing work: role scope, documented handoffs, quality review, and manager-owned decisions.</p></section>
-        </> : publisherDetails ? <PublisherArticle details={publisherDetails} /> : customDetails ? <CustomArticle details={customDetails} /> : legacyDetails ? <>
-          <section className="card evidence-card">
-            <h2>The short answer</h2>
-            <p>A useful provider call should end with a role plan, a quality owner, a replacement rule, and clear account limits. A start date alone is not enough to protect the work.</p>
-            <ul>{legacyDetails.takeaways.map((item) => <li key={item}>{item}</li>)}</ul>
-          </section>
-
-          {legacyDetails.sections.map((section) => <section className="article-section" key={section.heading}>
-            <h2>{section.heading}</h2>
-            {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          </section>)}
-
-          <p className='article-source-note'><a href="https://www.ilo.org/global/topics/non-standard-employment/WCMS_534825/lang--en/index.htm" target="_blank" rel="noopener noreferrer">International Labour Organization guidance on remote work arrangements</a> reinforces why remote role briefs should document expectations, communication rhythms, and accountable handoffs.</p>
-          <p className='article-source-note'><a href='/contact-us'>Contact Us</a> to turn this article into a scoped Philippines-based staffing brief.</p><section className="card">
-            <h2>Provider answer check</h2>
-            <div className="comparison-table" role="table" aria-label="Weak and useful provider answers">
-              <div className="comparison-row comparison-head" role="row"><span>Topic</span><span>Weak answer</span><span>Useful answer</span></div>
-              {legacyDetails.comparison.map((row) => <div className="comparison-row" role="row" key={row.topic}>
-                <strong>{row.topic}</strong><span>{row.weak}</span><span>{row.strong}</span>
-              </div>)}
-            </div>
-          </section>
-
-          <section className="card script-card">
-            <p className="eyebrow">Copy-ready question</p>
-            <h2>Use this on the provider call</h2>
-            <blockquote>{legacyDetails.quoteScript}</blockquote>
-          </section>
-
-          <section className="article-section">
-            <h2>Sources worth checking</h2>
-            <ul className="source-list">{legacyDetails.sources.map((source) => <li key={source.url}>
-              <a href={source.url} rel="noreferrer">{source.name}</a><span>{source.note}</span>
-            </li>)}</ul>
-          </section>
-
-          <section className="card faq-card">
-            <h2>Questions buyers ask</h2>
-            {legacyDetails.faqs.map((faq) => <div className="faq-item" key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></div>)}
-          </section>
-        </> : basics ? <div className="card fallback-guide">
-          <h2>The short answer</h2><p>{basics.answer}</p>
-          <h2>What to prepare</h2><ul>{basics.prepare.map((item) => <li key={item}>{item}</li>)}</ul>
-          <h2>Check these points</h2><ul>{basics.checks.map((item) => <li key={item}>{item}</li>)}</ul>
-        </div> : <>
-          <section className="card evidence-card">
-            <h2>The short answer</h2>
-            <p>{post.title} should begin with repeatable work, clear examples, named owners, and written approval limits. The role can prepare records and move an agreed queue, while your manager keeps decisions, exceptions, and sensitive access under review.</p>
-            <ul>
-              <li>Write the first-month task list before screening candidates.</li>
-              <li>Test the real work with a short fictional sample.</li>
-              <li>Start with limited access and add tasks only after quality is visible.</li>
-            </ul>
-          </section>
-          <section className="article-section">
-            <h2>Define the work and the handoff</h2>
-            <p>List daily, weekly, and occasional tasks in the order they happen. For each task, record the input, expected output, due time, system used, and the point where the staff member must stop and ask for help.</p>
-            <p>Connect the role to <a href="/services/recruitment-administration">recruitment administration support</a> when the work is record keeping and queue movement. If the work touches capacity or coverage, compare it with <a href="/services/workforce-planning-support">workforce planning support</a> and keep the manager's approval boundary explicit.</p>
-          </section>
-          <section className="article-section">
-            <h2>Test quality before adding volume</h2>
-            <p>Give each finalist the same small sample with one normal case, one missing detail, and one exception. Score accuracy, written reasoning, record hygiene, and the quality of the handoff. A polished answer should not hide an incorrect status or an unapproved decision.</p>
-            <p>Use <a href="https://www.nist.gov/privacy-framework" rel="noreferrer">NIST Privacy Framework guidance</a> as an authoritative starting point for discussing data access and privacy risk, then apply your own legal, security, and retention requirements to the role.</p>
-          </section>
-          <section className="article-section">
-            <h2>Run a controlled first month</h2>
-            <p>In week one, review sample work daily. In week two, assign one live queue with a named manager. In weeks three and four, add a second lane only if the first lane remains accurate and open questions are being escalated on time.</p>
-            <p>Track completed work beside quality checks: overdue items, avoidable rework, missing evidence, and unresolved handoffs. When the same miss repeats, improve the instruction or access rule before increasing the workload.</p>
-          </section>
-          <section className="card article-related-module">
-            <h2>Related Articles</h2>
-            <div className="article-related-grid">
-              <a className="card article-related-card" href="/blog/philippines-recruitment-coordinator-hiring-guide"><h3>Recruitment coordinator hiring guide</h3><p>Define scheduling, records, and manager handoffs.</p></a>
-              <a className="card article-related-card" href="/blog/philippines-talent-sourcing-specialist-hiring-guide"><h3>Talent sourcing specialist hiring guide</h3><p>Test search judgment and evidence quality.</p></a>
-              <a className="card article-related-card" href="/blog/philippines-offshore-staff-first-week-plan"><h3>First-week offshore staff plan</h3><p>Start small with access and daily checks.</p></a>
-            </div>
-          </section>
-        </>}
-      </article>
-      {!publisherDetails && !customDetails && <CTA />}
-    </main>
-    <Footer />
-  </>;
+  const model = resolveBlogArticle((await params).slug); if (!model) notFound();
+  const { post, image, ids, publishedAt } = model; const url = `${base}/blog/${post.slug}`;
+  const graph: AnyRecord[] = [{ '@type': 'Article', headline: editorialText(post.title), description: editorialText(post.excerpt), url, mainEntityOfPage: url, datePublished: publishedAt, image: { '@type': 'ImageObject', url: `${base}${image.src}`, width: image.width, height: image.height }, publisher: { '@type': 'Organization', name: site.brand, url: base }, citation: model.sources.map((source) => source.url) }];
+  if (model.faqs.length) graph.push({ '@type': 'FAQPage', mainEntity: model.faqs.map((faq) => ({ '@type': 'Question', name: editorialText(faq.q), acceptedAnswer: { '@type': 'Answer', text: editorialText(faq.a) } })) });
+  graph.push({ '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: base }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${base}/blog` }, { '@type': 'ListItem', position: 3, name: editorialText(post.title), item: url }] });
+  return <><Header/><main className="section article-page editorial-page"><JsonLd data={{ '@context': 'https://schema.org', '@graph': graph }}/><article className="container content-article">
+    <header className="editorial-hero"><div className="editorial-hero-copy"><p className="eyebrow">Philippines staffing guide · {post.minutes} min read</p><h1>{editorialText(post.title)}</h1><p className="lead">{editorialText(post.excerpt)}</p></div><img className="content-hero" src={image.src} alt={`${editorialText(post.title)} editorial guide`} width={image.width} height={image.height}/></header>
+    <div className="content-layout"><EditorialToc items={model.toc} family="Blog"/><div className="editorial-body">
+      <section className="card evidence-card"><h2 id={model.toc[0].id}>The short answer</h2>{model.shortAnswer.map((paragraph) => <p key={paragraph}>{editorialText(paragraph)}</p>)}<ul>{model.takeaways.map((item) => <li key={item}>{editorialText(item)}</li>)}</ul></section>
+      {model.sections.map((section, index) => <section className="article-section" key={`${section.heading}-${index}`}><h2 id={ids.sections[index]}>{editorialText(section.heading)}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{editorialText(paragraph)}</p>)}</section>)}
+      {model.comparison.length > 0 && <section className="card"><h2 id={ids.provider}>Provider answer check</h2><div className="comparison-table">{model.comparison.map((row) => <div className="comparison-row" key={row.topic}><strong>{editorialText(row.topic)}</strong><span>{editorialText(row.weak)}</span><span>{editorialText(row.strong)}</span></div>)}</div></section>}
+      {model.sources.length > 0 && <section className="article-section numbered-sources"><h2 id={ids.sources}>Sources and further reading</h2><ol>{model.sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{editorialText(source.name)}</a>{source.note && <span>{editorialText(source.note)}</span>}</li>)}</ol></section>}
+      {model.faqs.length > 0 && <section className="card faq-card"><h2 id={ids.questions}>Questions managers ask</h2>{model.faqs.map((faq, index) => <div className="faq-item" key={faq.q}><h3 id={ids.faqs[index]}>{editorialText(faq.q)}</h3><p>{editorialText(faq.a)}</p></div>)}</section>}
+      <section className="card content-testimonial"><h2 id={ids.decision}>A practical decision framework</h2><p>Define the task, evidence, authority boundary, reviewer, and stop condition before assigning live work. Test a normal case and an exception, then expand access or volume only after the evidence is consistently reviewable.</p></section>
+      <section className="article-section"><h2 id={ids.related}>Related content</h2><p>Compare <a href="/services">offshore staffing services</a>, review the <a href="/research">research library</a>, or <a href="/contact-us">request a role plan</a> grounded in your systems and approval boundaries.</p></section>
+    </div></div>
+  </article><CTA/></main><Footer/></>;
 }

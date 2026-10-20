@@ -15,8 +15,6 @@ reviewedAt: "2026-08-19T12:00:00.000Z"
 featuredImage: "/aug19-heroes/offshore-resourcing-review-consistency-research.webp"
 ---
 
-# Research Brief: Offshore Resourcing Operations Review Consistency
-
 *August 19, 2026*
 
 ## Research question
@@ -77,3 +75,10 @@ The central conclusion is that offshore resourcing operations review consistency
 - [CISA Identity and Access Management](https://www.cisa.gov/topics/cyber-threats-and-advisories/identity-and-access-management)
 - [GAO Standards for Internal Control](https://www.gao.gov/products/gao-14-704g)
 - [COSO Internal Control](https://www.coso.org/internal-control)
+
+- [NIST SP 800-53 Rev. 5, Security and Privacy Controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)
+- [NIST SP 800-61 Rev. 3, Incident Response Recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
+- [NIST SP 800-92, Guide to Computer Security Log Management](https://csrc.nist.gov/pubs/sp/800/92/final)
+- [CISA Zero Trust Maturity Model](https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model)
+- [The IIA's Three Lines Model](https://www.theiia.org/en/content/position-papers/2020/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense/)
+- [NIST SP 800-161 Rev. 1, Cybersecurity Supply Chain Risk Management](https://csrc.nist.gov/pubs/sp/800/161/r1/final)

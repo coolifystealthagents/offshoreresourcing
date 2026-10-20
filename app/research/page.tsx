@@ -9,12 +9,6 @@ export const metadata = {
 };
 export default function Research() {
   const researchPosts = getDocuments("research");
-  const clusters = [
-    "All Research",
-    "Hiring Controls",
-    "Scope Benchmarks",
-    "Workflow Design",
-  ];
   return (
     <>
       <Header />
@@ -40,15 +34,15 @@ export default function Research() {
               aria-label="Research quality signals"
             >
               <div>
-                <strong>01</strong>
+                <strong>Evidence</strong>
                 <span>Benchmarks and operating context</span>
               </div>
               <div>
-                <strong>02</strong>
+                <strong>Review</strong>
                 <span>Practical screening questions</span>
               </div>
               <div>
-                <strong>03</strong>
+                <strong>Action</strong>
                 <span>Implementation checks</span>
               </div>
             </aside>
@@ -56,35 +50,16 @@ export default function Research() {
         </section>
         <section className="section research-library-section">
           <div className="container">
-            <nav
-              className="research-cluster-tabs"
-              aria-label="Research topic filters"
-            >
-              {clusters.map((cluster, i) => (
-                <a
-                  className={i === 0 ? "active" : ""}
-                  href="/research"
-                  key={cluster}
-                >
-                  {cluster}
-                  <small>
-                    {i === 0
-                      ? researchPosts.length
-                      : Math.max(1, Math.ceil(researchPosts.length / 3))}
-                  </small>
-                </a>
-              ))}
-            </nav>
             <div className="research-card-grid">
               {researchPosts.length ? (
-                researchPosts.map((p, i) => (
+                researchPosts.map((p) => (
                   <a
                     className="research-library-card"
                     href={`/research/${p.slug}`}
                     key={p.slug}
                   >
                     <span className="research-card-badge">
-                      {clusters[(i % 3) + 1]}
+                      {p.category}
                     </span>
                     <h2>{p.title}</h2>
                     <time dateTime={p.publishedAt}>Published {formatDate(p.publishedAt)}</time>
@@ -95,7 +70,6 @@ export default function Research() {
                     <p className="research-card-excerpt">{p.description}</p>
                     <div className="research-card-meta">
                       <span>{site.brand} Research</span>
-                      <span>6 min read</span>
                       <span>{p.sourceCount} sources</span>
                     </div>
                   </a>

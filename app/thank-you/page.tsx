@@ -1,44 +1,6 @@
 import type { Metadata } from 'next';
 import { Header, Footer } from '../components';
-import { TestimonialsRail } from '../booking-components';
 
-export const metadata: Metadata = {
-  title: 'Thank You - Book A Meeting',
-  description: 'Choose a convenient time to speak with the Stealth Agents team.',
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = { title: 'Thank You | Book a Meeting', description: 'Choose a time to continue your staffing conversation.', robots: { index: false, follow: false }, alternates: { canonical: 'https://offshoreresourcing.com/thank-you' } };
 
-export default function ThankYouPage() {
-  return (
-    <>
-      <Header />
-      <main className="sa-booking-page">
-        <div className="container sa-booking-grid">
-          <div className="sa-booking-left">
-            <p className="sa-booking-kicker">You’re one step away.</p>
-            <h1>Step 2 - Book A Meeting</h1>
-            <p className="sa-booking-lead">No commitment. No risk. Just expert guidance.</p>
-            <img className="sa-booking-image" src="/thank-you-hero.png" alt="Stealth Agents team ready to help" width="619" height="402" />
-            <TestimonialsRail />
-          </div>
-          <section className="sa-booking-calendar" aria-labelledby="booking-calendar-title">
-            <h2 id="booking-calendar-title">Pick a Time That Works for You</h2>
-            <iframe
-              src="https://go.oncehub.com/StealthAgentsTeam?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1"
-              id="SOI_StealthAgentsTeam"
-              name="ScheduleOnceIframe"
-              title="Schedule a meeting with Stealth Agents"
-              scrolling="yes"
-              frameBorder="0"
-              height="850"
-              width="100%"
-              className="sa-oncehub-frame"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          </section>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
-}
+export default function ThankYouPage() { return <><Header/><main className="sa-booking-page"><div className="container sa-booking-grid"><div className="sa-booking-left"><p className="sa-booking-kicker">Request received</p><h1>Choose a time to continue.</h1><p className="sa-booking-lead">Use the scheduler to select a meeting time with the Stealth Agents team. Bring your role scope, coverage needs, and open questions.</p><img className="sa-booking-image" src="/thank-you-hero.png" alt="Stealth Agents team ready for a staffing conversation" width="619" height="402"/></div><section className="sa-booking-calendar" aria-labelledby="booking-calendar-title"><h2 id="booking-calendar-title">Pick a time that works for you</h2><iframe src="https://go.oncehub.com/StealthAgentsTeam?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1&amp;redirect_url=https%3A%2F%2Foffshoreresourcing.com%2Fthanks-whats-next" id="SOI_StealthAgentsTeam" name="ScheduleOnceIframe" title="Schedule a meeting with Stealth Agents" scrolling="yes" frameBorder="0" height="850" width="100%" className="sa-oncehub-frame" referrerPolicy="strict-origin-when-cross-origin"/><p className="sa-booking-fallback">Completed a booking? <a href="/thanks-whats-next">See what happens next</a>.</p></section></div></main><Footer/></>; }

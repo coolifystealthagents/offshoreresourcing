@@ -2,7 +2,7 @@
   "name": "offshoreresourcing",
   "private": true,
   "scripts": {
-    "test": "node tests/homepage-image-labels.test.mjs",
+    "test": "node --test tests/*.test.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 3000",
@@ -14,8 +14,8 @@
     "thumbnails:sync-frontmatter": "py -3 scripts/thumbnail_ops.py sync-frontmatter"
   },
   "dependencies": {
-    "@next/third-parties": "^15.1.6",
-    "next": "^15.1.6",
+    "@next/third-parties": "^16.4.2",
+    "next": "^16.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

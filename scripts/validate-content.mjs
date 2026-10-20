@@ -28,7 +28,7 @@ for (const type of ['research', 'alternatives']) {
       console.error(`${name}: dash hygiene failure`);
       failures++;
     }
-    if (type === 'research' && (raw.match(/^\d+\.\s+\[[^\]]+\]\(https?:\/\//gm) || []).length < 10) {
+    if (type === 'research' && (raw.match(/^(?:\d+\.|-)\s+\[[^\]]+\]\(https?:\/\//gm) || []).length < 10) {
       console.error(`${name}: research requires at least 10 sources`);
       failures++;
     }

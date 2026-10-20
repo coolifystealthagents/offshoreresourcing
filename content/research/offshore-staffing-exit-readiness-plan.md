@@ -127,3 +127,7 @@ The site's [role suitability framework](/research/philippines-offshore-role-suit
 6. [Contingency Planning Guide for Federal Information Systems, SP 800-34 Rev. 1](https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final), National Institute of Standards and Technology, checked September 18, 2026.
 7. [Incident Response Recommendations and Considerations for Cybersecurity Risk Management, SP 800-61 Rev. 3](https://csrc.nist.gov/pubs/sp/800/61/r3/final), National Institute of Standards and Technology, checked September 18, 2026.
 8. [General principles and operational guidelines for fair recruitment](https://www.ilo.org/publications/general-principles-and-operational-guidelines-fair-recruitment-and), International Labour Organization, checked September 18, 2026.
+
+9. [NIST SP 800-92, Guide to Computer Security Log Management](https://csrc.nist.gov/pubs/sp/800/92/final), checked against the source for this review.
+
+10. [CISA Zero Trust Maturity Model](https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model), checked against the source for this review.
