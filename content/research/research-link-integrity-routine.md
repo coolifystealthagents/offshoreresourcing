@@ -28,7 +28,7 @@ This routine uses public search, research, accessibility, quality, privacy, and 
 ## Related research
 - [Research article internal link map](/research/research-article-internal-link-map)
 - [Research metadata completeness check](/research/research-metadata-completeness-check)
-- [Research source recency policy](/research/research-source-recency-policy)
+- [Research source expiry monitoring](/research/research-source-expiry-monitoring)
 ## FAQs
 ### How often should links be checked?
 Check before publication and whenever a linked article, source, or route changes.
