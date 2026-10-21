@@ -53,3 +53,13 @@ Start with `candidate-screening-record-evidence-quality`. It matches the candida
 - Do not add a link merely to rotate anchors or manufacture a cluster.
 - Keep Philippines-only staffing language, and keep hiring, employment, money, policy, and legal authority with the reader's authorized team.
 - Treat research as source-backed planning help. Separate observed evidence from the site's own recommendations.
+
+## 2026-10-21 candidate review: candidate-screening evidence
+
+- **Source route:** `/research/candidate-screening-record-evidence-quality`
+- **Service route:** `/services/candidate-screening-coordination`
+- **Reader question:** A hiring manager has screening notes but cannot tell whether the record gives them enough job-relevant evidence to make the next decision.
+- **Artifact check:** Fresh build selected one source artifact with the H1 "Evidence quality in offshore candidate screening records" and one service artifact with the H1 "Candidate Screening Coordination." Both routes have self-canonicals and sitemap entries. The source `<main>` has zero links to the service route.
+- **Candidate action:** Add one in-body link only beside the article's advice on setting up a documented screening queue. The link should offer Philippines-based coordination of approved screening records, not candidate selection or advancement.
+- **Decision boundary:** The hiring manager retains screening criteria, candidate advancement, offers, employment decisions, and exceptions. The support role prepares and routes documented evidence.
+- **State:** Verified absent. This is the next rendered handoff candidate, not a published change or a public-proof claim.
