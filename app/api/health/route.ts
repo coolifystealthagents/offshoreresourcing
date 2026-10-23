@@ -1,2 +1,8 @@
-export const dynamic = 'force-dynamic';
-export function GET() { return Response.json({ status: 'ok', service: 'offshoreresourcing' }, { headers: { 'cache-control': 'no-store' } }); }
+export const dynamic = 'force-static';
+
+export function GET() {
+  return new Response(JSON.stringify({ status: 'ok', service: 'offshoreresourcing.com' }), {
+    status: 200,
+    headers: { 'content-type': 'application/json', 'cache-control': 'no-store' },
+  });
+}
