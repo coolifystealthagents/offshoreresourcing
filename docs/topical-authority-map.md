@@ -43,9 +43,9 @@ This is an internal execution ledger. It keeps each published research page tied
 | Compliance Document Administration | How should a team limit access and keep a review trail for controlled documents? | `/research/data-minimization-for-offshore-support` | `/services/compliance-document-administration` | The service page must stay framed as administrative support, not legal or compliance advice. |
 | Retention Program Support | What can continuity evidence tell a team before it changes a retention plan? | `/research/remote-staff-retention-evidence` | `/services/retention-program-support` | Avoid causal claims. The reader should still test the local role, period, and review conditions. |
 
-## Next release candidate
+## Candidate-screening handoff status
 
-Start with `candidate-screening-record-evidence-quality`. It matches the candidate-screening service route exactly, and the new article gives a natural point to send a reader who needs help setting up a documented screening queue. Before changing it, confirm the generated service artifact contains `/services/candidate-screening-coordination`; then assert the new source-route label and href are present and that no generic service link replaces that decision-specific handoff.
+`candidate-screening-record-evidence-quality` already gives a reader who needs a documented screening queue a decision-specific path to `/services/candidate-screening-coordination`. Its in-body handoff limits the Philippines-based role to keeping records complete and comparable while the hiring manager keeps the selection decision. Do not add a second link for this pair.
 
 ## Guardrails
 
@@ -54,12 +54,13 @@ Start with `candidate-screening-record-evidence-quality`. It matches the candida
 - Keep Philippines-only staffing language, and keep hiring, employment, money, policy, and legal authority with the reader's authorized team.
 - Treat research as source-backed planning help. Separate observed evidence from the site's own recommendations.
 
-## 2026-10-21 candidate review: candidate-screening evidence
+## 2026-10-23 candidate review: candidate-screening evidence
 
 - **Source route:** `/research/candidate-screening-record-evidence-quality`
 - **Service route:** `/services/candidate-screening-coordination`
 - **Reader question:** A hiring manager has screening notes but cannot tell whether the record gives them enough job-relevant evidence to make the next decision.
-- **Artifact check:** Fresh build selected one source artifact with the H1 "Evidence quality in offshore candidate screening records" and one service artifact with the H1 "Candidate Screening Coordination." Both routes have self-canonicals and sitemap entries. The source `<main>` has zero links to the service route.
-- **Candidate action:** Add one in-body link only beside the article's advice on setting up a documented screening queue. The link should offer Philippines-based coordination of approved screening records, not candidate selection or advancement.
+- **Artifact check:** Fresh build selected one source artifact with the H1 "Evidence quality in offshore candidate screening records" and one service artifact with the H1 "Candidate Screening Coordination." Both routes have self-canonicals and sitemap entries. The source `<main>` has one service anchor to the canonical service URL.
+- **Rendered source:** `d328058bf638d953504bde3fa13c30acc632de96` added the in-body handoff beside the documented-queue advice.
+- **Candidate action:** Delivered and non-duplicable. Reassess only when a different existing source route has a verified-absent, decision-relevant candidate-screening path.
 - **Decision boundary:** The hiring manager retains screening criteria, candidate advancement, offers, employment decisions, and exceptions. The support role prepares and routes documented evidence.
-- **State:** Verified absent. This is the next rendered handoff candidate, not a published change or a public-proof claim.
+- **State:** Delivered locally; public verification remains unavailable while both route hosts and the sitemap return `503 text/plain`.
