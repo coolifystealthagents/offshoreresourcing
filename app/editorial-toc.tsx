@@ -7,7 +7,7 @@ export type TocItem = { id: string; text: string; level?: 2 | 3 };
 function TocLinks({ items, activeId }: { items: TocItem[]; activeId: string }) {
   return <ol className="editorial-toc-list">
     {items.map((item) => <li className={item.level === 3 ? 'toc-subitem' : undefined} key={item.id}>
-      <a href={`#${item.id}`} aria-current={activeId === item.id ? 'location' : undefined}>{item.text}</a>
+      <a href={`#${item.id}`} aria-current={activeId === item.id ? 'location' : undefined} onClick={(event) => { const details = event.currentTarget.closest('details'); if (details) details.removeAttribute('open'); }}>{item.text}</a>
     </li>)}
   </ol>;
 }
