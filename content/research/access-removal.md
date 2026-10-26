@@ -4,6 +4,9 @@ description: "A protocol measuring the gap between assignment end and access rem
 publishedAt: "2026-10-25"
 updated: "2026-10-25"
 tags: ["offshore", "research", "evidence"]
+category: "Offshore operations research"
+verifiedAt: 2026-10-25
+image: /images/research/october-25/access-removal.svg
 ---
 
 A protocol measuring the gap between assignment end and access removal for offshore recruitment and managed staffing work.

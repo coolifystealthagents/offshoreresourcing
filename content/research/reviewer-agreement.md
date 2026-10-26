@@ -4,6 +4,9 @@ description: "A protocol testing whether independent reviewers assign the same e
 publishedAt: "2026-10-25"
 updated: "2026-10-25"
 tags: ["offshore", "research", "evidence"]
+category: "Offshore operations research"
+verifiedAt: 2026-10-25
+image: /images/research/october-25/reviewer-agreement.svg
 ---
 
 A protocol testing whether independent reviewers assign the same exception reason to the same offshore recruitment and managed staffing record.

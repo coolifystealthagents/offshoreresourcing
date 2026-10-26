@@ -4,6 +4,9 @@ description: "A protocol separating owner wait, source wait, system delay, and r
 publishedAt: "2026-10-25"
 updated: "2026-10-25"
 tags: ["offshore", "research", "evidence"]
+category: "Offshore operations research"
+verifiedAt: 2026-10-25
+image: /images/research/october-25/queue-aging.svg
 ---
 
 A protocol separating owner wait, source wait, system delay, and rework in offshore recruitment and managed staffing queues.

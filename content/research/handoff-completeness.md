@@ -4,6 +4,9 @@ description: "A protocol measuring whether offshore recruitment and managed staf
 publishedAt: "2026-10-25"
 updated: "2026-10-25"
 tags: ["offshore", "research", "evidence"]
+category: "Offshore operations research"
+verifiedAt: 2026-10-25
+image: /images/research/october-25/handoff-completeness.svg
 ---
 
 A protocol measuring whether offshore recruitment and managed staffing handoffs carry the source, state, owner, and next action.

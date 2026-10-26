@@ -4,6 +4,9 @@ description: "A protocol for measuring whether offshore recruitment and managed 
 publishedAt: "2026-10-25"
 updated: "2026-10-25"
 tags: ["offshore", "research", "evidence"]
+category: "Offshore operations research"
+verifiedAt: 2026-10-25
+image: /images/research/october-25/intake-reliability.svg
 ---
 
 A protocol for measuring whether offshore recruitment and managed staffing intake items carry the source, owner, and date needed before work begins.
