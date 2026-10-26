@@ -264,8 +264,9 @@ const augustTenBlogDates: Record<string, string> = {
 type BlogPost = { slug: string; title: string; excerpt: string; minutes: number; publishedAt?: string; image?: string };
 
 import { october22Details, october22Posts } from './oct22-batch';
+import { october25Details, october25Posts } from './oct25-batch';
 
-export const blogPosts: readonly BlogPost[] = [...october22Posts, ...dailyBlogOct13Posts, ...dailyBlogOct12Posts, ...dailyBlogOct9Posts, ...dailyBlogOct8Posts, ...dailyBlogSep24Posts, ...dailyBlogSep23Posts, ...dailyBlogSep22Posts, ...dailyBlogSep18Offa60Posts, ...dailyBlogSep18Posts, ...dailyBlogSep14Posts,
+export const blogPosts: readonly BlogPost[] = [...october25Posts, ...october22Posts, ...dailyBlogOct13Posts, ...dailyBlogOct12Posts, ...dailyBlogOct9Posts, ...dailyBlogOct8Posts, ...dailyBlogSep24Posts, ...dailyBlogSep23Posts, ...dailyBlogSep22Posts, ...dailyBlogSep18Offa60Posts, ...dailyBlogSep18Posts, ...dailyBlogSep14Posts,
   ...dailyBlogSep11Posts, ...(blogPostsSource as readonly BlogPost[]), ...dailyBlogPosts, ...dailyBlog20Posts, ...repairBlog21Posts, ...sourceRepair2Posts, ...dailyBlog23Posts, ...august23BlogPosts, ...dailyBlog31Posts, ...dailyBlogSep1Posts, ...dailyBlogSep2Posts, ...dailyBlogSep4Posts, ...dailyBlogSep7Posts, ...dailyBlogSep8Posts, ...dailyBlogSep9Posts, ...dailyBlogSep10Posts]
   .map((post): BlogPost => augustTenBlogDates[post.slug] ? { ...post, publishedAt: augustTenBlogDates[post.slug] } : post)
   .sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || (blogPostsSource.findIndex((item) => item.slug === a.slug) - blogPostsSource.findIndex((item) => item.slug === b.slug)));
@@ -501,7 +502,7 @@ const august17BlogDetails = {
 } as const;
 
 export const blogDetails = {
-  ...october22Details,
+  ...october25Details,...october22Details,
   ...august17BlogDetails,
   'philippines-recruitment-coordinator-hiring-guide': {
     articleType: 'publisher',
