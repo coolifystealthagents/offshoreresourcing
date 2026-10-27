@@ -53,7 +53,7 @@ At Offshore Resourcing: Agreement is not accuracy. Two reviewers can agree on th
 
 The record can show field presence, source currency, named ownership, and where the offshore recruitment and managed staffing record is thin. It can support a clock-start definition, a pause log, a weekly exception review.
 
-In offshore recruitment and managed staffing: It cannot promise an outcome, a regulator's view, or a causal result. The protocol does not decide whether the service target itself was appropriate.
+A protocol measuring the gap between the defined clock event and the timestamp recorded in offshore recruitment and managed staffing. The offshoreresourcing review should show the source, owner, next action, and exception reason for this when does the service clock start in offshore recruitment and managed staffing? workflow before the item moves.
 
 ## Limitations and error
 

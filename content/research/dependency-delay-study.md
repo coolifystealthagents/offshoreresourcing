@@ -53,7 +53,7 @@ At Offshore Resourcing: Agreement is not accuracy. Two reviewers can agree on th
 
 The record can show field presence, source currency, named ownership, and where the offshore recruitment and managed staffing record is thin. It can support a dependency map, a confirmation target, a fallback rule.
 
-In offshore recruitment and managed staffing: It cannot promise an outcome, a regulator's view, or a causal result. The protocol does not rank teams or prove that one staffing model is better.
+A protocol separating upstream wait, owner wait, and rework in offshore recruitment and managed staffing dependency chains. The offshoreresourcing review should show the source, owner, next action, and exception reason for this where do dependencies add delay in offshore recruitment and managed staffing? workflow before the item moves.
 
 ## Limitations and error
 

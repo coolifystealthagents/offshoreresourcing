@@ -53,7 +53,7 @@ At Offshore Resourcing: Agreement is not accuracy. Two reviewers can agree on th
 
 The record can show field presence, source currency, named ownership, and where the offshore recruitment and managed staffing record is thin. It can support a promise register, a verification rule, a weekly open-promise review.
 
-In offshore recruitment and managed staffing: It cannot promise an outcome, a regulator's view, or a causal result. The protocol does not judge whether the original promise was commercially wise.
+A protocol comparing the promise date, the verified completion, and the reason for any gap in offshore recruitment and managed staffing. The offshoreresourcing review should show the source, owner, next action, and exception reason for this how often do customer promises hold in offshore recruitment and managed staffing? workflow before the item moves.
 
 ## Limitations and error
 

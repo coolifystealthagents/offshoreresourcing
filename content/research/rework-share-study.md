@@ -53,7 +53,7 @@ At Offshore Resourcing: Agreement is not accuracy. Two reviewers can agree on th
 
 The record can show field presence, source currency, named ownership, and where the offshore recruitment and managed staffing record is thin. It can support a rework reason code, a linked case record, a monthly rework review.
 
-In offshore recruitment and managed staffing: It cannot promise an outcome, a regulator's view, or a causal result. The protocol does not evaluate individual performance or prove a causal staffing effect.
+A protocol measuring repeat effort caused by missing evidence, wrong scope, or a failed check in offshore recruitment and managed staffing. The offshoreresourcing review should show the source, owner, next action, and exception reason for this how much work is rework in offshore recruitment and managed staffing? workflow before the item moves.
 
 ## Limitations and error
 

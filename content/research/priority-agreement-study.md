@@ -53,7 +53,7 @@ At Offshore Resourcing: Agreement is not accuracy. Two reviewers can agree on th
 
 The record can show field presence, source currency, named ownership, and where the offshore recruitment and managed staffing record is thin. It can support a priority scoring guide, a reviewer calibration, an override log.
 
-In offshore recruitment and managed staffing: It cannot promise an outcome, a regulator's view, or a causal result. The protocol does not judge whether the chosen priority produced the best business outcome.
+A protocol testing whether independent reviewers assign the same priority band to the same offshore recruitment and managed staffing item. The offshoreresourcing review should show the source, owner, next action, and exception reason for this do reviewers agree on work priority in offshore recruitment and managed staffing? workflow before the item moves.
 
 ## Limitations and error
 
