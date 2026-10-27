@@ -29,6 +29,7 @@ import { dailyBlogOct12Details as oct12Details, dailyBlogOct12Posts } from '../.
 import { dailyBlogOct13Details, dailyBlogOct13Posts } from '../../daily-blog-2026-10-13';
 import { october25Details, october25Posts } from '../../oct25-batch';
 import { october26Details, october26Posts } from '../../oct26-batch';
+import { october27Details, october27Posts } from '../../oct27-batch';
 import { EditorialToc, type TocItem } from '../../editorial-toc';
 import { editorialText, headingId, resolveContentImage } from '../../../lib/content';
 
@@ -47,6 +48,7 @@ type BlogModel = {
 
 /* Newest collection wins. The selected record drives body, image, schema and TOC. */
 const collections: readonly { details: AnyRecord; posts: readonly AnyRecord[] }[] = [
+  { details: october27Details, posts: october27Posts },
   { details: october26Details, posts: october26Posts },
   { details: october25Details, posts: october25Posts },
   { details: { ...oct12Details, ...dailyBlogOct13Details }, posts: [...dailyBlogOct13Posts, ...dailyBlogOct12Posts] },
