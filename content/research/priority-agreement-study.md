@@ -15,7 +15,7 @@ A protocol testing whether independent reviewers assign the same priority band t
 
 ## Research question and scope
 
-Do two reviewers put the same item in the same priority band using the written scoring rule? The scope is the operational record for offshore recruitment and managed staffing, not the legal, financial, or clinical conclusion that may follow.
+A protocol testing whether independent reviewers assign the same priority band to the same offshore recruitment and managed staffing item. The offshoreresourcing review should show the source, owner, next action, and exception reason for this do reviewers agree on work priority in offshore recruitment and managed staffing? workflow before the item moves.
 
 In the offshore recruitment and managed staffing lane: The study is deliberately narrow. It reports what the record can show in a defined population and window. It does not claim an industry rate or a causal staffing effect.
 

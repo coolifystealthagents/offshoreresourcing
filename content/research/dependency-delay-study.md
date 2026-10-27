@@ -15,7 +15,7 @@ A protocol separating upstream wait, owner wait, and rework in offshore recruitm
 
 ## Research question and scope
 
-How much delay comes from an upstream input, an internal owner, or a rework loop? The scope is the operational record for offshore recruitment and managed staffing, not the legal, financial, or clinical conclusion that may follow.
+A protocol separating upstream wait, owner wait, and rework in offshore recruitment and managed staffing dependency chains. The offshoreresourcing review should show the source, owner, next action, and exception reason for this where do dependencies add delay in offshore recruitment and managed staffing? workflow before the item moves.
 
 In the offshore recruitment and managed staffing lane: The study is deliberately narrow. It reports what the record can show in a defined population and window. It does not claim an industry rate or a causal staffing effect.
 
