@@ -5,6 +5,10 @@ slug: "vetting-completeness-study-oct28"
 date: "2026-10-28"
 updated: "2026-10-28"
 author: "Editorial Team"
+category: "Offshore research"
+publishedAt: "2026-10-28"
+verifiedAt: "2026-10-28"
+image: "/thumbnails/october-28/vetting-completeness-study-oct28.svg"
 hero: "/thumbnails/october-28/vetting-completeness-study-oct28.svg"
 ---
 
