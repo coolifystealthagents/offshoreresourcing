@@ -13,6 +13,7 @@ const data = read('app/data.ts');
 const form = read('app/contact-us/StandardContactForm.tsx');
 const contactApi = read('app/api/contact/route.ts');
 const globalCss = read('app/globals.css');
+const acrClient = read('app/acr-client.tsx');
 
 function jpegDimensions(file) {
   const bytes = readFileSync(path.join(root, file));
@@ -61,6 +62,9 @@ test('reviews contain exactly fourteen unique records with official record prove
   assert.match(globalCss, /\.review-source\{display:inline-block/);
   assert.match(globalCss, /@keyframes review-marquee/);
   assert.match(globalCss, /prefers-reduced-motion:reduce[\s\S]*nth-child\(n\+15\)/);
+  assert.match(components, /tabIndex=\{duplicate \? -1 : undefined\}/);
+  assert.match(globalCss, /@media\(prefers-reduced-motion:reduce\)[\s\S]*?\.review-viewport\{overflow-x:auto;[\s\S]*?\.review-track\{width:max-content;display:flex;animation:none;will-change:auto\}/);
+  assert.doesNotMatch(globalCss, /@media\(prefers-reduced-motion:reduce\)[^{]*\{[^}]*\.review-track\{[^}]*display:grid/);
 });
 
 test('contact keeps intake form, official team plate, reviews, and responsive order', () => {
@@ -75,12 +79,17 @@ test('contact keeps intake form, official team plate, reviews, and responsive or
 
 test('approved contact form contract and API mappings are preserved', () => {
   for (const field of ['firstName', 'lastName', 'email', 'phoneLocal', 'countryCode', 'companyName', 'website', 'companySize', 'positions', 'referral', 'referralSpecify', 'message']) assert.match(form, new RegExp(`name=["']${field}["']`), `missing form field ${field}`);
-  for (const label of ['First Name *', 'Last Name *', 'Business Email *', 'Not Accepting Personal Email', 'Phone Number *', 'Company Name *', 'Website / URL', 'Company Size *', 'How Many Positions to Fill *', 'How Did You Hear About Us? *', 'Please Specify *', 'Message']) assert.ok(form.includes(label), `missing approved label ${label}`);
+  for (const label of ['First Name *', 'Last Name *', 'Business Email *', 'Phone Number *', 'Company Name *', 'Website / URL', 'Company Size *', 'How Many Positions to Fill *', 'How Did You Hear About Us? *', 'Please Specify *', 'Message']) assert.ok(form.includes(label), `missing approved label ${label}`);
+  assert.doesNotMatch(form, /Not Accepting Personal Email/);
   assert.match(form, /textarea name="message" rows=\{4\}/);
-  assert.match(form, /textarea\{resize:vertical;min-height:150px\}/);
+  assert.match(form, /textarea\{resize:vertical;min-height:64px\}/);
+  assert.match(form, /@media\(max-width:700px\)[\s\S]*textarea\{min-height:150px\}/);
+  assert.match(form, /<h2>Tell us about the role<\/h2>/);
   assert.match(form, /source: "contact-form", formId: "contactPageForm"/);
   assert.match(form, /acrTracker\?\.trackLead/);
-  assert.match(form, /const tracker = .*acrTracker\?\.trackLead/);
+  assert.match(form, /endpoint = "\/api\/contact", encoding = "form"/);
+  assert.doesNotMatch(form, /const tracker = .*acrTracker\?\.trackLead/);
+  assert.doesNotMatch(form, /catch[\s\S]*trackLead[\s\S]*location\.assign/);
   assert.match(form, /window\.location\.assign\("\/thank-you"\)/);
   assert.match(form, /We could not submit your request\. Please try again\./);
   for (const key of ['phoneLocal', 'countryCode', 'phoneCountryCode', 'country_code', "text(form, 'phone'", 'referralSpecify']) assert.ok(contactApi.includes(key), `API mapping missing ${key}`);
@@ -93,6 +102,50 @@ test('approved contact form contract and API mappings are preserved', () => {
   assert.match(contactApi, /bytes > MAX_BODY_BYTES/);
   assert.match(contactApi, /reader\.cancel\('Body limit exceeded'\)/);
   assert.doesNotMatch(contactApi, /await request\.formData\(\)/);
+});
+
+test('the contact component exclusively owns enhanced submission', () => {
+  assert.doesNotMatch(acrClient, /addEventListener\(['"]submit/);
+  assert.doesNotMatch(acrClient, /fetch\(action/);
+  assert.match(form, /new URLSearchParams\(payload\)/);
+  assert.match(form, /if \(!response\.ok\) throw new Error/);
+});
+
+test('legacy cancellation URL consolidates permanently', () => {
+  assert.match(read('app/cancellation/page.tsx'), /permanentRedirect\(['"]\/cancellation-policy['"]\)/);
+  assert.doesNotMatch(read('app/sitemap.xml/route.ts'), /['"]\/cancellation['"]/);
+});
+
+test('editorial conversion banners preserve attribution on the canonical contact route', () => {
+  const profile = JSON.parse(read('app/blog-banner-profile.json'));
+  const variants = Object.values(profile.positions).flat();
+  assert.equal(variants.length, 9);
+  for (const variant of variants) assert.equal(variant.href, '/contact-us');
+  assert.match(read('app/blog-banners.tsx'), /utm_content: `\$\{position\}_\$\{variant\}`/);
+});
+
+test('commercial process layouts do not generate decorative sequence numbers', () => {
+  assert.doesNotMatch(globalCss, /counter-reset\s*:\s*step/);
+  assert.doesNotMatch(globalCss, /counter-increment\s*:\s*step/);
+  assert.doesNotMatch(globalCss, /content\s*:\s*counter\(step/);
+});
+
+test('index routes own their canonical metadata and research links only canonical records', () => {
+  for (const file of ['app/blog/page.tsx', 'app/research/page.tsx', 'app/alternatives/page.tsx']) {
+    assert.match(read(file), /alternates:\s*\{\s*canonical/);
+  }
+  const paginatedBlog = read('app/blog/page/[page]/page.tsx');
+  assert.match(paginatedBlog, /generateMetadata/);
+  assert.match(paginatedBlog, /if \(!\/\^\[1-9\]\\d\*\$\/\.test\(page\)\) return null/);
+  assert.match(paginatedBlog, /Number\.isSafeInteger\(pageNumber\)/);
+  assert.match(paginatedBlog, /pageNumber === null \|\| pageNumber > totalPages\) notFound\(\)/);
+  assert.match(paginatedBlog, /title: `Blog page \$\{pageNumber\}`/);
+  assert.doesNotMatch(paginatedBlog, /title: `[^`]*\| Offshore Resourcing`/);
+  assert.match(paginatedBlog, /canonical: pageNumber === 1 \? "\/blog" : `\/blog\/page\/\$\{pageNumber\}`/);
+  assert.match(paginatedBlog, /if \(n === 1\) permanentRedirect\("\/blog"\)/);
+  const researchIndex = read('app/research/page.tsx');
+  assert.match(researchIndex, /getCanonicalStatus/);
+  assert.match(researchIndex, /filter\([^\n]+!getCanonicalStatus\([^\n]+\.isDuplicate/);
 });
 
 test('commercial service guides are substantial and exactly match app data slugs', () => {

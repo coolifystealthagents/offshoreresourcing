@@ -1,14 +1,15 @@
 import { Header, Footer } from "../components";
 import { site } from "../data";
-import { getDocuments } from "../../lib/content";
+import { getCanonicalStatus, getDocuments } from "../../lib/content";
 const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 export const metadata = {
   title: `Research | ${site.brand}`,
   description:
     "Original research and source-backed analysis for planning Philippines-based support.",
+  alternates: { canonical: "/research" },
 };
 export default function Research() {
-  const researchPosts = getDocuments("research");
+  const researchPosts = getDocuments("research").filter((document) => !getCanonicalStatus(document).isDuplicate);
   return (
     <>
       <Header />

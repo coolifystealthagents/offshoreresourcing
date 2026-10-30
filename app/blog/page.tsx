@@ -4,6 +4,7 @@ const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "
 export const metadata = {
   title: `Blog | ${site.brand}`,
   description: "Practical Philippines staffing guides.",
+  alternates: { canonical: "/blog" },
 };
 export default function Blog() {
   const posts = blogPosts.slice(0, 20);
