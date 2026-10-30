@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
+import ts from 'typescript';
 
 const root = process.cwd();
 const read = file => readFileSync(path.join(root, file), 'utf8');
@@ -14,6 +15,39 @@ const form = read('app/contact-us/StandardContactForm.tsx');
 const contactApi = read('app/api/contact/route.ts');
 const globalCss = read('app/globals.css');
 const acrClient = read('app/acr-client.tsx');
+
+function exportedMetadataObject(source, file = 'metadata.tsx') {
+  const syntax = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+  const declarations = syntax.statements.flatMap(statement => {
+    if (!ts.isVariableStatement(statement) || !statement.modifiers?.some(modifier => modifier.kind === ts.SyntaxKind.ExportKeyword)) return [];
+    return statement.declarationList.declarations.filter(declaration => ts.isIdentifier(declaration.name) && declaration.name.text === 'metadata');
+  });
+  assert.equal(declarations.length, 1, `${file} must export exactly one metadata declaration`);
+  const initializer = declarations[0].initializer;
+  assert.ok(initializer && ts.isObjectLiteralExpression(initializer), `${file} metadata must be an object literal`);
+  return initializer;
+}
+
+function staticPropertyName(property, file) {
+  assert.ok(ts.isIdentifier(property.name) || ts.isStringLiteral(property.name) || ts.isNumericLiteral(property.name), `${file} metadata contains an unsupported property name`);
+  return property.name.text;
+}
+
+function directProperty(object, name, file) {
+  for (const property of object.properties) {
+    assert.ok(ts.isPropertyAssignment(property), `${file} metadata may only contain direct property assignments`);
+    assert.ok(!ts.isComputedPropertyName(property.name), `${file} metadata may not contain computed properties`);
+    staticPropertyName(property, file);
+  }
+  const matches = object.properties.filter(property => staticPropertyName(property, file) === name);
+  assert.equal(matches.length, 1, `${file} metadata must contain exactly one direct ${name} property`);
+  return matches[0].initializer;
+}
+
+function exactString(initializer, expected, label) {
+  assert.ok(ts.isStringLiteral(initializer) || ts.isNoSubstitutionTemplateLiteral(initializer), `${label} must be a string literal`);
+  assert.equal(initializer.text, expected, `${label} must match exactly`);
+}
 
 function jpegDimensions(file) {
   const bytes = readFileSync(path.join(root, file));
@@ -131,9 +165,29 @@ test('commercial process layouts do not generate decorative sequence numbers', (
 });
 
 test('index routes own their canonical metadata and research links only canonical records', () => {
-  for (const file of ['app/blog/page.tsx', 'app/research/page.tsx', 'app/alternatives/page.tsx']) {
-    assert.match(read(file), /alternates:\s*\{\s*canonical/);
+  const indexMetadata = new Map([
+    ['app/blog/page.tsx', ['Blog', '/blog']],
+    ['app/research/page.tsx', ['Research', '/research']],
+    ['app/alternatives/page.tsx', ['Alternatives', '/alternatives']],
+  ]);
+  for (const [file, [title, canonical]] of indexMetadata) {
+    const source = read(file);
+    const metadata = exportedMetadataObject(source, file);
+    exactString(directProperty(metadata, 'title', file), title, `${file} metadata.title`);
+    const alternates = directProperty(metadata, 'alternates', file);
+    assert.ok(ts.isObjectLiteralExpression(alternates), `${file} metadata.alternates must be an object literal`);
+    exactString(directProperty(alternates, 'canonical', `${file} metadata.alternates`), canonical, `${file} metadata.alternates.canonical`);
   }
+  const rootTitle = directProperty(exportedMetadataObject(read('app/layout.tsx'), 'app/layout.tsx'), 'title', 'app/layout.tsx');
+  assert.ok(ts.isObjectLiteralExpression(rootTitle), 'root metadata.title must be an object literal');
+  exactString(directProperty(rootTitle, 'default', 'app/layout.tsx title'), 'Offshore Resourcing | Plan offshore roles', 'root metadata.title.default');
+  exactString(directProperty(rootTitle, 'template', 'app/layout.tsx title'), '%s | Offshore Resourcing', 'root metadata.title.template');
+  const escapedTitleFixture = exportedMetadataObject(String.raw`export const metadata = { title: "Blog", t\u0069tle: dynamicTitle };`, 'escaped-title-fixture.tsx');
+  assert.throws(() => directProperty(escapedTitleFixture, 'title', 'escaped-title-fixture.tsx'), /exactly one direct title property/);
+  const escapedCanonicalFixture = exportedMetadataObject(String.raw`export const metadata = { alternates: { canonical: "/blog", "can\u006fnical": "/wrong" } };`, 'escaped-canonical-fixture.tsx');
+  const fixtureAlternates = directProperty(escapedCanonicalFixture, 'alternates', 'escaped-canonical-fixture.tsx');
+  assert.ok(ts.isObjectLiteralExpression(fixtureAlternates));
+  assert.throws(() => directProperty(fixtureAlternates, 'canonical', 'escaped-canonical-fixture.tsx alternates'), /exactly one direct canonical property/);
   const paginatedBlog = read('app/blog/page/[page]/page.tsx');
   assert.match(paginatedBlog, /generateMetadata/);
   assert.match(paginatedBlog, /if \(!\/\^\[1-9\]\\d\*\$\/\.test\(page\)\) return null/);
