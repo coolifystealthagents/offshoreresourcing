@@ -32,6 +32,7 @@ import { october26Details, october26Posts } from '../../oct26-batch';
 import { october27Details, october27Posts } from '../../oct27-batch';
 import { EditorialToc, type TocItem } from '../../editorial-toc';
 import { editorialText, headingId, resolveContentImage } from '../../../lib/content';
+import { parseInlineMarkdownLinks } from '../../../lib/inline-markdown';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
 type AnyRecord = Record<string, any>;
@@ -65,6 +66,12 @@ const collections: readonly { details: AnyRecord; posts: readonly AnyRecord[] }[
   { details: repairBlog21Details, posts: repairBlog21Posts }, { details: dailyBlog20Details, posts: dailyBlog20Posts },
   { details: dailyBlogDetails, posts: dailyBlogPosts },
 ];
+
+function inlineEditorialText(value: string) {
+  return parseInlineMarkdownLinks(editorialText(value)).map((token, index) => token.type === 'link'
+    ? <a href={token.href} key={`inline-link-${index}`}>{token.label}</a>
+    : token.value);
+}
 
 function uniqueHeading(text: string, counts: Map<string, number>) {
   const root = headingId(text); const count = (counts.get(root) ?? 0) + 1; counts.set(root, count);
@@ -142,11 +149,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   return <><main className="section article-page editorial-page"><JsonLd data={{ '@context': 'https://schema.org', '@graph': graph }}/><article className="container content-article">
     <header className="editorial-hero"><div className="editorial-hero-copy"><p className="eyebrow">Philippines staffing guide · {post.minutes} min read · <time dateTime={publishedAt}>Published {new Date(`${publishedAt}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time></p><h1>{editorialText(post.title)}</h1><p className="lead">{editorialText(post.excerpt)}</p></div><img className="content-hero" src={image.src} alt={`${editorialText(post.title)} editorial guide`} width={image.width} height={image.height}/></header>
     <div className="content-layout"><EditorialToc items={model.toc} family="Blog"/><div className="editorial-body">
-      <section className="card evidence-card"><h2 id={model.toc[0].id}>The short answer</h2>{model.shortAnswer.map((paragraph) => <p key={paragraph}>{editorialText(paragraph)}</p>)}<ul>{model.takeaways.map((item) => <li key={item}>{editorialText(item)}</li>)}</ul></section>
-      {model.sections.map((section, index) => <section className="article-section" key={`${section.heading}-${index}`}><h2 id={ids.sections[index]}>{editorialText(section.heading)}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{editorialText(paragraph)}</p>)}</section>)}
+      <section className="card evidence-card"><h2 id={model.toc[0].id}>The short answer</h2>{model.shortAnswer.map((paragraph) => <p key={paragraph}>{inlineEditorialText(paragraph)}</p>)}<ul>{model.takeaways.map((item) => <li key={item}>{inlineEditorialText(item)}</li>)}</ul></section>
+      {model.sections.map((section, index) => <section className="article-section" key={`${section.heading}-${index}`}><h2 id={ids.sections[index]}>{editorialText(section.heading)}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{inlineEditorialText(paragraph)}</p>)}</section>)}
       {model.comparison.length > 0 && <section className="card"><h2 id={ids.provider}>Provider answer check</h2><div className="comparison-table">{model.comparison.map((row) => <div className="comparison-row" key={row.topic}><strong>{editorialText(row.topic)}</strong><span>{editorialText(row.weak)}</span><span>{editorialText(row.strong)}</span></div>)}</div></section>}
       {model.sources.length > 0 && <section className="article-section numbered-sources"><h2 id={ids.sources}>Sources and further reading</h2><ol>{model.sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{editorialText(source.name)}</a>{source.note && <span>{editorialText(source.note)}</span>}</li>)}</ol></section>}
-      {model.faqs.length > 0 && <section className="card faq-card"><h2 id={ids.questions}>Questions managers ask</h2>{model.faqs.map((faq, index) => <div className="faq-item" key={faq.q}><h3 id={ids.faqs[index]}>{editorialText(faq.q)}</h3><p>{editorialText(faq.a)}</p></div>)}</section>}
+      {model.faqs.length > 0 && <section className="card faq-card"><h2 id={ids.questions}>Questions managers ask</h2>{model.faqs.map((faq, index) => <div className="faq-item" key={faq.q}><h3 id={ids.faqs[index]}>{editorialText(faq.q)}</h3><p>{inlineEditorialText(faq.a)}</p></div>)}</section>}
       <section className="card content-testimonial"><h2 id={ids.decision}>A practical decision framework</h2><p>Define the task, evidence, authority boundary, reviewer, and stop condition before assigning live work. Test a normal case and an exception, then expand access or volume only after the evidence is consistently reviewable.</p></section>
       <section className="article-section"><h2 id={ids.related}>Related content</h2><p>Compare <a href="/services">offshore staffing services</a>, review the <a href="/research">research library</a>, or <a href="/contact-us">request a role plan</a> grounded in your systems and approval boundaries.</p></section>
     </div></div>

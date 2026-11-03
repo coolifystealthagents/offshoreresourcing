@@ -270,6 +270,30 @@ test('adjacent partner logos are decorative', () => {
   assert.match(contact, /stealth-agents-logo\.png" width="149" height="50" alt=""/);
 });
 
+test('blog inline markdown links render through a safe URL allowlist', () => {
+  const source = read('lib/inline-markdown.ts');
+  const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
+  const module = { exports: {} };
+  new Function('exports', 'module', compiled)(module.exports, module);
+  const { safeInlineHref, parseInlineMarkdownLinks } = module.exports;
+  for (const href of ['/blog/example', '/contact-us?from=article#form', 'https://example.com/path', 'http://example.com']) assert.equal(safeInlineHref(href), href);
+  for (const href of ['//evil.example/path', '/\\evil.example/path', 'https://evil.example\\path', 'https://user:pass@example.com', 'javascript:alert(1)', 'data:text/html,test', '/line\nbreak']) assert.equal(safeInlineHref(href), null);
+  assert.deepEqual(parseInlineMarkdownLinks('Read [one](/blog/one) and [two](https://example.com).'), [
+    { type: 'text', value: 'Read ' },
+    { type: 'link', label: 'one', href: '/blog/one' },
+    { type: 'text', value: ' and ' },
+    { type: 'link', label: 'two', href: 'https://example.com' },
+    { type: 'text', value: '.' },
+  ]);
+  assert.deepEqual(parseInlineMarkdownLinks('Keep [unsafe](//evil.example) visible.'), [{ type: 'text', value: 'Keep [unsafe](//evil.example) visible.' }]);
+  const article = read('app/blog/[slug]/page.tsx');
+  assert.match(article, /parseInlineMarkdownLinks\(editorialText\(value\)\)/);
+  assert.match(article, /model\.shortAnswer\.map\(\(paragraph\) => <p key=\{paragraph\}>\{inlineEditorialText\(paragraph\)\}<\/p>\)/);
+  assert.match(article, /section\.paragraphs\.map\(\(paragraph\) => <p key=\{paragraph\}>\{inlineEditorialText\(paragraph\)\}<\/p>\)/);
+  assert.match(article, /<p>\{inlineEditorialText\(faq\.a\)\}<\/p>/);
+  assert.doesNotMatch(article, /dangerouslySetInnerHTML[^\n]+inlineEditorialText/);
+});
+
 test('security headers, registry keys, hero structure, and custom 404 remain complete', () => {
   const config = read('next.config.mjs');
   for (const header of ['Content-Security-Policy', 'Strict-Transport-Security', 'X-Content-Type-Options', 'Referrer-Policy', 'Permissions-Policy']) assert.ok(config.includes(header));
