@@ -61,6 +61,7 @@
 .formColumn { grid-area: form; min-width: 0; }
 .reviews { grid-area: reviews; min-width: 0; align-self: start; }
 .hero :global(.review-heading h2) { color: #fff; }
+.hero :global(.review-heading .review-stars) { color: #ffc21c !important; }
 .hero :global(.review-heading > a),
 .hero :global(.review-source) { color: var(--or-cyan-bright); }
 .hero :global(.review-card) { color: var(--or-ink); }
@@ -177,4 +178,35 @@
   .teamGrid figure > img { height: 350px; }
   .teamGrid figcaption { left: 12px; bottom: 12px; max-width: calc(100% - 24px); font-size: 12px; }
   .teamGrid figcaption img { width: 78px; }
+}
+
+.heroBadge {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 14px;
+  padding: 7px 14px;
+  border: 1px solid rgba(114,211,251,.28);
+  border-radius: 999px;
+  color: var(--or-cyan-bright);
+  background: rgba(114,211,251,.10);
+  font-size: 12px;
+  font-weight: 750;
+}
+.heroBadge span { color: #ffc21c; }
+.copy h1 span { color: var(--or-cyan-bright); }
+.intakeFacts {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+  margin: 30px 0 0;
+}
+.intakeFacts div { min-width: 0; }
+.intakeFacts dt { color: #fff; font-size: 20px; font-weight: 800; }
+.intakeFacts dd { margin: 3px 0 0; color: #aeb9c8; font-size: 12px; line-height: 1.4; }
+
+@media (max-width: 700px) {
+  .intakeFacts { gap: 10px; }
+  .intakeFacts dt { font-size: 16px; }
 }

@@ -20,7 +20,7 @@ export function PartnerAttribution({ footer = false }: { footer?: boolean }) {
 }
 
 export function Header() {
-  return <><a className="skip-link" href="#main-content">Skip to main content</a><header className="nav"><div className="nav-inner"><a className="logo" href="/" aria-label={`${site.brand} home`}><LogoMark /></a><nav className="links fleet-links" aria-label="Primary navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/contact-us">Contact Us</a></nav><PartnerAttribution /><MobileNavigation /></div></header><span id="main-content" className="main-anchor" tabIndex={-1} /> </>;
+  return <><a className="skip-link" href="#main-content">Skip to main content</a><header className="nav"><div className="nav-inner"><a className="logo" href="/" aria-label={`${site.brand} home`}><LogoMark /></a><span className="header-partner"><PartnerAttribution /></span><nav className="links fleet-links" aria-label="Primary navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/contact-us">Contact Us</a></nav><a className="header-cta" href="/contact-us">Plan a Role <span aria-hidden="true">→</span></a><MobileNavigation /></div></header><span id="main-content" className="main-anchor" tabIndex={-1} /> </>;
 }
 
 export function Footer() {

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function ContactUsPage() {
   return <><Header/><main className={styles.page}>
     <section className={styles.hero}><div className={styles.heroGrid}>
-      <div className={styles.copy}><p className={styles.kicker}>Staffing intake</p><h1>Turn a workload into a role your manager can run.</h1><p className={styles.lead}>Share the recurring work, tools, coverage, and decisions that stay internal. We will use the detail to guide a practical staffing conversation.</p><div className={styles.scopeLabels}><span>Role scope</span><span>Access limits</span><span>Review rhythm</span><span>Philippines based talent</span></div></div>
+      <div className={styles.copy}><p className={styles.heroBadge}><span aria-hidden="true">★</span> Staffing intake for a defined role</p><h1>Turn a workload into a role <span>your manager can run.</span></h1><p className={styles.lead}>Share the recurring work, tools, coverage, and decisions that stay internal. We will use the detail to guide a practical staffing conversation.</p><div className={styles.scopeLabels}><span>Role scope</span><span>Access limits</span><span>Review rhythm</span><span>Philippines based talent</span></div><dl className={styles.intakeFacts}><div><dt>Prepare</dt><dd>Tasks and examples</dd></div><div><dt>Protect</dt><dd>Access and approvals</dd></div><div><dt>Review</dt><dd>Quality and exceptions</dd></div></dl></div>
       <div id="consultation" className={styles.formColumn}><StandardContactForm endpoint="/api/contact" encoding="form"/></div>
       <div className={styles.reviews}><ReviewsMarquee/></div>
     </div></section>
