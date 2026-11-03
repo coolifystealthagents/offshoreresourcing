@@ -34,10 +34,13 @@ export default async function BlogPage({
   return (
     <>
       <Header />
-      <main className="section">
-        <div className="container">
+      <main className="editorial-index-page">
+        <section className="editorial-index-hero"><div className="container">
           <p className="eyebrow">Philippines staffing blog</p>
           <h1>Blog page {n}</h1>
+          <p className="lead">Continue browsing practical role, control, and handoff guidance.</p>
+        </div></section>
+        <section className="editorial-index-library"><div className="container">
           <div className="cards">
             {posts.map((p) => (
               <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
@@ -57,7 +60,7 @@ export default async function BlogPage({
               </a>
             ))}
           </nav>
-        </div>
+        </div></section>
       </main>
       <Footer />
     </>

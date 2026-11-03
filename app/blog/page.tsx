@@ -12,14 +12,13 @@ export default function Blog() {
   return (
     <>
       <Header />
-      <main className="section">
-        <div className="container">
+      <main className="editorial-index-page">
+        <section className="editorial-index-hero"><div className="container">
           <p className="eyebrow">Philippines staffing blog</p>
           <h1>Practical role and handoff guides.</h1>
-          <p className="lead">
-            Read concise guidance for scoping and managing Filipino support
-            roles. Existing article addresses remain available.
-          </p>
+          <p className="lead">Read concise guidance for scoping and managing Filipino support roles. Existing article addresses remain available.</p>
+        </div></section>
+        <section className="editorial-index-library"><div className="container">
           <div className="cards">
             {posts.map((p) => (
               <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
@@ -41,7 +40,7 @@ export default function Blog() {
               </a>
             ))}
           </nav>
-        </div>
+        </div></section>
       </main>
       <Footer />
     </>

@@ -326,3 +326,59 @@
     padding-left: 4px;
   }
 }
+
+/* Reference-led visual alignment */
+.page {
+  --ink: var(--or-ink, #101828);
+  --muted: var(--or-copy, #475467);
+  --paper: var(--or-subtle, #f7f9fc);
+  --teal: var(--or-cyan-deep, #087f9c);
+  --aubergine: var(--or-night-soft, #0c1424);
+  --signal: var(--or-cyan, #22b8dc);
+  --line: var(--or-line, #e4e7ec);
+  font-family: var(--or-font, Arial, sans-serif);
+}
+.shell { width: min(var(--or-shell, 1280px), calc(100% - 48px)); }
+.hero {
+  min-height: min(760px, calc(100svh - 68px));
+  display: grid;
+  align-items: center;
+  padding: 64px 0;
+  color: #fff;
+  border-bottom: 0;
+  background: radial-gradient(circle at 82% 18%, rgba(34,184,220,.17), transparent 32%), var(--or-night, #030712);
+}
+.hero h1 { color: #fff; font-family: var(--or-font, Arial, sans-serif); line-height: 1.04; }
+.lead { color: #cdd5df; }
+.eyebrow { color: var(--or-cyan-bright, #6edcf3); }
+.facts { gap: 12px; border: 0; background: transparent; }
+.facts p { border: 1px solid rgba(255,255,255,.14); border-radius: 10px; color: #cdd5df; background: rgba(255,255,255,.06); }
+.facts strong { color: #fff; }
+.hero :global(.content-hero) { border: 0; border-radius: 14px; box-shadow: 0 24px 60px rgba(0,0,0,.30); }
+.body { padding: 80px 0; }
+.method,
+.framework { border: 1px solid var(--line); border-left: 0; border-radius: 16px; background: var(--paper); box-shadow: var(--or-shadow-card, 0 2px 8px rgba(0,0,0,.06)); }
+.checklist { border-radius: 16px; background: var(--or-night-soft, #0c1424); }
+.checklist .eyebrow { color: var(--or-cyan-bright, #6edcf3); }
+.checkGrid article { border-radius: 12px; }
+.checkGrid strong { color: var(--or-cyan-bright, #6edcf3); }
+.checkGrid p { color: #cdd5df; }
+.faq details { margin-top: 12px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.cta {
+  border: 0;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--or-night, #030712), #07334b);
+  box-shadow: var(--or-shadow-hover, 0 18px 38px rgba(0,0,0,.12));
+}
+.cta .eyebrow { color: var(--or-cyan-bright, #6edcf3); }
+.cta p,
+.cta .ctaTitle { color: #fff; }
+.cta a { border: 0; color: #04131a; background: linear-gradient(90deg, var(--or-cyan, #22b8dc), var(--or-cyan-bright, #6edcf3)); }
+
+@media (max-width: 700px) {
+  .shell { width: min(100% - 32px, var(--or-shell, 1280px)); }
+  .hero { min-height: auto; padding: 52px 0; }
+  .hero h1 { font-size: clamp(40px, 11vw, 54px); }
+}
