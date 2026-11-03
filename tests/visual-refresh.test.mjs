@@ -14,11 +14,11 @@ const assets = read('app/visual-assets.tsx');
 const css = read('app/reference-system.css');
 
 test('visual refresh uses approved local artwork with declared dimensions and useful alt text', () => {
-  const referenced = [...`${home}\n${services}\n${assets}`.matchAll(/['"](\/(?:images|illustrations)\/[^'"]+\.(?:webp|png|jpe?g))['"]/g)]
+  const referenced = [...`${home}\n${services}\n${assets}`.matchAll(/['"](\/(?:images|illustrations)\/[^'"]+\.(?:svg|webp|png|jpe?g))['"]/g)]
     .map(([, path]) => path);
   assert.ok(referenced.length >= 11);
   for (const path of referenced) assert.ok(existsSync(resolve(root, `public${path}`)), `missing local image: ${path}`);
-  assert.match(home, /offshore-team-planning\.webp[^>]+width="1400"[^>]+height="1400"[^>]+alt="[^"]+"/);
+  assert.match(home, /managed-workflow\.svg[^>]+width="1600"[^>]+height="1600"[^>]+loading="eager"[^>]+fetchPriority="high"[^>]+alt="[^"]+"/);
   assert.match(services, /global-team-grid\.webp[^>]+width="1200"[^>]+height="630"[^>]+alt="[^"]+"/);
   assert.doesNotMatch(`${home}\n${services}`, /stealth-agents-team-bacolod/);
 });
