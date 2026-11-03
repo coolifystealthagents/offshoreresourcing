@@ -1,6 +1,7 @@
 import { notFound, permanentRedirect } from "next/navigation";
 import { blogPosts } from "../../../data";
 import { editorialText } from "../../../../lib/content";
+import { editorialImageFor } from "../../../visual-assets";
 const totalPages = Math.max(1, Math.ceil(blogPosts.length / 20));
 function parsePageNumber(page: string) {
   if (!/^[1-9]\d*$/.test(page)) return null;
@@ -40,12 +41,16 @@ export default async function BlogPage({
         </div></section>
         <section className="editorial-index-library"><div className="container">
           <div className="cards">
-            {posts.map((p) => (
-              <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
+            {posts.map((p) => {
+              const image = editorialImageFor(`${p.title} ${p.slug}`);
+              return <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
+                <img className="editorial-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
+                <div className="editorial-card-copy">
                 <h2>{editorialText(p.title)}</h2>
                 <p>{editorialText(p.excerpt)}</p>
+                </div>
               </a>
-            ))}
+            })}
           </div>
           <nav className="pagination" aria-label="Blog pages">
             {Array.from({ length: totalPages }, (_, i) => (

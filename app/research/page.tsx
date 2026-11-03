@@ -1,6 +1,7 @@
 import { Header, Footer } from "../components";
 import { site } from "../data";
 import { getCanonicalStatus, getDocuments } from "../../lib/content";
+import { editorialImageFor } from "../visual-assets";
 const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 export const metadata = {
   title: "Research",
@@ -53,12 +54,15 @@ export default function Research() {
           <div className="container">
             <div className="research-card-grid">
               {researchPosts.length ? (
-                researchPosts.map((p) => (
-                  <a
+                researchPosts.map((p) => {
+                  const image = editorialImageFor(`${p.title} ${p.category} ${p.slug}`);
+                  return <a
                     className="research-library-card"
                     href={`/research/${p.slug}`}
                     key={p.slug}
                   >
+                    <img className="research-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
+                    <div className="research-card-copy">
                     <span className="research-card-badge">
                       {p.category}
                     </span>
@@ -73,8 +77,9 @@ export default function Research() {
                       <span>{site.brand} Research</span>
                       <span>{p.sourceCount} sources</span>
                     </div>
+                    </div>
                   </a>
-                ))
+                })
               ) : (
                 <div className="research-library-card empty-state">
                   <span className="research-card-badge">Coming soon</span>

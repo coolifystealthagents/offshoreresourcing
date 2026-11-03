@@ -159,9 +159,8 @@ test('editorial conversion banners preserve attribution on the canonical contact
 });
 
 test('commercial process layouts do not generate decorative sequence numbers', () => {
-  assert.doesNotMatch(globalCss, /counter-reset\s*:\s*step/);
-  assert.doesNotMatch(globalCss, /counter-increment\s*:\s*step/);
-  assert.doesNotMatch(globalCss, /content\s*:\s*counter\(step/);
+  assert.doesNotMatch(globalCss, /counter-(?:reset|increment)\s*:\s*(?:step|operation)/);
+  assert.doesNotMatch(globalCss, /content\s*:\s*['"]?0?['"]?\s*counter\((?:step|operation)/);
 });
 
 test('index routes own their canonical metadata and research links only canonical records', () => {

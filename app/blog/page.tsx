@@ -1,4 +1,5 @@
 import { blogPosts } from "../data";
+import { editorialImageFor } from "../visual-assets";
 const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 export const metadata = {
   title: "Blog",
@@ -18,14 +19,18 @@ export default function Blog() {
         </div></section>
         <section className="editorial-index-library"><div className="container">
           <div className="cards">
-            {posts.map((p) => (
-              <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
+            {posts.map((p) => {
+              const image = editorialImageFor(`${p.title} ${p.slug}`);
+              return <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
+                <img className="editorial-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
+                <div className="editorial-card-copy">
                 <h2>{p.title}</h2>
                 <p>{p.excerpt}</p>
                 {"publishedAt" in p && typeof p.publishedAt === "string" ? <time dateTime={p.publishedAt}>Published {formatDate(p.publishedAt)}</time> : null}
                 <span>{p.minutes} min read</span>
+                </div>
               </a>
-            ))}
+            })}
           </div>
           <nav className="pagination" aria-label="Blog pages">
             {Array.from({ length: pages }, (_, i) => (

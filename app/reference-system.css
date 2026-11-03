@@ -515,19 +515,24 @@ body {
   min-width: 0;
   min-height: 250px;
   flex-direction: column;
-  padding: 24px;
+  overflow: hidden;
+  padding: 0;
   border: 1px solid var(--or-line);
   border-radius: var(--or-radius-card);
   color: var(--or-ink);
   background: #fff;
   box-shadow: var(--or-shadow-card);
 }
+.editorial-card-image,
+.research-card-image { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; }
+.editorial-card-copy { display: flex; min-height: 250px; flex: 1; flex-direction: column; padding: 24px; }
 .editorial-index-library .card:hover { border-color: rgba(34,184,220,.5); transform: translateY(-3px); box-shadow: var(--or-shadow-hover); }
 .editorial-index-library .card h2 { color: var(--or-ink); font-size: 21px; line-height: 1.25; }
 .editorial-index-library .card p { color: var(--or-copy); line-height: 1.65; }
 .editorial-index-library .card time,
-.editorial-index-library .card > span { color: var(--or-muted); font-size: 12px; font-weight: 700; }
-.editorial-index-library .card > span { margin-top: 8px; }
+.editorial-index-library .editorial-card-copy > span { color: var(--or-muted); font-size: 12px; font-weight: 700; }
+.editorial-index-library .card time { margin-top: auto; }
+.editorial-index-library .editorial-card-copy > span { margin-top: 8px; }
 .editorial-index-library .pagination a { background: #fff; }
 
 /* Research index */
@@ -545,7 +550,9 @@ body {
 .research-hero-card div { border-color: rgba(255,255,255,.16); border-radius: 12px; background: rgba(255,255,255,.06); }
 .research-hero-card strong { color: var(--or-cyan-bright); }
 .research-library-section { background: var(--or-subtle); }
-.research-library-card { min-height: 0; padding: 24px; }
+.research-library-card { min-height: 0; overflow: hidden; padding: 0; }
+.research-library-card.empty-state { padding: 24px; }
+.research-card-copy { display: flex; min-height: 280px; flex-direction: column; padding: 24px; }
 .research-card-badge { color: #075f74; background: var(--or-tint); }
 .research-card-highlight { color: #046d67; }
 .research-cluster-tabs a { border-radius: 8px; }
@@ -700,7 +707,7 @@ body {
   .directory-hero-grid > img { height: auto; aspect-ratio: 1200 / 630; }
 }
 
-/* Keep approved landscape directory artwork legible and remove purely decorative counters. */
+/* Keep approved landscape directory artwork legible. */
 .directory-hero-grid > img {
   height: auto;
   min-height: 0;
@@ -708,11 +715,6 @@ body {
   object-fit: contain;
   background: #1c273a;
 }
-.process-list li::before {
-  display: none;
-  content: none;
-}
-
 @media (prefers-reduced-motion: reduce) {
   :is(a, button, summary, input, select, textarea, article) { transition-duration: .01ms !important; }
   .service-link-grid a:hover,
@@ -815,6 +817,7 @@ body {
 .home-hero .text-link { color: #e8edf3; font-size: 14px; }
 .hero-assurance { margin: 10px 0 0; color: #fff; font-size: 13px; font-weight: 750; }
 .documentary-frame img { height: min(66vh,560px); border-radius: 14px; object-position: center; }
+.home-hero .documentary-frame img { object-fit: contain; background: #071522; }
 .documentary-frame figcaption { color: #0b1625; background: rgba(114,211,251,.94); }
 
 .home-review-band { padding: 20px 0 26px; border-bottom: 1px solid #edf0f4; background: #fff; }
@@ -839,6 +842,18 @@ body {
 .service-link-grid a h3 { font-size: 18px; }
 .process-list { grid-template-columns: repeat(4,minmax(0,1fr)); }
 .process-list li { min-height: 220px; }
+.process-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  margin-bottom: 24px;
+  border: 1px solid rgba(114,211,251,.32);
+  border-radius: 12px;
+  color: var(--or-cyan-bright);
+  background: rgba(114,211,251,.08);
+}
+.process-icon svg { width: 25px; height: 25px; }
 
 .directory-hero { position: relative; overflow: hidden; background: #020813; }
 .directory-hero-media,
@@ -850,7 +865,7 @@ body {
 .directory-hero-grid > div { max-width: 650px; }
 .directory-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
 .directory-grid article { border-radius: 13px; }
-.directory-grid article > img { height: 138px; object-fit: cover; }
+.directory-grid article > img { width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; }
 .directory-grid article > div { padding: 22px; }
 .directory-grid article h3 { font-size: 20px; }
 .directory-grid .audience-line { font-size: 13px; }
