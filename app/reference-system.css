@@ -684,6 +684,7 @@ body {
   .related-grid,
   .accountability-grid,
   .cards,
+  .editorial-index-library .cards,
   .editorial-listing-grid { grid-template-columns: 1fr; }
   .process-list li { border-top: 1px solid rgba(255,255,255,.13); }
   .final-cta { width: calc(100% - 32px); margin-bottom: 60px; padding: 34px 24px; border-radius: 16px; }

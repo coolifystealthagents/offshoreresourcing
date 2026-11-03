@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Footer, Header } from '../../components';
 import { EditorialToc } from '../../editorial-toc';
 import styles from './comparison.module.css';
 
@@ -137,7 +136,6 @@ export default function ComparisonArticle() {
   };
 
   return <>
-    <Header />
     <main className={styles.page}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <header className={styles.hero}>
@@ -224,6 +222,5 @@ export default function ComparisonArticle() {
         </div>
       </article>
     </main>
-    <Footer />
   </>;
 }

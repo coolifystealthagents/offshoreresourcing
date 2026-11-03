@@ -1,11 +1,12 @@
 import type { ReactNode } from 'react';
 import { BlogBanner } from '../blog-banners';
+import { Footer, Header } from '../components';
 
 export default function BlogLayout({ children }: { children: ReactNode }) {
   return <>
-    <BlogBanner position="top" />
+    <Header />
     {children}
-    <BlogBanner position="middle" />
     <BlogBanner position="bottom" />
+    <Footer />
   </>;
 }

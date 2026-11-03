@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Header, Footer, CTA, JsonLd } from '../../components';
+import { CTA, JsonLd } from '../../components';
 import { blogDetails, blogPosts, guideBasics, site } from '../../data';
 import { dailyBlogDetails, dailyBlogPosts } from '../../daily-blog-2026-08-18';
 import { dailyBlog20Details, dailyBlog20Posts } from '../../daily-blog-2026-08-20';
@@ -139,7 +139,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const graph: AnyRecord[] = [{ '@type': 'Article', headline: editorialText(post.title), description: editorialText(post.excerpt), url, mainEntityOfPage: url, datePublished: publishedAt, image: { '@type': 'ImageObject', url: `${base}${image.src}`, width: image.width, height: image.height }, publisher: { '@type': 'Organization', name: site.brand, url: base }, citation: model.sources.map((source) => source.url) }];
   if (model.faqs.length) graph.push({ '@type': 'FAQPage', mainEntity: model.faqs.map((faq) => ({ '@type': 'Question', name: editorialText(faq.q), acceptedAnswer: { '@type': 'Answer', text: editorialText(faq.a) } })) });
   graph.push({ '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: base }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${base}/blog` }, { '@type': 'ListItem', position: 3, name: editorialText(post.title), item: url }] });
-  return <><Header/><main className="section article-page editorial-page"><JsonLd data={{ '@context': 'https://schema.org', '@graph': graph }}/><article className="container content-article">
+  return <><main className="section article-page editorial-page"><JsonLd data={{ '@context': 'https://schema.org', '@graph': graph }}/><article className="container content-article">
     <header className="editorial-hero"><div className="editorial-hero-copy"><p className="eyebrow">Philippines staffing guide · {post.minutes} min read · <time dateTime={publishedAt}>Published {new Date(`${publishedAt}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time></p><h1>{editorialText(post.title)}</h1><p className="lead">{editorialText(post.excerpt)}</p></div><img className="content-hero" src={image.src} alt={`${editorialText(post.title)} editorial guide`} width={image.width} height={image.height}/></header>
     <div className="content-layout"><EditorialToc items={model.toc} family="Blog"/><div className="editorial-body">
       <section className="card evidence-card"><h2 id={model.toc[0].id}>The short answer</h2>{model.shortAnswer.map((paragraph) => <p key={paragraph}>{editorialText(paragraph)}</p>)}<ul>{model.takeaways.map((item) => <li key={item}>{editorialText(item)}</li>)}</ul></section>
@@ -150,5 +150,5 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <section className="card content-testimonial"><h2 id={ids.decision}>A practical decision framework</h2><p>Define the task, evidence, authority boundary, reviewer, and stop condition before assigning live work. Test a normal case and an exception, then expand access or volume only after the evidence is consistently reviewable.</p></section>
       <section className="article-section"><h2 id={ids.related}>Related content</h2><p>Compare <a href="/services">offshore staffing services</a>, review the <a href="/research">research library</a>, or <a href="/contact-us">request a role plan</a> grounded in your systems and approval boundaries.</p></section>
     </div></div>
-  </article><CTA/></main><Footer/></>;
+  </article><CTA/></main></>;
 }

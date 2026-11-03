@@ -1,4 +1,3 @@
-import { Header, Footer } from "../components";
 import { blogPosts } from "../data";
 const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 export const metadata = {
@@ -11,7 +10,6 @@ export default function Blog() {
   const pages = Math.max(1, Math.ceil(blogPosts.length / 20));
   return (
     <>
-      <Header />
       <main className="editorial-index-page">
         <section className="editorial-index-hero"><div className="container">
           <p className="eyebrow">Philippines staffing blog</p>
@@ -42,7 +40,6 @@ export default function Blog() {
           </nav>
         </div></section>
       </main>
-      <Footer />
     </>
   );
 }

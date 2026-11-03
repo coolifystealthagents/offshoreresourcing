@@ -1,5 +1,4 @@
 import { notFound, permanentRedirect } from "next/navigation";
-import { Header, Footer } from "../../../components";
 import { blogPosts } from "../../../data";
 import { editorialText } from "../../../../lib/content";
 const totalPages = Math.max(1, Math.ceil(blogPosts.length / 20));
@@ -33,7 +32,6 @@ export default async function BlogPage({
   const posts = blogPosts.slice((n - 1) * 20, n * 20);
   return (
     <>
-      <Header />
       <main className="editorial-index-page">
         <section className="editorial-index-hero"><div className="container">
           <p className="eyebrow">Philippines staffing blog</p>
@@ -62,7 +60,6 @@ export default async function BlogPage({
           </nav>
         </div></section>
       </main>
-      <Footer />
     </>
   );
 }

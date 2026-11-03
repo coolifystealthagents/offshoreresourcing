@@ -74,9 +74,7 @@ export function renderAug19Article(family: Family, slug: string) {
       { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE }, { '@type': 'ListItem', position: 2, name: section, item: `${SITE}/${family}` }, { '@type': 'ListItem', position: 3, name: editorialText(record.title), item: url }] },
     ],
   };
-  return <>
-    <Header />
-    <main className="section article-page editorial-page">
+  const article = <main className="section article-page editorial-page">
       <JsonLd data={schema} />
       <article className="container content-article">
         <header className="editorial-hero">
@@ -104,7 +102,6 @@ export function renderAug19Article(family: Family, slug: string) {
         </div>
       </article>
       <CTA />
-    </main>
-    <Footer />
-  </>;
+    </main>;
+  return family === 'blog' ? article : <><Header />{article}<Footer /></>;
 }
