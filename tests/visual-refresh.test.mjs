@@ -28,6 +28,7 @@ test('blog and research indexes render accessible landscape thumbnails', () => {
     assert.match(source, /width="1200" height="630" alt=\{image\.alt\}/);
   }
   assert.match(css, /\.listing-card-image,[\s\S]*aspect-ratio:\s*16\s*\/\s*9/);
+  assert.match(css, /\.directory-grid article \{[^}]*display:\s*flex[^}]*flex-direction:\s*column/);
   assert.match(services, /className="listing-card-image"/);
 });
 

@@ -864,7 +864,7 @@ body {
 .directory-hero-grid { position: relative; z-index: 2; display: block; }
 .directory-hero-grid > div { max-width: 650px; }
 .directory-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
-.directory-grid article { border-radius: 13px; }
+.directory-grid article { display: flex; flex-direction: column; border-radius: 13px; }
 .listing-card-image,
 .directory-grid article > img,
 .editorial-card-image,
