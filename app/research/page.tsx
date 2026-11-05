@@ -18,12 +18,12 @@ export default function Research() {
         <section className="research-hero">
           <div className="container research-hero-grid">
             <div>
-              <p className="eyebrow">Research Library</p>
-              <h1>Source-backed research for better staffing decisions</h1>
+              <p className="eyebrow">Offshore staffing research</p>
+              <h1>Evidence for role scope, controls, and handoffs</h1>
               <p className="lead">
-                Use these reports to compare roles, costs, controls, and
-                onboarding decisions before building a Philippines-based support
-                team.
+                Review the source record, method, limits, and operating context
+                behind staffing scope, access, review, coverage, and handoff
+                decisions.
               </p>
               <div className="research-meta">
                 <span>{researchPosts.length} reports</span>
@@ -55,23 +55,19 @@ export default function Research() {
             <div className="research-card-grid">
               {researchPosts.length ? (
                 researchPosts.map((p) => {
-                  const image = p.image ? { src: p.image, alt: `${p.title} editorial photograph` } : editorialImageFor(`${p.title} ${p.category} ${p.slug}`);
+                  const image = p.image ? { src: p.image, alt: `Editorial image for ${p.title}` } : editorialImageFor(`${p.title} ${p.category} ${p.slug}`);
                   return <a
                     className="research-library-card"
                     href={`/research/${p.slug}`}
                     key={p.slug}
                   >
-                    <img className="research-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
+                    <img className="research-card-image listing-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
                     <div className="research-card-copy">
                     <span className="research-card-badge">
                       {p.category}
                     </span>
                     <h2>{p.title}</h2>
                     <time dateTime={p.publishedAt}>Published {formatDate(p.publishedAt)}</time>
-                    <p className="research-card-highlight">
-                      Planning signal: compare the role, review owner, and
-                      handoff risk before hiring.
-                    </p>
                     <p className="research-card-excerpt">{p.description}</p>
                     <div className="research-card-meta">
                       <span>{site.brand} Research</span>
@@ -103,7 +99,7 @@ export default function Research() {
         </section>
         <section className="section research-methodology">
           <div className="container">
-            <h2>Methodology and use</h2>
+            <h2>Read the evidence before applying the recommendation</h2>
             <p>
               Each research page should make assumptions visible, separate
               sourced facts from recommendations, and translate findings into a

@@ -14,21 +14,21 @@ const assets = read('app/visual-assets.tsx');
 const css = read('app/reference-system.css');
 
 test('visual refresh uses approved local artwork with declared dimensions and useful alt text', () => {
-  const referenced = [...`${home}\n${services}\n${assets}`.matchAll(/['"](\/(?:images|illustrations)\/[^'"]+\.(?:svg|webp|png|jpe?g))['"]/g)]
+  const referenced = [...`${home}\n${services}\n${assets}`.matchAll(/['"](\/(?:brand|images|illustrations)\/[^'"]+\.(?:svg|webp|png|jpe?g))['"]/g)]
     .map(([, path]) => path);
   assert.ok(referenced.length >= 11);
   for (const path of referenced) assert.ok(existsSync(resolve(root, `public${path}`)), `missing local image: ${path}`);
-  assert.match(home, /managed-workflow\.svg[^>]+width="1600"[^>]+height="1600"[^>]+loading="eager"[^>]+fetchPriority="high"[^>]+alt="[^"]+"/);
+  assert.match(home, /stealth-agents-team-bacolod-hero\.jpg[^>]+width="1600"[^>]+height="906"[^>]+loading="eager"[^>]+fetchPriority="high"[^>]+alt="Stealth Agents team gathered outside Bacolod City Hall in the Philippines"/);
   assert.match(services, /global-team-grid\.webp[^>]+width="1200"[^>]+height="630"[^>]+alt="[^"]+"/);
-  assert.doesNotMatch(`${home}\n${services}`, /stealth-agents-team-bacolod/);
+  assert.match(home, /Official Stealth Agents team photograph, Bacolod, Philippines\./);
 });
 
 test('blog and research indexes render accessible landscape thumbnails', () => {
   for (const source of [blog, paginatedBlog, research]) {
     assert.match(source, /width="1200" height="630" alt=\{image\.alt\}/);
   }
-  assert.match(css, /\.editorial-card-image,[\s\S]*aspect-ratio:\s*1200\s*\/\s*630/);
-  assert.match(css, /\.directory-grid article > img \{[^}]*aspect-ratio:\s*1200\s*\/\s*630/);
+  assert.match(css, /\.listing-card-image,[\s\S]*aspect-ratio:\s*16\s*\/\s*9/);
+  assert.match(services, /className="listing-card-image"/);
 });
 
 test('homepage process uses meaningful icons instead of generated labels', () => {

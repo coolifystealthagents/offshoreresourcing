@@ -817,7 +817,7 @@ body {
 .home-hero .text-link { color: #e8edf3; font-size: 14px; }
 .hero-assurance { margin: 10px 0 0; color: #fff; font-size: 13px; font-weight: 750; }
 .documentary-frame img { height: min(66vh,560px); border-radius: 14px; object-position: center; }
-.home-hero .documentary-frame img { object-fit: contain; background: #071522; }
+.home-hero .documentary-frame img { height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 42%; background: #071522; }
 .documentary-frame figcaption { color: #0b1625; background: rgba(114,211,251,.94); }
 
 .home-review-band { padding: 20px 0 26px; border-bottom: 1px solid #edf0f4; background: #fff; }
@@ -865,7 +865,10 @@ body {
 .directory-hero-grid > div { max-width: 650px; }
 .directory-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
 .directory-grid article { border-radius: 13px; }
-.directory-grid article > img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.listing-card-image,
+.directory-grid article > img,
+.editorial-card-image,
+.research-card-image { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; }
 .directory-grid article > div { padding: 22px; }
 .directory-grid article h3 { font-size: 20px; }
 .directory-grid .audience-line { font-size: 13px; }
@@ -897,6 +900,7 @@ body {
   .hero-actions .signal-button { flex: 1 1 100%; }
   .hero-assurance { text-align: center; }
   .documentary-frame img { height: 370px; }
+  .home-hero .documentary-frame img { height: auto; aspect-ratio: 16 / 9; object-position: center 44%; }
   .home-review-band { padding: 28px 0; }
   .commercial-section { padding: 68px 0; }
   .service-link-grid,
@@ -905,8 +909,8 @@ body {
   .directory-hero { min-height: 840px; align-items: end; padding: 88px 0 74px; }
   .directory-hero-media { object-position: 58% center; opacity: .68; }
   .directory-hero-shade { background: linear-gradient(180deg,rgba(2,8,19,.40) 0%,rgba(2,8,19,.76) 34%,rgba(2,8,19,.98) 88%); }
-  .directory-grid article { display: grid; grid-template-columns: 112px minmax(0,1fr); }
-  .directory-grid article > img { width: 112px; height: 100%; min-height: 220px; border-radius: 0; }
+  .directory-grid article { display: flex; flex-direction: column; }
+  .directory-grid article > img { width: 100%; height: auto; min-height: 0; aspect-ratio: 16 / 9; border-radius: 0; }
   .directory-grid article > div { padding: 20px; }
   .directory-grid article h3 { font-size: 19px; }
   .process-list { grid-template-columns: 1fr; }

@@ -35,16 +35,16 @@ export default async function BlogPage({
     <>
       <main className="editorial-index-page">
         <section className="editorial-index-hero"><div className="container">
-          <p className="eyebrow">Philippines staffing blog</p>
+          <p className="eyebrow">Offshore staffing operating guides</p>
           <h1>Blog page {n}</h1>
-          <p className="lead">Continue browsing practical role, control, and handoff guidance.</p>
+          <p className="lead">Continue browsing task briefs, queue controls, review checks, coverage plans, and handoff guidance.</p>
         </div></section>
         <section className="editorial-index-library"><div className="container">
           <div className="cards">
             {posts.map((p) => {
               const image = editorialImageFor(`${p.title} ${p.slug}`);
               return <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
-                <img className="editorial-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
+                <img className="editorial-card-image listing-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
                 <div className="editorial-card-copy">
                 <h2>{editorialText(p.title)}</h2>
                 <p>{editorialText(p.excerpt)}</p>

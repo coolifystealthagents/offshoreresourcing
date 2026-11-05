@@ -13,16 +13,16 @@ export default function Blog() {
     <>
       <main className="editorial-index-page">
         <section className="editorial-index-hero"><div className="container">
-          <p className="eyebrow">Philippines staffing blog</p>
-          <h1>Practical role and handoff guides.</h1>
-          <p className="lead">Read concise guidance for scoping and managing Filipino support roles. Existing article addresses remain available.</p>
+          <p className="eyebrow">Offshore staffing operating guides</p>
+          <h1>Build the task brief, review path, and handoff.</h1>
+          <p className="lead">Use these guides to document queues, permissions, acceptance checks, corrections, coverage, and manager-owned decisions for Philippines based support.</p>
         </div></section>
         <section className="editorial-index-library"><div className="container">
           <div className="cards">
             {posts.map((p) => {
-              const image = p.image ? { src: p.image, alt: `${p.title} editorial photograph` } : editorialImageFor(`${p.title} ${p.slug}`);
+              const image = p.image ? { src: p.image, alt: `Editorial image for ${p.title}` } : editorialImageFor(`${p.title} ${p.slug}`);
               return <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
-                <img className="editorial-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
+                <img className="editorial-card-image listing-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
                 <div className="editorial-card-copy">
                 <h2>{p.title}</h2>
                 <p>{p.excerpt}</p>
