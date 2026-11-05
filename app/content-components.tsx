@@ -75,6 +75,7 @@ export function ContentArticle({ document, related, canonicalSlug = document.slu
   const url = `${base}/${document.type}/${canonicalSlug}`;
   const hasPublished = isValidPublicDate(document.publishedAt);
   const hasVerified = isValidPublicDate(document.verifiedAt);
+  const hero = document.image.replace(/\.webp$/, '-hero.webp');
   const relatedItems = related.slice(0, 3);
   const tocItems = [
     ...document.headings,
@@ -103,7 +104,7 @@ export function ContentArticle({ document, related, canonicalSlug = document.slu
           <p className="lead">{document.description}</p>
           <div className="content-badges"><span>{document.category}</span>{document.type === 'research' && <span>{document.sourceCount} sources</span>}{document.alternativeType && <span>{editorialText(document.alternativeType)}</span>}</div>
         </div>
-        <img className="content-hero" src={document.image} alt={`${document.title} editorial guide`} width={document.imageWidth} height={document.imageHeight} />
+        <img className="content-hero" src={hero} alt={`${document.title} editorial photograph`} width={document.imageWidth} height={document.imageHeight} />
       </header>
       <div className="content-layout">
         <EditorialToc items={tocItems} family={section} />

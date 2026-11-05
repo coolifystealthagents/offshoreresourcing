@@ -524,7 +524,7 @@ body {
   box-shadow: var(--or-shadow-card);
 }
 .editorial-card-image,
-.research-card-image { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; }
+.research-card-image { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 .editorial-card-copy { display: flex; min-height: 250px; flex: 1; flex-direction: column; padding: 24px; }
 .editorial-index-library .card:hover { border-color: rgba(34,184,220,.5); transform: translateY(-3px); box-shadow: var(--or-shadow-hover); }
 .editorial-index-library .card h2 { color: var(--or-ink); font-size: 21px; line-height: 1.25; }
@@ -704,14 +704,14 @@ body {
   .footer-bottom { padding-inline: 16px; }
   .research-hero { padding: 58px 0; }
   .sa-booking-page { padding: 48px 0 64px; }
-  .directory-hero-grid > img { height: auto; aspect-ratio: 1200 / 630; }
+  .directory-hero-grid > img { height: auto; aspect-ratio: 16 / 9; }
 }
 
 /* Keep approved landscape directory artwork legible. */
 .directory-hero-grid > img {
   height: auto;
   min-height: 0;
-  aspect-ratio: 1200 / 630;
+  aspect-ratio: 16 / 9;
   object-fit: contain;
   background: #1c273a;
 }
@@ -865,7 +865,7 @@ body {
 .directory-hero-grid > div { max-width: 650px; }
 .directory-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
 .directory-grid article { border-radius: 13px; }
-.directory-grid article > img { width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; }
+.directory-grid article > img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 .directory-grid article > div { padding: 22px; }
 .directory-grid article h3 { font-size: 20px; }
 .directory-grid .audience-line { font-size: 13px; }

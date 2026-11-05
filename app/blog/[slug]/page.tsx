@@ -27,6 +27,7 @@ import { dailyBlogOct8Details, dailyBlogOct8Posts } from '../../daily-blog-2026-
 import { dailyBlogOct9Details, dailyBlogOct9Posts } from '../../daily-blog-2026-10-09';
 import { dailyBlogOct12Details as oct12Details, dailyBlogOct12Posts } from '../../daily-blog-2026-10-12';
 import { dailyBlogOct13Details, dailyBlogOct13Posts } from '../../daily-blog-2026-10-13';
+import { dailyBlogNov05Details, dailyBlogNov05Posts } from '../../daily-blog-2026-11-05';
 import { october25Details, october25Posts } from '../../oct25-batch';
 import { october26Details, october26Posts } from '../../oct26-batch';
 import { october27Details, october27Posts } from '../../oct27-batch';
@@ -41,6 +42,7 @@ type Faq = { q: string; a: string };
 type Source = { name: string; url: string; note?: string };
 type BlogModel = {
   post: (typeof blogPosts)[number]; image: { src: string; width: number; height: number };
+  hero: { src: string; width: number; height: number };
   publishedAt: string;
   shortAnswer: readonly string[]; takeaways: readonly string[]; sections: readonly ArticleSection[];
   sources: readonly Source[]; faqs: readonly Faq[]; comparison: readonly { topic: string; weak: string; strong: string }[];
@@ -49,6 +51,7 @@ type BlogModel = {
 
 /* Newest collection wins. The selected record drives body, image, schema and TOC. */
 const collections: readonly { details: AnyRecord; posts: readonly AnyRecord[] }[] = [
+  { details: dailyBlogNov05Details, posts: dailyBlogNov05Posts },
   { details: october27Details, posts: october27Posts },
   { details: october26Details, posts: october26Posts },
   { details: october25Details, posts: october25Posts },
@@ -117,6 +120,7 @@ function resolveBlogArticle(slug: string): BlogModel | null {
   const comparison = (detail?.comparison ?? []) as readonly { topic: string; weak: string; strong: string }[];
   const imagePath = collectionPost?.image || (post as AnyRecord).image || '';
   const image = resolveContentImage(imagePath, 'alternatives');
+  const hero = resolveContentImage(imagePath.replace(/\.webp$/, '-hero.webp'), 'alternatives');
   const counts = new Map<string, number>();
   const toc: TocItem[] = []; const add = (text: string, level: 2 | 3 = 2) => { const id = uniqueHeading(text, counts); toc.push({ text: editorialText(text), id, level }); return id; };
   const shortId = add('The short answer');
@@ -127,27 +131,27 @@ function resolveBlogArticle(slug: string): BlogModel | null {
   const faqIds = faqs.map((faq) => add(faq.q, 3));
   const decision = add('A practical decision framework');
   const related = add('Related content');
-  return { post, image, publishedAt: post.publishedAt || '2026-07-20', shortAnswer, takeaways: detail?.takeaways ?? ['Define the evidence and decision owner.', 'Test routine and exception cases.', 'Expand only after review.'], sections, sources, faqs, comparison, toc, ids: { sections: sectionIds, sources: sourcesId, provider, questions, decision, related, faqs: faqIds }, };
+  return { post, image, hero, publishedAt: post.publishedAt || '2026-07-20', shortAnswer, takeaways: detail?.takeaways ?? ['Define the evidence and decision owner.', 'Test routine and exception cases.', 'Expand only after review.'], sections, sources, faqs, comparison, toc, ids: { sections: sectionIds, sources: sourcesId, provider, questions, decision, related, faqs: faqIds }, };
 }
 
 export function generateStaticParams() { return blogPosts.map((post) => ({ slug: post.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const model = resolveBlogArticle((await params).slug); if (!model) return { title: 'Article not found' };
-  const { post, image, publishedAt } = model; const url = `${base}/blog/${post.slug}`;
+  const { post, image, hero, publishedAt } = model; const url = `${base}/blog/${post.slug}`;
   return { title: editorialText(post.title), description: editorialText(post.excerpt), alternates: { canonical: url },
-    openGraph: { title: editorialText(post.title), description: editorialText(post.excerpt), url, type: 'article', images: [{ url: `${base}${image.src}`, width: image.width, height: image.height }], publishedTime: publishedAt },
-    twitter: { card: 'summary_large_image', title: editorialText(post.title), description: editorialText(post.excerpt), images: [`${base}${image.src}`] } };
+    openGraph: { title: editorialText(post.title), description: editorialText(post.excerpt), url, type: 'article', images: [{ url: `${base}${hero.src}`, width: hero.width, height: hero.height }], publishedTime: publishedAt },
+    twitter: { card: 'summary_large_image', title: editorialText(post.title), description: editorialText(post.excerpt), images: [`${base}${hero.src}`] } };
 }
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const model = resolveBlogArticle((await params).slug); if (!model) notFound();
-  const { post, image, ids, publishedAt } = model; const url = `${base}/blog/${post.slug}`;
+  const { post, image, hero, ids, publishedAt } = model; const url = `${base}/blog/${post.slug}`;
   const graph: AnyRecord[] = [{ '@type': 'Article', headline: editorialText(post.title), description: editorialText(post.excerpt), url, mainEntityOfPage: url, datePublished: publishedAt, image: { '@type': 'ImageObject', url: `${base}${image.src}`, width: image.width, height: image.height }, publisher: { '@type': 'Organization', name: site.brand, url: base }, citation: model.sources.map((source) => source.url) }];
   if (model.faqs.length) graph.push({ '@type': 'FAQPage', mainEntity: model.faqs.map((faq) => ({ '@type': 'Question', name: editorialText(faq.q), acceptedAnswer: { '@type': 'Answer', text: editorialText(faq.a) } })) });
   graph.push({ '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: base }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${base}/blog` }, { '@type': 'ListItem', position: 3, name: editorialText(post.title), item: url }] });
   return <><main className="section article-page editorial-page"><JsonLd data={{ '@context': 'https://schema.org', '@graph': graph }}/><article className="container content-article">
-    <header className="editorial-hero"><div className="editorial-hero-copy"><p className="eyebrow">Philippines staffing guide · {post.minutes} min read · <time dateTime={publishedAt}>Published {new Date(`${publishedAt}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time></p><h1>{editorialText(post.title)}</h1><p className="lead">{editorialText(post.excerpt)}</p></div><img className="content-hero" src={image.src} alt={`${editorialText(post.title)} editorial guide`} width={image.width} height={image.height}/></header>
+    <header className="editorial-hero"><div className="editorial-hero-copy"><p className="eyebrow">Philippines staffing guide · {post.minutes} min read · <time dateTime={publishedAt}>Published {new Date(`${publishedAt}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time></p><h1>{editorialText(post.title)}</h1><p className="lead">{editorialText(post.excerpt)}</p></div><img className="content-hero" src={hero.src} alt={`${editorialText(post.title)} editorial photograph`} width={hero.width} height={hero.height}/></header>
     <div className="content-layout"><EditorialToc items={model.toc} family="Blog"/><div className="editorial-body">
       <section className="card evidence-card"><h2 id={model.toc[0].id}>The short answer</h2>{model.shortAnswer.map((paragraph) => <p key={paragraph}>{inlineEditorialText(paragraph)}</p>)}<ul>{model.takeaways.map((item) => <li key={item}>{inlineEditorialText(item)}</li>)}</ul></section>
       {model.sections.map((section, index) => <section className="article-section" key={`${section.heading}-${index}`}><h2 id={ids.sections[index]}>{editorialText(section.heading)}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{inlineEditorialText(paragraph)}</p>)}</section>)}

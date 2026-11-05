@@ -55,7 +55,7 @@ export default function Research() {
             <div className="research-card-grid">
               {researchPosts.length ? (
                 researchPosts.map((p) => {
-                  const image = editorialImageFor(`${p.title} ${p.category} ${p.slug}`);
+                  const image = p.image ? { src: p.image, alt: `${p.title} editorial photograph` } : editorialImageFor(`${p.title} ${p.category} ${p.slug}`);
                   return <a
                     className="research-library-card"
                     href={`/research/${p.slug}`}
@@ -76,6 +76,7 @@ export default function Research() {
                     <div className="research-card-meta">
                       <span>{site.brand} Research</span>
                       <span>{p.sourceCount} sources</span>
+                      <span>{Math.max(4, Math.ceil(p.body.split(/\s+/).filter(Boolean).length / 220))} min read</span>
                     </div>
                     </div>
                   </a>

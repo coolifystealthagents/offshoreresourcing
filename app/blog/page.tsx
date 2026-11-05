@@ -20,7 +20,7 @@ export default function Blog() {
         <section className="editorial-index-library"><div className="container">
           <div className="cards">
             {posts.map((p) => {
-              const image = editorialImageFor(`${p.title} ${p.slug}`);
+              const image = p.image ? { src: p.image, alt: `${p.title} editorial photograph` } : editorialImageFor(`${p.title} ${p.slug}`);
               return <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
                 <img className="editorial-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
                 <div className="editorial-card-copy">
