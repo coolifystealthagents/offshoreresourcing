@@ -18,9 +18,9 @@ test('visual refresh uses approved local artwork with declared dimensions and us
     .map(([, path]) => path);
   assert.ok(referenced.length >= 11);
   for (const path of referenced) assert.ok(existsSync(resolve(root, `public${path}`)), `missing local image: ${path}`);
-  assert.match(home, /stealth-agents-team-bacolod-hero\.jpg[^>]+width="1600"[^>]+height="906"[^>]+loading="eager"[^>]+fetchPriority="high"[^>]+alt="Stealth Agents team gathered outside Bacolod City Hall in the Philippines"/);
+  assert.match(home, /offshore-work-queue-handoff\.jpg[^>]+width="1800"[^>]+height="1012"[^>]+loading="eager"[^>]+fetchPriority="high"[^>]+alt="Three colleagues reviewing work beside shared workstation monitors"/);
   assert.match(services, /global-team-grid\.webp[^>]+width="1200"[^>]+height="630"[^>]+alt="[^"]+"/);
-  assert.match(home, /Official Stealth Agents team photograph, Bacolod, Philippines\./);
+  assert.match(home, /Workplace collaboration photographed by Austin Distel on Unsplash; people shown are illustrative\./);
 });
 
 test('blog and research indexes render accessible landscape thumbnails', () => {
