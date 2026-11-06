@@ -28,6 +28,7 @@ import { dailyBlogOct9Details, dailyBlogOct9Posts } from '../../daily-blog-2026-
 import { dailyBlogOct12Details as oct12Details, dailyBlogOct12Posts } from '../../daily-blog-2026-10-12';
 import { dailyBlogOct13Details, dailyBlogOct13Posts } from '../../daily-blog-2026-10-13';
 import { dailyBlogNov05Details, dailyBlogNov05Posts } from '../../daily-blog-2026-11-05';
+import { dailyBlogNov06Details, dailyBlogNov06Posts } from '../../daily-blog-2026-11-06';
 import { october25Details, october25Posts } from '../../oct25-batch';
 import { october26Details, october26Posts } from '../../oct26-batch';
 import { october27Details, october27Posts } from '../../oct27-batch';
@@ -51,6 +52,7 @@ type BlogModel = {
 
 /* Newest collection wins. The selected record drives body, image, schema and TOC. */
 const collections: readonly { details: AnyRecord; posts: readonly AnyRecord[] }[] = [
+  { details: dailyBlogNov06Details, posts: dailyBlogNov06Posts },
   { details: dailyBlogNov05Details, posts: dailyBlogNov05Posts },
   { details: october27Details, posts: october27Posts },
   { details: october26Details, posts: october26Posts },
