@@ -4,7 +4,7 @@ description: "A method for comparing offshore staffing options with total-cost e
 category: "offshore resourcing operations"
 publishedAt: 2026-11-06
 verifiedAt: 2026-11-06
-image: "/daily06/offshoreresourcing/evidence-standards-offshore-staffing-cost-comparisons.webp"
+image: "/daily06/offshoreresourcing/evidence-standards-for-offshore-staffing-cost-comparisons.webp"
 sourceCount: 10
 ---
 

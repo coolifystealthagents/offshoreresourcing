@@ -4,7 +4,7 @@ description: "A method for separating waiting time from work time when a support
 category: "offshore resourcing operations"
 publishedAt: 2026-11-06
 verifiedAt: 2026-11-06
-image: "/daily06/offshoreresourcing/handoff-delay-measurement-philippines-support-queue.webp"
+image: "/daily06/offshoreresourcing/measuring-handoff-delay-in-a-philippines-based-support-queue.webp"
 sourceCount: 10
 ---
 

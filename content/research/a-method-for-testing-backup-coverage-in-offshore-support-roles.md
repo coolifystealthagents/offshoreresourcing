@@ -4,7 +4,7 @@ description: "A repeatable test for whether a backup arrangement actually covers
 category: "offshore resourcing operations"
 publishedAt: 2026-11-06
 verifiedAt: 2026-11-06
-image: "/daily06/offshoreresourcing/backup-coverage-test-method-offshore-support.webp"
+image: "/daily06/offshoreresourcing/a-method-for-testing-backup-coverage-in-offshore-support-roles.webp"
 sourceCount: 10
 ---
 

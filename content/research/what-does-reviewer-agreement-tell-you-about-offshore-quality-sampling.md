@@ -4,7 +4,7 @@ description: "How to interpret reviewer agreement in offshore quality sampling w
 category: "offshore resourcing operations"
 publishedAt: 2026-11-06
 verifiedAt: 2026-11-06
-image: "/daily06/offshoreresourcing/reviewer-agreement-offshore-quality-sampling.webp"
+image: "/daily06/offshoreresourcing/what-does-reviewer-agreement-tell-you-about-offshore-quality-sampling.webp"
 sourceCount: 10
 ---
 

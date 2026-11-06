@@ -4,7 +4,7 @@ description: "A structured approach to deciding how much live schedule overlap a
 category: "offshore resourcing operations"
 publishedAt: 2026-11-06
 verifiedAt: 2026-11-06
-image: "/daily06/offshoreresourcing/schedule-overlap-requirements-offshore-roles.webp"
+image: "/daily06/offshoreresourcing/how-to-evaluate-schedule-overlap-requirements-for-offshore-roles.webp"
 sourceCount: 10
 ---
 

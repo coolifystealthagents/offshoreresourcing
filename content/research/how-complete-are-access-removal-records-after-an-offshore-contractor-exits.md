@@ -4,7 +4,7 @@ description: "A measurement protocol for checking whether access removal after a
 category: "offshore resourcing operations"
 publishedAt: 2026-11-06
 verifiedAt: 2026-11-06
-image: "/daily06/offshoreresourcing/access-removal-record-completeness-offshore-exit.webp"
+image: "/daily06/offshoreresourcing/how-complete-are-access-removal-records-after-an-offshore-contractor-exits.webp"
 sourceCount: 10
 ---
 

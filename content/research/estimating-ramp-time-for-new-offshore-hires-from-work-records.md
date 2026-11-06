@@ -4,7 +4,7 @@ description: "A method for estimating how long a new offshore hire needs to reac
 category: "offshore resourcing operations"
 publishedAt: 2026-11-06
 verifiedAt: 2026-11-06
-image: "/daily06/offshoreresourcing/estimating-ramp-time-offshore-hires.webp"
+image: "/daily06/offshoreresourcing/estimating-ramp-time-for-new-offshore-hires-from-work-records.webp"
 sourceCount: 10
 ---
 
