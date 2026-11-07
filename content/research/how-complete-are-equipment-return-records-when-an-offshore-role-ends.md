@@ -5,7 +5,7 @@ category: "offshore resourcing operations"
 publishedAt: 2026-11-07
 verifiedAt: 2026-11-07
 image: "/daily07/offshoreresourcing/how-complete-are-equipment-return-records-when-an-offshore-role-ends.webp"
-sourceCount: 8
+sourceCount: 10
 ---
 
 Equipment issued to an offshore worker can outlive the role if the return is not recorded. A laptop, a headset, a security token, or a mobile device may be shipped back, handed to a local lead, or kept by the worker with an informal promise to return it later. The risk is not only the replacement cost; an unreturned device can still hold access, data, and a recognizable company identity. This protocol defines a completeness check for the return record at the end of a role. Review [offshore staffing services](/services) and the [research library](/research) before you apply it to a live exit.
@@ -82,3 +82,6 @@ Decide whether the exit process is ready, needs a repair, or needs a manual revi
 6. [Philippine National Privacy Commission](https://privacy.gov.ph/data-privacy-act/)
 7. [NIST Privacy Framework](https://www.nist.gov/privacy-framework)
 8. [SBA guide to hiring and managing employees](https://www.sba.gov/business-guide/manage-your-business/hire-manage-employees)
+
+9. [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+10. [IRS recordkeeping guidance](https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping)

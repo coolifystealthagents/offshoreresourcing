@@ -5,7 +5,7 @@ category: "offshore resourcing operations"
 publishedAt: 2026-11-07
 verifiedAt: 2026-11-07
 image: "/daily07/offshoreresourcing/a-method-for-auditing-shadow-tool-use-in-offshore-support-roles.webp"
-sourceCount: 8
+sourceCount: 10
 ---
 
 Offshore support roles often accumulate small tools that were never approved: a personal spreadsheet for tracking requests, a chat group for quick answers, a note app for passwords, or a screen recorder for training. These tools can improve speed, but they also move work and data outside the systems the business can see. This method defines a bounded audit that finds shadow tool use, distinguishes a harmless convenience from a real control gap, and produces a fix that the team will accept. Compare [offshore staffing services](/services) with the [research library](/research) before you adapt the protocol to a live role.
@@ -82,3 +82,6 @@ Repeat the audit after the fix and compare the findings. If the same workaround 
 6. [ISO 9001 quality management principles](https://www.iso.org/iso-9001-quality-management.html)
 7. [APQC process classification framework](https://www.apqc.org/process-frameworks)
 8. [NIST NICE Workforce Framework](https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center)
+
+9. [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+10. [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework)

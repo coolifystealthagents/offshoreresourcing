@@ -5,7 +5,7 @@ category: "offshore resourcing operations"
 publishedAt: 2026-11-07
 verifiedAt: 2026-11-07
 image: "/daily07/offshoreresourcing/a-method-for-verifying-data-deletion-in-offshore-support-tools.webp"
-sourceCount: 8
+sourceCount: 10
 ---
 
 A delete button is a request, not proof. Customer records can remain in a trash folder, an export, a cached report, a linked attachment, or a backup long after a worker removes them from the main view. The gap matters when a client asks for deletion, when a retention period ends, or when a role closes and its working files should disappear. This method defines a bounded verification of data deletion in an offshore support tool. Use [offshore staffing services](/services) and the [research library](/research) before you run it on a live system.
@@ -82,3 +82,6 @@ Repeat the test after a fix and compare the results. If the same location keeps 
 6. [HHS HIPAA information](https://www.hhs.gov/hipaa/index.html)
 7. [ISO 9001 quality management principles](https://www.iso.org/iso-9001-quality-management.html)
 8. [FTC Start with Security guide](https://www.ftc.gov/business-guidance/resources/start-security-guide-business)
+
+9. [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+10. [IRS recordkeeping guidance](https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping)

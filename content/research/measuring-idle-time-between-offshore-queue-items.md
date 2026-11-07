@@ -5,7 +5,7 @@ category: "offshore resourcing operations"
 publishedAt: 2026-11-07
 verifiedAt: 2026-11-07
 image: "/daily07/offshoreresourcing/measuring-idle-time-between-offshore-queue-items.webp"
-sourceCount: 8
+sourceCount: 10
 ---
 
 A queue report often shows how long each item took, but not what happened between items. The gap can be a short pause after a difficult case, a wait for an answer, a search for a missing record, or a period when no work was assigned. Treating every gap as idle time encourages people to look busy, while ignoring the gap hides real capacity loss. This method defines a bounded way to measure the time between queue items and interpret it. Use [offshore staffing services](/services) and the [research library](/research) to connect the measure to staffing decisions.
@@ -76,3 +76,6 @@ Repeat the measure after the change and compare the same bands. If the long gaps
 6. [DOL Fact Sheet 17G: Recordkeeping](https://www.dol.gov/agencies/whd/fact-sheets/17g-flsa-recordkeeping)
 7. [SBA guide to hiring and managing employees](https://www.sba.gov/business-guide/manage-your-business/hire-manage-employees)
 8. [U.S. Census Bureau Annual Business Survey](https://www.census.gov/programs-surveys/abs.html)
+
+9. [NIST Privacy Framework](https://www.nist.gov/privacy-framework)
+10. [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials)

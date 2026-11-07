@@ -5,7 +5,7 @@ category: "offshore resourcing operations"
 publishedAt: 2026-11-07
 verifiedAt: 2026-11-07
 image: "/daily07/offshoreresourcing/do-offshore-timesheets-reconcile-with-system-activity-records.webp"
-sourceCount: 8
+sourceCount: 10
 ---
 
 A timesheet records what a person says they did, while a system log records what the account actually touched. The two records rarely match perfectly, and a perfect match is not the goal. The useful question is whether the differences are explainable, bounded, and consistent with the work. This method defines a reconciliation that a manager can run on a small sample without turning the queue into a surveillance system. Use the [research library](/research) and [offshore staffing services](/services) to connect the result to a broader control plan.
@@ -82,3 +82,6 @@ Repeat the reconciliation after the fix and compare the unexplained count. If th
 6. [APQC process classification framework](https://www.apqc.org/process-frameworks)
 7. [FTC data security guidance](https://www.ftc.gov/business-guidance/privacy-security/data-security)
 8. [NIST SP 800-53 security and privacy controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)
+
+9. [SBA guide to hiring and managing employees](https://www.sba.gov/business-guide/manage-your-business/hire-manage-employees)
+10. [NIST Privacy Framework](https://www.nist.gov/privacy-framework)

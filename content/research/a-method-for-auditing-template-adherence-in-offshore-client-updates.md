@@ -5,7 +5,7 @@ category: "offshore resourcing operations"
 publishedAt: 2026-11-07
 verifiedAt: 2026-11-07
 image: "/daily07/offshoreresourcing/a-method-for-auditing-template-adherence-in-offshore-client-updates.webp"
-sourceCount: 8
+sourceCount: 10
 ---
 
 Recurring client updates are often governed by a template: a subject line, a status section, a list of open items, a next-step date, and a contact. The template exists so a client can scan the update and so the team does not forget a required field. Over time, workers adapt it, shorten it, or replace a section with a link. Some variations are harmless, while others remove the information a client needs. This method defines a small audit of template adherence. Compare [offshore staffing services](/services) with the [research library](/research) before you apply it to a live account.
@@ -76,3 +76,6 @@ The workers may change their format during the audit, which can make the sample 
 6. [FTC data security guidance](https://www.ftc.gov/business-guidance/privacy-security/data-security)
 7. [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework)
 8. [NIST NICE Workforce Framework](https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center)
+
+9. [DOL Fact Sheet 22: Hours Worked](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked)
+10. [NIST Privacy Framework](https://www.nist.gov/privacy-framework)

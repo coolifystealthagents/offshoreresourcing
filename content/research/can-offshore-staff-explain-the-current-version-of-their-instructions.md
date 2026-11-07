@@ -5,7 +5,7 @@ category: "offshore resourcing operations"
 publishedAt: 2026-11-07
 verifiedAt: 2026-11-07
 image: "/daily07/offshoreresourcing/can-offshore-staff-explain-the-current-version-of-their-instructions.webp"
-sourceCount: 8
+sourceCount: 10
 ---
 
 A document management system can show that an instruction was published, assigned, and acknowledged. It cannot show that the worker understands the current version or can apply it to a real item. The gap matters when a procedure changes and the queue keeps running on an older habit. This protocol defines a short verification that asks the worker to explain and apply the current instruction in their own words. Compare [offshore staffing services](/services) with the [research library](/research) before you add it to a review cycle.
@@ -76,3 +76,6 @@ Repeat the check after the instruction or training change. If the same step stil
 6. [W3C Web Accessibility Initiative standards](https://www.w3.org/WAI/standards-guidelines/)
 7. [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework)
 8. [BLS Occupational Outlook Handbook](https://www.bls.gov/ooh/)
+
+9. [SBA guide to managing a business](https://www.sba.gov/business-guide/manage-your-business)
+10. [NIST SP 800-53 security and privacy controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)
