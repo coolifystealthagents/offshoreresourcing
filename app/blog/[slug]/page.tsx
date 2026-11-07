@@ -29,6 +29,7 @@ import { dailyBlogOct12Details as oct12Details, dailyBlogOct12Posts } from '../.
 import { dailyBlogOct13Details, dailyBlogOct13Posts } from '../../daily-blog-2026-10-13';
 import { dailyBlogNov05Details, dailyBlogNov05Posts } from '../../daily-blog-2026-11-05';
 import { dailyBlogNov06Details, dailyBlogNov06Posts } from '../../daily-blog-2026-11-06';
+import { dailyBlogNov07Details, dailyBlogNov07Posts } from '../../daily-blog-2026-11-07';
 import { october25Details, october25Posts } from '../../oct25-batch';
 import { october26Details, october26Posts } from '../../oct26-batch';
 import { october27Details, october27Posts } from '../../oct27-batch';
@@ -52,6 +53,7 @@ type BlogModel = {
 
 /* Newest collection wins. The selected record drives body, image, schema and TOC. */
 const collections: readonly { details: AnyRecord; posts: readonly AnyRecord[] }[] = [
+  { details: dailyBlogNov07Details, posts: dailyBlogNov07Posts },
   { details: dailyBlogNov06Details, posts: dailyBlogNov06Posts },
   { details: dailyBlogNov05Details, posts: dailyBlogNov05Posts },
   { details: october27Details, posts: october27Posts },
@@ -149,11 +151,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const model = resolveBlogArticle((await params).slug); if (!model) notFound();
   const { post, image, hero, ids, publishedAt } = model; const url = `${base}/blog/${post.slug}`;
+  const publishedLabel = `Published ${new Date(`${publishedAt}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}`;
   const graph: AnyRecord[] = [{ '@type': 'Article', headline: editorialText(post.title), description: editorialText(post.excerpt), url, mainEntityOfPage: url, datePublished: publishedAt, image: { '@type': 'ImageObject', url: `${base}${image.src}`, width: image.width, height: image.height }, publisher: { '@type': 'Organization', name: site.brand, url: base }, citation: model.sources.map((source) => source.url) }];
   if (model.faqs.length) graph.push({ '@type': 'FAQPage', mainEntity: model.faqs.map((faq) => ({ '@type': 'Question', name: editorialText(faq.q), acceptedAnswer: { '@type': 'Answer', text: editorialText(faq.a) } })) });
   graph.push({ '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: base }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${base}/blog` }, { '@type': 'ListItem', position: 3, name: editorialText(post.title), item: url }] });
   return <><main className="section article-page editorial-page"><JsonLd data={{ '@context': 'https://schema.org', '@graph': graph }}/><article className="container content-article">
-    <header className="editorial-hero"><div className="editorial-hero-copy"><p className="eyebrow">Philippines staffing guide · {post.minutes} min read · <time dateTime={publishedAt}>Published {new Date(`${publishedAt}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time></p><h1>{editorialText(post.title)}</h1><p className="lead">{editorialText(post.excerpt)}</p></div><img className="content-hero" src={hero.src} alt={`${editorialText(post.title)} editorial photograph`} width={hero.width} height={hero.height}/></header>
+    <header className="editorial-hero"><div className="editorial-hero-copy"><p className="eyebrow">Philippines staffing guide · {post.minutes} min read · <time dateTime={publishedAt}>{publishedLabel}</time></p><h1>{editorialText(post.title)}</h1><p className="lead">{editorialText(post.excerpt)}</p></div><img className="content-hero" src={hero.src} alt={`${editorialText(post.title)} editorial photograph`} width={hero.width} height={hero.height}/></header>
     <div className="content-layout"><EditorialToc items={model.toc} family="Blog"/><div className="editorial-body">
       <section className="card evidence-card"><h2 id={model.toc[0].id}>The short answer</h2>{model.shortAnswer.map((paragraph) => <p key={paragraph}>{inlineEditorialText(paragraph)}</p>)}<ul>{model.takeaways.map((item) => <li key={item}>{inlineEditorialText(item)}</li>)}</ul></section>
       {model.sections.map((section, index) => <section className="article-section" key={`${section.heading}-${index}`}><h2 id={ids.sections[index]}>{editorialText(section.heading)}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{inlineEditorialText(paragraph)}</p>)}</section>)}

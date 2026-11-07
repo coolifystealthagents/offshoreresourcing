@@ -99,7 +99,7 @@ export function ContentArticle({ document, related, canonicalSlug = document.slu
     <article className="container content-article">
       <header className="editorial-hero">
         <div className="editorial-hero-copy">
-          <p className="eyebrow">{section}{hasPublished && <> · <time dateTime={document.publishedAt}>Published {formatPublicDate(document.publishedAt)}</time></>}{hasVerified && <> · Verified <time dateTime={document.verifiedAt}>{formatPublicDate(document.verifiedAt)}</time></>}</p>
+          <p className="eyebrow">{section}{hasPublished && <> · <time dateTime={document.publishedAt}>{`Published ${formatPublicDate(document.publishedAt)}`}</time></>}{hasVerified && <> · Verified <time dateTime={document.verifiedAt}>{formatPublicDate(document.verifiedAt)}</time></>}</p>
           <h1>{document.title}</h1>
           <p className="lead">{document.description}</p>
           <div className="content-badges"><span>{document.category}</span>{document.type === 'research' && <span>{document.sourceCount} sources</span>}{document.alternativeType && <span>{editorialText(document.alternativeType)}</span>}</div>
