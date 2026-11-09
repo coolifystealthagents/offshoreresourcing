@@ -10,6 +10,7 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  staticPageGenerationTimeout: 240,
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }];
   },
