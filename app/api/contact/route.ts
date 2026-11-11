@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
   const declaredLength = request.headers.get('content-length');
   const length = declaredLength === null ? null : Number(declaredLength);
   const origin = request.headers.get('origin');
-  if (origin && origin !== request.nextUrl.origin) return errorPage(400, 'The request origin is not allowed.');
+  if (origin && origin !== 'https://offshoreresourcing.com' && origin !== 'https://www.offshoreresourcing.com') return errorPage(400, 'The request origin is not allowed.');
   if (length !== null && (!Number.isFinite(length) || length < 0 || length > MAX_BODY_BYTES)) return errorPage(400, 'The submitted form is too large.');
   if (!contentType.includes('application/x-www-form-urlencoded')) return errorPage(400, 'Submit the contact form using URL encoded form data.');
   if (limited(`ip:${ip(request)}`, 10)) return errorPage(429, 'Too many requests. Please wait before trying again.');
@@ -144,5 +144,5 @@ export async function POST(request: NextRequest) {
   }
 
   void sendLeadFallbackToMattermost({ name, email, phone, business, message, companySize, positions, referral: referralForUpstream, pageUrl, userAgent: request.headers.get('user-agent') || '' });
-  return NextResponse.redirect(new URL('/thank-you?lead=accepted', request.url), 303);
+  if (request.headers.get('accept')?.includes('application/json')) return NextResponse.json({ok:true,redirect:'/thank-you?lead=accepted'}, {headers:{'cache-control':'no-store'}});return NextResponse.redirect(new URL('/thank-you?lead=accepted', 'https://offshoreresourcing.com'), 303);
 }
