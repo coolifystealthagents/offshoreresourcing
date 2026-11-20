@@ -1,0 +1,81 @@
+[
+  {
+    "asset": "/images/photos/services-hero.jpg",
+    "kind": "generated editorial photograph",
+    "provider": "Google Gemini 3 Pro Image via reAPI (treg)",
+    "model": "gemini-3-pro-image-preview",
+    "created": "2026-11-21",
+    "prompt": "Four Filipino recruiting operations colleagues planning work lanes around a table in a bright office with printed charts and a laptop.",
+    "note": "Illustrative photography. The people shown are not identified as Offshore Resourcing or StealthAgents employees or clients."
+  },
+  {
+    "asset": "/images/photos/talent-sourcing.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "A Filipina recruiting researcher searching candidate profiles on a laptop beside a printed role brief.",
+    "note": "Illustrative photography."
+  },
+  {
+    "asset": "/images/photos/candidate-screening.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "A Filipino recruiting coordinator conducting a screening call with a checklist and laptop.",
+    "note": "Illustrative photography."
+  },
+  {
+    "asset": "/images/photos/interview-scheduling.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "A Filipina recruiting coordinator scheduling interviews with a printed weekly schedule.",
+    "note": "Illustrative photography."
+  },
+  {
+    "asset": "/images/photos/recruitment-admin.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "Hands organizing candidate folders with colored index tabs beside a laptop.",
+    "note": "Illustrative photography."
+  },
+  {
+    "asset": "/images/photos/workforce-planning.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "Two Filipino operations leaders reviewing a capacity plan on a wall monitor.",
+    "note": "Illustrative photography."
+  },
+  {
+    "asset": "/images/photos/onboarding.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "A team lead welcoming a new hire at a laptop in a bright office.",
+    "note": "Illustrative photography."
+  },
+  {
+    "asset": "/images/photos/training.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "A team lead running a short training session with printed handouts.",
+    "note": "Illustrative photography."
+  },
+  {
+    "asset": "/images/photos/reporting.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "An operations analyst reviewing a performance dashboard and printed summary.",
+    "note": "Illustrative photography."
+  },
+  {
+    "asset": "/images/photos/people-ops.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "A people operations specialist in a one-on-one conversation with a colleague.",
+    "note": "Illustrative photography."
+  },
+  {
+    "asset": "/images/photos/compliance.jpg",
+    "kind": "generated editorial photograph",
+    "created": "2026-11-21",
+    "prompt": "A compliance reviewer marking a printed policy document beside a laptop.",
+    "note": "Illustrative photography."
+  }
+]

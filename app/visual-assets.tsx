@@ -27,6 +27,39 @@ export function editorialImageFor(value: string) {
   return { src: approvedImages.collaboration, alt: 'Remote collaboration illustration with organized work lanes' };
 }
 
+
+const editorialPhotos = {
+  candidates: { src: '/images/photos/candidate-screening.jpg', alt: 'Recruiting coordinator screening candidates with a checklist and laptop' },
+  schedule: { src: '/images/photos/interview-scheduling.jpg', alt: 'Recruiting coordinator scheduling interviews with a printed weekly plan' },
+  onboarding: { src: '/images/photos/onboarding.jpg', alt: 'Team lead welcoming a new hire at a laptop in a bright office' },
+  training: { src: '/images/photos/training.jpg', alt: 'Team lead running a short training session with printed handouts' },
+  evidence: { src: '/images/photos/compliance.jpg', alt: 'Compliance reviewer checking a printed policy document beside a laptop' },
+  quality: { src: '/images/photos/reporting.jpg', alt: 'Operations analyst reviewing a performance dashboard and printed summary' },
+  capacity: { src: '/images/photos/workforce-planning.jpg', alt: 'Operations leaders reviewing a capacity plan on a wall monitor' },
+  handoff: { src: '/images/photos/recruitment-admin.jpg', alt: 'Hands organizing candidate folders with colored index tabs' },
+  people: { src: '/images/photos/people-ops.jpg', alt: 'People operations specialist in a one-on-one conversation with a colleague' },
+  collaboration: { src: '/images/photos/services-hero.jpg', alt: 'Recruiting operations colleagues planning service lanes around a table' },
+} as const;
+
+export function editorialPhotoFor(value: string) {
+  const text = value.toLowerCase();
+  if (/candidate|recruit|screen|talent|interview/.test(text)) return editorialPhotos.candidates;
+  if (/schedule|calendar|time.?zone|coverage|overlap/.test(text)) return editorialPhotos.schedule;
+  if (/onboard|knowledge|learn/.test(text)) return editorialPhotos.onboarding;
+  if (/training/.test(text)) return editorialPhotos.training;
+  if (/compliance|access|security|privacy|source|evidence|approval/.test(text)) return editorialPhotos.evidence;
+  if (/supplier|vendor|continuity/.test(text)) return editorialPhotos.handoff;
+  if (/transfer|assessment|impact/.test(text)) return editorialPhotos.evidence;
+  if (/quality|review|scorecard|performance|audit/.test(text)) return editorialPhotos.quality;
+  if (/capacity|workforce|forecast|queue|workload/.test(text)) return editorialPhotos.capacity;
+  if (/handoff|workflow|process|coordination|delivery/.test(text)) return editorialPhotos.handoff;
+  if (/retention|employee|people|team/.test(text)) return editorialPhotos.people;
+  const pool = [editorialPhotos.collaboration, editorialPhotos.capacity, editorialPhotos.handoff, editorialPhotos.quality, editorialPhotos.people, editorialPhotos.evidence, editorialPhotos.schedule, editorialPhotos.candidates, editorialPhotos.onboarding, editorialPhotos.training];
+  let hash = 0;
+  for (const character of text) hash = (hash * 33 + character.charCodeAt(0)) >>> 0;
+  return pool[hash % pool.length];
+}
+
 export function ProcessIcon({ name }: { name: ProcessIconName }) {
   const paths: Record<ProcessIconName, ReactNode> = {
     brief: <><path d="M7 3h7l3 3v15H7z"/><path d="M14 3v4h4M10 11h5M10 15h5"/></>,

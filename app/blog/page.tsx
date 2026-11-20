@@ -1,5 +1,5 @@
 import { blogPosts } from "../data";
-import { editorialImageFor } from "../visual-assets";
+import { editorialPhotoFor } from "../visual-assets";
 const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 export const metadata = {
   title: "Blog",
@@ -12,15 +12,22 @@ export default function Blog() {
   return (
     <>
       <main className="editorial-index-page">
-        <section className="editorial-index-hero"><div className="container">
-          <p className="eyebrow">Offshore staffing operating guides</p>
-          <h1>Build the task brief, review path, and handoff.</h1>
-          <p className="lead">Use these guides to document queues, permissions, acceptance checks, corrections, coverage, and manager-owned decisions for Philippines based support.</p>
+        <section className="editorial-index-hero"><div className="container editorial-index-hero-grid">
+          <div>
+            <p className="eyebrow">Offshore staffing operating guides</p>
+            <h1>Build the task brief, review path, and handoff.</h1>
+            <p className="lead">Use these guides to document queues, permissions, acceptance checks, corrections, coverage, and manager-owned decisions for Philippines based support.</p>
+          </div>
+          <aside className="editorial-index-facts" aria-label="Blog library facts">
+            <div><strong>{blogPosts.length}</strong><span>Operating guides</span></div>
+            <div><strong>20</strong><span>Guides per page</span></div>
+            <div><strong>2026</strong><span>Updated weekly</span></div>
+          </aside>
         </div></section>
         <section className="editorial-index-library"><div className="container">
           <div className="cards">
             {posts.map((p) => {
-              const image = p.image ? { src: p.image, alt: `Editorial image for ${p.title}` } : editorialImageFor(`${p.title} ${p.slug}`);
+              const image = editorialPhotoFor(`${p.title} ${p.slug}`);
               return <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
                 <img className="editorial-card-image listing-card-image" src={image.src} width="1200" height="630" alt={image.alt}/>
                 <div className="editorial-card-copy">
