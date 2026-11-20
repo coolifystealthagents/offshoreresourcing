@@ -1,5 +1,14 @@
 [
   {
+    "asset": "/images/photos/home-hero.jpg",
+    "kind": "generated editorial photograph",
+    "provider": "Google Gemini 3 Pro Image via reAPI (treg)",
+    "model": "gemini-3-pro-image-preview",
+    "created": "2026-11-21",
+    "prompt": "Four Filipino professionals collaborating around a light wood table with laptops and printed documents in a bright modern office, warm natural light.",
+    "note": "Illustrative photography. The people shown are not identified as Offshore Resourcing or StealthAgents employees or clients."
+  },
+  {
     "asset": "/images/photos/services-hero.jpg",
     "kind": "generated editorial photograph",
     "provider": "Google Gemini 3 Pro Image via reAPI (treg)",
