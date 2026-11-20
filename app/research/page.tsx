@@ -9,8 +9,12 @@ export const metadata = {
     "Original research and source-backed analysis for planning Philippines-based support.",
   alternates: { canonical: "/research" },
 };
+const PAGE_SIZE = 24;
+
 export default function Research() {
-  const researchPosts = getDocuments("research").filter((document) => !getCanonicalStatus(document).isDuplicate);
+  const allResearch = getDocuments("research").filter((document) => !getCanonicalStatus(document).isDuplicate);
+  const totalPages = Math.max(1, Math.ceil(allResearch.length / PAGE_SIZE));
+  const researchPosts = allResearch.slice(0, PAGE_SIZE);
   return (
     <>
       <Header />
@@ -26,8 +30,8 @@ export default function Research() {
                 decisions.
               </p>
               <div className="research-meta">
-                <span>{researchPosts.length} reports</span>
-                <span>Methodology notes</span>
+                <span>{allResearch.length} reports</span>
+                <span>{totalPages} pages</span>
                 <span>Buyer controls</span>
               </div>
             </div>
@@ -95,6 +99,17 @@ export default function Research() {
                 </div>
               )}
             </div>
+            <nav className="pagination" aria-label="Research pages">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <a
+                  aria-current={i === 0 ? "page" : undefined}
+                  href={i === 0 ? "/research" : `/research/page/${i + 1}`}
+                  key={i}
+                >
+                  {i + 1}
+                </a>
+              ))}
+            </nav>
           </div>
         </section>
         <section className="section research-methodology">
