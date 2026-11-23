@@ -3,16 +3,16 @@
     "domain": "offshoreresourcing.com",
     "industry": "Philippines based offshore staffing planning",
     "audience": "Operations, recruiting, and people leaders defining support roles",
-    "designFamily": "Offshore Resourcing Premium Corporate: warm neutral surfaces, deep navy, muted cobalt, Manrope typography, rounded media and restrained depth",
-    "heroComposition": "Warm paper first fold with a soft radial wash, a compact trust pill, large ink headline with one cobalt phrase, operational checks, one navy pill action, and a rounded documentary photograph with a floating proof card",
-    "typeCharacter": "Locally hosted Manrope variable for display and body, with sentence-case controls and small uppercase labels instead of monospace",
-    "paletteFamily": "Ink #101828, deep navy #16233a, muted cobalt #2b4c7e, warm paper #f7f5f1, mist #efede8, sand #e9ddca, white, and slate copy",
-    "shapeGrammar": "Twenty-two-pixel media panels, sixteen-pixel cards, ten-pixel controls, pill actions, one-pixel warm gray rules, and soft ambient shadows",
-    "imageTreatment": "Real editorial recruiting and operations photography in rounded panels with quiet captions; the official Bacolod team photograph remains unedited",
-    "sectionRhythm": "Warm first fold, white proof band, alternating white and paper operating sections, one deep navy process block, soft boundary and FAQ cards, and a rounded navy closing panel",
-    "navigationTreatment": "Sticky white bar with three centered routes, a subdued StealthAgents attribution pill, a navy right-side action, and a compact rounded mobile menu",
-    "motionSignature": "Short hover lifts, subtle image and card transitions, and reduced-motion fallbacks",
-    "density": "Readable and composed: the services directory shows the first lane titles above the desktop fold, and the contact form is complete above the first desktop fold",
-    "signatureElement": "One cobalt phrase inside a large ink headline on a warm paper canvas"
+    "designFamily": "Offshore Resourcing Global Operations: luminous ice surfaces, deep navy, electric cobalt and cyan, Instrument Sans display, 3D globe stage, floating glass role cards",
+    "heroComposition": "Full-screen luminous ice hero with a dotted field, drifting aurora light, a large ink headline with a cobalt phrase, compact operating checks, a gradient action, and a 3D stage combining a rotating dotted globe, a dark role-brief card, a floating review card and a Manila/Cebu coverage card",
+    "typeCharacter": "Locally hosted Instrument Sans for display and Manrope for body, labels and controls; sentence-case interface copy with tracking only on small labels",
+    "paletteFamily": "Deep navy #071426, electric cobalt #2f55ff, cyan #19b6d9, ice paper #f3f6fc, mist #e8eef9, white, slate #44536b, amber #f2b84b and restrained status green",
+    "shapeGrammar": "Rounded 18–22px media and cards, 10–14px glass chips, subtle blue-tinted shadows, gradient buttons, glowing connector lines and a 2px reading-progress bar",
+    "imageTreatment": "Real editorial recruiting and operations photography in rounded frames with floating glass proof badges and cursor tilt; the official Bacolod team photograph remains unedited",
+    "sectionRhythm": "Full-screen 3D hero, animated capability ticker, navy stats band, white and ice operating sections, deep navy process rail with glowing connectors, glass review cards, and a glowing navy closing panel",
+    "navigationTreatment": "Sticky translucent white bar with three routes, subdued StealthAgents attribution, dark navy action pill, cobalt hover states, reading progress line and a rounded mobile menu",
+    "motionSignature": "Rotating canvas globe with connection arcs, floating and cursor-tilted role cards, drifting aurora light, service ticker, scroll progress, safe scroll reveals and hover lifts with reduced-motion fallbacks",
+    "density": "Readable and composed: the services directory shows the first lane titles above the desktop fold, the contact form is complete above the first desktop fold, and research is paginated",
+    "signatureElement": "A rotating 3D globe behind a floating dark role-brief card on a luminous cobalt-tinted field"
   }
 ]

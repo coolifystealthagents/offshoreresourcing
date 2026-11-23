@@ -18,11 +18,12 @@ export default function Services() { return <><Header/><main className="commerci
       <ul className="hero-checklist"><li>Required files, records, and systems</li><li>Finished outputs and quality checks</li><li>Queue owners and escalation points</li><li>Decisions that stay with your team</li></ul>
       <div className="hero-actions"><a className="signal-button" href="#service-directory">Compare Service Lanes <span aria-hidden="true">→</span></a><a className="text-link" href="/contact-us">Plan a role</a></div>
     </div>
-    <div className="directory-visual">
+    <div className="directory-visual" data-tilt>
       <figure className="directory-photo">
         <img src="/images/photos/services-hero.jpg" width="1600" height="1067" alt="Four recruiting operations colleagues planning service lanes around a table"/>
         <figcaption>Service design session · recruiting operations team</figcaption>
       </figure>
+      <div className="figure-badge"><i>✓</i> 12 documented lanes</div>
     </div>
   </div></section>
   <section className="commercial-section services-directory" id="service-directory"><div className="commercial-shell"><div className="section-heading"><p className="section-kicker">Service directory</p><h2>Compare the input, output, reviewer, and stop point.</h2><p>Open a guide for task examples, systems, acceptance checks, launch steps, and manager-owned decisions.</p></div><div className="directory-grid">{commercialServices.map(service=><article key={service.slug}><img className="listing-card-image" src={service.heroImage} width="1200" height="630" alt={service.heroAlt}/><div><h3>{service.title}</h3><p>{service.description}</p><p className="audience-line"><strong>Useful for:</strong> {service.audience}</p><a href={`/services/${service.slug}`}>See inputs and handoffs</a></div></article>)}</div></div></section>

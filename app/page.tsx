@@ -4,6 +4,7 @@ import { commercialServices } from './commercial-data';
 import { site } from './data';
 import { defaultSocialImage } from '../lib/seo';
 import { ProcessIcon } from './visual-assets';
+import Globe from './Globe';
 
 const canonical = 'https://offshoreresourcing.com';
 const description = 'Plan Philippines based offshore roles with clear scope, access boundaries, workflow ownership, and manager review.';
@@ -30,14 +31,38 @@ export default function Home() {
         <div className="hero-actions"><a className="signal-button" href="/contact-us">Plan your role <span aria-hidden="true">→</span></a><a className="text-link" href="/services">Explore service lanes</a></div>
         <p className="hero-assurance">Leave with a practical role brief for the recruiting handoff.</p>
       </div>
-      <figure className="hero-visual">
-        <img src="/images/photos/home-hero.jpg" width="1800" height="1200" alt="Four Philippines-based operations professionals collaborating at a table with laptops"/>
-        <figcaption className="hero-photo-card"><strong>12 documented service lanes</strong><span>Clear scope, access limits, and manager review</span></figcaption>
-      </figure>
+      <div className="hero-stage" data-tilt>
+        <div className="globe-shell"><Globe /></div>
+        <article className="role-card">
+          <div className="role-card-head"><span>Role brief</span><span className="role-card-chip">Ready</span></div>
+          <h3>Talent sourcing lane</h3>
+          <p>A bounded research queue for a Philippines-based specialist.</p>
+          <div className="role-rows">
+            <div className="role-row"><span>Scope</span><strong>Candidate research</strong><em>✓</em></div>
+            <div className="role-row"><span>Access</span><strong>Approved sources</strong><em>✓</em></div>
+            <div className="role-row"><span>Review</span><strong>Manager sample</strong><em>✓</em></div>
+            <div className="role-row"><span>Owner</span><strong>Team lead</strong><em>✓</em></div>
+          </div>
+          <div className="role-card-foot"><span>Status · In review</span><span className="role-progress"><span /></span></div>
+        </article>
+        <div className="float-card float-card--queue">
+          <div className="float-label"><span>Review queue</span><strong>Clear</strong></div>
+          <h4>Evidence checked</h4>
+          <div className="mini-rows"><div className="mini-row"><i>✓</i> Source linked</div><div className="mini-row"><i>✓</i> Duplicate cleared</div><div className="mini-row"><i>✓</i> Reviewer noted</div></div>
+        </div>
+        <div className="float-card float-card--region">
+          <div className="float-label"><span>Coverage</span><strong>Live</strong></div>
+          <h4>Manila · Cebu</h4>
+          <div className="region-line"><span>GMT+8 overlap</span><span className="region-pulse">Active</span></div>
+        </div>
+      </div>
     </div></section>
     <section className="home-review-band"><div className="commercial-shell"><ReviewsMarquee/></div></section>
 
-    <section className="commercial-section"><div className="commercial-shell split-intro"><div><p className="section-kicker">Role brief</p><h2>Describe the queue, not just the job title.</h2></div><div><p>Trace one real request from intake to completion. Record where it starts, which fields and files are required, what a finished result contains, and who resolves an exception.</p><ul className="plain-checks"><li>Task volume, cadence, and due time</li><li>Approved systems and access level</li><li>Finished example and review rubric</li><li>Correction, escalation, and handoff owner</li></ul></div></div></section>
+    <section className="capability-ticker" aria-hidden="true"><div className="ticker-track">{[...commercialServices, ...commercialServices].map((service, index) => <span className="ticker-item" key={`${service.slug}-${index}`}>{service.title}</span>)}</div></section>
+    <section className="stats-band"><div className="commercial-shell"><div className="stats-grid"><div className="stat"><strong>12</strong><span>Documented service lanes</span></div><div className="stat"><strong>4</strong><span>Operating controls per lane</span></div><div className="stat"><strong>3</strong><span>Review layers before expansion</span></div><div className="stat"><strong>1</strong><span>Practical brief for intake</span></div></div></div></section>
+
+    <section className="commercial-section"><div className="commercial-shell role-brief-grid"><figure className="role-photo"><img src="/images/photos/home-hero.jpg" width="1800" height="1200" alt="Four Philippines-based operations professionals collaborating at a table with laptops"/><div className="role-photo-badge"><i>✓</i> Manager-owned review</div></figure><div><p className="section-kicker">Role brief</p><h2>Describe the queue, not just the job title.</h2><p>Trace one real request from intake to completion. Record where it starts, which fields and files are required, what a finished result contains, and who resolves an exception.</p><ul className="plain-checks"><li>Task volume, cadence, and due time</li><li>Approved systems and access level</li><li>Finished example and review rubric</li><li>Correction, escalation, and handoff owner</li></ul><a className="text-link" href="/contact-us">Build the role brief</a></div></div></section>
 
     <section className="commercial-section tinted-section"><div className="commercial-shell"><div className="section-heading"><p className="section-kicker">Service directory</p><h2>Choose the queue a support specialist will own.</h2><p>Each guide shows the required inputs, finished output, review check, escalation point, and decisions that stay with your team.</p></div><div className="service-gallery">{featured.map(service=><a className="service-card" href={`/services/${service.slug}`} key={service.slug}><img src={service.heroImage} width="1200" height="630" alt={service.heroAlt}/><div className="service-card-body"><h3>{service.title}</h3><p>{service.description}</p><span>Explore this lane →</span></div></a>)}</div><div className="section-foot"><a className="text-link" href="/services">View all 12 service lanes</a></div></div></section>
 
