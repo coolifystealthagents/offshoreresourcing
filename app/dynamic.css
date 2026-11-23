@@ -705,6 +705,14 @@ h1, h2, h3, h4, h5, h6,
   -webkit-mask-image: radial-gradient(ellipse at 50% 20%, #000 4%, transparent 72%);
   content: "";
 }
+
+.aubergine-section .section-kicker,
+.aubergine-section .section-heading .section-kicker { color: #e9ddca !important; }
+.aubergine-section .section-kicker::before,
+.aubergine-section .section-heading .section-kicker::before { background: #e9ddca; }
+.aubergine-section .section-heading h2 { color: #fff !important; }
+.aubergine-section .section-heading > p:last-child { color: #b9c7dd !important; }
+
 .process-list { position: relative; }
 .process-list::before {
   position: absolute;
