@@ -952,5 +952,5 @@ const posts=[
  }
 }
 ];
-export const dailyBlogNov22Posts=posts;
-export const dailyBlogNov22Details=Object.fromEntries(posts.map(post=>[post.slug,post.details]));
+export const dailyBlogNov23Posts=posts;
+export const dailyBlogNov23Details=Object.fromEntries(posts.map(post=>[post.slug,post.details]));
