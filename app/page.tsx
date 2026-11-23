@@ -51,9 +51,9 @@ export default function Home() {
           <div className="mini-rows"><div className="mini-row"><i>✓</i> Source linked</div><div className="mini-row"><i>✓</i> Duplicate cleared</div><div className="mini-row"><i>✓</i> Reviewer noted</div></div>
         </div>
         <div className="float-card float-card--region">
-          <div className="float-label"><span>Coverage</span><strong>Live</strong></div>
+          <div className="float-label"><span>Coverage</span><strong>PH</strong></div>
           <h4>Manila · Cebu</h4>
-          <div className="region-line"><span>GMT+8 overlap</span><span className="region-pulse">Active</span></div>
+          <div className="region-line"><span>Core overlap</span><span className="region-pulse">GMT+8</span></div>
         </div>
       </div>
     </div></section>
