@@ -26,6 +26,10 @@ export function proxy(request: NextRequest) {
   const hostname = requestHost.split(':')[0].toLowerCase();
   const scheme = publicScheme(request);
 
+  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+    return NextResponse.next();
+  }
+
   if (scheme === 'http' || hostname === `www.${CANONICAL_HOST}`) {
     const destination = request.nextUrl.clone();
     destination.protocol = 'https:';
